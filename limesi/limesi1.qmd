@@ -55,12 +55,12 @@ Neka su $(a_n)_n$ i $(b_n)_n$ konvergentni nizovi u $\mathbb{R}$. Tada vrijedi:
 
 1. Niz $(a_n \pm b_n)_n$ je konvergentan i vrijedi $\displaystyle \lim_{n \to \infty}(a_n \pm b_n)_n = \lim_{n \to \infty} a_n \pm \lim_{n \to \infty} b_n$
 2. Niz $(a_n \cdot b_n)_n$ je konvergentan i $\displaystyle \lim_{n \to \infty} (a_n \cdot b_n)_n = \lim_{n \to \infty} a_n \cdot \lim_{n \to \infty} b_n$
-3. Ako je $\forall n \in \mathbb{N}, b_n \neq 0$ i $\displaystyle \lim_{n \to \infty} b_n \neq 0$, onda je niz $\displaystyle \left (\frac{a_n}{b_n} \right)_n$ konvergentan i vrijedi $\displaystyle \lim_{n \to \infty} \left (\frac{a_n}{b_n} \right)_n = \displaystyle \frac{\lim_{n \to \infty} a_n}{\lim_{n \to \infty} b_n}$ 
-4. Niz $(|a_n|)_n$ je konvergentan i $\lim_{n \to \infty} |a_n| = |\displaystyle \lim_{n \to \infty} a_n|$
+3. Ako je $\forall n \in \mathbb{N}, b_n \neq 0$ i $\displaystyle \lim_{n \to \infty} b_n \neq 0$, onda je niz $\displaystyle \left (\frac{a_n}{b_n} \right)_n$ konvergentan i vrijedi $\displaystyle \lim_{n \to \infty} \left (\frac{a_n}{b_n} \right)_n = \displaystyle \frac{\displaystyle \lim_{n \to \infty} a_n}{\displaystyle\lim_{n \to \infty} b_n}$ 
+4. Niz $(|a_n|)_n$ je konvergentan i $\displaystyle\lim_{n \to \infty} |a_n| = |\displaystyle \lim_{n \to \infty} a_n|$
 :::
 
 :::{.korolar}
-Neka su $\lim_{n \to \infty} a_n = a$ i $\lim_{n \to \infty} b_n = b$. Tada je za sve $\lambda, \mu \in \mathbb{R}$ niz $(\lambda a_n + \mu b_n)_n$ konvergent i vrijedi $\lim_{n \to \infty} (\lambda a_n + \mu b_n) = \lambda a + \mu b$.
+Neka su $\displaystyle \lim_{n \to \infty} a_n = a$ i $\displaystyle \lim_{n \to \infty} b_n = b$. Tada je za sve $\lambda, \mu \in \mathbb{R}$ niz $(\lambda a_n + \mu b_n)_n$ konvergent i vrijedi $\displaystyle \lim_{n \to \infty} (\lambda a_n + \mu b_n) = \lambda a + \mu b$.
 :::
 
 Iz prethodnog teorema i korolara vidimo da je skup svih konvergentnih nizova u $\mathbb{R}$ zatvoren na linearne kombinacije svojih elemenata, stoga zaključujemo da je skup konvergentnih nizova u $\mathbb{R}$ vektorski prostor.
@@ -76,7 +76,7 @@ $$
 \lim_{n \to \infty} c_n = c \Rightarrow \lim_{n \to \infty} f(c_n) = L
 $$  
 
-Tada pišemo $\lim_{x \to c} f(x) = L$.
+Tada pišemo $\displaystyle \lim_{x \to c} f(x) = L$.
 :::
 
 Iz definicije je vidljivo da je približavanje broja $x$ prema $c$ ekvivalentno približavanju svih nizova koji konvergiraju k točki $c$. Dakle, u definiciji je potrebno promatrati sve takve nizove, a ne samo jedan niz ili njih konačno mnogo. Tada se slike tih nizova po funkciji $f$ moraju približavati istom broju $L$. S druge strane, nizovi koji konvergiraju k $c$ imaju točke i lijevo i desno od $c$ pa je prirodno pretpostaviti da je točka $c$ iz nekog otvorenog intervala koji je sadržan u domeni funkcije $f$.
@@ -104,8 +104,8 @@ Neka je $I \subseteq \mathbb{R}$ otvoreni interval, $c \in I$ i $f,g \colon I \b
 1. Funkcija $f \pm g$ ima limes u $c$ i vrijedi $\displaystyle \lim_{x \to c} (f(x) \pm g(x)) = \lim_{x \to c} f(x) \pm \lim_{x \to c} g(x)$
 2. Za svaki $\lambda \in \mathbb{R}$ funkcija $\lambda f$ ima limes u $c$ i vrijedi $\displaystyle \lim_{x \to c} \lambda f(x) = \lambda \lim_{x \to c} f(x)$
 3. Funkcije $fg$ ima limes u $c$ i  vrijedi $\displaystyle \lim_{x \to c} (f(x)g(x)) = \lim_{x \to c} f(x) \lim_{x \to c} g(x)$
-3. Ako je $ g(x) \neq 0, \forall x \in I \backslash \{c\}$ i $\displaystyle \lim_{x \to c} g(x) \neq 0$, onda je funkcija $\left (\frac{f}{g} \right)_n$ ima limes u $c$ i vrijedi $\displaystyle \lim_{x \to c} \left (\frac{f(x)}{g(x)} \right)_n = \frac{\lim_{x \to c} f(x)}{\lim_{x \to c} g}$ 
-4. Funkcija $|f|$ ima limes u $c$ i $\displaystyle \lim_{x \to c} |f(x)| = |\lim_{x \to c} f(x)|$
+3. Ako je $g(x) \neq 0, \forall x \in I \backslash \{c\}$ i $\displaystyle \lim_{x \to c} g(x) \neq 0$, onda je funkcija $\displaystyle \frac{f}{g}$ ima limes u $c$ i vrijedi $\displaystyle \lim_{x \to c} \left (\displaystyle \frac{f(x)}{g(x)} \right)_n = \frac{\displaystyle \lim_{x \to c} f(x)}{\displaystyle \lim_{x \to c} g}$ 
+4. Funkcija $|f|$ ima limes u $c$ i $\displaystyle \lim_{x \to c} |f(x)| = |\displaystyle \lim_{x \to c} f(x)|$
 :::
 
 Kao i kod nizova, možemo definirati limes u $\pm \infty$.
