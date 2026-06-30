@@ -1,1 +1,110 @@
-# Definicija {.unnumbered}
+# Definicija i temeljna teorija {.unnumbered}
+
+## Limes niza {.unnumbered}
+
+:::{.def}
+Funkciju $a \colon \mathbb{N} \to S$ zovemo **niz** u $S$. 
+:::
+
+Uobičajena oznaka funkcijskih vrijednosti je $a(n)=a_n$, a oznaka niz $(a_n)_{n \in \mathbb{N}}$, $(a_n)_n$ ili samo $(a_n)$.
+
+Primjeri nekih nizova:
+
+- $a_n = \frac{1}{n}, \ \forall n \in \mathbb{N}$ niz je u $\mathbb{R}$
+- $a_n = n+\frac{i}{n}, \ \forall n \in \mathbb{N}$ niz je u $\mathbb{C}$
+- $a_n(x)= \sin (nx)$ niz realnih funkcija
+
+:::{.def}
+Neka je $(a_n)_n$ niz u $\mathbb{R}$. Niz $(a_n)_n$ je:
+
+- rastući ako $\forall n \in \mathbb{N}, a_n \leq a_{n+1}$
+- strogo rastući ako $\forall n \in \mathbb{N}, a_n < a_{n+1}$
+- padajući ako $\forall n \in \mathbb{N}, a_n \geq a_{n+1}$
+- strogo padajući ako $\forall n \in \mathbb{N}, a_n > a_{n+1}$
+:::
+
+Definicija monotonosti niza odgovara našoj intuiciji. Doduše, za nizove u $\mathbb{R}^n$ nećemo moći govoriti o monotonosti, ali uvest ćemo pojam ograničenosti.
+
+Definirajmo sada **limes**:
+
+:::{.def}
+Niz realnih brojeva $(a_n)_n$ **konvergira** ili teži k realnom broju $a \in \mathbb{R}$ ako svaki otvoreni interval polumjera $\varepsilon$ oko točke $a$ sadrži gotovo sve članove niza, tj.
+$$
+(\forall \varepsilon > 0)(\exists n_{\varepsilon} \in \mathbb{N})(\forall n in \mathbb{N})
+((n > n_{varepsilon}) \rightarrow (|a_n - a| < \varepsilon))
+$$
+
+Tada $a$ zovemo **granična vrijednost** ili **limes** niza $(a_n)_n$ i pišemo $a = lim_{n -> \infty} a_n$.
+
+Ako niz ne konvergira, kažemo da **divergira**.
+:::
+
+Možemo definirati i konvergenciju prema $+ \infty$ i $- \infty$, ali trenutno nema potrebe za to. Sada navodimo neke bitne rezultate, ali bez dokaza.
+
+:::{.teorem}
+1. Konvergentan niz u $\mathbb{R}$ ima samo jednu graničnu vrijednost.
+2. Konvergentan niz u $\mathbb{R}$ je ograničen.
+:::
+
+:::{.teorem}
+Svaki monoton i ograničen niz u $\mathbb{R}$ je konvergentan.
+:::
+
+:::{.teorem}
+Neka su $(a_n)_n$ i $(b_n)_n$ konvergentni nizovi u $\mathbb{R}$. Tada vrijedi:
+1. Niz $(a_n \pm b_n)_n$ je konvergentan i vrijedi $\lim_{n \to \infty}(a_n \pm b_n)_n = \lim_{n \to \infty} a_n \pm \lim_{n \to \infty} b_n$
+2. Niz $(a_n \cdot b_n)_n$ je konvergentan i $\lim_{n \to \infty} (a_n \cdot b_n)_n = \lim_{n \to \infty} a_n \cdot \lim_{n \to \infty} b_n$
+3. Ako je $\forall n \in \mathbb{N}, b_n \neq 0$ i $\lim_{n \to \infty} b_n \neq 0$, onda je niz $\left (\frac{a_n}{b_n} \right)_n$ konvergentan i vrijedi $\displaystyle \lim_{n \to \infty} \left (\frac{a_n}{b_n} \right)_n = \frac{\lim_{n \to \infty} a_n}{\lim_{n \to \infty} b_n}$ 
+4. Niz $(|a_n|)_n$ je konvergentan i $\lim_{n \to \infty} |a_n| = |\lim_{n \to \infty} a_n|$
+:::
+
+:::{.korolar}
+Neka su $\lim_{n \to \infty} a_n = a$ i $\lim_{n \to \infty} b_n = b$. Tada je za sve $\lambda, \mi \in \mathbb{R}$ niz $(\lambda a_n + \mi b_n)_n$ konvergent i vrijedi $\lim_{n \to \infty} (\lambda a_n + \mi b_n) = \lambda a + \mi b$.
+:::
+
+Iz prethodnog teorema i korolara vidimo da je skup svih konvergentnih nizova u $\mathbb{R}$ zatvoren na linearne kombinacije svojih elemenata, stoga zaključujemo da je skup konvergentnih nizova u $\mathbb{R}$ vektorski prostor.
+
+
+## Limes funkcije {.unnumbered}
+
+Sada prelazimo na limes funkcija, sljedećom definicijom vidimo vezu s limesom niza:
+
+:::{.def}
+Neka je $I \subseteq \mathbb{R}$ otvoreni interval i $c \in I$. Za funkciju $f \colon I \backslash \{c\} \to \mathbb{R}$ kažemo da ima limes u točki $c$ jedank $L$ ako **za svaki** niz $(c_n)_n$ u $I \backslash \{c\}$ vrijedi 
+$$ 
+\lim_{n \to \infty} c_n = c \longrightarrow \lim_{n \to \infty} f(c_n) = L
+$$  
+
+Tada pišemo $\lim_{x \to c} f(x) = L$.
+:::
+
+Iz definicije je vidljivo da je približavanje broja $x$ prema $c$ ekvivalentno približavanju svih nizova koji konvergiraju k $c$. Dakle, u definiciji je potrebno promatrati sve takve nizove, a ne samo jedan niz ili njih konačno mnogo. Tada se slike tih nizova po funkciji $f$ moraju približavati istom broju $L$. S druge strane, nizovi koji konvergiraju k $c$ imaju točke i lijevo i desno od $c$, pa je prirodno pretpostaviti da je točka $c$ iz nekog otvorenog intervala koji je sadržan u domeni funkcije $f$.
+
+Pojam limesa funkcije moguće je definirati i bez nizova i to je sadržaj Cauchyjeve definicije limesa:
+
+:::{.teorem}
+Neka je $I \subseteq \mathbb{R}$ otvoreni interval, $c \in I$ i $f \colon I \backslash \{c\} \to \mathbb{R}$. Limes funkciej $f$ u točki $c$ postoji i $\lim_{x \to c} f(x) = L$ ako i samo ako vrijedi:
+$$
+(\forall \varepsilon > 0)(\exists \delta > 0)(\forall x \in I)((0 < |x-c| < \delta) \rightarrow (|f(x) - L| < \varepsilon))
+$$
+:::
+
+
+Cauchyjeva definicija ima intuitivnu geometrijsku interpretaciju. Za svaku okolinu $\langle L− \varepsilon,L+ \varepsilon \rangle$ broja $L$ postoji okolina $\langle c− \delta, c + \delta \rangle$ broja $c$ koja se, s izuzetkom točke $c$, preslikava u okolinu $\langle L− \varepsilon,L+ \varepsilon \rangle$, tj.
+$$
+f(\langle c− \delta, c + \delta \rangle \backslash \{c\}) \subseteq \langle L− \varepsilon,L+ \varepsilon \rangle
+$$
+
+Limes funkcije u skladu je s operacija zbrajanja, oduzimanja, množenja i dijeljenja:
+
+:::{.teorem}
+Neka je $I \subseteq \mathbb{R}$ otvoreni interval, $c \in I$ i $f,g \colon I \backslash \{c\} \to \mathbb{R}$ za koje postoje $\lim_{x \to  c} f(x)$ i $\lim_{x \to  c} g(x)$. Tada vrijedi: 
+
+1. Funkcija $f \pm g$ ima limes u $c$ i vrijedi $\lim_{x \to c} (f(x) \pm g(x)) = \lim_{x \to c} f(x) \pm \lim_{x \to c} g(x)$
+2. Za svaki $\lambda \in \mathbb{R}$ funkcija $\lambda f$ ima limes u $c$ i vrijedi $\lim_{x \to c} \lamda f(x) = \lamda \lim_{x \to c} f(x)$
+3. Funkcije $fg$ ima limes u $c$ i  vrijedi $\lim_{x \to c} (f(x)g(x)) = \lim_{x \to c} f(x) \lim_{x \to c} g(x)$
+3. Ako je $ g(x) \neq 0, \forall x \in I \backslash \{c\}$ i $\lim_{x \to c} g(x) \neq 0$, onda je funkcija $\left (\frac{f}{g} \right)_n$ ima limes u $c$ i vrijedi $\displaystyle \lim_{x \to c} \left (\frac{f(x)}{g(x)} \right)_n = \frac{\lim_{x \to c} f(x)}{\lim_{x \to c} g}$ 
+4. Funkcija $|f|$ ima limes u $c$ i $\lim_{x \to c} |f(x)| = |\lim_{x \to c} f(x)|$
+:::
+
+Kao i kod nizova, možemo definirati limes u $\pm \infty$.
