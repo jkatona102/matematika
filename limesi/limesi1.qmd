@@ -99,13 +99,124 @@ $$
 Limes funkcije u skladu je s operacija zbrajanja, oduzimanja, množenja i dijeljenja:
 
 :::{.teorem}
-Neka je $I \subseteq \mathbb{R}$ otvoreni interval, $c \in I$ i $f,g \colon I \backslash \{c\} \to \mathbb{R}$ za koje postoje $\lim_{x \to  c} f(x)$ i $\lim_{x \to  c} g(x)$. Tada vrijedi: 
+Neka je $I \subseteq \mathbb{R}$ otvoreni interval, $c \in I$ i $f,g \colon I \backslash \{c\} \to \mathbb{R}$ za koje postoje $\displaystyle \lim_{x \to  c} f(x)$ i $\displaystyle \lim_{x \to  c} g(x)$. Tada vrijedi: 
 
 1. Funkcija $f \pm g$ ima limes u $c$ i vrijedi $\displaystyle \lim_{x \to c} (f(x) \pm g(x)) = \lim_{x \to c} f(x) \pm \lim_{x \to c} g(x)$
 2. Za svaki $\lambda \in \mathbb{R}$ funkcija $\lambda f$ ima limes u $c$ i vrijedi $\displaystyle \lim_{x \to c} \lambda f(x) = \lambda \lim_{x \to c} f(x)$
 3. Funkcije $fg$ ima limes u $c$ i  vrijedi $\displaystyle \lim_{x \to c} (f(x)g(x)) = \lim_{x \to c} f(x) \lim_{x \to c} g(x)$
-3. Ako je $g(x) \neq 0, \forall x \in I \backslash \{c\}$ i $\displaystyle \lim_{x \to c} g(x) \neq 0$, onda je funkcija $\displaystyle \frac{f}{g}$ ima limes u $c$ i vrijedi $\displaystyle \lim_{x \to c} \left (\displaystyle \frac{f(x)}{g(x)} \right)_n = \frac{\displaystyle \lim_{x \to c} f(x)}{\displaystyle \lim_{x \to c} g}$ 
+3. Ako je $g(x) \neq 0, \forall x \in I \backslash \{c\}$ i $\displaystyle \lim_{x \to c} g(x) \neq 0$, onda je funkcija $\displaystyle \frac{f}{g}$ ima limes u $c$ i vrijedi $\displaystyle \lim_{x \to c} \left (\displaystyle \frac{f(x)}{g(x)} \right) = \frac{\displaystyle \lim_{x \to c} f(x)}{\displaystyle \lim_{x \to c} g(x)}$ 
 4. Funkcija $|f|$ ima limes u $c$ i $\displaystyle \lim_{x \to c} |f(x)| = |\displaystyle \lim_{x \to c} f(x)|$
 :::
 
 Kao i kod nizova, možemo definirati limes u $\pm \infty$.
+
+Definirajmo sada lijevi i desni limesi.
+
+:::{.def}
+Neka je $I \subseteq \mathbb{R}$ otvoreni interval i $c \in I$. Za funkciju $f \colon I \backslash \{c\} \to \mathbb{R}$ kažemo da ima
+
+1. **limes slijeva** u točki $c$ jednak $L$ ako vrijedi
+$$
+(\forall \varepsilon > 0)(\exists \delta > 0)(\forall x \in I)((0 < c-x < \delta) \rightarrow (|f(x) - L| < \varepsilon))
+$$
+
+Tada pišemo $\displaystyle \lim_{x \to c-} f(x) = f(c-) = L$.
+
+2. **limes slijeva** u točki $c$ jednak $L$ ako vrijedi
+$$
+(\forall \varepsilon > 0)(\exists \delta > 0)(\forall x \in I)((0 < x-c < \delta) \rightarrow (|f(x) - L| < \varepsilon))
+$$
+
+Tada pišemo $\displaystyle \lim_{x \to c+} f(x) = f(c+) = L$.
+:::
+
+Uzmimo za ilustraciju funkciju $f$ definiranu kao 
+$$ f(x) =
+\begin{brackets}
+1 & x > 1 \\
+0 & x = 0 \\
+-1 & x < -1 
+\end{brackets}
+$$
+
+$$
+\lim_{x \to 0-} f(x) = -1 \neq 1 = \lim_{x \to 0+} f(x)
+$$
+
+Vidimo da se lijevi i desni limes razlikuju u točki $c=0$ pa pomoću sljedećeg rezultata zaključujemo da limes ove funkcije u točki $c=0$ ne postoji.
+
+:::{.teorem}
+Neka je $I \subseteq \mathbb{R}$ otvoreni interval, $c \in I$ i $f \colon I \backslash \{c\} \to \mathbb{R}$. Za funkciju $f$ postoji $\displaystyle \lim_{x \to c} f(x)$ ako i samo postoje i jednaki su $\displaystyle \lim_{x \to c-} f(x)$ i $\displaystyle \lim_{x \to c+} f(x)$.
+:::
+
+## Neprekidnost {.unnumbered}
+
+:::{.def}
+Neka je $I \subseteq \mathbb{R}$ otvoreni interval i $c \in I$. Za funkciju $f \colon I \to \mathbb{R}$ kažemo da je **neprekidna** u točki $c$ ako postoji limes funkcije $f$ u točki $c$ i $\displaystyle \lim_{x \to c} f(x) = f(c)$. Funkcija $f$ je neprekidna na skupu $I$ ako je neprekidna u svakoj točki $c \in I$.
+:::
+
+Slikovito rečeno, grafove neprekidnih funkcija možemo nacrtati potezom ruke bez odizanja olovke s papira.
+
+Iskažimo Cauchyjevu definiciju:
+
+:::{.tem}
+Neka je $I \subseteq \mathbb{R}$ otvoreni interval, $c \in I$ i $f \colon I \to \mathbb{R}$. Funkcija $f$ je neprekidna u točki $c$ ako i samo ako vrijedi:
+$$
+(\forall \varepsilon > 0)(\exists \delta > 0)(\forall x \in I)((|x-c| < \delta) \rightarrow (|f(x) - f(c)| < \varepsilon))
+$$
+:::
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Funkcija
+f = lambda x: x**2
+
+# Točka u kojoj promatramo neprekidnost
+x0 = 1
+delta = 0.4
+epsilon = 1.0
+
+y0 = f(x0)
+
+# Graf funkcije
+x = np.linspace(0, 2, 1000)
+y = f(x)
+
+plt.figure(figsize=(8,6))
+plt.plot(x, y, linewidth=2)
+
+# ε-okolina oko f(x0)
+plt.axhline(y0 + epsilon, linestyle="--")
+plt.axhline(y0 - epsilon, linestyle="--")
+
+# δ-okolina oko x0
+plt.axvline(x0 + delta, linestyle="--")
+plt.axvline(x0 - delta, linestyle="--")
+
+# Obojano područje ε-okoline
+plt.fill_between(
+    x,
+    y0 - epsilon,
+    y0 + epsilon,
+    alpha=0.2
+)
+
+# Obojano područje δ-okoline
+plt.axvspan(
+    x0 - delta,
+    x0 + delta,
+    alpha=0.15
+)
+
+# Točka (x0,f(x0))
+plt.plot(x0, y0, "o", markersize=8)
+
+plt.xlabel("$x$")
+plt.ylabel("$f(x)$")
+plt.title("Skica neprekidnosti u točki $x_0$")
+plt.grid(True)
+
+plt.show()
+```
