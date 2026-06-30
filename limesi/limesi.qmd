@@ -1,0 +1,3 @@
+# LIMESI {.unnumbered}
+
+U ovom kratkom poglavlju dat ćemo kratki pregled limesa radi jednostavnosti shvaćanja diferencijalnog računa.

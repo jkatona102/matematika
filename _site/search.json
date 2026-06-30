@@ -9,9 +9,9 @@
   {
     "objectID": "predaja.html",
     "href": "predaja.html",
-    "title": "1 Predaja zadataka",
+    "title": "Predaja zadataka",
     "section": "",
-    "text": "1 Predaja zadataka\nNa ovoj stranici predajete zadatke.\n\n\nPredaja zadataka\n\n \n  Odaberi set zadataka Derivacije 1. dio Derivacije 2. dio Derivacije 3. dio \n \nPošalji rješenje",
+    "text": "Predaja zadataka\nNa ovoj stranici predajete zadatke.\n\n\nPredaja zadataka\n\n \n  Odaberi set zadataka Derivacije 1. dio Derivacije 2. dio Derivacije 3. dio \n \nPošalji rješenje",
     "crumbs": [
       "Home",
       "Predavanje zadataka"
@@ -321,5 +321,29 @@
     "title": "Povijest promjena na stranici",
     "section": "",
     "text": "30.06.2026. - stranica stvorena"
+  },
+  {
+    "objectID": "limesi/limesi1.html",
+    "href": "limesi/limesi1.html",
+    "title": "Definicija",
+    "section": "",
+    "text": "Definicija",
+    "crumbs": [
+      "Home",
+      "1. Limesi",
+      "1.1 Definicija i operacije"
+    ]
+  },
+  {
+    "objectID": "limesi/limesi-zadatci.html",
+    "href": "limesi/limesi-zadatci.html",
+    "title": "Zadatci",
+    "section": "",
+    "text": "Zadatci",
+    "crumbs": [
+      "Home",
+      "1. Limesi",
+      "1.2 Zadatci"
+    ]
   }
 ]
