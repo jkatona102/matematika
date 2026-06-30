@@ -1,0 +1,51 @@
+project:
+  type: website
+
+website:
+  title: "web-stranica"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - href: promjene.qmd
+        text: Novosti
+
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - text: "Predavanje zadataka"
+        href: predaja.qmd
+      - section: "1. DERIVACIJE"
+        href: derivacije/derivacije.qmd
+        contents:
+          - text: "1.1 Uvod u derivacije"
+            href: derivacije/derivacije-uvod.qmd
+          - text: "1.2 Definicija"
+            href: derivacije/derivacije-definicija.qmd
+          - text: "1.3 Pravila za računanje derivacija"
+            href: derivacije/derivacije-racunanje.qmd
+          - text: "Zadatci - prvi dio"
+            href: derivacije/derivacije-zadaci1.qmd
+
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+    lang: "hr"
+    charset: utf-8
+    number-sections: true
+
+language:
+  toc-title-document: "Na ovoj stranici"
+  toc-title-website: "Sadržaj"
+  search-label: "Pretraživanje"
+
+crossref:
+  chapters: true
+  thm-prefix: "Teorem"

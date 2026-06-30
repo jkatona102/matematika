@@ -1,0 +1,220 @@
+# Zadatci {.unnumbered}
+
+:::{.zadatak}
+Po definiciji odredite derivaciju sljedećih funkcija:
+
+(a) $f(x) = x^2$
+(b) $f(x) = x^3$
+(c) $f(x) = \cos x$
+(d) $f(x) = \displaystyle \frac{1}{x}$
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži hint</summary>
+Definicija: $f'(c) = \displaystyle \lim_{x \to c} \frac{f(x) - f(c)}{x - c}$
+
+U *c.* dijelu zadatka koristite formule pretvorbe i limes $\displaystyle \lim_{t \to 0} \frac{\sin t}{t}=1$
+
+</details>
+:::
+
+<!-- :::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a) 
+$$
+\begin{align*}
+f'(c) &= \displaystyle \lim_{x \to c} \frac{f(x) - f(c)}{x - c} = \lim_{x \to c} \frac{x^2 - c^2}{x - c} \\
+&= \lim_{x \to c} \frac{(x-c)(x+c)}{x - c} = \lim_{x \to c} (x+c) = 2c
+\end{align*}
+$$
+
+(b) 
+$$
+\begin{align*}
+f'(c) &= \displaystyle \lim_{x \to c} \frac{f(x) - f(c)}{x - c} = \lim_{x \to c} \frac{x^3 - c^3}{x - c} \\
+&= \lim_{x \to c} \frac{(x-c)(x^2+xc+c^2)}{x - c} = \lim_{x \to c} (x^2+xc+c^2) = 3c^2
+\end{align*}
+$$
+
+(c)
+$$
+\begin{align*}
+f'(c) &= \displaystyle \lim_{x \to c} \frac{f(x) - f(c)}{x - c} = \lim_{x \to c} \frac{\cos x - \cos c}{x - c} \\
+&= \lim_{x \to c} \frac{-2 \sin \frac{x+c}{2} \sin \frac{x-c}{2}}{x - c} = - \lim_{x \to c} \frac{\sin \frac{x+c}{2} \sin \frac{x-c}{2}}{\frac{x-c}{2}} \\
+&= -\sin c
+\end{align*}
+$$
+
+(d)
+$$
+\begin{align*}
+f'(c) &= \displaystyle \lim_{x \to c} \frac{f(x) - f(c)}{x - c} = \lim_{x \to c} \frac{\frac{1}{x} - \frac{1}{c}}{x - c} \\
+&= \lim_{x \to c} \frac{\frac{c-x}{xc}}{x-c} = \lim_{x \to c} \frac{c-x}{xc(x-c)} \\
+&= \lim_{x \to c} \frac{-(x-c)}{xc(x-c)} = \lim_{x \to c} \frac{-1}{xc} = -\frac{1}{c^2}
+\end{align*}
+$$
+
+</details>
+::: -->
+
+---
+
+:::{.zadatak}
+Derivirajte sljedeće funkcije:
+
+(a) $f(x) = 5x^2-x+1$
+(b) $f(x) = 3 \sqrt{x}$
+(c) $f(x) = \sin (2x)$
+(d) $f(x) = \displaystyle \frac{2x - 3}{x^2 - x +1}$
+(e) $f(x) = \displaystyle \frac{\sin x + \cos x}{\sin x - \cos x}$
+(f) $f(x) = x2^x$
+(g) $f(x) = e^x \arcsin x$
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži hint</summary>
+Koristite poznata pravila deriviranja zbroja, produkta, kvocijenta, kompozicije...
+</details>
+:::
+
+<!--:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a)
+$$
+f'(x)=(5x^2-x+1)'= (5x^2)'-x' + 1'=10x - 1
+$$
+
+(b)
+$$
+f'(x) = (3 \sqrt{x})' = 3 (\sqrt{x})' = \frac{3}{2\sqrt{x}}
+$$
+
+(c)
+$$
+f'(x) = (\sin 2x)' = (\sin 2x)' (2x)' = 2\cos 2x
+$$
+
+(d)
+$$
+\begin{align*}
+f'(x) &= \frac{(2x - 3)'\cdot (x^2 - x +1) - (2x - 3)(x^2 - x +1)'}{(x^2 - x +1)^2} \\
+&= \frac{2 \cdot (x^2 - x +1) - (2x - 3) \cdot (2x-1)}{(x^2 - x +1)^2} = \frac{-2x^2 + 4x - 1}{(x^2 - x + 1)^2}
+\end{align*}
+$$
+
+(e)
+$$
+\begin{align*}
+f'(x) &= \frac{(\sin x + \cos x)'(\sin x - \cos x) - (\sin x + \cos x)(\sin x - \cos x)'}{(\sin x - \cos x)^2} \\
+&= \frac{(\cos x - \sin x)(\sin x - \cos x) - (\sin x + \cos x)(\cos x + \sin x)}{(\sin x - \cos x)^2} \\
+&= \frac{-2}{(\sin x - \cos x)^2}
+\end{align*}
+$$
+
+(f)
+$$
+f'(x) = (x2^x)' = x' \cdot 2^x + x \cdot (2^x)' = 2^x + x2^x \ln 2 = 2^x(1+x \ln 2)
+$$
+
+(g)
+$$
+f'(x) = (e^x)'\arcsin x + e^x \arcsin ' x = e^x \arcsin x + \frac{e^x}{\sqrt{1-x^2}}
+$$
+
+</details>
+::: -->
+
+---
+
+:::{.zadatak}
+Koristeći pravilo kompozicije odredite derivacije sljedećih funkcija:
+
+(a) $f(x) = \sqrt{\tan x}$
+(b) $f(x) = \ln \sin x$
+(c) $f(x) = e^{x^2 - 2x + 1}$
+(d) $f(x) = \displaystyle \frac{1}{5^{x^2}}$
+:::
+
+<!--:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a)
+$$
+f'(x) = (\sqrt{\tan x})' \tan ' x = \frac{1}{2 \sqrt{\tan x}} \frac{1}{\cos ^2 x}
+$$
+
+(b)
+$$
+f'(x) = \ln ' (\sin x) \sin 'x = \frac{1}{\sin x} \cos x = \cot x
+$$
+
+(c)
+$$
+f'(x) = (e^{x^2 - 2x + 1})' = (e^{x^2 - 2x + 1})'(x^2-2x+1)' = e^{x^2 - 2x + 1}(2x-2)
+$$
+
+(d)
+$$
+f'(x) = (5^{-x^2})' = (5^{-x^2})' (-x^2)' = 5^{-x^2} \ln 5 \cdot (-2x)
+$$
+
+</details>
+::: -->
+
+---
+
+:::{.zadatak}
+Koristeći formulu za derivaciju inverzne funkcije odredite derivacije sljedećih funkcija:
+
+(a) $f(x) = \ln x$
+(b) $f(x) = \arccos x$
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži hint</summary>
+Svojstvo logaritma $\ln (e^x) = x$ i $e^{\ln x}=x$, općenito $\log_b a^n = n \log_b a$ i $\log_{b^m} a = \frac{1}{m} \log_b a$
+</details>
+:::
+
+<!--:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a) Neka je $g(x)=e^x$, tada je $g^{-1}(x)=f(x)=\ln x$
+$$
+f'(x) = \displaystyle (g^{-1})'(x)=\frac{1}{g'(g^{-1}(x))} = \frac{1}{e^{\ln x}} =\frac{1}{x}
+$$
+
+(b) Neka je $g(x)=\cos x$, tada je $g^{-1}(x)=f(x)=\arccos x$
+$$
+f'(x) = \displaystyle (g^{-1})'(x)=\frac{1}{g'(g^{-1}(x))} = \frac{1}{-\sin \arccos x} =-\frac{1}{\sqrt{1 - \cos ^2 \arccos x}} = - \frac{1}{\sqrt{1-x^2}}
+$$
+
+</details>
+::: -->
+
+---
+
+:::{.zadatak}
+**(naprednije)** Zadana je funkcija $f \colon \mathbb{R} \to \mathbb{R}$, $f(x) = x + e^x$. Pokažite da je $f$ injekcija (za $x_1,x_2 \in \mathbb{R}, x_1 \neq x_2$ vrijedi $f(x_1) \neq f(x_2)$)
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži hint</summary>
+Razmislite što se događa s funkcijom koja bi više puta u različitim točkama $x$ postizala istu vrijednost $f(x)$.
+</details>
+:::
+
+<!--:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Izračunajmo derivaciju: $f'(x) = 1 + e^x$. Uočimo $f'(x) > 0, \forall x \in \mathbb{R}$. Sjetimo se interpretacije derivacije, ako je derivacija pozitivna, funkcija raste. Ova funkcija $f$ raste na cijeloj domeni, i to strogo raste. Stoga nepostoje različite točke $x_1,x_2$ takve da vrijedi $f(x_1)=f(x_2)$. 
+
+Analogno smo mogli argumentirati da je $f$ zbroj dviju strogo rastućih funkcija pa je i ona sama strogo rastuća.
+</details>
+::: -->

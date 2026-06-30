@@ -1,0 +1,222 @@
+# Pravila za računanje derivacija {.unnumbered}
+
+Vidjeli smo da su zbroj, produkt i kvocijent diferencijabilnih funkcija također diferencijabilni i da je derivacija linearne kombinacije diferenicijalnih funkcija linearna kombinacija njihovih derivacija. 
+
+U ovom poglavlju navest ćemo još neka pravila za računanje derivacija koja nam omogućuju da izračunamo derivaciju složenijih funkcija.
+
+Za početak pokažimo rezultat za derivaciju kompozicije:
+
+## Derivacija kompozicije {.unnumbered}
+
+:::{.teorem}
+Neka su $f \colon I \to \mathbb{R}$, $g \colon J \to \mathbb{R}$ i neka je $f(I) \subseteq J$, tj. kompozicija $g \circ f \colon I \to \mathbb{R}$ je dobro definirana na $I$. Ako je $f$ diferencijabilna u točki $c \in I$ i funkcija $g$ diferencijabilna u točki $d = f(c) \in J$, onda je kompozicija $g \circ f \colon I \to \mathbb{R}$ diferencijabilna u točki $c$ i vrijedi
+$$
+(g \circ f)'(c) = g'(f(c)) f'(c).
+$$
+:::
+
+:::{.dokaz}
+<details>
+<summary>Prikaži dokaz</summary>
+Neka su dane funkcije 
+$$
+\omega = \begin{cases}
+\displaystyle \frac{f(x) - f(c)}{x - c} - f'(c) & \text{ako } x \neq c, \\
+\hspace{2.4em}0 & \text{ako } x = c.
+\end{cases}
+$$
+
+i za funkciju $g$
+$$
+\omega _1 = \begin{cases}
+\displaystyle \frac{g(x) - g(d)}{x - d} - g'(d) & \text{ako } x \neq d, \\
+\hspace{2.4em}0 & \text{ako } x = d.
+\end{cases}
+$$
+
+Tada vrijedi $g(y) = g(d) + (g'(d) + \omega_1(y))(y - d)$ za sve $y \in J$.
+
+Neka je $h = g \circ f$. Tada je $h(x) = g[f(x)] = g(d) + [g'(d) + \omega _1(f(x))](f(x) - f(c))$
+
+što daje
+$$
+\frac{h(x) - h(c)}{x - c} = [g'(d) + \omega_1(f(x))] \frac{f(x) - f(c)}{x - c}
+$$
+
+Zbog neprkidnosti funkcije $f$ u točki $c$ i neprekidnosti $\omega _1$ u $d = f(c)$, funkcija $\omega _1 \circ f$ je neprekidna u $c$ i $(\omega _1 \circ f)(c) = \omega _1(f(c)) = \omega _1(d) = 0$. Stoga je
+
+$$
+h'(c) = \lim_{x \to c} \frac{h(x) - h(c)}{x - c} = \lim_{x \to c} [g'(d) + \omega_1(f(x))] \frac{f(x) - f(c)}{x - c} = g'(d) f'(c).
+$$
+
+odakle slijedi tvrdnja.
+
+</details>
+:::
+
+:::{.primjer}
+Derivirajmo funkciju $f(x) = \sin(x^2)$. Ovdje je $g(x) = \sin x$ i $f(x) = x^2$. Tada je $g'(x) = \cos x$ i $f'(x) = 2x$. Primjenom pravila za derivaciju kompozicije dobivamo
+$$
+f'(x) = g'(f(x)) f'(x) = \cos(x^2) \cdot 2x.
+$$
+:::
+
+:::{.primjer}
+Derivirajmo funkciju $f(x) = \ln (x^2 + 1)$. Ovdje je $g(x) = \ln x$ i $f(x) = x^2 + 1$. Tada je $g'(x) = \frac{1}{x}$ i $f'(x) = 2x$. Primjenom pravila za derivaciju kompozicije dobivamo
+$$
+f'(x) = g'(f(x)) f'(x) = \frac{1}{x^2 + 1} \cdot 2x.
+$$
+:::
+
+U gornjim su primjerima eksplicitno određene vanjska i unutarnja funkcija, u praksi se to ne radi, već direktno primjenjujemo teorem.
+
+
+## Derivacija inverzne funkcije {.unnumbered}
+
+:::{.teorem}
+Neka je $f \colon I \to J, I,J \subseteq \mathbb{R}$, $I$ otvoren interval i neka je $f$ neprekidna bijekcija na $I$. Ako $f$ ima derivaciju u točki $c \in I$ i ako je $f'(c) \neq 0$, onda je $f^{-1}$ diferencijabilna u točki $d = f(c)$ i vrijedi $(f^{-1})'(d) = \frac{1}{f'(c)}$.
+:::
+
+:::{.dokaz}
+<details>
+<summary>Prikaži dokaz</summary>
+Po svojstvima neprekidnih fukcija znamo da je i $f^{-1} \colon J \to I$ neprekidna funkcija. Nadalje, iz diferencijabilnosti funkcije $f$ u točki $c$ slijedi
+$$
+f(x) − f(c) = (x − c)[f'(c) + \omega(x)],
+$$
+
+gdje je $\omega$ funkcija neprekidna u $c$ definirana kao i u prethodnim teoremima.
+Stavimo $d = f(c)$ i $y = f(x)$ pa dobivamo
+$$
+y − d = [f^{-1}(y)− f^{-1}(d)][f'(c) + \omega(f^{-1}(y))].
+$$
+
+Odatle dobivamo
+$$
+\frac{f^{-1}(y)− f^{-1}(d)}{y - d} = \frac{1}{f'(c) + \omega(f^{-1}(y))}
+$$
+
+što zbog neprekidnosti funkcije $\omega \circ f^{-1}$ u točki $d$ i $(\omega \circ f^{-1})(d) = 0$ dje jednakost
+$$
+(f^{-1})'(d) = \lim_{y \to d} \frac{f^{-1}(y)− f^{-1}(d)}{y - d} = \frac{1}{f'(c)}
+$$
+
+Prethodnu formulu koristimo u obliku
+$$
+(f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))}.
+$$
+
+</details>
+:::
+
+:::{.primjer}
+Odredimo derivaciju funkcije $f = \sqrt{x}$. Neka je $g(x) = x^2$, tada je $g^{-1} = f$. Vrijedi
+$$
+f'(x) = (g^{-1})'(x) = \frac{1}{g'(g^{-1}(x))} = \frac{1}{g'(\sqrt{x})} = \frac{1}{2\sqrt{x}}.
+$$
+
+:::
+
+## Derivacije elementarnih funkcija {.unnumbered}
+
+Pomoću definicije ćemo odrediti derivacije nekih elementarnih funkcija, a ostale samo prikazati u tablici.
+
+:::{.primjer}
+Po definiciji odredite derivaciju funkcije $f(x) = x^n$, $n \in \mathbb{N}$.
+$$
+\begin{align*}
+f'(c) &= \lim_{x \to c} \frac{f(x) - f(c)}{x - c} \\
+&= \lim_{x \to c} \frac{x^n - c^n}{x - c} \\
+&= \lim_{x \to c} \frac{(x - c)(x^{n-1} + x^{n-2}c + ... + xc^{n-2} + c^{n-1})}{x - c} \\
+&= \lim_{x \to c} (x^{n-1} + x^{n-2}c + ... + xc^{n-2} + c^{n-1}) \\
+&= nc^{n-1}.
+\end{align*}
+$$
+
+Dakle, $f'(x) = nx^{n-1}$.
+:::
+
+:::{.primjer}
+Po definiciji odredite derivaciju funkcije $f(x) = e^x$
+$$
+\begin{align*}
+f'(c) &= \lim_{x \to c} \frac{f(x) - f(c)}{x - c} \\
+&= \lim_{x \to c} \frac{e^x - e^c}{x - c} \\
+&= e^c \lim_{x \to c} \frac{e^{x-c} - 1}{x - c} \\
+&= e^c \lim_{x-c \to 0} \frac{e^{x-c} - 1}{x - c} \\
+&= e^c \lim_{h \to 0} \frac{e^{h} - 1}{h} \\
+&= e^c.
+\end{align*}
+$$
+
+Dakle, $f'(x) = e^c$.
+
+**Napomena:** u zadnjem koraku koristili smo činjenicu $\displaystyle \lim_{t \to 0} \frac{e^t-1}{t}=1$
+:::
+
+:::{.primjer}
+Odredite derivaciju funkcije $f(x) = \arcsin(x)$ koristeći formulu za derivaciju inverzne funkcije. Neka je $g(x) = \sin x$, tada je $g^{-1}(x) = f(x)$.
+$$
+\begin{align*}
+f'(c) = \arcsin'(x) = (\sin^{-1}(c))' &= \frac{1}{g'(g^{-1}(c))} \\
+&= \frac{1}{\cos(\arcsin(c))} \\
+&= \frac{1}{\sqrt{1 - \sin ^2 (\arcsin (c))}} \\
+&= \frac{1}{1 - c^2} \\
+\end{align*}
+$$
+
+Dakle, $f'(x) = \displaystyle \frac{1}{1 - x^2}$.
+
+**Napomena:** u petom koraku koristili smo identitet $\sin^2(x) + \cos^2(x) = 1.$
+:::
+
+### Tablica derivacija {.unnumbered}
+
+| Funkcija $f(x)$ | Derivacija $f'(x)$ |
+|:---:|:---:|
+| $c,\; c\in\mathbb{R}$ | $0$ |
+| $x$ | $1$ |
+| $x^n,\; n\in\mathbb{Z}$ | $nx^{n-1}$ |
+| $x^a,\; a\in\mathbb{R},\; x>0$ | $ax^{a-1}$ |
+| $\sqrt{x}$ | $\dfrac{1}{2\sqrt{x}}$ |
+| $a^x,\; a>0$ | $a^x\ln a$ |
+| $e^x$ | $e^x$ |
+| $\log_a x,\; a>0,\; a\neq 1$ | $\dfrac{1}{x\ln a}$ |
+| $\ln x$ | $\dfrac{1}{x}$ |
+| $\sin x$ | $\cos x$ |
+| $\cos x$ | $-\sin x$ |
+| $\tan x$ | $\dfrac{1}{\cos^2 x}$ |
+| $\cot x$ | $-\dfrac{1}{\sin^2 x}$ |
+| $\arcsin x$ | $\dfrac{1}{\sqrt{1-x^2}}$ |
+| $\arccos x$ | $-\dfrac{1}{\sqrt{1-x^2}}$ |
+| $\arctan x$ | $\dfrac{1}{1+x^2}$ |
+| $\sinh x$ | $\cosh x$ |
+| $\cosh x$ | $\sinh x$ |
+| $\tanh x$ | $\dfrac{1}{\cosh^2 x}$ |
+| $\coth x$ | $-\dfrac{1}{\sinh^2 x}$ |
+| $\operatorname{arcctg}x$ | $-\dfrac{1}{1+x^2}$ |
+| $\operatorname{Arsh}x$ | $\dfrac{1}{\sqrt{1+x^2}}$ |
+| $\operatorname{Arch}x$ | $\dfrac{1}{\sqrt{x^2-1}}$ |
+| $\operatorname{Arth}x$ | $\dfrac{1}{1-x^2}$ |
+| $\operatorname{Arcth}x$ | $\dfrac{1}{1-x^2}$ |
+
+### Pravila deriviranja {.unnumbered}
+| Pravilo | Formula |
+|:---:|:---:|
+| Zbroj i razlika | $(u\pm v)' = u' \pm v'$ |
+| Množenje konstantom | $(cu)' = cu'$ |
+| Produkt | $(uv)' = u'v + uv'$ |
+| Kvocijent | $\left(\dfrac{u}{v}\right)' = \dfrac{u'v-uv'}{v^2}$ |
+| Recipročna funkcija | $\left(\dfrac{1}{v}\right)' = -\dfrac{v'}{v^2}$ |
+| Kompozicija (lančano pravilo) | $(f\circ g)'(x) = f'(g(x))\,g'(x)$ |
+
+### Derivacije višeg reda {.unnumbered}
+| Funkcija | $n$-ta derivacija |
+|:---:|:---:|
+| $a^x$ | $(a^x)^{(n)} = a^x(\ln a)^n$ |
+| $\sin x$ | $(\sin x)^{(n)} = \sin\!\left(x+\dfrac{n\pi}{2}\right)$ |
+| $\cos x$ | $(\cos x)^{(n)} = \cos\!\left(x+\dfrac{n\pi}{2}\right)$ |
+| $\sinh x$ | $\begin{cases}\sinh x,& n \text{ paran}\\ \cosh x,& n \text{ neparan}\end{cases}$ |
+| $\cosh x$ | $\begin{cases}\cosh x,& n \text{ paran}\\ \sinh x,& n \text{ neparan}\end{cases}$ |
+| $x^m$ | $(x^m)^{(n)} = m(m-1)\cdots(m-n+1)x^{m-n}$ |
+| Leibnizova formula | $(uv)^{(n)} = \displaystyle\sum_{k=0}^{n}\binom{n}{k}u^{(k)}v^{(n-k)}$ |

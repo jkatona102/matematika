@@ -1,0 +1,47 @@
+# Uvod u derivacije {.unnumbered}
+
+Povijesno su postojala dva bitna problema koja su potaknula razvoj derivacija i diferencijalnog računa:
+
+- definiranje pojma brzine
+- problem postojanja tangente na krivulju
+
+## Fizikalna interpretacija derivacije {.unnumbered}
+
+Neka je $s(t), t \geq 0$, funkcija koja mjeri put koji je prošla materijalna točka u vremenskom intervalu $[0,t]$. Prosječna brzina te materijalne točke u vremenskom intervalu $[t_0,t]$ definira se kao 
+$$
+\overline{v}(t_0,t) = \frac{s(t) - s(t_0)}{t - t_0}
+$$ 
+
+No pitanje je kako definirati pojam brzine u trenutku $t_0$. To je nešto što nije moguće mjeriti, jer znamo mjeriti prosječnu brzinu, a ne brzinu na intervalu $[t_0,t_0]$ koji je duljine $0$.
+
+Ovim se problemom bavio Isaac Newton.
+
+Problem intervala duljine $0$ rješavamo koristeći limese. Promatramo limes funkcije $v$ u točki $t_0$: 
+$$
+v(t_0) = \lim_{t \to t_0} \overline{v}(t_0,t) = \lim_{t \to t_0} \frac{s(t) - s(t_0)}{t - t_0}
+$$
+
+ako taj limes postoji.
+
+## Geometrijska interpretacija derivacije {.unnumbered}
+
+Ovaj problem promatrao je Gottfried Leibniz. Odnosi se na problem postojanja jedinstvene tangente u nekoj točki grafa $\Gamma_f$ funkcije $f$. Sekanta kroz točke $C = (c,f(c))$ i $D = (d,f(d))$ ima koeficijent smjera 
+$$
+k_s = \frac{f(d) - f(c)}{d - c}
+$$
+
+Ako $d \to c$, odnosno, ako se točka $D$ po grafu $\Gamma_f$ približava točki $C$, tada sekanta postaje tangenta u točki $C$. Koeficijent smjera tangente definira se kao limes koeficijenta smjera sekante:
+$$
+k_t = \frac{f(d) - f(c)}{d - c}
+$$
+
+<div style="display:flex; justify-content:center;">
+  <iframe 
+    scrolling="no"
+    title="Tangenta i normala"
+    src="https://www.geogebra.org/material/iframe/id/bq4wmzc5/width/700/height/500/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/true/ld/true/sdz/true/ctl/false"
+    width="700"
+    height="500"
+    style="border:0;">
+  </iframe>
+</div>

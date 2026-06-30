@@ -1,0 +1,127 @@
+# Predaja zadataka
+
+Na ovoj stranici predajete zadatke.
+
+<div class="upload-form">
+  <h3>Predaja zadataka</h3>
+
+  <input type="text" id="ime" placeholder="Ime">
+  <input type="text" id="prezime" placeholder="Prezime">
+
+  <!-- 🔽 NOVO: izbor seta zadataka -->
+  <select id="setZadataka">
+    <option value="">Odaberi set zadataka</option>
+    <option value="Derivacije1">Derivacije 1. dio</option>
+    <option value="Derivacije2">Derivacije 2. dio</option>
+    <option value="Derivacije3">Derivacije 3. dio</option>
+  </select>
+
+  <!-- 📂 MULTI FILE -->
+  <input type="file" id="file" multiple>
+
+  <button id="uploadBtn" onclick="upload()">Pošalji rješenje</button>
+
+  <p id="status"></p>
+</div>
+
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+
+const supabaseUrl = "https://jwsvnvvexmwnvjovdbyg.supabase.co";
+const supabaseKey = "sb_publishable_OJODRwGSdsFkc78-XMO_LQ__B_a2EJ3";
+
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+function sanitize(str) {
+  return str
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-zA-Z0-9_-]/g, "_");
+}
+
+window.upload = async function () {
+
+  const btn = document.getElementById("uploadBtn");
+
+  const ime = document.getElementById("ime").value.trim();
+  const prezime = document.getElementById("prezime").value.trim();
+  const setZadataka = document.getElementById("setZadataka").value;
+  const files = document.getElementById("file").files;
+
+  if (!ime || !prezime || !setZadataka || files.length === 0) {
+    alert("Popuni sve podatke i odaberi set + datoteke.");
+    return;
+  }
+
+  // 🔥 loading state
+  btn.disabled = true;
+  btn.classList.add("loading");
+  btn.innerText = "Šaljem...";
+
+  const imeSafe = sanitize(ime);
+  const prezimeSafe = sanitize(prezime);
+
+  const uploadedFiles = [];
+
+  for (let file of files) {
+
+    const filePath = `${setZadataka}/${imeSafe}_${prezimeSafe}/${Date.now()}-${file.name.replace(/[^a-zA-Z0-9.\-_]/g, "_")}`;
+
+    const { error } = await supabase.storage
+      .from("submissions")
+      .upload(filePath, file);
+
+    if (error) {
+      console.error(error);
+      alert("Greška pri uploadu: " + file.name);
+
+      // reset button on error
+      btn.disabled = false;
+      btn.classList.remove("loading");
+      btn.innerText = "Pošalji rješenje";
+
+      return;
+    }
+
+    uploadedFiles.push({
+      ime,
+      prezime,
+      set_zadataka: setZadataka,
+      datoteka: file.name,
+      putanja: filePath
+    });
+  }
+
+  const { error: dbError } = await supabase
+    .from("predaje")
+    .insert(uploadedFiles);
+
+  if (dbError) {
+    console.error(dbError);
+    alert("DB ERROR: " + JSON.stringify(dbError));
+
+    btn.disabled = false;
+    btn.classList.remove("loading");
+    btn.innerText = "Pošalji rješenje";
+
+    return;
+  }
+
+  // ✅ success state
+  btn.classList.remove("loading");
+  btn.classList.add("success");
+  btn.innerText = "Uspješno ✔";
+
+  document.getElementById("status").innerText =
+    "Upload uspješan! Sve datoteke su spremljene.";
+
+  // reset after 3 seconds
+  setTimeout(() => {
+    btn.disabled = false;
+    btn.classList.remove("success");
+    btn.innerText = "Pošalji rješenje";
+  }, 3000);
+
+  console.log("Upload OK");
+};
+</script>

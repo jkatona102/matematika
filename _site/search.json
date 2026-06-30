@@ -1,0 +1,325 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "O stranici",
+    "section": "",
+    "text": "Na ovoj će stranici biti objavljeni materijali za rad. Svaka će se cjelina sastojati od teorija i zadataka koji će biti postupno objavljeni.\nNa stranici Novosti silazno će biti sortirane promjene koje su se dogodile na stranici (dodavanje materijala, ispravljanje greški i slično)."
+  },
+  {
+    "objectID": "predaja.html",
+    "href": "predaja.html",
+    "title": "1 Predaja zadataka",
+    "section": "",
+    "text": "1 Predaja zadataka\nNa ovoj stranici predajete zadatke.\n\n\nPredaja zadataka\n\n \n  Odaberi set zadataka Derivacije 1. dio Derivacije 2. dio Derivacije 3. dio \n \nPošalji rješenje",
+    "crumbs": [
+      "Home",
+      "Predavanje zadataka"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Matematika",
+    "section": "",
+    "text": "Ovo je Quarto stranica.\nDerivacije"
+  },
+  {
+    "objectID": "derivacije.html",
+    "href": "derivacije.html",
+    "title": "DERIVACIJE",
+    "section": "",
+    "text": "U ovom poglavlju dat ćemo povijesni pregled pojma derivacije, definirati pojam derivacije funkcije i navesti osnovna pravila za računanje derivacija. Također ćemo se upoznati s primjenama derivacija u različitim područjima matematike i znanosti.\n\n\n\n1.1 Uvod u derivacije",
+    "crumbs": [
+      "Home",
+      "1. Derivacije"
+    ]
+  },
+  {
+    "objectID": "derivacije-uvod.html",
+    "href": "derivacije-uvod.html",
+    "title": "Uvod u derivacije",
+    "section": "",
+    "text": "Povijesno su postojala dva bitna problema koja su potaknula razvoj derivacija i diferencijalnog računa:\n\ndefiniranje pojma brzine\nproblem postojanja tangente na krivulju\n\n\n\nNeka je \\(s(t), t \\geq 0\\), funkcija koja mjeri put koji je prošla materijalna točka u vremenskom intervalu \\([0,t]\\). Prosječna brzina te materijalne točke u vremenskom intervalu \\([t_0,t]\\) definira se kao \\[\n\\overline{v}(t_0,t) = \\frac{s(t) - s(t_0)}{t - t_0}\n\\]\nNo pitanje je kako definirati pojam brzine u trenutku \\(t_0\\). To je nešto što nije moguće mjeriti, jer znamo mjeriti prosječnu brzinu, a ne brzinu na intervalu \\([t_0,t_0]\\) koji je duljine \\(0\\).\nOvim se problemom bavio Isaac Newton.\nProblem intervala duljine \\(0\\) rješavamo koristeći limese. Promatramo limes funkcije \\(v\\) u točki \\(t_0\\): \\[\nv(t_0) = \\lim_{t \\to t_0} \\overline{v}(t_0,t) = \\lim_{t \\to t_0} \\frac{s(t) - s(t_0)}{t - t_0}\n\\]\nako taj limes postoji.\n\n\n\nOvaj problem promatrao je Gottfried Leibniz. Odnosi se na problem postojanja jedinstvene tangente u nekoj točki grafa \\(\\Gamma_f\\) funkcije \\(f\\). Sekanta kroz točke \\(C = (c,f(c))\\) i \\(D = (d,f(d))\\) ima koeficijent smjera \\[\nk_s = \\frac{f(d) - f(c)}{d - c}\n\\]\nAko \\(d \\to c\\), odnosno, ako se točka \\(D\\) po grafu \\(\\Gamma_f\\) približava točki \\(C\\), tada sekanta postaje tangenta u točki \\(C\\). Koeficijent smjera tangente definira se kao limes koeficijenta smjera sekante: \\[\nk_t = \\frac{f(d) - f(c)}{d - c}\n\\]",
+    "crumbs": [
+      "Home",
+      "1. Derivacije",
+      "1.1 Uvod u derivacije"
+    ]
+  },
+  {
+    "objectID": "derivacije.html#sadržaj-poglavlja",
+    "href": "derivacije.html#sadržaj-poglavlja",
+    "title": "DERIVACIJE",
+    "section": "",
+    "text": "1.1 Uvod u derivacije",
+    "crumbs": [
+      "Home",
+      "1. Derivacije"
+    ]
+  },
+  {
+    "objectID": "derivacije-uvod.html#fizikalna-interpretacija-derivacije",
+    "href": "derivacije-uvod.html#fizikalna-interpretacija-derivacije",
+    "title": "Uvod u derivacije",
+    "section": "",
+    "text": "Neka je \\(s(t), t \\geq 0\\), funkcija koja mjeri put koji je prošla materijalna točka u vremenskom intervalu \\([0,t]\\). Prosječna brzina te materijalne točke u vremenskom intervalu \\([t_0,t]\\) definira se kao \\[\n\\overline{v}(t_0,t) = \\frac{s(t) - s(t_0)}{t - t_0}\n\\]\nNo pitanje je kako definirati pojam brzine u trenutku \\(t_0\\). To je nešto što nije moguće mjeriti, jer znamo mjeriti prosječnu brzinu, a ne brzinu na intervalu \\([t_0,t_0]\\) koji je duljine \\(0\\).\nOvim se problemom bavio Isaac Newton.\nProblem intervala duljine \\(0\\) rješavamo koristeći limese. Promatramo limes funkcije \\(v\\) u točki \\(t_0\\): \\[\nv(t_0) = \\lim_{t \\to t_0} \\overline{v}(t_0,t) = \\lim_{t \\to t_0} \\frac{s(t) - s(t_0)}{t - t_0}\n\\]\nako taj limes postoji.",
+    "crumbs": [
+      "Home",
+      "1. Derivacije",
+      "1.1 Uvod u derivacije"
+    ]
+  },
+  {
+    "objectID": "derivacije-uvod.html#footnotes",
+    "href": "derivacije-uvod.html#footnotes",
+    "title": "1.1 Uvod u derivacije",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIsaac Newton je razvio koncept derivacije kao način za definiranje brzine u trenutku, što je bilo ključno za razvoj diferencijalnog računa.↩︎",
+    "crumbs": [
+      "Home",
+      "1. Derivacije",
+      "1.1 Uvod u derivacije"
+    ]
+  },
+  {
+    "objectID": "derivacije-uvod.html#geometrijska-interpretacija-derivacije",
+    "href": "derivacije-uvod.html#geometrijska-interpretacija-derivacije",
+    "title": "Uvod u derivacije",
+    "section": "",
+    "text": "Ovaj problem promatrao je Gottfried Leibniz. Odnosi se na problem postojanja jedinstvene tangente u nekoj točki grafa \\(\\Gamma_f\\) funkcije \\(f\\). Sekanta kroz točke \\(C = (c,f(c))\\) i \\(D = (d,f(d))\\) ima koeficijent smjera \\[\nk_s = \\frac{f(d) - f(c)}{d - c}\n\\]\nAko \\(d \\to c\\), odnosno, ako se točka \\(D\\) po grafu \\(\\Gamma_f\\) približava točki \\(C\\), tada sekanta postaje tangenta u točki \\(C\\). Koeficijent smjera tangente definira se kao limes koeficijenta smjera sekante: \\[\nk_t = \\frac{f(d) - f(c)}{d - c}\n\\]",
+    "crumbs": [
+      "Home",
+      "1. Derivacije",
+      "1.1 Uvod u derivacije"
+    ]
+  },
+  {
+    "objectID": "derivacije-definicija.html",
+    "href": "derivacije-definicija.html",
+    "title": "Definicija",
+    "section": "",
+    "text": "Neka je \\(I \\subseteq \\mathbb{R}\\) otvoreni interval. Kažemo da je funkcija \\(f \\colon I \\to \\mathbb{R}\\) diferencijabilna ili derivabilna u točki \\(c \\in I\\), ako postoji limes \\[\n\\lim_{d \\to c} \\frac{f(d) - f(c)}{d - c}\n\\]\nTaj broj zovemo derivacija (izvod) funkcije \\(f\\) u točki \\(c\\) i pišemo \\[\nf'(c) = \\lim_{d \\to c} \\frac{f(d) - f(c)}{d - c}\n\\]\nJoš označavamo i s \\(Df(c)\\) ili \\(\\displaystyle \\frac{df}{dx}(c)\\).\n\nKažemo da je \\(f\\) diferencijabilna na intervalu \\(I\\) ako je diferencijabilna u svakoj točki \\(c \\in I\\). U tom slučaju definiramo funkciju \\(f' \\colon I \\to \\mathbb{R}\\), koja svakoj točki \\(c \\in I\\) pridružuje derivaciju funkcije \\(f\\) u toj točki.\nAnalogno definiramo derivacije više reda: \\[\nf^{(n+1)}(c) = \\lim_{d \\to c} \\frac{f^{(n)}(d) - f^{(n)}(c)}{d - c}\n\\]\nNavedi problemi imaju sljedeća rješenja u navednoj definiciji:\n\nFunkcija \\(g\\) definirana s \\(g(x) = f'(c)(x− c) + f(c), x \\in \\mathbb{R}\\), je lokalno najbolja aproksimacija funkcije \\(f\\) oko \\(c\\) među polinomima stupnja \\(\\leq 1\\).\nBrzina materijalne točke, čiji put u vremenu \\(t\\) opisuje funkcija \\(t \\to s(t)\\), dana je s \\(v(t) = s'(t)\\), tj. brzina je prva derivacija funkcije puta po vremenu. Analogno se ubrzanje definira kao derivacija brzine po vremenu, tj. \\(a(t) = v'(t) = s''(t)\\).\nTangenta na graf funkcije \\(f\\) za točku \\(c\\), ili u točki grafa \\((c,f(c))\\), je pravac koji je graf linearne funkcije \\(g\\) iz točke 1. Jasno, moguće je odmah zadati i funkciju \\(\\displaystyle h(x) = -\\frac{1}{f'(c)}(x− c) + f(c)\\), čiji graf je normala na graf funkcije u točki \\(c\\).\n\n\nOdredimo derivaciju konstantne funkcije \\(f(x) = \\alpha , \\forall x \\in \\mathbb{R}\\) u točki \\(c \\in \\mathbb{R}\\): \\[\nf'(c) = \\lim_{x \\to c} \\frac{f(x) - f(c)}{x - c} = \\lim_{x \\to c} \\frac{\\alpha - \\alpha}{x - c} = 0\n\\]\nDakle, \\(f'(x) = 0, \\forall x \\in \\mathbb{R}\\).\n\n\nOdredimo derivaciju funkcije \\(f(x) = x\\) u točki \\(c \\in \\mathbb{R}\\): \\[\nf'(c) = \\lim_{x \\to c} \\frac{f(x) - f(c)}{x - c} = \\lim_{x \\to c} \\frac{x - c}{x - c} = 1\n\\]\nDakle, \\(f'(x) = 1, \\forall x \\in \\mathbb{R}\\).\n\n\nPrimijetimo da funkcija \\(f(x) = |x|\\) nije diferencijabilna u točki \\(c = 0\\): \\[\nf'(0) = \\lim_{x \\to 0} \\frac{f(x) - f(0)}{x - 0} = \\lim_{x \\to 0} \\frac{|x| - 0}{x} = \\lim_{x \\to 0} \\frac{|x|}{x}\n\\]\nOvaj limes ne postoji: prilazeći s negativne strane limes je \\(-1\\), a prilazeći s pozitivne strane limes je \\(1\\). Stoga funkcija \\(f(x) = |x|\\) nije diferencijabilna u točki \\(x = 0\\).\n\n\n\nSljedeći je teorem bitan:\n\nAko je funkcija \\(f \\colon I \\to \\mathbb{R}\\) diferencijabilna u točki \\(c\\) otvorenog intervala \\(I\\), onda je \\(f\\) neprekidna u \\(c\\).\n\n\n\n\nPrikaži dokaz\n\nZbog diferencijabilnosti funkcije \\(f\\) u točki \\(c\\) je funkcija \\[\n\\omega = \\begin{cases}\n\\displaystyle \\frac{f(x) - f(c)}{x - c} - f'(c) & \\text{ako } x \\neq c, \\\\\n\\hspace{2.4em}0 & \\text{ako } x = c.\n\\end{cases}\n\\]\nneprekidna u \\(c\\). Naime, \\(\\omega(c) = 0 = \\lim_{x \\to c} \\displaystyle \\left (\\frac{f(x) - f(c)}{x - c} - f'(c) \\right ) = \\lim_{x \\to c} \\omega(x)\\).\nSada je \\(f(x) = f(c) + (f'(c) + \\omega (x))(x− c), \\ x \\in I\\) odakle zbog neprekidnosti od \\(\\omega\\) u \\(c\\) slijedi tvrdnja.\n\n\n\nNeka su funkcije \\(f,g \\colon I \\to \\mathbb{R}\\) diferencijabilne u točki \\(c\\) otvorenog intervala \\(I\\).\n\nFunkcija \\(f + g\\) je diferencijabilna u točki \\(c\\) i \\[\n(f + g)'(c) = f'(c) + g'(c).\n\\]\nFunkcija \\(f \\dot g\\) je diferencijabilna u točki \\(c\\) i \\[\n(fg)'(c) = f'(c) g(c) + f(c) g'(c).\n\\]\nAko je funkcija \\(\\frac{f}{g}\\) definirana na \\(I\\), onda je i diferencijabilna u točki \\(c\\) i \\[\n\\left(\\frac{f}{g}\\right)'(c) = \\frac{f'(c) g(c) - f(c) g'(c)}{g(c)^2}.\n\\]\n\n\n\nNeka su funkcije \\(f,g \\colon I \\to \\mathbb{R}\\) diferencijabilne u točki \\(c\\) otvorenog intervala \\(I\\). Tada je za sve \\(\\lambda , \\mu \\in \\mathbb{R}\\) funkcija \\(\\lambda f + \\mu g\\) diferencijabilna u točki \\(c\\) i vrijedi \\[\n(\\lambda f + \\mu g)'(c) = \\lambda f'(c) + \\mu g'(c).\n\\]\nSkup svih funkcija s \\(I\\) u \\(\\mathbb{R}\\) koje su diferencijabilne u točki \\(c\\) je vektorski prostor (uz operacije zbrajanja i množenja sa skalarom definiranim po točkama), a pridruživanje \\(f \\to f'(c)\\) je linearan funkcional (linearni operator s kodomenom \\(\\mathbb{R}\\)) na tom prostoru.",
+    "crumbs": [
+      "Home",
+      "1. Derivacije",
+      "1.2 Definicija"
+    ]
+  },
+  {
+    "objectID": "derivacije-racunanje.html",
+    "href": "derivacije-racunanje.html",
+    "title": "Pravila za računanje derivacija",
+    "section": "",
+    "text": "Vidjeli smo da su zbroj, produkt i kvocijent diferencijablnih funkciaj također diferencijalnih i da je derivacija linearne kombinacije diferenicijalnih funkcija linearna kombinacija njihovih derivacija.\nU ovom poglavlju navest ćemo još neka pravila za računanje derivacija koja nam omogućuju da izračunamo derivaciju složenijih funkcija.\nZa početak pokažimo rezultat za derivaciju kompozicije:\n\n\n\nNeka su \\(f \\colon I \\to \\mathbb{R}\\), \\(g \\colon J \\to \\mathbb{R}\\) i neka je \\(f(I) \\subseteq J\\), tj. kompozicija \\(g \\circ f \\colon I \\to \\mathbb{R}\\) je dobro definirana na \\(I\\). Ako je \\(f\\) diferencijabilna u točki \\(c \\in I\\) i funkcija \\(g\\) diferencijabilna u točki \\(d = f(c) \\in J\\), onda je kompozicija \\(g \\circ f \\colon I \\to \\mathbb{R}\\) diferencijabilna u točki \\(c\\) i vrijedi \\[\n(g \\circ f)'(c) = g'(f(c)) f'(c).\n\\]\n\n\n\n\nPrikaži dokaz\n\nNeka su dane funkcije \\[\n\\omega = \\begin{cases}\n\\displaystyle \\frac{f(x) - f(c)}{x - c} - f'(c) & \\text{ako } x \\neq c, \\\\\n\\hspace{2.4em}0 & \\text{ako } x = c.\n\\end{cases}\n\\]\ni za funkciju \\(g\\) \\[\n\\omega _1 = \\begin{cases}\n\\displaystyle \\frac{g(x) - g(d)}{x - d} - g'(d) & \\text{ako } x \\neq d, \\\\\n\\hspace{2.4em}0 & \\text{ako } x = d.\n\\end{cases}\n\\]\nTada vrijedi \\(g(y) = g(d) + (g'(d) + \\omega_1(y))(y - d)\\) za sve \\(y \\in J\\).\nNeka je \\(h = g \\circ f\\). Tada je \\(h(x) = g[f(x)] = g(d) + [g'(d) + \\omega _1(f(x))](f(x) - f(c))\\)\nšto daje \\[\n\\frac{h(x) - h(c)}{x - c} = [g'(d) + \\omega_1(f(x))] \\frac{f(x) - f(c)}{x - c}\n\\]\nZbog neprkidnosti funkcije \\(f\\) u točki \\(c\\) i neprekidnosti \\(\\omega _1\\) u \\(d = f(c)\\), funkcija \\(\\omega _1 \\circ f\\) je neprekidna u \\(c\\) i \\((\\omega _1 \\circ f)(c) = \\omega _1(f(c)) = \\omega _1(d) = 0\\). Stoga je\n\\[\nh'(c) = \\lim_{x \\to c} \\frac{h(x) - h(c)}{x - c} = \\lim_{x \\to c} [g'(d) + \\omega_1(f(x))] \\frac{f(x) - f(c)}{x - c} = g'(d) f'(c).\n\\]\nodakle slijedi tvrdnja.\n\n\n\nDerivirajmo funkciju \\(f(x) = \\sin(x^2)\\). Ovdje je \\(g(x) = \\sin x\\) i \\(f(x) = x^2\\). Tada je \\(g'(x) = \\cos x\\) i \\(f'(x) = 2x\\). Primjenom pravila za derivaciju kompozicije dobivamo \\[\nf'(x) = g'(f(x)) f'(x) = \\cos(x^2) \\cdot 2x.\n\\]\n\n\nDerivirajmo funkciju \\(f(x) = \\ln (x^2 + 1)\\). Ovdje je \\(g(x) = \\ln x\\) i \\(f(x) = x^2 + 1\\). Tada je \\(g'(x) = \\frac{1}{x}\\) i \\(f'(x) = 2x\\). Primjenom pravila za derivaciju kompozicije dobivamo \\[\nf'(x) = g'(f(x)) f'(x) = \\frac{1}{x^2 + 1} \\cdot 2x.\n\\]\n\nU gornji su primjerima eksplicitno određene vanjska i unutarnja funkcija, u praksi se to ne radi, već direktno primjenjujemo teorem.\n\n\n\n\nNeka je \\(f \\colon I \\to J, I,J \\subseteq \\mathbb{R}\\), \\(I\\) otvoren interval i neka je \\(f\\) neprekidna bijekcija na \\(I\\). Ako \\(f\\) ima derivaciju u točki \\(c \\in I\\) i ako je \\(f'(c) \\neq 0\\), onda je \\(f^{-1}\\) diferencijabilna u točki \\(d = f(c)\\) i vrijedi \\((f^{-1})'(d) = \\frac{1}{f'(c)}\\).\n\n\n\n\nPrikaži dokaz\n\nPo svojstvima neprekidnih fukcija znamo da je i \\(f^{-1} \\colon J \\to I\\) neprekidna funkcija. Nadalje, iz diferencijabilnosti funkcije \\(f\\) u točki \\(c\\) slijedi \\[\nf(x) − f(c) = (x − c)[f'(c) + \\omega(x)],\n\\]\ngdje je \\(\\omega\\) funkcija neprekidna u \\(c\\) definirana kao i u prethodnim teoremima. Stavimo \\(d = f(c)\\) i \\(y = f(x)\\) pa dobivamo \\[\ny − d = [f^{-1}(y)− f^{-1}(d)][f'(c) + \\omega(f^{-1}(y))].\n\\]\nOdatle dobivamo \\[\n\\frac{f^{-1}(y)− f^{-1}(d)}{y - d} = \\frac{1}{f'(c) + \\omega(f^{-1}(y))}\n\\]\nšto zbog neprekidnosti funkcije \\(\\omega \\circ f^{-1}\\) u točki \\(d\\) i \\((\\omega \\circ f^{-1})(d) = 0\\) dje jednakost \\[\n(f^{-1})'(d) = \\lim_{y \\to d} \\frac{f^{-1}(y)− f^{-1}(d)}{y - d} = \\frac{1}{f'(c)}\n\\]\nPrethodnu formulu koristimo u obliku \\[\n(f^{-1})'(x) = \\frac{1}{f'(f^{-1}(x))}.\n\\]\n\n\n\nOdredimo derivaciju funkcije \\(f = \\sqrt{x}\\). Neka je \\(g(x) = x^2\\), tada je \\(g^{-1} = f\\). Vrijedi \\[\nf'(x) = (g^{-1})'(x) = \\frac{1}{g'(g^{-1}(x))} = \\frac{1}{g'(\\sqrt{x})} = \\frac{1}{2\\sqrt{x}}.\n\\]\n\n\n\n\nPomoću definicije ćemo odrediti derivacije nekih elementarnih funkcija, a ostale samo prikazati u tablici.\n\nPo definiciji odredite derivaciju funkcije \\(f(x) = x^n\\), \\(n \\in \\mathbb{N}\\). \\[\n\\begin{align*}\nf'(c) &= \\lim_{x \\to c} \\frac{f(x) - f(c)}{x - c} \\\\\n&= \\lim_{x \\to c} \\frac{x^n - c^n}{x - c} \\\\\n&= \\lim_{x \\to c} \\frac{(x - c)(x^{n-1} + x^{n-2}c + ... + xc^{n-2} + c^{n-1})}{x - c} \\\\\n&= \\lim_{x \\to c} (x^{n-1} + x^{n-2}c + ... + xc^{n-2} + c^{n-1}) \\\\\n&= nc^{n-1}.\n\\end{align*}\n\\]\nDakle, \\(f'(x) = nx^{n-1}\\).\n\n\nPo definiciji odredite derivaciju funkcije \\(f(x) = e^x\\) \\[\n\\begin{align*}\nf'(c) &= \\lim_{x \\to c} \\frac{f(x) - f(c)}{x - c} \\\\\n&= \\lim_{x \\to c} \\frac{e^x - e^c}{x - c} \\\\\n&= e^c \\lim_{x \\to c} \\frac{e^{x-c} - 1}{x - c} \\\\\n&= e^c \\lim_{x-c \\to 0} \\frac{e^{x-c} - 1}{x - c} \\\\\n&= e^c \\lim_{h \\to 0} \\frac{e^{h} - 1}{h} \\\\\n&= e^c.\n\\end{align*}\n\\]\nDakle, \\(f'(x) = e^c\\).\n\n\nOdredite derivaciju funkcije \\(f(x) = \\arcsin(x)\\) koristeći formulu za derivaciju inverzne funkcije. Neka je \\(g(x) = \\sin x\\), tada je \\(g^{-1}(x) = f(x)\\). \\[\n\\begin{align*}\nf'(c) = \\arcsin'(x) = (\\sin^{-1}(c))' &= \\frac{1}{g'(g^{-1}(c))} \\\\\n&= \\frac{1}{\\cos(\\arcsin(c))} \\\\\n&= \\frac{1}{\\sqrt{1 - \\sin ^2 (\\arcsin (c))}} \\\\\n&= \\frac{1}{1 - c^2} \\\\\n\\end{align*}\n\\]\nDakle, \\(f'(x) = \\displaystyle \\frac{1}{1 - x^2}\\).\nNapomena: u petom koraku koristili smo identitet \\(\\sin^2(x) + cos^2(x) = 1.\\)\n\n\n\n\n\n\nFunkcija \\(f(x)\\)\nDerivacija \\(f'(x)\\)\n\n\n\n\n\\(c,\\; c\\in\\mathbb{R}\\)\n\\(0\\)\n\n\n\\(x\\)\n\\(1\\)\n\n\n\\(x^n,\\; n\\in\\mathbb{Z}\\)\n\\(nx^{n-1}\\)\n\n\n\\(x^a,\\; a\\in\\mathbb{R},\\; x&gt;0\\)\n\\(ax^{a-1}\\)\n\n\n\\(\\sqrt{x}\\)\n\\(\\dfrac{1}{2\\sqrt{x}}\\)\n\n\n\\(a^x,\\; a&gt;0\\)\n\\(a^x\\ln a\\)\n\n\n\\(e^x\\)\n\\(e^x\\)\n\n\n\\(\\log_a x,\\; a&gt;0,\\; a\\neq 1\\)\n\\(\\dfrac{1}{x\\ln a}\\)\n\n\n\\(\\ln x\\)\n\\(\\dfrac{1}{x}\\)\n\n\n\\(\\sin x\\)\n\\(\\cos x\\)\n\n\n\\(\\cos x\\)\n\\(-\\sin x\\)\n\n\n\\(\\tan x\\)\n\\(\\dfrac{1}{\\cos^2 x}\\)\n\n\n\\(\\cot x\\)\n\\(-\\dfrac{1}{\\sin^2 x}\\)\n\n\n\\(\\arcsin x\\)\n\\(\\dfrac{1}{\\sqrt{1-x^2}}\\)\n\n\n\\(\\arccos x\\)\n\\(-\\dfrac{1}{\\sqrt{1-x^2}}\\)\n\n\n\\(\\arctan x\\)\n\\(\\dfrac{1}{1+x^2}\\)\n\n\n\\(\\sinh x\\)\n\\(\\cosh x\\)\n\n\n\\(\\cosh x\\)\n\\(\\sinh x\\)\n\n\n\\(\\tanh x\\)\n\\(\\dfrac{1}{\\cosh^2 x}\\)\n\n\n\\(\\coth x\\)\n\\(-\\dfrac{1}{\\sinh^2 x}\\)\n\n\n\\(\\operatorname{arcctg}x\\)\n\\(-\\dfrac{1}{1+x^2}\\)\n\n\n\\(\\operatorname{Arsh}x\\)\n\\(\\dfrac{1}{\\sqrt{1+x^2}}\\)\n\n\n\\(\\operatorname{Arch}x\\)\n\\(\\dfrac{1}{\\sqrt{x^2-1}}\\)\n\n\n\\(\\operatorname{Arth}x\\)\n\\(\\dfrac{1}{1-x^2}\\)\n\n\n\\(\\operatorname{Arcth}x\\)\n\\(\\dfrac{1}{1-x^2}\\)\n\n\n\n\n\n\n\nPravila deriviranja\n\n\n\n\n\n\nPravilo\nFormula\n\n\n\n\nZbroj i razlika\n\\((u\\pm v)' = u' \\pm v'\\)\n\n\nMnoženje konstantom\n\\((cu)' = cu'\\)\n\n\nProdukt\n\\((uv)' = u'v + uv'\\)\n\n\nKvocijent\n\\(\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v-uv'}{v^2}\\)\n\n\nRecipročna funkcija\n\\(\\left(\\dfrac{1}{v}\\right)' = -\\dfrac{v'}{v^2}\\)\n\n\nKompozicija (lančano pravilo)\n\\((f\\circ g)'(x) = f'(g(x))\\,g'(x)\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunkcija\n\\(n\\)-ta derivacija\n\n\n\n\n\\(a^x\\)\n\\((a^x)^{(n)} = a^x(\\ln a)^n\\)\n\n\n\\(\\sin x\\)\n\\((\\sin x)^{(n)} = \\sin\\!\\left(x+\\dfrac{n\\pi}{2}\\right)\\)\n\n\n\\(\\cos x\\)\n\\((\\cos x)^{(n)} = \\cos\\!\\left(x+\\dfrac{n\\pi}{2}\\right)\\)\n\n\n\\(\\sinh x\\)\n\\(\\begin{cases}\\sinh x,& n \\text{ paran}\\\\ \\cosh x,& n \\text{ neparan}\\end{cases}\\)\n\n\n\\(\\cosh x\\)\n\\(\\begin{cases}\\cosh x,& n \\text{ paran}\\\\ \\sinh x,& n \\text{ neparan}\\end{cases}\\)\n\n\n\\(x^m\\)\n\\((x^m)^{(n)} = m(m-1)\\cdots(m-n+1)x^{m-n}\\)\n\n\nLeibnizova formula\n\\((uv)^{(n)} = \\displaystyle\\sum_{k=0}^{n}\\binom{n}{k}u^{(k)}v^{(n-k)}\\)",
+    "crumbs": [
+      "Home",
+      "1. Derivacije",
+      "1.3 Pravila za računanje derivacija"
+    ]
+  },
+  {
+    "objectID": "derivacije-racunanje.html#derivacija-kompozicije",
+    "href": "derivacije-racunanje.html#derivacija-kompozicije",
+    "title": "Pravila za računanje derivacija",
+    "section": "",
+    "text": "Neka su \\(f \\colon I \\to \\mathbb{R}\\), \\(g \\colon J \\to \\mathbb{R}\\) i neka je \\(f(I) \\subseteq J\\), tj. kompozicija \\(g \\circ f \\colon I \\to \\mathbb{R}\\) je dobro definirana na \\(I\\). Ako je \\(f\\) diferencijabilna u točki \\(c \\in I\\) i funkcija \\(g\\) diferencijabilna u točki \\(d = f(c) \\in J\\), onda je kompozicija \\(g \\circ f \\colon I \\to \\mathbb{R}\\) diferencijabilna u točki \\(c\\) i vrijedi \\[\n(g \\circ f)'(c) = g'(f(c)) f'(c).\n\\]\n\n\n\n\nPrikaži dokaz\n\nNeka su dane funkcije \\[\n\\omega = \\begin{cases}\n\\displaystyle \\frac{f(x) - f(c)}{x - c} - f'(c) & \\text{ako } x \\neq c, \\\\\n\\hspace{2.4em}0 & \\text{ako } x = c.\n\\end{cases}\n\\]\ni za funkciju \\(g\\) \\[\n\\omega _1 = \\begin{cases}\n\\displaystyle \\frac{g(x) - g(d)}{x - d} - g'(d) & \\text{ako } x \\neq d, \\\\\n\\hspace{2.4em}0 & \\text{ako } x = d.\n\\end{cases}\n\\]\nTada vrijedi \\(g(y) = g(d) + (g'(d) + \\omega_1(y))(y - d)\\) za sve \\(y \\in J\\).\nNeka je \\(h = g \\circ f\\). Tada je \\(h(x) = g[f(x)] = g(d) + [g'(d) + \\omega _1(f(x))](f(x) - f(c))\\)\nšto daje \\[\n\\frac{h(x) - h(c)}{x - c} = [g'(d) + \\omega_1(f(x))] \\frac{f(x) - f(c)}{x - c}\n\\]\nZbog neprkidnosti funkcije \\(f\\) u točki \\(c\\) i neprekidnosti \\(\\omega _1\\) u \\(d = f(c)\\), funkcija \\(\\omega _1 \\circ f\\) je neprekidna u \\(c\\) i \\((\\omega _1 \\circ f)(c) = \\omega _1(f(c)) = \\omega _1(d) = 0\\). Stoga je\n\\[\nh'(c) = \\lim_{x \\to c} \\frac{h(x) - h(c)}{x - c} = \\lim_{x \\to c} [g'(d) + \\omega_1(f(x))] \\frac{f(x) - f(c)}{x - c} = g'(d) f'(c).\n\\]\nodakle slijedi tvrdnja.\n\n\n\nDerivirajmo funkciju \\(f(x) = \\sin(x^2)\\). Ovdje je \\(g(x) = \\sin x\\) i \\(f(x) = x^2\\). Tada je \\(g'(x) = \\cos x\\) i \\(f'(x) = 2x\\). Primjenom pravila za derivaciju kompozicije dobivamo \\[\nf'(x) = g'(f(x)) f'(x) = \\cos(x^2) \\cdot 2x.\n\\]\n\n\nDerivirajmo funkciju \\(f(x) = \\ln (x^2 + 1)\\). Ovdje je \\(g(x) = \\ln x\\) i \\(f(x) = x^2 + 1\\). Tada je \\(g'(x) = \\frac{1}{x}\\) i \\(f'(x) = 2x\\). Primjenom pravila za derivaciju kompozicije dobivamo \\[\nf'(x) = g'(f(x)) f'(x) = \\frac{1}{x^2 + 1} \\cdot 2x.\n\\]\n\nU gornji su primjerima eksplicitno određene vanjska i unutarnja funkcija, u praksi se to ne radi, već direktno primjenjujemo teorem.",
+    "crumbs": [
+      "Home",
+      "1. Derivacije",
+      "1.3 Pravila za računanje derivacija"
+    ]
+  },
+  {
+    "objectID": "derivacije-racunanje.html#derivacija-inverzne-funkcije",
+    "href": "derivacije-racunanje.html#derivacija-inverzne-funkcije",
+    "title": "Pravila za računanje derivacija",
+    "section": "",
+    "text": "Neka je \\(f \\colon I \\to J, I,J \\subseteq \\mathbb{R}\\), \\(I\\) otvoren interval i neka je \\(f\\) neprekidna bijekcija na \\(I\\). Ako \\(f\\) ima derivaciju u točki \\(c \\in I\\) i ako je \\(f'(c) \\neq 0\\), onda je \\(f^{-1}\\) diferencijabilna u točki \\(d = f(c)\\) i vrijedi \\((f^{-1})'(d) = \\frac{1}{f'(c)}\\).\n\n\n\n\nPrikaži dokaz\n\nPo svojstvima neprekidnih fukcija znamo da je i \\(f^{-1} \\colon J \\to I\\) neprekidna funkcija. Nadalje, iz diferencijabilnosti funkcije \\(f\\) u točki \\(c\\) slijedi \\[\nf(x) − f(c) = (x − c)[f'(c) + \\omega(x)],\n\\]\ngdje je \\(\\omega\\) funkcija neprekidna u \\(c\\) definirana kao i u prethodnim teoremima. Stavimo \\(d = f(c)\\) i \\(y = f(x)\\) pa dobivamo \\[\ny − d = [f^{-1}(y)− f^{-1}(d)][f'(c) + \\omega(f^{-1}(y))].\n\\]\nOdatle dobivamo \\[\n\\frac{f^{-1}(y)− f^{-1}(d)}{y - d} = \\frac{1}{f'(c) + \\omega(f^{-1}(y))}\n\\]\nšto zbog neprekidnosti funkcije \\(\\omega \\circ f^{-1}\\) u točki \\(d\\) i \\((\\omega \\circ f^{-1})(d) = 0\\) dje jednakost \\[\n(f^{-1})'(d) = \\lim_{y \\to d} \\frac{f^{-1}(y)− f^{-1}(d)}{y - d} = \\frac{1}{f'(c)}\n\\]\nPrethodnu formulu koristimo u obliku \\[\n(f^{-1})'(x) = \\frac{1}{f'(f^{-1}(x))}.\n\\]\n\n\n\nOdredimo derivaciju funkcije \\(f = \\sqrt{x}\\). Neka je \\(g(x) = x^2\\), tada je \\(g^{-1} = f\\). Vrijedi \\[\nf'(x) = (g^{-1})'(x) = \\frac{1}{g'(g^{-1}(x))} = \\frac{1}{g'(\\sqrt{x})} = \\frac{1}{2\\sqrt{x}}.\n\\]",
+    "crumbs": [
+      "Home",
+      "1. Derivacije",
+      "1.3 Pravila za računanje derivacija"
+    ]
+  },
+  {
+    "objectID": "derivacije-definicija.html#neprekidnost-i-diferencijabilnost",
+    "href": "derivacije-definicija.html#neprekidnost-i-diferencijabilnost",
+    "title": "Definicija",
+    "section": "",
+    "text": "Sljedeći je teorem bitan:\n\nAko je funkcija \\(f \\colon I \\to \\mathbb{R}\\) diferencijabilna u točki \\(c\\) otvorenog intervala \\(I\\), onda je \\(f\\) neprekidna u \\(c\\).\n\n\n\n\nPrikaži dokaz\n\nZbog diferencijabilnosti funkcije \\(f\\) u točki \\(c\\) je funkcija \\[\n\\omega = \\begin{cases}\n\\displaystyle \\frac{f(x) - f(c)}{x - c} - f'(c) & \\text{ako } x \\neq c, \\\\\n\\hspace{2.4em}0 & \\text{ako } x = c.\n\\end{cases}\n\\]\nneprekidna u \\(c\\). Naime, \\(\\omega(c) = 0 = \\lim_{x \\to c} \\displaystyle \\left (\\frac{f(x) - f(c)}{x - c} - f'(c) \\right ) = \\lim_{x \\to c} \\omega(x)\\).\nSada je \\(f(x) = f(c) + (f'(c) + \\omega (x))(x− c), \\ x \\in I\\) odakle zbog neprekidnosti od \\(\\omega\\) u \\(c\\) slijedi tvrdnja.\n\n\n\nNeka su funkcije \\(f,g \\colon I \\to \\mathbb{R}\\) diferencijabilne u točki \\(c\\) otvorenog intervala \\(I\\).\n\nFunkcija \\(f + g\\) je diferencijabilna u točki \\(c\\) i \\[\n(f + g)'(c) = f'(c) + g'(c).\n\\]\nFunkcija \\(f \\dot g\\) je diferencijabilna u točki \\(c\\) i \\[\n(fg)'(c) = f'(c) g(c) + f(c) g'(c).\n\\]\nAko je funkcija \\(\\frac{f}{g}\\) definirana na \\(I\\), onda je i diferencijabilna u točki \\(c\\) i \\[\n\\left(\\frac{f}{g}\\right)'(c) = \\frac{f'(c) g(c) - f(c) g'(c)}{g(c)^2}.\n\\]\n\n\n\nNeka su funkcije \\(f,g \\colon I \\to \\mathbb{R}\\) diferencijabilne u točki \\(c\\) otvorenog intervala \\(I\\). Tada je za sve \\(\\lambda , \\mu \\in \\mathbb{R}\\) funkcija \\(\\lambda f + \\mu g\\) diferencijabilna u točki \\(c\\) i vrijedi \\[\n(\\lambda f + \\mu g)'(c) = \\lambda f'(c) + \\mu g'(c).\n\\]\nSkup svih funkcija s \\(I\\) u \\(\\mathbb{R}\\) koje su diferencijabilne u točki \\(c\\) je vektorski prostor (uz operacije zbrajanja i množenja sa skalarom definiranim po točkama), a pridruživanje \\(f \\to f'(c)\\) je linearan funkcional (linearni operator s kodomenom \\(\\mathbb{R}\\)) na tom prostoru.",
+    "crumbs": [
+      "Home",
+      "1. Derivacije",
+      "1.2 Definicija"
+    ]
+  },
+  {
+    "objectID": "derivacije-racunanje.html#derivacije-elementarnih-funkcija",
+    "href": "derivacije-racunanje.html#derivacije-elementarnih-funkcija",
+    "title": "Pravila za računanje derivacija",
+    "section": "",
+    "text": "Pomoću definicije ćemo odrediti derivacije nekih elementarnih funkcija, a ostale samo prikazati u tablici.\n\nPo definiciji odredite derivaciju funkcije \\(f(x) = x^n\\), \\(n \\in \\mathbb{N}\\). \\[\n\\begin{align*}\nf'(c) &= \\lim_{x \\to c} \\frac{f(x) - f(c)}{x - c} \\\\\n&= \\lim_{x \\to c} \\frac{x^n - c^n}{x - c} \\\\\n&= \\lim_{x \\to c} \\frac{(x - c)(x^{n-1} + x^{n-2}c + ... + xc^{n-2} + c^{n-1})}{x - c} \\\\\n&= \\lim_{x \\to c} (x^{n-1} + x^{n-2}c + ... + xc^{n-2} + c^{n-1}) \\\\\n&= nc^{n-1}.\n\\end{align*}\n\\]\nDakle, \\(f'(x) = nx^{n-1}\\).\n\n\nPo definiciji odredite derivaciju funkcije \\(f(x) = e^x\\) \\[\n\\begin{align*}\nf'(c) &= \\lim_{x \\to c} \\frac{f(x) - f(c)}{x - c} \\\\\n&= \\lim_{x \\to c} \\frac{e^x - e^c}{x - c} \\\\\n&= e^c \\lim_{x \\to c} \\frac{e^{x-c} - 1}{x - c} \\\\\n&= e^c \\lim_{x-c \\to 0} \\frac{e^{x-c} - 1}{x - c} \\\\\n&= e^c \\lim_{h \\to 0} \\frac{e^{h} - 1}{h} \\\\\n&= e^c.\n\\end{align*}\n\\]\nDakle, \\(f'(x) = e^c\\).\n\n\nOdredite derivaciju funkcije \\(f(x) = \\arcsin(x)\\) koristeći formulu za derivaciju inverzne funkcije. Neka je \\(g(x) = \\sin x\\), tada je \\(g^{-1}(x) = f(x)\\). \\[\n\\begin{align*}\nf'(c) = \\arcsin'(x) = (\\sin^{-1}(c))' &= \\frac{1}{g'(g^{-1}(c))} \\\\\n&= \\frac{1}{\\cos(\\arcsin(c))} \\\\\n&= \\frac{1}{\\sqrt{1 - \\sin ^2 (\\arcsin (c))}} \\\\\n&= \\frac{1}{1 - c^2} \\\\\n\\end{align*}\n\\]\nDakle, \\(f'(x) = \\displaystyle \\frac{1}{1 - x^2}\\).\nNapomena: u petom koraku koristili smo identitet \\(\\sin^2(x) + cos^2(x) = 1.\\)\n\n\n\n\n\n\nFunkcija \\(f(x)\\)\nDerivacija \\(f'(x)\\)\n\n\n\n\n\\(c,\\; c\\in\\mathbb{R}\\)\n\\(0\\)\n\n\n\\(x\\)\n\\(1\\)\n\n\n\\(x^n,\\; n\\in\\mathbb{Z}\\)\n\\(nx^{n-1}\\)\n\n\n\\(x^a,\\; a\\in\\mathbb{R},\\; x&gt;0\\)\n\\(ax^{a-1}\\)\n\n\n\\(\\sqrt{x}\\)\n\\(\\dfrac{1}{2\\sqrt{x}}\\)\n\n\n\\(a^x,\\; a&gt;0\\)\n\\(a^x\\ln a\\)\n\n\n\\(e^x\\)\n\\(e^x\\)\n\n\n\\(\\log_a x,\\; a&gt;0,\\; a\\neq 1\\)\n\\(\\dfrac{1}{x\\ln a}\\)\n\n\n\\(\\ln x\\)\n\\(\\dfrac{1}{x}\\)\n\n\n\\(\\sin x\\)\n\\(\\cos x\\)\n\n\n\\(\\cos x\\)\n\\(-\\sin x\\)\n\n\n\\(\\tan x\\)\n\\(\\dfrac{1}{\\cos^2 x}\\)\n\n\n\\(\\cot x\\)\n\\(-\\dfrac{1}{\\sin^2 x}\\)\n\n\n\\(\\arcsin x\\)\n\\(\\dfrac{1}{\\sqrt{1-x^2}}\\)\n\n\n\\(\\arccos x\\)\n\\(-\\dfrac{1}{\\sqrt{1-x^2}}\\)\n\n\n\\(\\arctan x\\)\n\\(\\dfrac{1}{1+x^2}\\)\n\n\n\\(\\sinh x\\)\n\\(\\cosh x\\)\n\n\n\\(\\cosh x\\)\n\\(\\sinh x\\)\n\n\n\\(\\tanh x\\)\n\\(\\dfrac{1}{\\cosh^2 x}\\)\n\n\n\\(\\coth x\\)\n\\(-\\dfrac{1}{\\sinh^2 x}\\)\n\n\n\\(\\operatorname{arcctg}x\\)\n\\(-\\dfrac{1}{1+x^2}\\)\n\n\n\\(\\operatorname{Arsh}x\\)\n\\(\\dfrac{1}{\\sqrt{1+x^2}}\\)\n\n\n\\(\\operatorname{Arch}x\\)\n\\(\\dfrac{1}{\\sqrt{x^2-1}}\\)\n\n\n\\(\\operatorname{Arth}x\\)\n\\(\\dfrac{1}{1-x^2}\\)\n\n\n\\(\\operatorname{Arcth}x\\)\n\\(\\dfrac{1}{1-x^2}\\)\n\n\n\n\n\n\n\nPravila deriviranja\n\n\n\n\n\n\nPravilo\nFormula\n\n\n\n\nZbroj i razlika\n\\((u\\pm v)' = u' \\pm v'\\)\n\n\nMnoženje konstantom\n\\((cu)' = cu'\\)\n\n\nProdukt\n\\((uv)' = u'v + uv'\\)\n\n\nKvocijent\n\\(\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v-uv'}{v^2}\\)\n\n\nRecipročna funkcija\n\\(\\left(\\dfrac{1}{v}\\right)' = -\\dfrac{v'}{v^2}\\)\n\n\nKompozicija (lančano pravilo)\n\\((f\\circ g)'(x) = f'(g(x))\\,g'(x)\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunkcija\n\\(n\\)-ta derivacija\n\n\n\n\n\\(a^x\\)\n\\((a^x)^{(n)} = a^x(\\ln a)^n\\)\n\n\n\\(\\sin x\\)\n\\((\\sin x)^{(n)} = \\sin\\!\\left(x+\\dfrac{n\\pi}{2}\\right)\\)\n\n\n\\(\\cos x\\)\n\\((\\cos x)^{(n)} = \\cos\\!\\left(x+\\dfrac{n\\pi}{2}\\right)\\)\n\n\n\\(\\sinh x\\)\n\\(\\begin{cases}\\sinh x,& n \\text{ paran}\\\\ \\cosh x,& n \\text{ neparan}\\end{cases}\\)\n\n\n\\(\\cosh x\\)\n\\(\\begin{cases}\\cosh x,& n \\text{ paran}\\\\ \\sinh x,& n \\text{ neparan}\\end{cases}\\)\n\n\n\\(x^m\\)\n\\((x^m)^{(n)} = m(m-1)\\cdots(m-n+1)x^{m-n}\\)\n\n\nLeibnizova formula\n\\((uv)^{(n)} = \\displaystyle\\sum_{k=0}^{n}\\binom{n}{k}u^{(k)}v^{(n-k)}\\)",
+    "crumbs": [
+      "Home",
+      "1. Derivacije",
+      "1.3 Pravila za računanje derivacija"
+    ]
+  },
+  {
+    "objectID": "derivacije-zadaci1.html",
+    "href": "derivacije-zadaci1.html",
+    "title": "Zadatci",
+    "section": "",
+    "text": "Zadatci"
+  },
+  {
+    "objectID": "derivacije/derivacije.html",
+    "href": "derivacije/derivacije.html",
+    "title": "DERIVACIJE",
+    "section": "",
+    "text": "U ovom poglavlju dat ćemo povijesni pregled pojma derivacije, definirati pojam derivacije funkcije i navesti osnovna pravila za računanje derivacija. Također ćemo se upoznati s primjenama derivacija u različitim područjima matematike i znanosti.\n\n\n\n1.1 Uvod u derivacije\n1.2 Definicija\n1.3 Pravila za računanje derivacija\nZadatci - prvi dio",
+    "crumbs": [
+      "Home",
+      "1. DERIVACIJE"
+    ]
+  },
+  {
+    "objectID": "derivacije/derivacije.html#sadržaj-poglavlja",
+    "href": "derivacije/derivacije.html#sadržaj-poglavlja",
+    "title": "DERIVACIJE",
+    "section": "",
+    "text": "1.1 Uvod u derivacije\n1.2 Definicija\n1.3 Pravila za računanje derivacija\nZadatci - prvi dio",
+    "crumbs": [
+      "Home",
+      "1. DERIVACIJE"
+    ]
+  },
+  {
+    "objectID": "derivacije/derivacije-racunanje.html",
+    "href": "derivacije/derivacije-racunanje.html",
+    "title": "Pravila za računanje derivacija",
+    "section": "",
+    "text": "Vidjeli smo da su zbroj, produkt i kvocijent diferencijabilnih funkcija također diferencijabilni i da je derivacija linearne kombinacije diferenicijalnih funkcija linearna kombinacija njihovih derivacija.\nU ovom poglavlju navest ćemo još neka pravila za računanje derivacija koja nam omogućuju da izračunamo derivaciju složenijih funkcija.\nZa početak pokažimo rezultat za derivaciju kompozicije:\n\n\n\nNeka su \\(f \\colon I \\to \\mathbb{R}\\), \\(g \\colon J \\to \\mathbb{R}\\) i neka je \\(f(I) \\subseteq J\\), tj. kompozicija \\(g \\circ f \\colon I \\to \\mathbb{R}\\) je dobro definirana na \\(I\\). Ako je \\(f\\) diferencijabilna u točki \\(c \\in I\\) i funkcija \\(g\\) diferencijabilna u točki \\(d = f(c) \\in J\\), onda je kompozicija \\(g \\circ f \\colon I \\to \\mathbb{R}\\) diferencijabilna u točki \\(c\\) i vrijedi \\[\n(g \\circ f)'(c) = g'(f(c)) f'(c).\n\\]\n\n\n\n\nPrikaži dokaz\n\nNeka su dane funkcije \\[\n\\omega = \\begin{cases}\n\\displaystyle \\frac{f(x) - f(c)}{x - c} - f'(c) & \\text{ako } x \\neq c, \\\\\n\\hspace{2.4em}0 & \\text{ako } x = c.\n\\end{cases}\n\\]\ni za funkciju \\(g\\) \\[\n\\omega _1 = \\begin{cases}\n\\displaystyle \\frac{g(x) - g(d)}{x - d} - g'(d) & \\text{ako } x \\neq d, \\\\\n\\hspace{2.4em}0 & \\text{ako } x = d.\n\\end{cases}\n\\]\nTada vrijedi \\(g(y) = g(d) + (g'(d) + \\omega_1(y))(y - d)\\) za sve \\(y \\in J\\).\nNeka je \\(h = g \\circ f\\). Tada je \\(h(x) = g[f(x)] = g(d) + [g'(d) + \\omega _1(f(x))](f(x) - f(c))\\)\nšto daje \\[\n\\frac{h(x) - h(c)}{x - c} = [g'(d) + \\omega_1(f(x))] \\frac{f(x) - f(c)}{x - c}\n\\]\nZbog neprkidnosti funkcije \\(f\\) u točki \\(c\\) i neprekidnosti \\(\\omega _1\\) u \\(d = f(c)\\), funkcija \\(\\omega _1 \\circ f\\) je neprekidna u \\(c\\) i \\((\\omega _1 \\circ f)(c) = \\omega _1(f(c)) = \\omega _1(d) = 0\\). Stoga je\n\\[\nh'(c) = \\lim_{x \\to c} \\frac{h(x) - h(c)}{x - c} = \\lim_{x \\to c} [g'(d) + \\omega_1(f(x))] \\frac{f(x) - f(c)}{x - c} = g'(d) f'(c).\n\\]\nodakle slijedi tvrdnja.\n\n\n\nDerivirajmo funkciju \\(f(x) = \\sin(x^2)\\). Ovdje je \\(g(x) = \\sin x\\) i \\(f(x) = x^2\\). Tada je \\(g'(x) = \\cos x\\) i \\(f'(x) = 2x\\). Primjenom pravila za derivaciju kompozicije dobivamo \\[\nf'(x) = g'(f(x)) f'(x) = \\cos(x^2) \\cdot 2x.\n\\]\n\n\nDerivirajmo funkciju \\(f(x) = \\ln (x^2 + 1)\\). Ovdje je \\(g(x) = \\ln x\\) i \\(f(x) = x^2 + 1\\). Tada je \\(g'(x) = \\frac{1}{x}\\) i \\(f'(x) = 2x\\). Primjenom pravila za derivaciju kompozicije dobivamo \\[\nf'(x) = g'(f(x)) f'(x) = \\frac{1}{x^2 + 1} \\cdot 2x.\n\\]\n\nU gornjim su primjerima eksplicitno određene vanjska i unutarnja funkcija, u praksi se to ne radi, već direktno primjenjujemo teorem.\n\n\n\n\nNeka je \\(f \\colon I \\to J, I,J \\subseteq \\mathbb{R}\\), \\(I\\) otvoren interval i neka je \\(f\\) neprekidna bijekcija na \\(I\\). Ako \\(f\\) ima derivaciju u točki \\(c \\in I\\) i ako je \\(f'(c) \\neq 0\\), onda je \\(f^{-1}\\) diferencijabilna u točki \\(d = f(c)\\) i vrijedi \\((f^{-1})'(d) = \\frac{1}{f'(c)}\\).\n\n\n\n\nPrikaži dokaz\n\nPo svojstvima neprekidnih fukcija znamo da je i \\(f^{-1} \\colon J \\to I\\) neprekidna funkcija. Nadalje, iz diferencijabilnosti funkcije \\(f\\) u točki \\(c\\) slijedi \\[\nf(x) − f(c) = (x − c)[f'(c) + \\omega(x)],\n\\]\ngdje je \\(\\omega\\) funkcija neprekidna u \\(c\\) definirana kao i u prethodnim teoremima. Stavimo \\(d = f(c)\\) i \\(y = f(x)\\) pa dobivamo \\[\ny − d = [f^{-1}(y)− f^{-1}(d)][f'(c) + \\omega(f^{-1}(y))].\n\\]\nOdatle dobivamo \\[\n\\frac{f^{-1}(y)− f^{-1}(d)}{y - d} = \\frac{1}{f'(c) + \\omega(f^{-1}(y))}\n\\]\nšto zbog neprekidnosti funkcije \\(\\omega \\circ f^{-1}\\) u točki \\(d\\) i \\((\\omega \\circ f^{-1})(d) = 0\\) dje jednakost \\[\n(f^{-1})'(d) = \\lim_{y \\to d} \\frac{f^{-1}(y)− f^{-1}(d)}{y - d} = \\frac{1}{f'(c)}\n\\]\nPrethodnu formulu koristimo u obliku \\[\n(f^{-1})'(x) = \\frac{1}{f'(f^{-1}(x))}.\n\\]\n\n\n\nOdredimo derivaciju funkcije \\(f = \\sqrt{x}\\). Neka je \\(g(x) = x^2\\), tada je \\(g^{-1} = f\\). Vrijedi \\[\nf'(x) = (g^{-1})'(x) = \\frac{1}{g'(g^{-1}(x))} = \\frac{1}{g'(\\sqrt{x})} = \\frac{1}{2\\sqrt{x}}.\n\\]\n\n\n\n\nPomoću definicije ćemo odrediti derivacije nekih elementarnih funkcija, a ostale samo prikazati u tablici.\n\nPo definiciji odredite derivaciju funkcije \\(f(x) = x^n\\), \\(n \\in \\mathbb{N}\\). \\[\n\\begin{align*}\nf'(c) &= \\lim_{x \\to c} \\frac{f(x) - f(c)}{x - c} \\\\\n&= \\lim_{x \\to c} \\frac{x^n - c^n}{x - c} \\\\\n&= \\lim_{x \\to c} \\frac{(x - c)(x^{n-1} + x^{n-2}c + ... + xc^{n-2} + c^{n-1})}{x - c} \\\\\n&= \\lim_{x \\to c} (x^{n-1} + x^{n-2}c + ... + xc^{n-2} + c^{n-1}) \\\\\n&= nc^{n-1}.\n\\end{align*}\n\\]\nDakle, \\(f'(x) = nx^{n-1}\\).\n\n\nPo definiciji odredite derivaciju funkcije \\(f(x) = e^x\\) \\[\n\\begin{align*}\nf'(c) &= \\lim_{x \\to c} \\frac{f(x) - f(c)}{x - c} \\\\\n&= \\lim_{x \\to c} \\frac{e^x - e^c}{x - c} \\\\\n&= e^c \\lim_{x \\to c} \\frac{e^{x-c} - 1}{x - c} \\\\\n&= e^c \\lim_{x-c \\to 0} \\frac{e^{x-c} - 1}{x - c} \\\\\n&= e^c \\lim_{h \\to 0} \\frac{e^{h} - 1}{h} \\\\\n&= e^c.\n\\end{align*}\n\\]\nDakle, \\(f'(x) = e^c\\).\nNapomena: u zadnjem koraku koristili smo činjenicu \\(\\displaystyle \\lim_{t \\to 0} \\frac{e^t-1}{t}=1\\)\n\n\nOdredite derivaciju funkcije \\(f(x) = \\arcsin(x)\\) koristeći formulu za derivaciju inverzne funkcije. Neka je \\(g(x) = \\sin x\\), tada je \\(g^{-1}(x) = f(x)\\). \\[\n\\begin{align*}\nf'(c) = \\arcsin'(x) = (\\sin^{-1}(c))' &= \\frac{1}{g'(g^{-1}(c))} \\\\\n&= \\frac{1}{\\cos(\\arcsin(c))} \\\\\n&= \\frac{1}{\\sqrt{1 - \\sin ^2 (\\arcsin (c))}} \\\\\n&= \\frac{1}{1 - c^2} \\\\\n\\end{align*}\n\\]\nDakle, \\(f'(x) = \\displaystyle \\frac{1}{1 - x^2}\\).\nNapomena: u petom koraku koristili smo identitet \\(\\sin^2(x) + \\cos^2(x) = 1.\\)\n\n\n\n\n\n\nFunkcija \\(f(x)\\)\nDerivacija \\(f'(x)\\)\n\n\n\n\n\\(c,\\; c\\in\\mathbb{R}\\)\n\\(0\\)\n\n\n\\(x\\)\n\\(1\\)\n\n\n\\(x^n,\\; n\\in\\mathbb{Z}\\)\n\\(nx^{n-1}\\)\n\n\n\\(x^a,\\; a\\in\\mathbb{R},\\; x&gt;0\\)\n\\(ax^{a-1}\\)\n\n\n\\(\\sqrt{x}\\)\n\\(\\dfrac{1}{2\\sqrt{x}}\\)\n\n\n\\(a^x,\\; a&gt;0\\)\n\\(a^x\\ln a\\)\n\n\n\\(e^x\\)\n\\(e^x\\)\n\n\n\\(\\log_a x,\\; a&gt;0,\\; a\\neq 1\\)\n\\(\\dfrac{1}{x\\ln a}\\)\n\n\n\\(\\ln x\\)\n\\(\\dfrac{1}{x}\\)\n\n\n\\(\\sin x\\)\n\\(\\cos x\\)\n\n\n\\(\\cos x\\)\n\\(-\\sin x\\)\n\n\n\\(\\tan x\\)\n\\(\\dfrac{1}{\\cos^2 x}\\)\n\n\n\\(\\cot x\\)\n\\(-\\dfrac{1}{\\sin^2 x}\\)\n\n\n\\(\\arcsin x\\)\n\\(\\dfrac{1}{\\sqrt{1-x^2}}\\)\n\n\n\\(\\arccos x\\)\n\\(-\\dfrac{1}{\\sqrt{1-x^2}}\\)\n\n\n\\(\\arctan x\\)\n\\(\\dfrac{1}{1+x^2}\\)\n\n\n\\(\\sinh x\\)\n\\(\\cosh x\\)\n\n\n\\(\\cosh x\\)\n\\(\\sinh x\\)\n\n\n\\(\\tanh x\\)\n\\(\\dfrac{1}{\\cosh^2 x}\\)\n\n\n\\(\\coth x\\)\n\\(-\\dfrac{1}{\\sinh^2 x}\\)\n\n\n\\(\\operatorname{arcctg}x\\)\n\\(-\\dfrac{1}{1+x^2}\\)\n\n\n\\(\\operatorname{Arsh}x\\)\n\\(\\dfrac{1}{\\sqrt{1+x^2}}\\)\n\n\n\\(\\operatorname{Arch}x\\)\n\\(\\dfrac{1}{\\sqrt{x^2-1}}\\)\n\n\n\\(\\operatorname{Arth}x\\)\n\\(\\dfrac{1}{1-x^2}\\)\n\n\n\\(\\operatorname{Arcth}x\\)\n\\(\\dfrac{1}{1-x^2}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\nPravilo\nFormula\n\n\n\n\nZbroj i razlika\n\\((u\\pm v)' = u' \\pm v'\\)\n\n\nMnoženje konstantom\n\\((cu)' = cu'\\)\n\n\nProdukt\n\\((uv)' = u'v + uv'\\)\n\n\nKvocijent\n\\(\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v-uv'}{v^2}\\)\n\n\nRecipročna funkcija\n\\(\\left(\\dfrac{1}{v}\\right)' = -\\dfrac{v'}{v^2}\\)\n\n\nKompozicija (lančano pravilo)\n\\((f\\circ g)'(x) = f'(g(x))\\,g'(x)\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunkcija\n\\(n\\)-ta derivacija\n\n\n\n\n\\(a^x\\)\n\\((a^x)^{(n)} = a^x(\\ln a)^n\\)\n\n\n\\(\\sin x\\)\n\\((\\sin x)^{(n)} = \\sin\\!\\left(x+\\dfrac{n\\pi}{2}\\right)\\)\n\n\n\\(\\cos x\\)\n\\((\\cos x)^{(n)} = \\cos\\!\\left(x+\\dfrac{n\\pi}{2}\\right)\\)\n\n\n\\(\\sinh x\\)\n\\(\\begin{cases}\\sinh x,& n \\text{ paran}\\\\ \\cosh x,& n \\text{ neparan}\\end{cases}\\)\n\n\n\\(\\cosh x\\)\n\\(\\begin{cases}\\cosh x,& n \\text{ paran}\\\\ \\sinh x,& n \\text{ neparan}\\end{cases}\\)\n\n\n\\(x^m\\)\n\\((x^m)^{(n)} = m(m-1)\\cdots(m-n+1)x^{m-n}\\)\n\n\nLeibnizova formula\n\\((uv)^{(n)} = \\displaystyle\\sum_{k=0}^{n}\\binom{n}{k}u^{(k)}v^{(n-k)}\\)",
+    "crumbs": [
+      "Home",
+      "1. DERIVACIJE",
+      "1.3 Pravila za računanje derivacija"
+    ]
+  },
+  {
+    "objectID": "derivacije/derivacije-racunanje.html#derivacija-kompozicije",
+    "href": "derivacije/derivacije-racunanje.html#derivacija-kompozicije",
+    "title": "Pravila za računanje derivacija",
+    "section": "",
+    "text": "Neka su \\(f \\colon I \\to \\mathbb{R}\\), \\(g \\colon J \\to \\mathbb{R}\\) i neka je \\(f(I) \\subseteq J\\), tj. kompozicija \\(g \\circ f \\colon I \\to \\mathbb{R}\\) je dobro definirana na \\(I\\). Ako je \\(f\\) diferencijabilna u točki \\(c \\in I\\) i funkcija \\(g\\) diferencijabilna u točki \\(d = f(c) \\in J\\), onda je kompozicija \\(g \\circ f \\colon I \\to \\mathbb{R}\\) diferencijabilna u točki \\(c\\) i vrijedi \\[\n(g \\circ f)'(c) = g'(f(c)) f'(c).\n\\]\n\n\n\n\nPrikaži dokaz\n\nNeka su dane funkcije \\[\n\\omega = \\begin{cases}\n\\displaystyle \\frac{f(x) - f(c)}{x - c} - f'(c) & \\text{ako } x \\neq c, \\\\\n\\hspace{2.4em}0 & \\text{ako } x = c.\n\\end{cases}\n\\]\ni za funkciju \\(g\\) \\[\n\\omega _1 = \\begin{cases}\n\\displaystyle \\frac{g(x) - g(d)}{x - d} - g'(d) & \\text{ako } x \\neq d, \\\\\n\\hspace{2.4em}0 & \\text{ako } x = d.\n\\end{cases}\n\\]\nTada vrijedi \\(g(y) = g(d) + (g'(d) + \\omega_1(y))(y - d)\\) za sve \\(y \\in J\\).\nNeka je \\(h = g \\circ f\\). Tada je \\(h(x) = g[f(x)] = g(d) + [g'(d) + \\omega _1(f(x))](f(x) - f(c))\\)\nšto daje \\[\n\\frac{h(x) - h(c)}{x - c} = [g'(d) + \\omega_1(f(x))] \\frac{f(x) - f(c)}{x - c}\n\\]\nZbog neprkidnosti funkcije \\(f\\) u točki \\(c\\) i neprekidnosti \\(\\omega _1\\) u \\(d = f(c)\\), funkcija \\(\\omega _1 \\circ f\\) je neprekidna u \\(c\\) i \\((\\omega _1 \\circ f)(c) = \\omega _1(f(c)) = \\omega _1(d) = 0\\). Stoga je\n\\[\nh'(c) = \\lim_{x \\to c} \\frac{h(x) - h(c)}{x - c} = \\lim_{x \\to c} [g'(d) + \\omega_1(f(x))] \\frac{f(x) - f(c)}{x - c} = g'(d) f'(c).\n\\]\nodakle slijedi tvrdnja.\n\n\n\nDerivirajmo funkciju \\(f(x) = \\sin(x^2)\\). Ovdje je \\(g(x) = \\sin x\\) i \\(f(x) = x^2\\). Tada je \\(g'(x) = \\cos x\\) i \\(f'(x) = 2x\\). Primjenom pravila za derivaciju kompozicije dobivamo \\[\nf'(x) = g'(f(x)) f'(x) = \\cos(x^2) \\cdot 2x.\n\\]\n\n\nDerivirajmo funkciju \\(f(x) = \\ln (x^2 + 1)\\). Ovdje je \\(g(x) = \\ln x\\) i \\(f(x) = x^2 + 1\\). Tada je \\(g'(x) = \\frac{1}{x}\\) i \\(f'(x) = 2x\\). Primjenom pravila za derivaciju kompozicije dobivamo \\[\nf'(x) = g'(f(x)) f'(x) = \\frac{1}{x^2 + 1} \\cdot 2x.\n\\]\n\nU gornjim su primjerima eksplicitno određene vanjska i unutarnja funkcija, u praksi se to ne radi, već direktno primjenjujemo teorem.",
+    "crumbs": [
+      "Home",
+      "1. DERIVACIJE",
+      "1.3 Pravila za računanje derivacija"
+    ]
+  },
+  {
+    "objectID": "derivacije/derivacije-racunanje.html#derivacija-inverzne-funkcije",
+    "href": "derivacije/derivacije-racunanje.html#derivacija-inverzne-funkcije",
+    "title": "Pravila za računanje derivacija",
+    "section": "",
+    "text": "Neka je \\(f \\colon I \\to J, I,J \\subseteq \\mathbb{R}\\), \\(I\\) otvoren interval i neka je \\(f\\) neprekidna bijekcija na \\(I\\). Ako \\(f\\) ima derivaciju u točki \\(c \\in I\\) i ako je \\(f'(c) \\neq 0\\), onda je \\(f^{-1}\\) diferencijabilna u točki \\(d = f(c)\\) i vrijedi \\((f^{-1})'(d) = \\frac{1}{f'(c)}\\).\n\n\n\n\nPrikaži dokaz\n\nPo svojstvima neprekidnih fukcija znamo da je i \\(f^{-1} \\colon J \\to I\\) neprekidna funkcija. Nadalje, iz diferencijabilnosti funkcije \\(f\\) u točki \\(c\\) slijedi \\[\nf(x) − f(c) = (x − c)[f'(c) + \\omega(x)],\n\\]\ngdje je \\(\\omega\\) funkcija neprekidna u \\(c\\) definirana kao i u prethodnim teoremima. Stavimo \\(d = f(c)\\) i \\(y = f(x)\\) pa dobivamo \\[\ny − d = [f^{-1}(y)− f^{-1}(d)][f'(c) + \\omega(f^{-1}(y))].\n\\]\nOdatle dobivamo \\[\n\\frac{f^{-1}(y)− f^{-1}(d)}{y - d} = \\frac{1}{f'(c) + \\omega(f^{-1}(y))}\n\\]\nšto zbog neprekidnosti funkcije \\(\\omega \\circ f^{-1}\\) u točki \\(d\\) i \\((\\omega \\circ f^{-1})(d) = 0\\) dje jednakost \\[\n(f^{-1})'(d) = \\lim_{y \\to d} \\frac{f^{-1}(y)− f^{-1}(d)}{y - d} = \\frac{1}{f'(c)}\n\\]\nPrethodnu formulu koristimo u obliku \\[\n(f^{-1})'(x) = \\frac{1}{f'(f^{-1}(x))}.\n\\]\n\n\n\nOdredimo derivaciju funkcije \\(f = \\sqrt{x}\\). Neka je \\(g(x) = x^2\\), tada je \\(g^{-1} = f\\). Vrijedi \\[\nf'(x) = (g^{-1})'(x) = \\frac{1}{g'(g^{-1}(x))} = \\frac{1}{g'(\\sqrt{x})} = \\frac{1}{2\\sqrt{x}}.\n\\]",
+    "crumbs": [
+      "Home",
+      "1. DERIVACIJE",
+      "1.3 Pravila za računanje derivacija"
+    ]
+  },
+  {
+    "objectID": "derivacije/derivacije-racunanje.html#derivacije-elementarnih-funkcija",
+    "href": "derivacije/derivacije-racunanje.html#derivacije-elementarnih-funkcija",
+    "title": "Pravila za računanje derivacija",
+    "section": "",
+    "text": "Pomoću definicije ćemo odrediti derivacije nekih elementarnih funkcija, a ostale samo prikazati u tablici.\n\nPo definiciji odredite derivaciju funkcije \\(f(x) = x^n\\), \\(n \\in \\mathbb{N}\\). \\[\n\\begin{align*}\nf'(c) &= \\lim_{x \\to c} \\frac{f(x) - f(c)}{x - c} \\\\\n&= \\lim_{x \\to c} \\frac{x^n - c^n}{x - c} \\\\\n&= \\lim_{x \\to c} \\frac{(x - c)(x^{n-1} + x^{n-2}c + ... + xc^{n-2} + c^{n-1})}{x - c} \\\\\n&= \\lim_{x \\to c} (x^{n-1} + x^{n-2}c + ... + xc^{n-2} + c^{n-1}) \\\\\n&= nc^{n-1}.\n\\end{align*}\n\\]\nDakle, \\(f'(x) = nx^{n-1}\\).\n\n\nPo definiciji odredite derivaciju funkcije \\(f(x) = e^x\\) \\[\n\\begin{align*}\nf'(c) &= \\lim_{x \\to c} \\frac{f(x) - f(c)}{x - c} \\\\\n&= \\lim_{x \\to c} \\frac{e^x - e^c}{x - c} \\\\\n&= e^c \\lim_{x \\to c} \\frac{e^{x-c} - 1}{x - c} \\\\\n&= e^c \\lim_{x-c \\to 0} \\frac{e^{x-c} - 1}{x - c} \\\\\n&= e^c \\lim_{h \\to 0} \\frac{e^{h} - 1}{h} \\\\\n&= e^c.\n\\end{align*}\n\\]\nDakle, \\(f'(x) = e^c\\).\nNapomena: u zadnjem koraku koristili smo činjenicu \\(\\displaystyle \\lim_{t \\to 0} \\frac{e^t-1}{t}=1\\)\n\n\nOdredite derivaciju funkcije \\(f(x) = \\arcsin(x)\\) koristeći formulu za derivaciju inverzne funkcije. Neka je \\(g(x) = \\sin x\\), tada je \\(g^{-1}(x) = f(x)\\). \\[\n\\begin{align*}\nf'(c) = \\arcsin'(x) = (\\sin^{-1}(c))' &= \\frac{1}{g'(g^{-1}(c))} \\\\\n&= \\frac{1}{\\cos(\\arcsin(c))} \\\\\n&= \\frac{1}{\\sqrt{1 - \\sin ^2 (\\arcsin (c))}} \\\\\n&= \\frac{1}{1 - c^2} \\\\\n\\end{align*}\n\\]\nDakle, \\(f'(x) = \\displaystyle \\frac{1}{1 - x^2}\\).\nNapomena: u petom koraku koristili smo identitet \\(\\sin^2(x) + \\cos^2(x) = 1.\\)\n\n\n\n\n\n\nFunkcija \\(f(x)\\)\nDerivacija \\(f'(x)\\)\n\n\n\n\n\\(c,\\; c\\in\\mathbb{R}\\)\n\\(0\\)\n\n\n\\(x\\)\n\\(1\\)\n\n\n\\(x^n,\\; n\\in\\mathbb{Z}\\)\n\\(nx^{n-1}\\)\n\n\n\\(x^a,\\; a\\in\\mathbb{R},\\; x&gt;0\\)\n\\(ax^{a-1}\\)\n\n\n\\(\\sqrt{x}\\)\n\\(\\dfrac{1}{2\\sqrt{x}}\\)\n\n\n\\(a^x,\\; a&gt;0\\)\n\\(a^x\\ln a\\)\n\n\n\\(e^x\\)\n\\(e^x\\)\n\n\n\\(\\log_a x,\\; a&gt;0,\\; a\\neq 1\\)\n\\(\\dfrac{1}{x\\ln a}\\)\n\n\n\\(\\ln x\\)\n\\(\\dfrac{1}{x}\\)\n\n\n\\(\\sin x\\)\n\\(\\cos x\\)\n\n\n\\(\\cos x\\)\n\\(-\\sin x\\)\n\n\n\\(\\tan x\\)\n\\(\\dfrac{1}{\\cos^2 x}\\)\n\n\n\\(\\cot x\\)\n\\(-\\dfrac{1}{\\sin^2 x}\\)\n\n\n\\(\\arcsin x\\)\n\\(\\dfrac{1}{\\sqrt{1-x^2}}\\)\n\n\n\\(\\arccos x\\)\n\\(-\\dfrac{1}{\\sqrt{1-x^2}}\\)\n\n\n\\(\\arctan x\\)\n\\(\\dfrac{1}{1+x^2}\\)\n\n\n\\(\\sinh x\\)\n\\(\\cosh x\\)\n\n\n\\(\\cosh x\\)\n\\(\\sinh x\\)\n\n\n\\(\\tanh x\\)\n\\(\\dfrac{1}{\\cosh^2 x}\\)\n\n\n\\(\\coth x\\)\n\\(-\\dfrac{1}{\\sinh^2 x}\\)\n\n\n\\(\\operatorname{arcctg}x\\)\n\\(-\\dfrac{1}{1+x^2}\\)\n\n\n\\(\\operatorname{Arsh}x\\)\n\\(\\dfrac{1}{\\sqrt{1+x^2}}\\)\n\n\n\\(\\operatorname{Arch}x\\)\n\\(\\dfrac{1}{\\sqrt{x^2-1}}\\)\n\n\n\\(\\operatorname{Arth}x\\)\n\\(\\dfrac{1}{1-x^2}\\)\n\n\n\\(\\operatorname{Arcth}x\\)\n\\(\\dfrac{1}{1-x^2}\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\nPravilo\nFormula\n\n\n\n\nZbroj i razlika\n\\((u\\pm v)' = u' \\pm v'\\)\n\n\nMnoženje konstantom\n\\((cu)' = cu'\\)\n\n\nProdukt\n\\((uv)' = u'v + uv'\\)\n\n\nKvocijent\n\\(\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v-uv'}{v^2}\\)\n\n\nRecipročna funkcija\n\\(\\left(\\dfrac{1}{v}\\right)' = -\\dfrac{v'}{v^2}\\)\n\n\nKompozicija (lančano pravilo)\n\\((f\\circ g)'(x) = f'(g(x))\\,g'(x)\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\nFunkcija\n\\(n\\)-ta derivacija\n\n\n\n\n\\(a^x\\)\n\\((a^x)^{(n)} = a^x(\\ln a)^n\\)\n\n\n\\(\\sin x\\)\n\\((\\sin x)^{(n)} = \\sin\\!\\left(x+\\dfrac{n\\pi}{2}\\right)\\)\n\n\n\\(\\cos x\\)\n\\((\\cos x)^{(n)} = \\cos\\!\\left(x+\\dfrac{n\\pi}{2}\\right)\\)\n\n\n\\(\\sinh x\\)\n\\(\\begin{cases}\\sinh x,& n \\text{ paran}\\\\ \\cosh x,& n \\text{ neparan}\\end{cases}\\)\n\n\n\\(\\cosh x\\)\n\\(\\begin{cases}\\cosh x,& n \\text{ paran}\\\\ \\sinh x,& n \\text{ neparan}\\end{cases}\\)\n\n\n\\(x^m\\)\n\\((x^m)^{(n)} = m(m-1)\\cdots(m-n+1)x^{m-n}\\)\n\n\nLeibnizova formula\n\\((uv)^{(n)} = \\displaystyle\\sum_{k=0}^{n}\\binom{n}{k}u^{(k)}v^{(n-k)}\\)",
+    "crumbs": [
+      "Home",
+      "1. DERIVACIJE",
+      "1.3 Pravila za računanje derivacija"
+    ]
+  },
+  {
+    "objectID": "derivacije/derivacije-uvod.html",
+    "href": "derivacije/derivacije-uvod.html",
+    "title": "Uvod u derivacije",
+    "section": "",
+    "text": "Povijesno su postojala dva bitna problema koja su potaknula razvoj derivacija i diferencijalnog računa:\n\ndefiniranje pojma brzine\nproblem postojanja tangente na krivulju\n\n\n\nNeka je \\(s(t), t \\geq 0\\), funkcija koja mjeri put koji je prošla materijalna točka u vremenskom intervalu \\([0,t]\\). Prosječna brzina te materijalne točke u vremenskom intervalu \\([t_0,t]\\) definira se kao \\[\n\\overline{v}(t_0,t) = \\frac{s(t) - s(t_0)}{t - t_0}\n\\]\nNo pitanje je kako definirati pojam brzine u trenutku \\(t_0\\). To je nešto što nije moguće mjeriti, jer znamo mjeriti prosječnu brzinu, a ne brzinu na intervalu \\([t_0,t_0]\\) koji je duljine \\(0\\).\nOvim se problemom bavio Isaac Newton.\nProblem intervala duljine \\(0\\) rješavamo koristeći limese. Promatramo limes funkcije \\(v\\) u točki \\(t_0\\): \\[\nv(t_0) = \\lim_{t \\to t_0} \\overline{v}(t_0,t) = \\lim_{t \\to t_0} \\frac{s(t) - s(t_0)}{t - t_0}\n\\]\nako taj limes postoji.\n\n\n\nOvaj problem promatrao je Gottfried Leibniz. Odnosi se na problem postojanja jedinstvene tangente u nekoj točki grafa \\(\\Gamma_f\\) funkcije \\(f\\). Sekanta kroz točke \\(C = (c,f(c))\\) i \\(D = (d,f(d))\\) ima koeficijent smjera \\[\nk_s = \\frac{f(d) - f(c)}{d - c}\n\\]\nAko \\(d \\to c\\), odnosno, ako se točka \\(D\\) po grafu \\(\\Gamma_f\\) približava točki \\(C\\), tada sekanta postaje tangenta u točki \\(C\\). Koeficijent smjera tangente definira se kao limes koeficijenta smjera sekante: \\[\nk_t = \\frac{f(d) - f(c)}{d - c}\n\\]",
+    "crumbs": [
+      "Home",
+      "1. DERIVACIJE",
+      "1.1 Uvod u derivacije"
+    ]
+  },
+  {
+    "objectID": "derivacije/derivacije-uvod.html#fizikalna-interpretacija-derivacije",
+    "href": "derivacije/derivacije-uvod.html#fizikalna-interpretacija-derivacije",
+    "title": "Uvod u derivacije",
+    "section": "",
+    "text": "Neka je \\(s(t), t \\geq 0\\), funkcija koja mjeri put koji je prošla materijalna točka u vremenskom intervalu \\([0,t]\\). Prosječna brzina te materijalne točke u vremenskom intervalu \\([t_0,t]\\) definira se kao \\[\n\\overline{v}(t_0,t) = \\frac{s(t) - s(t_0)}{t - t_0}\n\\]\nNo pitanje je kako definirati pojam brzine u trenutku \\(t_0\\). To je nešto što nije moguće mjeriti, jer znamo mjeriti prosječnu brzinu, a ne brzinu na intervalu \\([t_0,t_0]\\) koji je duljine \\(0\\).\nOvim se problemom bavio Isaac Newton.\nProblem intervala duljine \\(0\\) rješavamo koristeći limese. Promatramo limes funkcije \\(v\\) u točki \\(t_0\\): \\[\nv(t_0) = \\lim_{t \\to t_0} \\overline{v}(t_0,t) = \\lim_{t \\to t_0} \\frac{s(t) - s(t_0)}{t - t_0}\n\\]\nako taj limes postoji.",
+    "crumbs": [
+      "Home",
+      "1. DERIVACIJE",
+      "1.1 Uvod u derivacije"
+    ]
+  },
+  {
+    "objectID": "derivacije/derivacije-uvod.html#geometrijska-interpretacija-derivacije",
+    "href": "derivacije/derivacije-uvod.html#geometrijska-interpretacija-derivacije",
+    "title": "Uvod u derivacije",
+    "section": "",
+    "text": "Ovaj problem promatrao je Gottfried Leibniz. Odnosi se na problem postojanja jedinstvene tangente u nekoj točki grafa \\(\\Gamma_f\\) funkcije \\(f\\). Sekanta kroz točke \\(C = (c,f(c))\\) i \\(D = (d,f(d))\\) ima koeficijent smjera \\[\nk_s = \\frac{f(d) - f(c)}{d - c}\n\\]\nAko \\(d \\to c\\), odnosno, ako se točka \\(D\\) po grafu \\(\\Gamma_f\\) približava točki \\(C\\), tada sekanta postaje tangenta u točki \\(C\\). Koeficijent smjera tangente definira se kao limes koeficijenta smjera sekante: \\[\nk_t = \\frac{f(d) - f(c)}{d - c}\n\\]",
+    "crumbs": [
+      "Home",
+      "1. DERIVACIJE",
+      "1.1 Uvod u derivacije"
+    ]
+  },
+  {
+    "objectID": "derivacije/derivacije-definicija.html",
+    "href": "derivacije/derivacije-definicija.html",
+    "title": "Definicija",
+    "section": "",
+    "text": "Neka je \\(I \\subseteq \\mathbb{R}\\) otvoreni interval. Kažemo da je funkcija \\(f \\colon I \\to \\mathbb{R}\\) diferencijabilna ili derivabilna u točki \\(c \\in I\\), ako postoji limes \\[\n\\lim_{x \\to c} \\frac{f(x) - f(c)}{x - c}\n\\]\nTaj broj zovemo derivacija (izvod) funkcije \\(f\\) u točki \\(c\\) i pišemo \\[\nf'(c) = \\lim_{x \\to c} \\frac{f(x) - f(c)}{x - c}\n\\]\nJoš označavamo i s \\(Df(c)\\) ili \\(\\displaystyle \\frac{df}{dx}(c)\\).\n\nKažemo da je \\(f\\) diferencijabilna na intervalu \\(I\\) ako je diferencijabilna u svakoj točki \\(c \\in I\\). U tom slučaju definiramo funkciju \\(f' \\colon I \\to \\mathbb{R}\\), koja svakoj točki \\(c \\in I\\) pridružuje derivaciju funkcije \\(f\\) u toj točki.\nAnalogno definiramo derivacije više reda: \\[\nf^{(n+1)}(c) = \\lim_{x \\to c} \\frac{f^{(n)}(x) - f^{(n)}(c)}{x - c}\n\\]\nNavedi problemi imaju sljedeća rješenja u navednoj definiciji:\n\nFunkcija \\(g\\) definirana s \\(g(x) = f'(c)(x− c) + f(c), x \\in \\mathbb{R}\\), je lokalno najbolja aproksimacija funkcije \\(f\\) oko \\(c\\) među polinomima stupnja \\(\\leq 1\\).\nBrzina materijalne točke, čiji put u vremenu \\(t\\) opisuje funkcija \\(t \\to s(t)\\), dana je s \\(v(t) = s'(t)\\), tj. brzina je prva derivacija funkcije puta po vremenu. Analogno se ubrzanje definira kao derivacija brzine po vremenu, tj. \\(a(t) = v'(t) = s''(t)\\).\nTangenta na graf funkcije \\(f\\) za točku \\(c\\), ili u točki grafa \\((c,f(c))\\), je pravac koji je graf linearne funkcije \\(g\\) iz točke 1. Jasno, moguće je odmah zadati i funkciju \\(\\displaystyle h(x) = -\\frac{1}{f'(c)}(x− c) + f(c)\\), čiji je graf normala na graf funkcije u točki \\(c\\).\n\nDerivacija nam, ukratko, govori koliko brzo se funkcija u okolini neke točke mijenja, tj. koliko raste ili koliko pada.\n\nOdredimo derivaciju konstantne funkcije \\(f(x) = \\alpha , \\forall x \\in \\mathbb{R}\\) u točki \\(c \\in \\mathbb{R}\\): \\[\nf'(c) = \\lim_{x \\to c} \\frac{f(x) - f(c)}{x - c} = \\lim_{x \\to c} \\frac{\\alpha - \\alpha}{x - c} = 0\n\\]\nDakle, \\(f'(x) = 0, \\forall x \\in \\mathbb{R}\\).\n\n\nOdredimo derivaciju funkcije \\(f(x) = x\\) u točki \\(c \\in \\mathbb{R}\\): \\[\nf'(c) = \\lim_{x \\to c} \\frac{f(x) - f(c)}{x - c} = \\lim_{x \\to c} \\frac{x - c}{x - c} = 1\n\\]\nDakle, \\(f'(x) = 1, \\forall x \\in \\mathbb{R}\\).\n\n\nPrimijetimo da funkcija \\(f(x) = |x|\\) nije diferencijabilna u točki \\(c = 0\\): \\[\nf'(0) = \\lim_{x \\to 0} \\frac{f(x) - f(0)}{x - 0} = \\lim_{x \\to 0} \\frac{|x| - 0}{x} = \\lim_{x \\to 0} \\frac{|x|}{x}\n\\]\nOvaj limes ne postoji: prilazeći s negativne strane limes je \\(-1\\), a prilazeći s pozitivne strane limes je \\(1\\). Stoga funkcija \\(f(x) = |x|\\) nije diferencijabilna u točki \\(x = 0\\).\n\n\n\nSljedeći je teorem bitan:\n\nAko je funkcija \\(f \\colon I \\to \\mathbb{R}\\) diferencijabilna u točki \\(c\\) otvorenog intervala \\(I\\), onda je \\(f\\) neprekidna u \\(c\\).\n\n\n\n\nPrikaži dokaz\n\nZbog diferencijabilnosti funkcije \\(f\\) u točki \\(c\\) je funkcija \\[\n\\omega = \\begin{cases}\n\\displaystyle \\frac{f(x) - f(c)}{x - c} - f'(c) & \\text{ako } x \\neq c, \\\\\n\\hspace{2.4em}0 & \\text{ako } x = c.\n\\end{cases}\n\\]\nneprekidna u \\(c\\). Naime, \\(\\omega(c) = 0 = \\lim_{x \\to c} \\displaystyle \\left (\\frac{f(x) - f(c)}{x - c} - f'(c) \\right ) = \\lim_{x \\to c} \\omega(x)\\).\nSada je \\(f(x) = f(c) + (f'(c) + \\omega (x))(x− c), \\ x \\in I\\) odakle zbog neprekidnosti od \\(\\omega\\) u \\(c\\) slijedi tvrdnja.\n\n\nObrat ne vrijedi, neperkidna funkcija na \\(I\\) ne mora biti i diferencijabilna na \\(I\\), jedan primjer je funkcija \\(f(x) = |x|\\).\nUvedimo oznaku. Za funkciju kojoj je prva derivacija neprekidna kažemo da je klase \\(C^1\\) na intervalu \\(I\\), pišemo \\(f \\in C^1(I)\\). U punoj općenitosti, neka su \\(I,J \\subseteq \\mathbb{R}\\) otvoreni intervali, za \\(f \\colon I \\to J\\), za koju postoji \\(n\\)-ta derivacija i neprekidna je pišemo \\(f \\in C^n(I,J)\\). Primijetimo da je neprekidna funkcija klase \\(C^0(I)\\).\n\nNeka su funkcije \\(f,g \\colon I \\to \\mathbb{R}\\) diferencijabilne u točki \\(c\\) otvorenog intervala \\(I\\).\n\nFunkcija \\(f + g\\) je diferencijabilna u točki \\(c\\) i \\[\n(f + g)'(c) = f'(c) + g'(c).\n\\]\nFunkcija \\(fg\\) je diferencijabilna u točki \\(c\\) i \\[\n(fg)'(c) = f'(c) g(c) + f(c) g'(c).\n\\]\nAko je funkcija \\(\\frac{f}{g}\\) definirana na \\(I\\), onda je i diferencijabilna u točki \\(c\\) i \\[\n\\left(\\frac{f}{g}\\right)'(c) = \\frac{f'(c) g(c) - f(c) g'(c)}{g(c)^2}.\n\\]\n\n\n\nNeka su funkcije \\(f,g \\colon I \\to \\mathbb{R}\\) diferencijabilne u točki \\(c\\) otvorenog intervala \\(I\\). Tada je za sve \\(\\lambda , \\mu \\in \\mathbb{R}\\) funkcija \\(\\lambda f + \\mu g\\) diferencijabilna u točki \\(c\\) i vrijedi \\[\n(\\lambda f + \\mu g)'(c) = \\lambda f'(c) + \\mu g'(c).\n\\]\nSkup svih funkcija s \\(I\\) u \\(\\mathbb{R}\\) koje su diferencijabilne u točki \\(c\\) je vektorski prostor (uz operacije zbrajanja i množenja skalarom definiranim po točkama), a pridruživanje \\(f \\to f'(c)\\) je linearan funkcional (linearni operator s kodomenom \\(\\mathbb{R}\\)) na tom prostoru.",
+    "crumbs": [
+      "Home",
+      "1. DERIVACIJE",
+      "1.2 Definicija"
+    ]
+  },
+  {
+    "objectID": "derivacije/derivacije-definicija.html#neprekidnost-i-diferencijabilnost",
+    "href": "derivacije/derivacije-definicija.html#neprekidnost-i-diferencijabilnost",
+    "title": "Definicija",
+    "section": "",
+    "text": "Sljedeći je teorem bitan:\n\nAko je funkcija \\(f \\colon I \\to \\mathbb{R}\\) diferencijabilna u točki \\(c\\) otvorenog intervala \\(I\\), onda je \\(f\\) neprekidna u \\(c\\).\n\n\n\n\nPrikaži dokaz\n\nZbog diferencijabilnosti funkcije \\(f\\) u točki \\(c\\) je funkcija \\[\n\\omega = \\begin{cases}\n\\displaystyle \\frac{f(x) - f(c)}{x - c} - f'(c) & \\text{ako } x \\neq c, \\\\\n\\hspace{2.4em}0 & \\text{ako } x = c.\n\\end{cases}\n\\]\nneprekidna u \\(c\\). Naime, \\(\\omega(c) = 0 = \\lim_{x \\to c} \\displaystyle \\left (\\frac{f(x) - f(c)}{x - c} - f'(c) \\right ) = \\lim_{x \\to c} \\omega(x)\\).\nSada je \\(f(x) = f(c) + (f'(c) + \\omega (x))(x− c), \\ x \\in I\\) odakle zbog neprekidnosti od \\(\\omega\\) u \\(c\\) slijedi tvrdnja.\n\n\nObrat ne vrijedi, neperkidna funkcija na \\(I\\) ne mora biti i diferencijabilna na \\(I\\), jedan primjer je funkcija \\(f(x) = |x|\\).\nUvedimo oznaku. Za funkciju kojoj je prva derivacija neprekidna kažemo da je klase \\(C^1\\) na intervalu \\(I\\), pišemo \\(f \\in C^1(I)\\). U punoj općenitosti, neka su \\(I,J \\subseteq \\mathbb{R}\\) otvoreni intervali, za \\(f \\colon I \\to J\\), za koju postoji \\(n\\)-ta derivacija i neprekidna je pišemo \\(f \\in C^n(I,J)\\). Primijetimo da je neprekidna funkcija klase \\(C^0(I)\\).\n\nNeka su funkcije \\(f,g \\colon I \\to \\mathbb{R}\\) diferencijabilne u točki \\(c\\) otvorenog intervala \\(I\\).\n\nFunkcija \\(f + g\\) je diferencijabilna u točki \\(c\\) i \\[\n(f + g)'(c) = f'(c) + g'(c).\n\\]\nFunkcija \\(fg\\) je diferencijabilna u točki \\(c\\) i \\[\n(fg)'(c) = f'(c) g(c) + f(c) g'(c).\n\\]\nAko je funkcija \\(\\frac{f}{g}\\) definirana na \\(I\\), onda je i diferencijabilna u točki \\(c\\) i \\[\n\\left(\\frac{f}{g}\\right)'(c) = \\frac{f'(c) g(c) - f(c) g'(c)}{g(c)^2}.\n\\]\n\n\n\nNeka su funkcije \\(f,g \\colon I \\to \\mathbb{R}\\) diferencijabilne u točki \\(c\\) otvorenog intervala \\(I\\). Tada je za sve \\(\\lambda , \\mu \\in \\mathbb{R}\\) funkcija \\(\\lambda f + \\mu g\\) diferencijabilna u točki \\(c\\) i vrijedi \\[\n(\\lambda f + \\mu g)'(c) = \\lambda f'(c) + \\mu g'(c).\n\\]\nSkup svih funkcija s \\(I\\) u \\(\\mathbb{R}\\) koje su diferencijabilne u točki \\(c\\) je vektorski prostor (uz operacije zbrajanja i množenja skalarom definiranim po točkama), a pridruživanje \\(f \\to f'(c)\\) je linearan funkcional (linearni operator s kodomenom \\(\\mathbb{R}\\)) na tom prostoru.",
+    "crumbs": [
+      "Home",
+      "1. DERIVACIJE",
+      "1.2 Definicija"
+    ]
+  },
+  {
+    "objectID": "derivacije/derivacije-zadaci1.html",
+    "href": "derivacije/derivacije-zadaci1.html",
+    "title": "Zadatci",
+    "section": "",
+    "text": "Zadatci\n\nPo definiciji odredite derivaciju sljedećih funkcija:\n\n\\(f(x) = x^2\\)\n\\(f(x) = x^3\\)\n\\(f(x) = \\cos x\\)\n\\(f(x) = \\displaystyle \\frac{1}{x}\\)\n\n\n\n\n\nPrikaži hint\n\nDefinicija: \\(f'(c) = \\displaystyle \\lim_{x \\to c} \\frac{f(x) - f(c)}{x - c}\\)\nU c. dijelu zadatka koristite formule pretvorbe i limes \\(\\displaystyle \\lim_{t \\to 0} \\frac{\\sin t}{t}=1\\)\n\n\n\n\n\nDerivirajte sljedeće funkcije:\n\n\\(f(x) = 5x^2-x+1\\)\n\\(f(x) = 3 \\sqrt{x}\\)\n\\(f(x) = \\sin (2x)\\)\n\\(f(x) = \\displaystyle \\frac{2x - 3}{x^2 - x +1}\\)\n\\(f(x) = \\displaystyle \\frac{\\sin x + \\cos x}{\\sin x - \\cos x}\\)\n\\(f(x) = x2^x\\)\n\\(f(x) = e^x \\arcsin x\\)\n\n\n\n\n\nPrikaži hint\n\nKoristite poznata pravila deriviranja zbroja, produkta, kvocijenta, kompozicije…\n\n\n\n\n\nKoristeći pravilo kompozicije odredite derivacije sljedećih funkcija:\n\n\\(f(x) = \\sqrt{\\tan x}\\)\n\\(f(x) = \\ln \\sin x\\)\n\\(f(x) = e^{x^2 - 2x + 1}\\)\n\\(f(x) = \\displaystyle \\frac{1}{5^{x^2}}\\)\n\n\n\n\n\nKoristeći formulu za derivaciju inverzne funkcije odredite derivacije sljedećih funkcija:\n\n\\(f(x) = \\ln x\\)\n\\(f(x) = \\arccos x\\)\n\n\n\n\n\nPrikaži hint\n\nSvojstvo logaritma \\(\\ln (e^x) = x\\) i \\(e^{\\ln x}=x\\), općenito \\(\\log_b a^n = n \\log_b a\\) i \\(\\log_{b^m} a = \\frac{1}{m} \\log_b a\\)\n\n\n\n\n\n(naprednije) Zadana je funkcija \\(f \\colon \\mathbb{R} \\to \\mathbb{R}\\), \\(f(x) = x + e^x\\). Pokažite da je \\(f\\) injekcija (za \\(x_1,x_2 \\in \\mathbb{R}, x_1 \\neq x_2\\) vrijedi \\(f(x_1) \\neq f(x_2)\\))\n\n\n\n\nPrikaži hint\n\nRazmislite što se događa s funkcijom koja bi više puta u različitim točkama \\(x\\) postizala istu vrijednost \\(f(x)\\).",
+    "crumbs": [
+      "Home",
+      "1. DERIVACIJE",
+      "Zadatci - prvi dio"
+    ]
+  },
+  {
+    "objectID": "promjene.html",
+    "href": "promjene.html",
+    "title": "Povijest promjena na stranici",
+    "section": "",
+    "text": "30.06.2026. - stranica stvorena"
+  }
+]

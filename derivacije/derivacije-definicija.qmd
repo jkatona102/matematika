@@ -1,0 +1,116 @@
+# Definicija {.unnumbered}
+
+:::{.def}
+Neka je $I \subseteq \mathbb{R}$ otvoreni interval. Kažemo da je funkcija $f \colon I \to \mathbb{R}$ diferencijabilna ili derivabilna u točki $c \in I$, ako postoji limes
+$$
+\lim_{x \to c} \frac{f(x) - f(c)}{x - c}
+$$
+
+Taj broj zovemo derivacija (izvod) funkcije $f$ u točki $c$ i pišemo 
+$$
+f'(c) = \lim_{x \to c} \frac{f(x) - f(c)}{x - c}
+$$
+
+Još označavamo i s $Df(c)$ ili $\displaystyle \frac{df}{dx}(c)$.
+:::
+
+Kažemo da je $f$ diferencijabilna na intervalu $I$ ako je diferencijabilna u svakoj točki $c \in I$. U tom slučaju definiramo funkciju $f' \colon I \to \mathbb{R}$, koja svakoj točki $c \in I$ pridružuje derivaciju funkcije $f$ u toj točki.
+
+Analogno definiramo derivacije više reda:
+$$
+f^{(n+1)}(c) = \lim_{x \to c} \frac{f^{(n)}(x) - f^{(n)}(c)}{x - c}
+$$
+
+Navedi problemi imaju sljedeća rješenja u navednoj definiciji:
+
+1. Funkcija $g$ definirana s $g(x) = f'(c)(x− c) + f(c), x \in \mathbb{R}$, je lokalno najbolja aproksimacija funkcije $f$ oko $c$ među polinomima stupnja $\leq 1$.
+
+2. Brzina materijalne točke, čiji put u vremenu $t$ opisuje funkcija $t \to s(t)$, dana je s $v(t) = s'(t)$, tj. brzina je prva derivacija funkcije puta po vremenu. Analogno se ubrzanje definira kao derivacija brzine po vremenu, tj. $a(t) = v'(t) = s''(t)$.
+
+3. Tangenta na graf funkcije $f$ za točku $c$, ili u točki grafa $(c,f(c))$, je pravac koji je graf linearne funkcije $g$ iz točke 1. Jasno, moguće je odmah zadati i funkciju $\displaystyle h(x) = -\frac{1}{f'(c)}(x− c) + f(c)$, čiji je graf normala na graf funkcije u točki $c$.
+
+Derivacija nam, ukratko, govori koliko brzo se funkcija u okolini neke točke mijenja, tj. koliko raste ili koliko pada.
+
+:::{.primjer}
+Odredimo derivaciju konstantne funkcije $f(x) = \alpha , \forall x \in \mathbb{R}$ u točki $c \in \mathbb{R}$:
+$$
+f'(c) = \lim_{x \to c} \frac{f(x) - f(c)}{x - c} = \lim_{x \to c} \frac{\alpha - \alpha}{x - c} = 0
+$$
+
+Dakle, $f'(x) = 0, \forall x \in \mathbb{R}$.
+:::
+
+:::{.primjer}
+Odredimo derivaciju funkcije $f(x) = x$ u točki $c \in \mathbb{R}$:
+$$
+f'(c) = \lim_{x \to c} \frac{f(x) - f(c)}{x - c} = \lim_{x \to c} \frac{x - c}{x - c} = 1
+$$
+
+Dakle, $f'(x) = 1, \forall x \in \mathbb{R}$.
+:::
+
+:::{.primjer}
+Primijetimo da funkcija $f(x) = |x|$ nije diferencijabilna u točki $c = 0$:
+$$
+f'(0) = \lim_{x \to 0} \frac{f(x) - f(0)}{x - 0} = \lim_{x \to 0} \frac{|x| - 0}{x} = \lim_{x \to 0} \frac{|x|}{x}
+$$
+
+Ovaj limes ne postoji: prilazeći s negativne strane limes je $-1$, a prilazeći s pozitivne strane limes je $1$. Stoga funkcija $f(x) = |x|$ nije diferencijabilna u točki $x = 0$.
+:::
+
+## Neprekidnost i diferencijabilnost {.unnumbered}
+Sljedeći je teorem bitan:
+
+:::{.teorem}
+Ako je funkcija $f \colon I \to \mathbb{R}$ diferencijabilna u točki $c$ otvorenog intervala $I$, onda je $f$ neprekidna u $c$.
+:::
+
+:::{.dokaz}
+<details>
+<summary>Prikaži dokaz</summary>
+Zbog diferencijabilnosti funkcije $f$ u točki $c$ je funkcija
+$$
+\omega = \begin{cases}
+\displaystyle \frac{f(x) - f(c)}{x - c} - f'(c) & \text{ako } x \neq c, \\
+\hspace{2.4em}0 & \text{ako } x = c.
+\end{cases}
+$$
+
+neprekidna u $c$. Naime, $\omega(c) = 0 = \lim_{x \to c} \displaystyle \left (\frac{f(x) - f(c)}{x - c} - f'(c) \right ) = \lim_{x \to c} \omega(x)$. 
+
+Sada je $f(x) = f(c) + (f'(c) + \omega (x))(x− c), \ x \in I$ odakle zbog neprekidnosti od $\omega$ u $c$ slijedi tvrdnja.
+
+</details>
+:::
+
+Obrat ne vrijedi, neperkidna funkcija na $I$ ne mora biti i diferencijabilna na $I$, jedan primjer je funkcija $f(x) = |x|$.
+
+Uvedimo oznaku. Za funkciju kojoj je prva derivacija neprekidna kažemo da je klase $C^1$ na intervalu $I$, pišemo $f \in C^1(I)$. U punoj općenitosti, neka su $I,J \subseteq \mathbb{R}$ otvoreni intervali, za $f \colon I \to J$, za koju postoji $n$-ta derivacija i neprekidna je pišemo $f \in C^n(I,J)$. Primijetimo da je neprekidna funkcija klase $C^0(I)$.
+
+:::{.teorem}
+Neka su funkcije $f,g \colon I \to \mathbb{R}$ diferencijabilne u točki $c$ otvorenog intervala $I$.
+
+1. Funkcija $f + g$ je diferencijabilna u točki $c$ i 
+$$
+(f + g)'(c) = f'(c) + g'(c).
+$$
+
+2. Funkcija $fg$ je diferencijabilna u točki $c$ i 
+$$
+(fg)'(c) = f'(c) g(c) + f(c) g'(c).
+$$
+
+3. Ako je funkcija $\frac{f}{g}$ definirana na $I$, onda je i diferencijabilna u točki $c$ i 
+$$
+\left(\frac{f}{g}\right)'(c) = \frac{f'(c) g(c) - f(c) g'(c)}{g(c)^2}.
+$$
+:::
+
+:::{.korolar}
+Neka su funkcije $f,g \colon I \to \mathbb{R}$ diferencijabilne u točki $c$ otvorenog intervala $I$. Tada je za sve $\lambda , \mu \in \mathbb{R}$ funkcija $\lambda f + \mu g$ diferencijabilna u točki $c$ i vrijedi 
+$$
+(\lambda f + \mu g)'(c) = \lambda f'(c) + \mu g'(c).
+$$
+
+Skup svih funkcija s $I$ u $\mathbb{R}$ koje su diferencijabilne u točki $c$ je vektorski prostor (uz operacije zbrajanja i množenja skalarom definiranim po točkama), a pridruživanje $f \to f'(c)$ je linearan funkcional (linearni operator s kodomenom $\mathbb{R}$) na tom prostoru.
+:::

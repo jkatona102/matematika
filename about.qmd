@@ -1,0 +1,7 @@
+---
+title: "O stranici"
+---
+
+Na ovoj će stranici biti objavljeni materijali za rad. Svaka će se cjelina sastojati od teorija i zadataka koji će biti postupno objavljeni.
+
+Na stranici [Novosti](promjene.qmd) silazno će biti sortirane promjene koje su se dogodile na stranici (dodavanje materijala, ispravljanje greški i slično).
