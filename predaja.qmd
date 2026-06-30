@@ -1,4 +1,4 @@
-# Predaja zadataka
+# Predaja zadataka {.unnumbered}
 
 Na ovoj stranici predajete zadatke.
 
