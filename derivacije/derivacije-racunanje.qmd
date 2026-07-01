@@ -34,16 +34,27 @@ $$
 \end{cases}
 $$
 
-Tada vrijedi $g(y) = g(d) + (g'(d) + \omega_1(y))(y - d)$ za sve $y \in J$.
+Tada vrijedi 
+$$
+g(y) = g(d) + (g'(d) + \omega_1(y))(y - d)$ za sve $y \in J
+$$
 
-Neka je $h = g \circ f$. Tada je $h(x) = g[f(x)] = g(d) + [g'(d) + \omega _1(f(x))](f(x) - f(c))$
+Neka je $h = g \circ f$. Tada je 
+$$
+h(x) = g[f(x)] = g(d) + [g'(d) + \omega _1(f(x))](f(x) - f(c))
+$$
 
 što daje
 $$
 \frac{h(x) - h(c)}{x - c} = [g'(d) + \omega_1(f(x))] \frac{f(x) - f(c)}{x - c}
 $$
 
-Zbog neprkidnosti funkcije $f$ u točki $c$ i neprekidnosti $\omega _1$ u $d = f(c)$, funkcija $\omega _1 \circ f$ je neprekidna u $c$ i $(\omega _1 \circ f)(c) = \omega _1(f(c)) = \omega _1(d) = 0$. Stoga je
+Zbog neprkidnosti funkcije $f$ u točki $c$ i neprekidnosti $\omega _1$ u $d = f(c)$, funkcija $\omega _1 \circ f$ je neprekidna u $c$ i 
+$$
+(\omega _1 \circ f)(c) = \omega _1(f(c)) = \omega _1(d) = 0
+$$ 
+
+Stoga je
 
 $$
 h'(c) = \lim_{x \to c} \frac{h(x) - h(c)}{x - c} = \lim_{x \to c} [g'(d) + \omega_1(f(x))] \frac{f(x) - f(c)}{x - c} = g'(d) f'(c).

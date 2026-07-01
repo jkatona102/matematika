@@ -4,5 +4,14 @@ title: "Povijest promjena na stranici"
 
 ---
 
+01.07.2026.
+
+- dodano poglavlje o limesima i neprekidnosti
+
+- dodano poglavlje o derivacijama i diferencijabilnosti
+
+---
+
 30.06.2026. 
+
 - stranica stvorena

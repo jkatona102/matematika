@@ -4,4 +4,6 @@ title: "Matematika"
 
 Ovo je Quarto stranica.
 
+[Limesi](limesi/limesi.qmd)
+
 [Derivacije](derivacije/derivacije.qmd)

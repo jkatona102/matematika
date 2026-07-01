@@ -1,5 +1,10 @@
 # LIMESI {.unnumbered}
 
-U ovom kratkom poglavlju dat ćemo kratki pregled limesa radi jednostavnosti shvaćanja diferencijalnog računa.
+U ovom kratkom poglavlju dat ćemo pregled osnovnih svojstava limesa i neprekidnih funkcija radi jednostavnosti shvaćanja diferencijalnog računa.
 
 Većinu dokaza u ovom poglavlju ćemo izostaviti, a čitatelja se upućuje na dodatnu literaturu navedenu ovdje. Tijekom razvoja stranice postoji mogućnost dodavanja nekih dokaza.
+
+## Sadržaj poglavlja {.unnumbered}
+
+- [Definiciji i temeljna teorija, neprekidnost](limesi1.qmd)
+- [Zadatci](limesi-zadatci.qmd)

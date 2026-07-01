@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>derivacije-racunanje – web-stranica</title>
+<title>derivacije-racunanje – Matematika</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -112,7 +112,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">web-stranica</span>
+    <span class="navbar-title">Matematika</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Pretraživanje"></div>
@@ -186,7 +186,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../limesi/limesi1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1.1 Definicija i operacije</span></a>
+ <span class="menu-text">1.1 Definicija i temeljna teorija, neprekidnost</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -291,12 +291,19 @@ Prikaži dokaz
 \hspace{2.4em}0 &amp; \text{ako } x = d.
 \end{cases}
 \]</span></p>
-<p>Tada vrijedi <span class="math inline">\(g(y) = g(d) + (g'(d) + \omega_1(y))(y - d)\)</span> za sve <span class="math inline">\(y \in J\)</span>.</p>
-<p>Neka je <span class="math inline">\(h = g \circ f\)</span>. Tada je <span class="math inline">\(h(x) = g[f(x)] = g(d) + [g'(d) + \omega _1(f(x))](f(x) - f(c))\)</span></p>
+<p>Tada vrijedi <span class="math display">\[
+g(y) = g(d) + (g'(d) + \omega_1(y))(y - d)$ za sve $y \in J
+\]</span></p>
+<p>Neka je <span class="math inline">\(h = g \circ f\)</span>. Tada je <span class="math display">\[
+h(x) = g[f(x)] = g(d) + [g'(d) + \omega _1(f(x))](f(x) - f(c))
+\]</span></p>
 <p>što daje <span class="math display">\[
 \frac{h(x) - h(c)}{x - c} = [g'(d) + \omega_1(f(x))] \frac{f(x) - f(c)}{x - c}
 \]</span></p>
-<p>Zbog neprkidnosti funkcije <span class="math inline">\(f\)</span> u točki <span class="math inline">\(c\)</span> i neprekidnosti <span class="math inline">\(\omega _1\)</span> u <span class="math inline">\(d = f(c)\)</span>, funkcija <span class="math inline">\(\omega _1 \circ f\)</span> je neprekidna u <span class="math inline">\(c\)</span> i <span class="math inline">\((\omega _1 \circ f)(c) = \omega _1(f(c)) = \omega _1(d) = 0\)</span>. Stoga je</p>
+<p>Zbog neprkidnosti funkcije <span class="math inline">\(f\)</span> u točki <span class="math inline">\(c\)</span> i neprekidnosti <span class="math inline">\(\omega _1\)</span> u <span class="math inline">\(d = f(c)\)</span>, funkcija <span class="math inline">\(\omega _1 \circ f\)</span> je neprekidna u <span class="math inline">\(c\)</span> i <span class="math display">\[
+(\omega _1 \circ f)(c) = \omega _1(f(c)) = \omega _1(d) = 0
+\]</span></p>
+<p>Stoga je</p>
 <p><span class="math display">\[
 h'(c) = \lim_{x \to c} \frac{h(x) - h(c)}{x - c} = \lim_{x \to c} [g'(d) + \omega_1(f(x))] \frac{f(x) - f(c)}{x - c} = g'(d) f'(c).
 \]</span></p>

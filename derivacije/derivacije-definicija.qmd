@@ -76,9 +76,17 @@ $$
 \end{cases}
 $$
 
-neprekidna u $c$. Naime, $\omega(c) = 0 = \lim_{x \to c} \displaystyle \left (\frac{f(x) - f(c)}{x - c} - f'(c) \right ) = \lim_{x \to c} \omega(x)$ 
+neprekidna u $c$. Naime, 
+$$
+\omega(c) = 0 = \lim_{x \to c} \displaystyle \left (\frac{f(x) - f(c)}{x - c} - f'(c) \right ) = \lim_{x \to c} \omega(x)
+$$ 
 
-Sada je $f(x) = f(c) + (f'(c) + \omega (x))(x− c), \ x \in I$ odakle zbog neprekidnosti od $\omega$ u $c$ slijedi tvrdnja.
+Sada je 
+$$
+f(x) = f(c) + (f'(c) + \omega (x))(x− c), \ x \in I
+$$ 
+
+odakle zbog neprekidnosti od $\omega$ u $c$ slijedi tvrdnja.
 
 </details>
 :::

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>limesi1 – web-stranica</title>
+<title>limesi1 – Matematika</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -112,7 +112,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">web-stranica</span>
+    <span class="navbar-title">Matematika</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Pretraživanje"></div>
@@ -148,7 +148,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../limesi/limesi.html">1. LIMESI</a></li><li class="breadcrumb-item"><a href="../limesi/limesi1.html">1.1 Definicija i operacije</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../limesi/limesi.html">1. LIMESI</a></li><li class="breadcrumb-item"><a href="../limesi/limesi1.html">1.1 Definicija i temeljna teorija, neprekidnost</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Pretraživanje" onclick="window.quartoOpenSearch();">
@@ -186,13 +186,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../limesi/limesi1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">1.1 Definicija i operacije</span></a>
+ <span class="menu-text">1.1 Definicija i temeljna teorija, neprekidnost</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../limesi/limesi-zadatci.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1.2 Zadatci</span></a>
+ <span class="menu-text">Zadatci</span></a>
   </div>
 </li>
       </ul>
@@ -242,7 +242,7 @@ window.Quarto = {
     <h2 id="toc-title">Sadržaj</h2>
    
   <ul>
-  <li><a href="#definicija-i-temeljna-teorija" id="toc-definicija-i-temeljna-teorija" class="nav-link active" data-scroll-target="#definicija-i-temeljna-teorija">Definicija i temeljna teorija</a>
+  <li><a href="#definicija-i-temeljna-teorija-neprekidnost" id="toc-definicija-i-temeljna-teorija-neprekidnost" class="nav-link active" data-scroll-target="#definicija-i-temeljna-teorija-neprekidnost">Definicija i temeljna teorija, neprekidnost</a>
   <ul class="collapse">
   <li><a href="#limes-niza" id="toc-limes-niza" class="nav-link" data-scroll-target="#limes-niza">Limes niza</a></li>
   <li><a href="#limes-funkcije" id="toc-limes-funkcije" class="nav-link" data-scroll-target="#limes-funkcije">Limes funkcije</a></li>
@@ -253,13 +253,13 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../limesi/limesi.html">1. LIMESI</a></li><li class="breadcrumb-item"><a href="../limesi/limesi1.html">1.1 Definicija i operacije</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../limesi/limesi.html">1. LIMESI</a></li><li class="breadcrumb-item"><a href="../limesi/limesi1.html">1.1 Definicija i temeljna teorija, neprekidnost</a></li></ol></nav></header>
 
 
 
 
-<section id="definicija-i-temeljna-teorija" class="level1 unnumbered">
-<h1 class="unnumbered">Definicija i temeljna teorija</h1>
+<section id="definicija-i-temeljna-teorija-neprekidnost" class="level1 unnumbered">
+<h1 class="unnumbered">Definicija i temeljna teorija, neprekidnost</h1>
 <section id="limes-niza" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="limes-niza">Limes niza</h2>
 <div class="def">
@@ -375,6 +375,15 @@ f(\langle c− \delta, c + \delta \rangle \backslash \{c\}) \subseteq \langle L�
 <p>Vidimo da se lijevi i desni limes razlikuju u točki <span class="math inline">\(c=0\)</span> pa pomoću sljedećeg rezultata zaključujemo da limes ove funkcije u točki <span class="math inline">\(c=0\)</span> ne postoji.</p>
 <div class="teorem">
 <p>Neka je <span class="math inline">\(I \subseteq \mathbb{R}\)</span> otvoreni interval, <span class="math inline">\(c \in I\)</span> i <span class="math inline">\(f \colon I \backslash \{c\} \to \mathbb{R}\)</span>. Za funkciju <span class="math inline">\(f\)</span> postoji <span class="math inline">\(\displaystyle \lim_{x \to c} f(x)\)</span> ako i samo postoje i jednaki su <span class="math inline">\(\displaystyle \lim_{x \to c-} f(x)\)</span> i <span class="math inline">\(\displaystyle \lim_{x \to c+} f(x)\)</span>.</p>
+</div>
+<div class="primjer">
+<p>Odredimo limes <span class="math inline">\(\displaystyle \lim_{x \to \infty} \dfrac{5x^2 - 1}{3x^2 + 1}\)</span>.</p>
+<p>Klasični postupak je dijeljenje brojnika i nazivnika dominatnim članom (najvećom potencijom u ovom slučaju). Uočimo, kad podijelimo i brojnik i nazivnik istim brojem, razlomak se ne mijenja! <span class="math display">\[
+\displaystyle \lim_{x \to \infty} \dfrac{5x^2 - 1}{3x^2 + 1} =
+\displaystyle \lim_{x \to \infty} \dfrac{(5x^2 - 1) \dfrac{1}{x^2}}{(3x^2 + 1) \dfrac{1}{x^2}} =
+\displaystyle \lim_{x \to \infty} \dfrac{5 - \dfrac{1}{x^2}}{3 + \dfrac{1}{x^2}} = \dfrac{5 - 0}{3 + 0} = \dfrac{5}{3}
+\]</span></p>
+<p>U drugoj jednakosti koristili smo svojstvo da limesi može <em>ući</em> u razlomak.</p>
 </div>
 </section>
 <section id="neprekidnost" class="level2 unnumbered">

@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "web-stranica"
+  title: "Matematika"
   navbar:
     left:
       - href: index.qmd
@@ -22,9 +22,9 @@ website:
       - section: "1. LIMESI"
         href: limesi/limesi.qmd
         contents:
-          - text: "1.1 Definicija i operacije"
+          - text: "1.1 Definicija i temeljna teorija, neprekidnost"
             href: limesi/limesi1.qmd
-          - text: "1.2 Zadatci"
+          - text: "Zadatci"
             href: limesi/limesi-zadatci.qmd
            
       - section: "2. DERIVACIJE"
