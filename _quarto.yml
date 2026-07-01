@@ -17,14 +17,14 @@ website:
     contents:
       - text: "Predavanje zadataka"
         href: predaja.qmd
-      - section: "1. Limesi"
+      - section: "1. LIMESI"
         href: limesi/limesi.qmd
         contents:
           - text: "1.1 Definicija i operacije"
             href: limesi/limesi1.qmd
           - text: "1.2 Zadatci"
             href: limesi/limesi-zadatci.qmd
-      
+           
       - section: "2. DERIVACIJE"
         href: derivacije/derivacije.qmd
         contents:
@@ -53,7 +53,3 @@ language:
   toc-title-document: "Na ovoj stranici"
   toc-title-website: "Sadržaj"
   search-label: "Pretraživanje"
-
-crossref:
-  chapters: true
-  thm-prefix: "Teorem"

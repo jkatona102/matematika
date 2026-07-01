@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>limesi1 – web-stranica</title>
+<title>limesi – web-stranica</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -71,35 +71,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -144,7 +115,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../limesi/limesi.html">1. LIMESI</a></li><li class="breadcrumb-item"><a href="../limesi/limesi1.html">1.1 Definicija i operacije</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../limesi/limesi.html">1. LIMESI</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Pretraživanje" onclick="window.quartoOpenSearch();">
@@ -172,7 +143,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../limesi/limesi.html" class="sidebar-item-text sidebar-link">
+            <a href="../limesi/limesi.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">1. LIMESI</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -181,7 +152,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../limesi/limesi1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../limesi/limesi1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">1.1 Definicija i operacije</span></a>
   </div>
 </li>
@@ -238,156 +209,21 @@ window.Quarto = {
     <h2 id="toc-title">Sadržaj</h2>
    
   <ul>
-  <li><a href="#definicija-i-temeljna-teorija" id="toc-definicija-i-temeljna-teorija" class="nav-link active" data-scroll-target="#definicija-i-temeljna-teorija">Definicija i temeljna teorija</a>
-  <ul class="collapse">
-  <li><a href="#limes-niza" id="toc-limes-niza" class="nav-link" data-scroll-target="#limes-niza">Limes niza</a></li>
-  <li><a href="#limes-funkcije" id="toc-limes-funkcije" class="nav-link" data-scroll-target="#limes-funkcije">Limes funkcije</a></li>
-  <li><a href="#neprekidnost" id="toc-neprekidnost" class="nav-link" data-scroll-target="#neprekidnost">Neprekidnost</a></li>
-  </ul></li>
+  <li><a href="#limesi" id="toc-limesi" class="nav-link active" data-scroll-target="#limesi">LIMESI</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../limesi/limesi.html">1. LIMESI</a></li><li class="breadcrumb-item"><a href="../limesi/limesi1.html">1.1 Definicija i operacije</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<section id="definicija-i-temeljna-teorija" class="level1 unnumbered">
-<h1 class="unnumbered">Definicija i temeljna teorija</h1>
-<section id="limes-niza" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="limes-niza">Limes niza</h2>
-<div class="def">
-<p>Funkciju <span class="math inline">\(a \colon \mathbb{N} \to S\)</span> zovemo <strong>niz</strong> u <span class="math inline">\(S\)</span>.</p>
-</div>
-<p>Uobičajena oznaka funkcijskih vrijednosti je <span class="math inline">\(a(n)=a_n\)</span>, a oznaka niza <span class="math inline">\((a_n)_{n \in \mathbb{N}}\)</span>, <span class="math inline">\((a_n)_n\)</span> ili samo <span class="math inline">\((a_n)\)</span>.</p>
-<p>Primjeri nekih nizova:</p>
-<ul>
-<li><span class="math inline">\(a_n = \frac{1}{n}, \ \forall n \in \mathbb{N}\)</span> niz je u <span class="math inline">\(\mathbb{R}\)</span></li>
-<li><span class="math inline">\(a_n = n+\frac{i}{n}, \ \forall n \in \mathbb{N}\)</span> niz je u <span class="math inline">\(\mathbb{C}\)</span></li>
-<li><span class="math inline">\(a_n(x)= \sin (nx)\)</span> niz realnih funkcija</li>
-</ul>
-<div class="def">
-<p>Neka je <span class="math inline">\((a_n)_n\)</span> niz u <span class="math inline">\(\mathbb{R}\)</span>. Niz <span class="math inline">\((a_n)_n\)</span> je:</p>
-<ul>
-<li>rastući ako <span class="math inline">\(\forall n \in \mathbb{N}, a_n \leq a_{n+1}\)</span></li>
-<li>strogo rastući ako <span class="math inline">\(\forall n \in \mathbb{N}, a_n &lt; a_{n+1}\)</span></li>
-<li>padajući ako <span class="math inline">\(\forall n \in \mathbb{N}, a_n \geq a_{n+1}\)</span></li>
-<li>strogo padajući ako <span class="math inline">\(\forall n \in \mathbb{N}, a_n &gt; a_{n+1}\)</span></li>
-</ul>
-</div>
-<p>Definicija monotonosti niza odgovara našoj intuiciji. Doduše, za nizove u <span class="math inline">\(\mathbb{R}^n\)</span> nećemo moći govoriti o monotonosti, ali uvest ćemo pojam ograničenosti.</p>
-<p>Definirajmo sada <strong>limes</strong>:</p>
-<div class="def">
-<p>Niz realnih brojeva <span class="math inline">\((a_n)_n\)</span> <strong>konvergira</strong> ili teži k realnom broju <span class="math inline">\(a \in \mathbb{R}\)</span> ako svaki otvoreni interval polumjera <span class="math inline">\(\varepsilon\)</span> oko točke <span class="math inline">\(a\)</span> sadrži gotovo sve članove niza, tj. <span class="math display">\[
-(\forall \varepsilon &gt; 0)(\exists n_{\varepsilon} \in \mathbb{N})(\forall n \in \mathbb{N})
-((n &gt; n_{\varepsilon}) \rightarrow (|a_n - a| &lt; \varepsilon))
-\]</span></p>
-<p>Tada <span class="math inline">\(a\)</span> zovemo <strong>granična vrijednost</strong> ili <strong>limes</strong> niza <span class="math inline">\((a_n)_n\)</span> i pišemo <span class="math inline">\(a = \lim_{n \to \infty} a_n\)</span>.</p>
-<p>Ako niz ne konvergira, kažemo da <strong>divergira</strong>.</p>
-</div>
-<p>Možemo definirati i konvergenciju prema <span class="math inline">\(+ \infty\)</span> i <span class="math inline">\(- \infty\)</span>, ali trenutno nema potrebe za to. Sada navodimo neke bitne rezultate, ali bez dokaza.</p>
-<div class="teorem">
-<ol type="1">
-<li>Konvergentan niz u <span class="math inline">\(\mathbb{R}\)</span> ima samo jednu graničnu vrijednost.</li>
-<li>Konvergentan niz u <span class="math inline">\(\mathbb{R}\)</span> je ograničen.</li>
-</ol>
-</div>
-<div class="teorem">
-<p>Svaki monoton i ograničen niz u <span class="math inline">\(\mathbb{R}\)</span> je konvergentan.</p>
-</div>
-<div class="teorem">
-<p>Neka su <span class="math inline">\((a_n)_n\)</span> i <span class="math inline">\((b_n)_n\)</span> konvergentni nizovi u <span class="math inline">\(\mathbb{R}\)</span>. Tada vrijedi:</p>
-<ol type="1">
-<li>Niz <span class="math inline">\((a_n \pm b_n)_n\)</span> je konvergentan i vrijedi <span class="math inline">\(\displaystyle \lim_{n \to \infty}(a_n \pm b_n)_n = \lim_{n \to \infty} a_n \pm \lim_{n \to \infty} b_n\)</span></li>
-<li>Niz <span class="math inline">\((a_n \cdot b_n)_n\)</span> je konvergentan i <span class="math inline">\(\displaystyle \lim_{n \to \infty} (a_n \cdot b_n)_n = \lim_{n \to \infty} a_n \cdot \lim_{n \to \infty} b_n\)</span></li>
-<li>Ako je <span class="math inline">\(\forall n \in \mathbb{N}, b_n \neq 0\)</span> i <span class="math inline">\(\displaystyle \lim_{n \to \infty} b_n \neq 0\)</span>, onda je niz <span class="math inline">\(\displaystyle \left (\frac{a_n}{b_n} \right)_n\)</span> konvergentan i vrijedi <span class="math inline">\(\displaystyle \lim_{n \to \infty} \left (\frac{a_n}{b_n} \right)_n = \displaystyle \frac{\displaystyle \lim_{n \to \infty} a_n}{\displaystyle\lim_{n \to \infty} b_n}\)</span></li>
-<li>Niz <span class="math inline">\((|a_n|)_n\)</span> je konvergentan i <span class="math inline">\(\displaystyle\lim_{n \to \infty} |a_n| = |\displaystyle \lim_{n \to \infty} a_n|\)</span></li>
-</ol>
-</div>
-<div class="korolar">
-<p>Neka su <span class="math inline">\(\displaystyle \lim_{n \to \infty} a_n = a\)</span> i <span class="math inline">\(\displaystyle \lim_{n \to \infty} b_n = b\)</span>. Tada je za sve <span class="math inline">\(\lambda, \mu \in \mathbb{R}\)</span> niz <span class="math inline">\((\lambda a_n + \mu b_n)_n\)</span> konvergent i vrijedi <span class="math inline">\(\displaystyle \lim_{n \to \infty} (\lambda a_n + \mu b_n) = \lambda a + \mu b\)</span>.</p>
-</div>
-<p>Iz prethodnog teorema i korolara vidimo da je skup svih konvergentnih nizova u <span class="math inline">\(\mathbb{R}\)</span> zatvoren na linearne kombinacije svojih elemenata, stoga zaključujemo da je skup konvergentnih nizova u <span class="math inline">\(\mathbb{R}\)</span> vektorski prostor.</p>
-</section>
-<section id="limes-funkcije" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="limes-funkcije">Limes funkcije</h2>
-<p>Sada prelazimo na limes funkcija, sljedećom definicijom vidimo vezu s limesom niza:</p>
-<div class="def">
-<p>Neka je <span class="math inline">\(I \subseteq \mathbb{R}\)</span> otvoreni interval i <span class="math inline">\(c \in I\)</span>. Za funkciju <span class="math inline">\(f \colon I \backslash \{c\} \to \mathbb{R}\)</span> kažemo da ima limes u točki <span class="math inline">\(c\)</span> jednak <span class="math inline">\(L\)</span> ako <strong>za svaki</strong> niz <span class="math inline">\((c_n)_n\)</span> u <span class="math inline">\(I \backslash \{c\}\)</span> vrijedi <span class="math display">\[
-\lim_{n \to \infty} c_n = c \Rightarrow \lim_{n \to \infty} f(c_n) = L
-\]</span></p>
-<p>Tada pišemo <span class="math inline">\(\displaystyle \lim_{x \to c} f(x) = L\)</span>.</p>
-</div>
-<p>Iz definicije je vidljivo da je približavanje broja <span class="math inline">\(x\)</span> prema <span class="math inline">\(c\)</span> ekvivalentno približavanju svih nizova koji konvergiraju k točki <span class="math inline">\(c\)</span>. Dakle, u definiciji je potrebno promatrati sve takve nizove, a ne samo jedan niz ili njih konačno mnogo. Tada se slike tih nizova po funkciji <span class="math inline">\(f\)</span> moraju približavati istom broju <span class="math inline">\(L\)</span>. S druge strane, nizovi koji konvergiraju k <span class="math inline">\(c\)</span> imaju točke i lijevo i desno od <span class="math inline">\(c\)</span> pa je prirodno pretpostaviti da je točka <span class="math inline">\(c\)</span> iz nekog otvorenog intervala koji je sadržan u domeni funkcije <span class="math inline">\(f\)</span>.</p>
-<p>Pojam limesa funkcije moguće je definirati i bez nizova i to je sadržaj Cauchyjeve definicije limesa:</p>
-<div class="teorem">
-<p>Neka je <span class="math inline">\(I \subseteq \mathbb{R}\)</span> otvoreni interval, <span class="math inline">\(c \in I\)</span> i <span class="math inline">\(f \colon I \backslash \{c\} \to \mathbb{R}\)</span>. Limes funkcije <span class="math inline">\(f\)</span> u točki <span class="math inline">\(c\)</span> postoji i <span class="math inline">\(\lim_{x \to c} f(x) = L\)</span> ako i samo ako vrijedi: <span class="math display">\[
-(\forall \varepsilon &gt; 0)(\exists \delta &gt; 0)(\forall x \in I)((0 &lt; |x-c| &lt; \delta) \rightarrow (|f(x) - L| &lt; \varepsilon))
-\]</span></p>
-</div>
-<p>Cauchyjeva definicija ima intuitivnu geometrijsku interpretaciju. Za svaku okolinu <span class="math inline">\(\langle L− \varepsilon,L+ \varepsilon \rangle\)</span> broja <span class="math inline">\(L\)</span> postoji okolina <span class="math inline">\(\langle c− \delta, c + \delta \rangle\)</span> broja <span class="math inline">\(c\)</span> koja se, s izuzetkom točke <span class="math inline">\(c\)</span>, preslikava u okolinu <span class="math inline">\(\langle L− \varepsilon,L+ \varepsilon \rangle\)</span>, tj. <span class="math display">\[
-f(\langle c− \delta, c + \delta \rangle \backslash \{c\}) \subseteq \langle L− \varepsilon,L+ \varepsilon \rangle
-\]</span></p>
-<p>Limes funkcije u skladu je s operacija zbrajanja, oduzimanja, množenja i dijeljenja:</p>
-<div class="teorem">
-<p>Neka je <span class="math inline">\(I \subseteq \mathbb{R}\)</span> otvoreni interval, <span class="math inline">\(c \in I\)</span> i <span class="math inline">\(f,g \colon I \backslash \{c\} \to \mathbb{R}\)</span> za koje postoje <span class="math inline">\(\displaystyle \lim_{x \to  c} f(x)\)</span> i <span class="math inline">\(\displaystyle \lim_{x \to  c} g(x)\)</span>. Tada vrijedi:</p>
-<ol type="1">
-<li>Funkcija <span class="math inline">\(f \pm g\)</span> ima limes u <span class="math inline">\(c\)</span> i vrijedi <span class="math inline">\(\displaystyle \lim_{x \to c} (f(x) \pm g(x)) = \lim_{x \to c} f(x) \pm \lim_{x \to c} g(x)\)</span></li>
-<li>Za svaki <span class="math inline">\(\lambda \in \mathbb{R}\)</span> funkcija <span class="math inline">\(\lambda f\)</span> ima limes u <span class="math inline">\(c\)</span> i vrijedi <span class="math inline">\(\displaystyle \lim_{x \to c} \lambda f(x) = \lambda \lim_{x \to c} f(x)\)</span></li>
-<li>Funkcije <span class="math inline">\(fg\)</span> ima limes u <span class="math inline">\(c\)</span> i vrijedi <span class="math inline">\(\displaystyle \lim_{x \to c} (f(x)g(x)) = \lim_{x \to c} f(x) \lim_{x \to c} g(x)\)</span></li>
-<li>Ako je <span class="math inline">\(g(x) \neq 0, \forall x \in I \backslash \{c\}\)</span> i <span class="math inline">\(\displaystyle \lim_{x \to c} g(x) \neq 0\)</span>, onda je funkcija <span class="math inline">\(\displaystyle \frac{f}{g}\)</span> ima limes u <span class="math inline">\(c\)</span> i vrijedi <span class="math inline">\(\displaystyle \lim_{x \to c} \left (\displaystyle \frac{f(x)}{g(x)} \right) = \frac{\displaystyle \lim_{x \to c} f(x)}{\displaystyle \lim_{x \to c} g(x)}\)</span></li>
-<li>Funkcija <span class="math inline">\(|f|\)</span> ima limes u <span class="math inline">\(c\)</span> i <span class="math inline">\(\displaystyle \lim_{x \to c} |f(x)| = |\displaystyle \lim_{x \to c} f(x)|\)</span></li>
-</ol>
-</div>
-<p>Kao i kod nizova, možemo definirati limes u <span class="math inline">\(\pm \infty\)</span>.</p>
-<p>Definirajmo sada lijevi i desni limesi.</p>
-<div class="def">
-<p>Neka je <span class="math inline">\(I \subseteq \mathbb{R}\)</span> otvoreni interval i <span class="math inline">\(c \in I\)</span>. Za funkciju <span class="math inline">\(f \colon I \backslash \{c\} \to \mathbb{R}\)</span> kažemo da ima</p>
-<ol type="1">
-<li><strong>limes slijeva</strong> u točki <span class="math inline">\(c\)</span> jednak <span class="math inline">\(L\)</span> ako vrijedi <span class="math display">\[
-(\forall \varepsilon &gt; 0)(\exists \delta &gt; 0)(\forall x \in I)((0 &lt; c-x &lt; \delta) \rightarrow (|f(x) - L| &lt; \varepsilon))
-\]</span></li>
-</ol>
-<p>Tada pišemo <span class="math inline">\(\displaystyle \lim_{x \to c-} f(x) = f(c-) = L\)</span>.</p>
-<ol start="2" type="1">
-<li><strong>limes slijeva</strong> u točki <span class="math inline">\(c\)</span> jednak <span class="math inline">\(L\)</span> ako vrijedi <span class="math display">\[
-(\forall \varepsilon &gt; 0)(\exists \delta &gt; 0)(\forall x \in I)((0 &lt; x-c &lt; \delta) \rightarrow (|f(x) - L| &lt; \varepsilon))
-\]</span></li>
-</ol>
-<p>Tada pišemo <span class="math inline">\(\displaystyle \lim_{x \to c+} f(x) = f(c+) = L\)</span>.</p>
-</div>
-<p>Uzmimo za ilustraciju funkciju <span class="math inline">\(f\)</span> definiranu kao <span class="math display">\[ f(x) =
-\begin{brackets}
-1 &amp; x &gt; 1 \\
-0 &amp; x = 0 \\
--1 &amp; x &lt; -1
-\end{brackets}
-\]</span></p>
-<p><span class="math display">\[
-\lim_{x \to 0-} f(x) = -1 \neq 1 = \lim_{x \to 0+} f(x)
-\]</span></p>
-<p>Vidimo da se lijevi i desni limes razlikuju u točki <span class="math inline">\(c=0\)</span> pa pomoću sljedećeg rezultata zaključujemo da limes ove funkcije u točki <span class="math inline">\(c=0\)</span> ne postoji.</p>
-<div class="teorem">
-<p>Neka je <span class="math inline">\(I \subseteq \mathbb{R}\)</span> otvoreni interval, <span class="math inline">\(c \in I\)</span> i <span class="math inline">\(f \colon I \backslash \{c\} \to \mathbb{R}\)</span>. Za funkciju <span class="math inline">\(f\)</span> postoji <span class="math inline">\(\displaystyle \lim_{x \to c} f(x)\)</span> ako i samo postoje i jednaki su <span class="math inline">\(\displaystyle \lim_{x \to c-} f(x)\)</span> i <span class="math inline">\(\displaystyle \lim_{x \to c+} f(x)\)</span>.</p>
-</div>
-</section>
-<section id="neprekidnost" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="neprekidnost">Neprekidnost</h2>
-<div class="def">
-<p>Neka je <span class="math inline">\(I \subseteq \mathbb{R}\)</span> otvoreni interval i <span class="math inline">\(c \in I\)</span>. Za funkciju <span class="math inline">\(f \colon I \to \mathbb{R}\)</span> kažemo da je <strong>neprekidna</strong> u točki <span class="math inline">\(c\)</span> ako postoji limes funkcije <span class="math inline">\(f\)</span> u točki <span class="math inline">\(c\)</span> i <span class="math inline">\(\displaystyle \lim_{x \to c} f(x) = f(c)\)</span>. Funkcija <span class="math inline">\(f\)</span> je neprekidna na skupu <span class="math inline">\(I\)</span> ako je neprekidna u svakoj točki <span class="math inline">\(c \in I\)</span>.</p>
-</div>
-<p>Slikovito rečeno, grafove neprekidnih funkcija možemo nacrtati potezom ruke bez odizanja olovke s papira.</p>
-<p>Iskažimo Cauchyjevu definiciju:</p>
-<div class="def">
-<p>Neka je <span class="math inline">\(I \subseteq \mathbb{R}\)</span> otvoreni interval, <span class="math inline">\(c \in I\)</span> i <span class="math inline">\(f \colon I \to \mathbb{R}\)</span>. Funkcija <span class="math inline">\(f\)</span> je neprekidna u točki <span class="math inline">\(c\)</span> ako i samo ako vrijedi: <span class="math display">\[
-(\forall \varepsilon &gt; 0)(\exists \delta &gt; 0)(\forall x \in I)((|x-c| &lt; \delta) \rightarrow (|f(x) - f(c)| &lt; \varepsilon))
-\]</span></p>
-</div>
-<p>Imamo jednostavnu interpretaciju: za svaku okolinu točke <span class="math inline">\(c\)</span> slika te okolino po neprekidnoj funkciji <span class="math inline">\(f\)</span> je okolina točke <span class="math inline">\(f(c)\)</span>.</p>
+<section id="limesi" class="level1 unnumbered">
+<h1 class="unnumbered">LIMESI</h1>
+<p>U ovom kratkom poglavlju dat ćemo kratki pregled limesa radi jednostavnosti shvaćanja diferencijalnog računa.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

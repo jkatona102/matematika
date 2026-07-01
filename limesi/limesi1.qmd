@@ -159,9 +159,11 @@ Slikovito rečeno, grafove neprekidnih funkcija možemo nacrtati potezom ruke be
 
 Iskažimo Cauchyjevu definiciju:
 
-:::{.tem}
+:::{.def}
 Neka je $I \subseteq \mathbb{R}$ otvoreni interval, $c \in I$ i $f \colon I \to \mathbb{R}$. Funkcija $f$ je neprekidna u točki $c$ ako i samo ako vrijedi:
 $$
 (\forall \varepsilon > 0)(\exists \delta > 0)(\forall x \in I)((|x-c| < \delta) \rightarrow (|f(x) - f(c)| < \varepsilon))
 $$
 :::
+
+Imamo jednostavnu interpretaciju: za svaku okolinu točke $c$ slika te okolino po neprekidnoj funkciji $f$ je okolina točke $f(c)$.
