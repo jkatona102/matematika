@@ -10,6 +10,8 @@ website:
       - about.qmd
       - href: promjene.qmd
         text: Novosti
+      - href: literatura.qmd
+        text: Literatura
 
   sidebar:
     style: "docked"

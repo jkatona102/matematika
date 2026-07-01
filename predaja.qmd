@@ -8,15 +8,14 @@ Na ovoj stranici predajete zadatke.
   <input type="text" id="ime" placeholder="Ime">
   <input type="text" id="prezime" placeholder="Prezime">
 
-  <!-- 🔽 NOVO: izbor seta zadataka -->
   <select id="setZadataka">
     <option value="">Odaberi set zadataka</option>
+    <option value="Limesi">Limesi</option>
     <option value="Derivacije1">Derivacije 1. dio</option>
-    <option value="Derivacije2">Derivacije 2. dio</option>
-    <option value="Derivacije3">Derivacije 3. dio</option>
+    <!-- <option value="Derivacije2">Derivacije 2. dio</option>
+    <option value="Derivacije3">Derivacije 3. dio</option> -->
   </select>
 
-  <!-- 📂 MULTI FILE -->
   <input type="file" id="file" multiple>
 
   <button id="uploadBtn" onclick="upload()">Pošalji rješenje</button>
@@ -53,7 +52,6 @@ window.upload = async function () {
     return;
   }
 
-  // 🔥 loading state
   btn.disabled = true;
   btn.classList.add("loading");
   btn.innerText = "Šaljem...";
@@ -107,7 +105,7 @@ window.upload = async function () {
     return;
   }
 
-  // ✅ success state
+  // success state
   btn.classList.remove("loading");
   btn.classList.add("success");
   btn.innerText = "Uspješno ✔";

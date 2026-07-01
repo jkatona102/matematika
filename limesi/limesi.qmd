@@ -1,3 +1,5 @@
 # LIMESI {.unnumbered}
 
 U ovom kratkom poglavlju dat ćemo kratki pregled limesa radi jednostavnosti shvaćanja diferencijalnog računa.
+
+Većinu dokaza u ovom poglavlju ćemo izostaviti, a čitatelja se upućuje na dodatnu literaturu navedenu ovdje. Tijekom razvoja stranice postoji mogućnost dodavanja nekih dokaza.

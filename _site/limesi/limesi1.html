@@ -133,6 +133,10 @@ window.Quarto = {
     <a class="nav-link" href="../promjene.html"> 
 <span class="menu-text">Novosti</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../literatura.html"> 
+<span class="menu-text">Literatura</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -243,6 +247,7 @@ window.Quarto = {
   <li><a href="#limes-niza" id="toc-limes-niza" class="nav-link" data-scroll-target="#limes-niza">Limes niza</a></li>
   <li><a href="#limes-funkcije" id="toc-limes-funkcije" class="nav-link" data-scroll-target="#limes-funkcije">Limes funkcije</a></li>
   <li><a href="#neprekidnost" id="toc-neprekidnost" class="nav-link" data-scroll-target="#neprekidnost">Neprekidnost</a></li>
+  <li><a href="#neprekidnost-na-segmentu" id="toc-neprekidnost-na-segmentu" class="nav-link" data-scroll-target="#neprekidnost-na-segmentu">Neprekidnost na segmentu</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -358,11 +363,11 @@ f(\langle c− \delta, c + \delta \rangle \backslash \{c\}) \subseteq \langle L�
 <p>Tada pišemo <span class="math inline">\(\displaystyle \lim_{x \to c+} f(x) = f(c+) = L\)</span>.</p>
 </div>
 <p>Uzmimo za ilustraciju funkciju <span class="math inline">\(f\)</span> definiranu kao <span class="math display">\[ f(x) =
-\begin{brackets}
+\begin{cases}
 1 &amp; x &gt; 1 \\
 0 &amp; x = 0 \\
 -1 &amp; x &lt; -1
-\end{brackets}
+\end{cases}
 \]</span></p>
 <p><span class="math display">\[
 \lim_{x \to 0-} f(x) = -1 \neq 1 = \lim_{x \to 0+} f(x)
@@ -384,7 +389,76 @@ f(\langle c− \delta, c + \delta \rangle \backslash \{c\}) \subseteq \langle L�
 (\forall \varepsilon &gt; 0)(\exists \delta &gt; 0)(\forall x \in I)((|x-c| &lt; \delta) \rightarrow (|f(x) - f(c)| &lt; \varepsilon))
 \]</span></p>
 </div>
-<p>Imamo jednostavnu interpretaciju: za svaku okolinu točke <span class="math inline">\(c\)</span> slika te okolino po neprekidnoj funkciji <span class="math inline">\(f\)</span> je okolina točke <span class="math inline">\(f(c)\)</span>.</p>
+<p>Imamo jednostavnu interpretaciju: za svaku okolinu točke <span class="math inline">\(c\)</span> slika te okoline po neprekidnoj funkciji <span class="math inline">\(f\)</span> je okolina točke <span class="math inline">\(f(c)\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="epsilon-delta.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<div class="primjer">
+<p>Pokažimo da je funkcija <span class="math inline">\(f(x) = x^2\)</span> neprekidna u točki <span class="math inline">\(c = 1\)</span>. Neka je <span class="math inline">\(\varepsilon &gt; 0\)</span>. Trebamo naći <span class="math inline">\(\delta &gt; 0\)</span> takvo da vrijedi: <span class="math display">\[
+|x - 1| &lt; \delta \Rightarrow |f(x) - f(1)| &lt; \varepsilon
+\]</span></p>
+<p><span class="math display">\[
+|f(x) - f(1)| = |x^2 - 1| = |(x-1)(x+1)| &lt; \varepsilon
+\]</span></p>
+<p>Ocijenimo sada <span class="math inline">\(|x+1|\)</span>: <span class="math display">\[
+|x+1| = |x-1 + 2| \leq |x-1| + 2 &lt; \delta + 2
+\]</span></p>
+<p>Sada imamo <span class="math display">\[
+|f(x) - f(1)| = |x^2 - 1| = |(x-1)(x+1)| &lt; \delta(\delta + 2) &lt; \varepsilon
+\]</span></p>
+<p>Dodajmo uvjet <span class="math inline">\(\delta &lt; 1\)</span> i dobijemo <span class="math inline">\(\delta(\delta + 2) &lt; 3\delta\)</span>. Sada možemo odabrati <span class="math inline">\(\delta = \min \left\{1, \frac{\varepsilon}{3} \right\}\)</span> i time smo pokazali da je funkcija <span class="math inline">\(f(x) = x^2\)</span> neprekidna u točki <span class="math inline">\(c = 1\)</span>.</p>
+<p><strong>Napomena:</strong> u zadatci u kojima je potrebno pokazati neprekidnost neke funkcije najbitnije je dobro baratati nejednakostima i ocjenama, a tu nam najviše koristi nejednakost trokuta (<span class="math inline">\(|a+b| \leq |a| + |b|\)</span>) i svojstvo apsolutne vrijednosti.</p>
+</div>
+<p>Sljedeći teorem poznat nam je iz analogona za nizove i limese funkcija:</p>
+<div class="teorem">
+<p>Neka je <span class="math inline">\(I \subseteq \mathbb{R}\)</span> otvoreni interval, <span class="math inline">\(c \in I\)</span> i <span class="math inline">\(f,g \colon I \to \mathbb{R}\)</span> neprekidne u <span class="math inline">\(c\)</span>. Tada vrijedi:</p>
+<ol type="1">
+<li>Za sve <span class="math inline">\(\lambda, \mu \in \mathbb{R}\)</span> funkcija <span class="math inline">\(\lambda f + \mu g\)</span> je neprekidna u <span class="math inline">\(c\)</span>.</li>
+<li>Funkcija <span class="math inline">\(fg\)</span> je neprekidna u <span class="math inline">\(c\)</span>.</li>
+<li>Ako je <span class="math inline">\(g(x) \neq 0, \forall x \in I\)</span>, tada je funkcija <span class="math inline">\(\displaystyle \frac{f}{g}\)</span> neprekidna u <span class="math inline">\(c\)</span>.</li>
+</ol>
+</div>
+<p>Pokažimo da je i kompozicija neprekidnih funkcija neprekidna:</p>
+<div class="teorem">
+<p>Neka su <span class="math inline">\(I,J \subseteq \mathbb{R}\)</span> otvoreni intervali, <span class="math inline">\(f \colon I \to \mathbb{R}\)</span> i <span class="math inline">\(g \colon J \to \mathbb{R}\)</span> funkicije za koje vrijedi <span class="math inline">\(f(I) \subseteq J\)</span>, tj. kompozicija <span class="math inline">\(g \circ f \colon I \to \mathbb{R}\)</span> je dobro definirana na <span class="math inline">\(I\)</span>. Ako je <span class="math inline">\(f\)</span> neprekidna u točki <span class="math inline">\(c \in I\)</span> i funkcija <span class="math inline">\(g\)</span> neprekidna u točki <span class="math inline">\(d = f(c) \in J\)</span>, onda <span class="math inline">\(g \circ f\)</span> neprekidna u točki <span class="math inline">\(c\)</span>.</p>
+</div>
+<div class="dokaz">
+<details>
+<summary>
+Prikaži dokaz
+</summary>
+<p>Neka je <span class="math inline">\(\varepsilon &gt; 0\)</span> proizvoljan. Tada postoji <span class="math inline">\(\eta &gt; 0\)</span> takav da je <span class="math display">\[
+(\forall y \in J)(|y - d| &lt; \eta \Rightarrow |g(y) - g(d)| &lt; \varepsilon)
+\]</span></p>
+<p>Isto tako, kako je <span class="math inline">\(f\)</span> neprekidna u <span class="math inline">\(c\)</span>, za svaki <span class="math inline">\(\eta &gt; 0\)</span> postoji <span class="math inline">\(\delta &gt; 0\)</span> takav da je <span class="math display">\[
+(\forall x \in I)(|x - c| &lt; \delta \Rightarrow |f(x) - f(c)| &lt; \eta)
+\]</span></p>
+<p>Sada imamo <span class="math display">\[
+(\forall x \in I)(|x - c| &lt; \delta \Rightarrow |f(x) - f(c)| &lt; \eta \Rightarrow |g(f(x)) - g(f(c))| &lt; \varepsilon)
+\]</span></p>
+<p>Dakle, <span class="math inline">\(g \circ f\)</span> je neprekidna u točki <span class="math inline">\(c\)</span>.</p>
+</details>
+</div>
+<p>Pokažimo rezultat za inverznu funkciju:</p>
+<div class="teorem">
+<p>Neka je <span class="math inline">\(I \subseteq \mathbb{R}\)</span> otvoreni interval, funkcija <span class="math inline">\(f \colon I \to \mathbb{R}\)</span> i <span class="math inline">\(I' = f(I)\)</span>.</p>
+<ol type="1">
+<li>Ako je <span class="math inline">\(f\)</span> strogo monotona i neprekidna na <span class="math inline">\(I\)</span>, onda je <span class="math inline">\(I'\)</span> otvoren interval i <span class="math inline">\(f^{-1} : I' \to I\)</span> neprekidna funkcija na <span class="math inline">\(I'\)</span>.</li>
+<li>Ako je <span class="math inline">\(f\)</span> neprekidna bijekcija sa <span class="math inline">\(I\)</span> na <span class="math inline">\(I'\)</span>, onda je <span class="math inline">\(f\)</span> strogo monotona funkcija na <span class="math inline">\(I\)</span> i <span class="math inline">\(f^{-1} : I' \to I\)</span> neprekidna funkcija na <span class="math inline">\(I'\)</span>.</li>
+</ol>
+</div>
+<p>Kako smo definirali lijevi i desni limes, tako možemo definirati i liveu i desnu neprekidnost u točki <span class="math inline">\(c\)</span>.</p>
+</section>
+<section id="neprekidnost-na-segmentu" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="neprekidnost-na-segmentu">Neprekidnost na segmentu</h2>
+<p>Jedan od najpoznatijih i najkorisnijih rezultata u realnoj analizi u jednoj dimenziji je Bolzano-Weierstrassov teorem za neprekidne funkcije:</p>
+<div class="teorem">
+<p>Neka je funkcija <span class="math inline">\(f \colon [a,b] \to \mathbb{R}\)</span> neprekidna na segmentu <span class="math inline">\([a,b] \subseteq \mathbb{R}\)</span>. Tada je <span class="math inline">\(f([a,b]) = [m,M]\)</span> takoder segment.</p>
+</div>
+<p><strong>Napomena:</strong> iskažimo teorem na drugačiji način: neprekidan funkcija na segmentu postiže minimum i maksimum te sve među vrijednosti!</p>
+<p>Navedeni teorem ima veliku primjenu u mateematičkoj analizi za traženje ekstrema funkcije, u numeričkoj matematici za traženje rješenja jednadžbi i u optimizaciji.</p>
 
 
 </section>

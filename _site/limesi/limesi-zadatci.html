@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -104,6 +133,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../promjene.html"> 
 <span class="menu-text">Novosti</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../literatura.html"> 
+<span class="menu-text">Literatura</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -115,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../limesi/limesi.html">1. Limesi</a></li><li class="breadcrumb-item"><a href="../limesi/limesi-zadatci.html">1.2 Zadatci</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../limesi/limesi.html">1. LIMESI</a></li><li class="breadcrumb-item"><a href="../limesi/limesi-zadatci.html">1.2 Zadatci</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Pretraživanje" onclick="window.quartoOpenSearch();">
@@ -144,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../limesi/limesi.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. Limesi</span></a>
+ <span class="menu-text">1. LIMESI</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -209,20 +242,134 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sadržaj</h2>
    
   <ul>
-  <li><a href="#zadatci" id="toc-zadatci" class="nav-link active" data-scroll-target="#zadatci">Zadatci</a></li>
+  <li><a href="#zadatci" id="toc-zadatci" class="nav-link active" data-scroll-target="#zadatci">Zadatci</a>
+  <ul class="collapse">
+  <li><a href="#tablica-limesa" id="toc-tablica-limesa" class="nav-link" data-scroll-target="#tablica-limesa">Tablica limesa</a></li>
+  <li><a href="#zadatci-1" id="toc-zadatci-1" class="nav-link" data-scroll-target="#zadatci-1">Zadatci</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../limesi/limesi.html">1. Limesi</a></li><li class="breadcrumb-item"><a href="../limesi/limesi-zadatci.html">1.2 Zadatci</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../limesi/limesi.html">1. LIMESI</a></li><li class="breadcrumb-item"><a href="../limesi/limesi-zadatci.html">1.2 Zadatci</a></li></ol></nav></header>
 
 
 
 
 <section id="zadatci" class="level1 unnumbered">
 <h1 class="unnumbered">Zadatci</h1>
+<section id="tablica-limesa" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="tablica-limesa">Tablica limesa</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Funkcija</th>
+<th style="text-align: center;">Limes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \lim\limits_{x \to 0} \frac{\sin x}{x}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \lim\limits_{x \to 0} \frac{\tan x}{x}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \lim\limits_{x \to 0} \frac{1-\cos x}{x^2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\dfrac12\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \lim\limits_{x \to 0} \frac{\ln(1+x)}{x}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \lim\limits_{x \to 0} \frac{e^x-1}{x}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \lim\limits_{x \to 0} \frac{a^x-1}{x}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\ln a,\; a&gt;0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \lim\limits_{x \to \infty}\left(1+\frac1x\right)^x\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(e\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \lim\limits_{x \to 0}(1+x)^{1/x}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(e\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \lim\limits_{x \to \infty}\frac{\ln x}{x^\alpha}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0,\; \alpha&gt;0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \lim\limits_{x \to \infty}\frac{x^\alpha}{a^x}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0,\; a&gt;1,\; \alpha&gt;0\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="zadatci-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="zadatci-1">Zadatci</h2>
+<div class="zadatak">
+<p>Odredite sljedeće limese:</p>
+<ol type="a">
+<li><p><span class="math inline">\(\displaystyle \lim_{n \to \infty} \frac{5n - 1}{3n+2}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{n \to \infty} \frac{n^2 + 3n + 1}{2n^2 - n + 5}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{n \to \infty} \frac{(n+2)^3(n^2+n+1)^2}{n^7 -50n +5}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{n \to \infty} \frac{2^{n-2}}{2^n-2}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{n \to \infty} \frac{n^4 + 3^n}{n^3 + 4^n}\)</span></p></li>
+</ol>
+</div>
+<div class="hint">
+<details>
+<summary>
+Prikaži hint
+</summary>
+<p>Glavna ideja kod rješavanja ovih zadataka je da se brojnik i nazivnik podijele najvećom potencijom razlomka (tj. dominantnim članom). Na taj način se dobije izraz koji je lakše izračunati koristeći pravila za limese.</p>
+U <em>e.</em> dijelu uočite raste li brže eksponencijalna funkcija ili polinom.
+</details>
+</div>
+<hr>
+<div class="zadatak">
+<p>Odredite sljedeće limese:</p>
+<ol type="a">
+<li><p><span class="math inline">\(\displaystyle \lim_{x \to 1} \frac{x^2-1}{x-1}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{x \to 3} \frac{x^2-5x+6}{x^2-8x+15}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{x \to 0} \frac{\sin 13x}{\sin 17x}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \lim_{x \to \infty} x \sin \frac{\pi}{x}\)</span></p></li>
+</ol>
+</div>
+<div class="hint">
+<details>
+<summary>
+Prikaži hint
+</summary>
+U <em>a.</em> i <em>b.</em> dijelu probajte faktorizirati. <em>c.</em> dio koristi poznati limes za sinus, ali potrebna je mala manipulacija, kao i u <em>d.</em> dijelu.
+</details>
+</div>
+<hr>
+<div class="zadatak">
+<p><strong>(naprednije)</strong> Dokažite da je funkcija <span class="math inline">\(f(x) = \sqrt{x}\)</span> neprekidna u točki <span class="math inline">\(c=1\)</span>.</p>
+</div>
+<div class="hint">
+<details>
+<summary>
+Prikaži hint
+</summary>
+Ako u jednom trenutku dobijete razliku korijena, izvedite obrnutu racionalizaciju.
+</details>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

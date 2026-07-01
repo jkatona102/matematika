@@ -208,6 +208,11 @@ mjx-container[display="true"] {
   margin: 0.8em 0;
 }
 
+span.math.inline {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
 
 .upload-form {
   max-width: 500px;

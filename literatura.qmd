@@ -1,0 +1,6 @@
+---
+title: Literatura
+bibliography: references.bib
+nocite: |
+  @*
+---

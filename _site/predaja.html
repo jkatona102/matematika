@@ -104,6 +104,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./promjene.html"> 
 <span class="menu-text">Novosti</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./literatura.html"> 
+<span class="menu-text">Literatura</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -143,8 +147,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./derivacije/derivacije.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. DERIVACIJE</span></a>
+            <a href="./limesi/limesi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. LIMESI</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -152,20 +156,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./limesi/limesi1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.1 Definicija i operacije</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./limesi/limesi-zadatci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.2 Zadatci</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./derivacije/derivacije.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. DERIVACIJE</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./derivacije/derivacije-uvod.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1.1 Uvod u derivacije</span></a>
+ <span class="menu-text">2.1 Uvod u derivacije</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./derivacije/derivacije-definicija.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1.2 Definicija</span></a>
+ <span class="menu-text">2.2 Definicija</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./derivacije/derivacije-racunanje.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1.3 Pravila za računanje derivacija</span></a>
+ <span class="menu-text">2.3 Pravila za računanje derivacija</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -204,8 +231,9 @@ ul.task-list li input[type="checkbox"] {
 Predaja zadataka
 </h3>
 <p><input type="text" id="ime" placeholder="Ime"> <input type="text" id="prezime" placeholder="Prezime"></p>
-<p><!-- 🔽 NOVO: izbor seta zadataka --> <select id="setZadataka"> <option value="">Odaberi set zadataka</option> <option value="Derivacije1">Derivacije 1. dio</option> <option value="Derivacije2">Derivacije 2. dio</option> <option value="Derivacije3">Derivacije 3. dio</option> </select></p>
-<p><!-- 📂 MULTI FILE --> <input type="file" id="file" multiple=""></p>
+<p><select id="setZadataka"> <option value="">Odaberi set zadataka</option> <option value="Limesi">Limesi</option> <option value="Derivacije1">Derivacije 1. dio</option> <!-- <option value="Derivacije2">Derivacije 2. dio</option>
+    <option value="Derivacije3">Derivacije 3. dio</option> --> </select></p>
+<p><input type="file" id="file" multiple=""></p>
 <p><button id="uploadBtn" onclick="upload()">Pošalji rješenje</button></p>
 <p id="status">
 </p>
@@ -239,7 +267,6 @@ window.upload = async function () {
     return;
   }
 
-  // 🔥 loading state
   btn.disabled = true;
   btn.classList.add("loading");
   btn.innerText = "Šaljem...";
@@ -293,7 +320,7 @@ window.upload = async function () {
     return;
   }
 
-  // ✅ success state
+  // success state
   btn.classList.remove("loading");
   btn.classList.add("success");
   btn.innerText = "Uspješno ✔";

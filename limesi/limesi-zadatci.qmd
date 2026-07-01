@@ -1,1 +1,76 @@
 # Zadatci {.unnumbered}
+
+## Tablica limesa {.unnumbered}
+| Funkcija | Limes |
+|:---------:|:---------:|
+| $\displaystyle \lim\limits_{x \to 0} \frac{\sin x}{x}$ | $1$ |
+| $\displaystyle \lim\limits_{x \to 0} \frac{\tan x}{x}$ | $1$ |
+| $\displaystyle \lim\limits_{x \to 0} \frac{1-\cos x}{x^2}$ | $\dfrac12$ |
+| $\displaystyle \lim\limits_{x \to 0} \frac{\ln(1+x)}{x}$ | $1$ |
+| $\displaystyle \lim\limits_{x \to 0} \frac{e^x-1}{x}$ | $1$ |
+| $\displaystyle \lim\limits_{x \to 0} \frac{a^x-1}{x}$ | $\ln a,\; a>0$ |
+| $\displaystyle \lim\limits_{x \to \infty}\left(1+\frac1x\right)^x$ | $e$ |
+| $\displaystyle \lim\limits_{x \to 0}(1+x)^{1/x}$ | $e$ |
+| $\displaystyle \lim\limits_{x \to \infty}\frac{\ln x}{x^\alpha}$ | $0,\; \alpha>0$ |
+| $\displaystyle \lim\limits_{x \to \infty}\frac{x^\alpha}{a^x}$ | $0,\; a>1,\; \alpha>0$ |
+
+---
+
+## Zadatci {.unnumbered}
+
+:::{.zadatak}
+Odredite sljedeće limese:
+
+(a) $\displaystyle \lim_{n \to \infty} \frac{5n - 1}{3n+2}$
+
+(b) $\displaystyle \lim_{n \to \infty} \frac{n^2 + 3n + 1}{2n^2 - n + 5}$
+
+(c) $\displaystyle \lim_{n \to \infty} \frac{(n+2)^3(n^2+n+1)^2}{n^7 -50n +5}$
+
+(d) $\displaystyle \lim_{n \to \infty} \frac{2^{n-2}}{2^n-2}$
+
+(e) $\displaystyle \lim_{n \to \infty} \frac{n^4 + 3^n}{n^3 + 4^n}$
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži hint</summary>
+Glavna ideja kod rješavanja ovih zadataka je da se brojnik i nazivnik podijele najvećom potencijom razlomka (tj. dominantnim članom). Na taj način se dobije izraz koji je lakše izračunati koristeći pravila za limese.
+
+U *e.* dijelu uočite raste li brže eksponencijalna funkcija ili polinom.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+Odredite sljedeće limese:
+
+(a) $\displaystyle \lim_{x \to 1} \frac{x^2-1}{x-1}$
+
+(b) $\displaystyle \lim_{x \to 3} \frac{x^2-5x+6}{x^2-8x+15}$
+
+(c) $\displaystyle \lim_{x \to 0} \frac{\sin 13x}{\sin 17x}$
+
+(d) $\displaystyle \lim_{x \to \infty} x \sin \frac{\pi}{x}$
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži hint</summary>
+U *a.* i *b.* dijelu probajte faktorizirati. *c.* dio koristi poznati limes za sinus, ali potrebna je mala manipulacija, kao i u *d.* dijelu.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+**(naprednije)** Dokažite da je funkcija $f(x) = \sqrt{x}$ neprekidna u točki $c=1$.
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži hint</summary>
+Ako u jednom trenutku dobijete razliku korijena, izvedite obrnutu racionalizaciju.
+</details>
+:::

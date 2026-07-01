@@ -132,11 +132,11 @@ Tada pišemo $\displaystyle \lim_{x \to c+} f(x) = f(c+) = L$.
 
 Uzmimo za ilustraciju funkciju $f$ definiranu kao 
 $$ f(x) =
-\begin{brackets}
+\begin{cases}
 1 & x > 1 \\
 0 & x = 0 \\
 -1 & x < -1 
-\end{brackets}
+\end{cases}
 $$
 
 $$
@@ -166,4 +166,95 @@ $$
 $$
 :::
 
-Imamo jednostavnu interpretaciju: za svaku okolinu točke $c$ slika te okolino po neprekidnoj funkciji $f$ je okolina točke $f(c)$.
+Imamo jednostavnu interpretaciju: za svaku okolinu točke $c$ slika te okoline po neprekidnoj funkciji $f$ je okolina točke $f(c)$.
+
+![](epsilon-delta.jpg){width=50% fig-align="center"}
+
+:::{.primjer}
+Pokažimo da je funkcija $f(x) = x^2$ neprekidna u točki $c = 1$. Neka je $\varepsilon > 0$. Trebamo naći $\delta > 0$ takvo da vrijedi:
+$$
+|x - 1| < \delta \Rightarrow |f(x) - f(1)| < \varepsilon 
+$$
+
+$$
+|f(x) - f(1)| = |x^2 - 1| = |(x-1)(x+1)| < \varepsilon
+$$
+
+Ocijenimo sada $|x+1|$:
+$$
+|x+1| = |x-1 + 2| \leq |x-1| + 2 < \delta + 2
+$$
+
+Sada imamo
+$$
+|f(x) - f(1)| = |x^2 - 1| = |(x-1)(x+1)| < \delta(\delta + 2) < \varepsilon
+$$
+
+Dodajmo uvjet $\delta < 1$ i dobijemo $\delta(\delta + 2) < 3\delta$. Sada možemo odabrati $\delta = \min \left\{1, \frac{\varepsilon}{3} \right\}$ i time smo pokazali da je funkcija $f(x) = x^2$ neprekidna u točki $c = 1$.
+
+**Napomena:** u zadatci u kojima je potrebno pokazati neprekidnost neke funkcije najbitnije je dobro baratati nejednakostima i ocjenama, a tu nam najviše koristi nejednakost trokuta ($|a+b| \leq |a| + |b|$) i svojstvo apsolutne vrijednosti.
+:::
+
+Sljedeći teorem poznat nam je iz analogona za nizove i limese funkcija:
+
+:::{.teorem}
+Neka je $I \subseteq \mathbb{R}$ otvoreni interval, $c \in I$ i $f,g \colon I \to \mathbb{R}$ neprekidne u $c$. Tada vrijedi:
+
+1. Za sve $\lambda, \mu \in \mathbb{R}$ funkcija $\lambda f + \mu g$ je neprekidna u $c$. 
+2. Funkcija $fg$ je neprekidna u $c$.
+3. Ako je $g(x) \neq 0, \forall x \in I$, tada je funkcija $\displaystyle \frac{f}{g}$ neprekidna u $c$.
+:::
+
+Pokažimo da je i kompozicija neprekidnih funkcija neprekidna:
+
+:::{.teorem}
+Neka su $I,J \subseteq \mathbb{R}$ otvoreni intervali, $f \colon I \to \mathbb{R}$ i $g \colon J \to \mathbb{R}$ funkicije za koje vrijedi $f(I) \subseteq J$, tj. kompozicija $g \circ f \colon I \to \mathbb{R}$ je dobro definirana na $I$. Ako je $f$ neprekidna u točki $c \in I$ i funkcija $g$ neprekidna u točki $d = f(c) \in J$, onda $g \circ f$ neprekidna u točki $c$.
+:::
+
+:::{.dokaz}
+<details>
+<summary>Prikaži dokaz</summary>
+Neka je $\varepsilon > 0$ proizvoljan. Tada postoji $\eta > 0$ takav da je
+$$
+(\forall y \in J)(|y - d| < \eta \Rightarrow |g(y) - g(d)| < \varepsilon)
+$$
+
+Isto tako, kako je $f$ neprekidna u $c$, za svaki $\eta > 0$ postoji $\delta > 0$ takav da je
+$$
+(\forall x \in I)(|x - c| < \delta \Rightarrow |f(x) - f(c)| < \eta)
+$$
+
+Sada imamo
+$$
+(\forall x \in I)(|x - c| < \delta \Rightarrow |f(x) - f(c)| < \eta \Rightarrow |g(f(x)) - g(f(c))| < \varepsilon)
+$$
+
+Dakle, $g \circ f$ je neprekidna u točki $c$.
+
+</details>
+:::
+
+Pokažimo rezultat za inverznu funkciju:
+
+:::{.teorem}
+Neka je $I \subseteq \mathbb{R}$ otvoreni interval, funkcija $f \colon I \to \mathbb{R}$ i $I' = f(I)$.
+
+1. Ako je $f$ strogo monotona i neprekidna na $I$, onda je $I'$ otvoren
+interval i $f^{-1} : I' \to I$ neprekidna funkcija na $I'$.
+2. Ako je $f$ neprekidna bijekcija sa $I$ na $I'$, onda je $f$ strogo monotona
+funkcija na $I$ i $f^{-1} : I' \to I$ neprekidna funkcija na $I'$.
+:::
+
+Kako smo definirali lijevi i desni limes, tako možemo definirati i liveu i desnu neprekidnost u točki $c$.
+
+## Neprekidnost na segmentu {.unnumbered}
+
+Jedan od najpoznatijih i najkorisnijih rezultata u realnoj analizi u jednoj dimenziji je Bolzano-Weierstrassov teorem za neprekidne funkcije:
+
+:::{.teorem}
+Neka je funkcija $f \colon [a,b] \to \mathbb{R}$ neprekidna na segmentu $[a,b] \subseteq \mathbb{R}$. Tada je $f([a,b]) = [m,M]$ takoder segment.
+:::
+
+**Napomena:** iskažimo teorem na drugačiji način: neprekidan funkcija na segmentu postiže minimum i maksimum te sve među vrijednosti!
+
+Navedeni teorem ima veliku primjenu u mateematičkoj analizi za traženje ekstrema funkcije, u numeričkoj matematici za traženje rješenja jednadžbi i u optimizaciji.
