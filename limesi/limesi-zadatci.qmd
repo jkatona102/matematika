@@ -41,6 +41,42 @@ U *e.* dijelu uočite raste li brže eksponencijalna funkcija ili polinom.
 </details>
 :::
 
+<!--
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a) 
+$$
+\displaystyle \lim_{n \to \infty} \frac{5n - 1}{3n+2} = \lim_{n \to \infty} \frac{5 - \dfrac{1}{n}}{3 + \dfrac{2}{n}} = \frac{5}{3}
+$$
+
+(b)
+$$
+\displaystyle \lim_{n \to \infty} \frac{n^2 + 3n + 1}{2n^2 - n + 5} = \lim_{n \to \infty} \frac{1 + \dfrac{3}{n} + \dfrac{1}{n^2}}{2 - \dfrac{1}{n} + \dfrac{5}{n^2}} = \frac{1}{2}
+$$
+
+(c) Uočimo da je najveća potencija razlomka $n^7$. Prilikom dijeljenja brojnika s $n^7$ moramo paziti da ne smijemo obje zagrade podijeliti s istom potencijom. Prvu zagradu podijelimo s $n^3$ a drugu s $n^4$, tada te potencije lakše ulaze u zagradu koja je i sama neka potencija, a i dalje smo podijelili cijeli brojnik s $n^7$. Dakle, imamo
+$$
+\displaystyle \lim_{n \to \infty} \frac{(n+2)^3(n^2+n+1)^2}{n^7 -50n +5} = \lim_{n \to \infty} \frac{\left(1+\dfrac{2}{n}\right)^3\left(1 + \dfrac{1}{n} + \dfrac{1}{n^2}\right)^2}{1 - \dfrac{50}{n^6} + \dfrac{5}{n^7}} = 1
+$$
+
+(d)
+$$
+\displaystyle \lim_{n \to \infty} \frac{2^{n-2}}{2^n-2} = \lim_{n \to \infty} \frac{1}{4} \cdot \frac{2^n}{2^n-2} = \lim_{n \to \infty} \frac{1}{4} \cdot \frac{1}{1-\dfrac{2}{2^n}} = \frac{1}{4}
+$$
+
+Mogli smo argumentirati i da je $\displaystyle \lim_{t \to \infty} \frac{t}{t-2} = 1$ pa slijedi rješenje za $t = 2^n$ i $n \to \infty$.
+
+(e) Uočimo da je najveća potencija razlomka $4^n$. Dijelimo brojnik i nazivnik s $4^n$:
+$$
+\displaystyle \lim_{n \to \infty} \frac{n^4 + 3^n}{n^3 + 4^n} = \lim_{n \to \infty} \frac{\dfrac{n^4}{4^n} + \dfrac{3^n}{4^n}}{\dfrac{n^3}{4^n} + 1} = \lim_{n \to \infty} \frac{\dfrac{n^4}{4^n} + \left (\dfrac{3}{4}\right )^n}{\dfrac{n^3}{4^n} + 1} = 0
+$$
+
+Koristimo činjenicu da eksponencijalna funkcija raste puno brže od polinoma, tj. $\displaystyle \lim_{n \to \infty} \frac{n^k}{a^n} = 0$ za $a>1$ i $k\in\mathbb{N}$. Za $0 < \alpha <1$ vrijedi $\displaystyle \lim_{n \to \infty} \alpha^n = 0$ pa slijedi rješenje. 
+
+</details>
+::: -->
+
 ---
 
 :::{.zadatak}
@@ -62,10 +98,42 @@ U *a.* i *b.* dijelu probajte faktorizirati. *c.* dio koristi poznati limes za s
 </details>
 :::
 
+<!--
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+
+(a) 
+$$
+\displaystyle \lim_{x \to 1} \frac{x^2-1}{x-1} = \lim_{x \to 1} \frac{(x-1)(x+1)}{x-1} = \lim_{x \to 1} (x+1) = 2
+$$
+
+(b)
+$$
+\displaystyle \lim_{x \to 3} \frac{x^2-5x+6}{x^2-8x+15} = \lim_{x \to 3} \frac{(x-2)(x-3)}{(x-3)(x-5)} = \lim_{x \to 3} \frac{x-2}{x-5} = \frac{1}{2}
+$$
+
+(*Faktorizaciju možete odrediti grubom silom ili rješavanjem pripadnih kvadratnih jednadžbi.*)
+
+(c) Koristeći limes $\displaystyle \lim_{t \to 0} \frac{\sin t}{t} = 1$ i proširenjem razlomka jedinicom, imamo:
+$$
+\displaystyle \lim_{x \to 0} \frac{\sin 13x}{\sin 17x} = \lim_{x \to 0} \frac{13}{17} \cdot \frac{\sin 13x}{13x} \cdot \frac{17x}{\sin 17x} = \frac{13}{17}
+$$
+
+Uočimo da vrijedi i $\displaystyle \lim_{x \to 0} \dfrac{x}{\sin x} = 1$.
+
+(d) Kao u prošlom zadatku, proširimo razlomak do oblika čiji limes znamo:
+$$
+\displaystyle \lim_{x \to \infty} x \sin \frac{\pi}{x} = \lim_{x \to \infty} \pi \frac{\sin \dfrac{\pi}{x}}{\dfrac{\pi}{x}} = \pi \lim_{t \to 0} \frac{\sin t}{t} = \pi
+$$
+
+</details>
+::: -->
+
 ---
 
 :::{.zadatak}
-**(naprednije)** Dokažite da je funkcija $f(x) = \sqrt{x}$ neprekidna u točki $c=1$.
+**(naprednije)** Koristeći Cauchyjevu definiciju neprekidnosti dokažite da je funkcija $f(x) = \sqrt{x}$ neprekidna u točki $c=1$.
 :::
 
 :::{.hint}
@@ -74,3 +142,31 @@ U *a.* i *b.* dijelu probajte faktorizirati. *c.* dio koristi poznati limes za s
 Ako u jednom trenutku dobijete razliku korijena, izvedite obrnutu racionalizaciju.
 </details>
 :::
+
+<!--
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Neka je $\varepsilon > 0$. Trebamo naći $\delta > 0$ takvo da vrijedi:
+$$
+|x - 1| < \delta \Rightarrow |f(x) - f(1)| < \varepsilon 
+$$
+
+$$
+|f(x) - f(1)| = |\sqrt{x} - 1| = \left|\frac{(\sqrt{x} - 1)(\sqrt{x} + 1)}{\sqrt{x} + 1}\right| = \left|\frac{x - 1}{\sqrt{x} + 1}\right| < \varepsilon
+$$
+
+Ocijenimo sada $|\sqrt{x} + 1|$:
+$$
+|\sqrt{x} + 1| = \sqrt{x} + 1 \geq 1
+$$
+
+Dakle,
+$$
+|f(x) - f(1)| = \left|\frac{x - 1}{\sqrt{x} + 1}\right| \leq |x - 1| < \delta
+$$
+
+Sada možemo odabrati $\delta = \varepsilon$ i time smo pokazali da je funkcija $f(x) = \sqrt{x}$ neprekidna u točki $c = 1$.
+
+</details>
+::: -->
