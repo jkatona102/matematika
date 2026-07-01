@@ -208,6 +208,11 @@ mjx-container[display="true"] {
   margin: 0.8em 0;
 }
 
+mjx-container {
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+}
+
 span.math.inline {
   white-space: normal;
   overflow-wrap: anywhere;
