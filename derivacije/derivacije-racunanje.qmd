@@ -36,7 +36,7 @@ $$
 
 Tada vrijedi 
 $$
-g(y) = g(d) + (g'(d) + \omega_1(y))(y - d)$ \forall $y \in J
+g(y) = g(d) + (g'(d) + \omega_1(y))(y - d) \forall y \in J
 $$
 
 Neka je $h = g \circ f$. Tada je 
