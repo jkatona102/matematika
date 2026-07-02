@@ -41,7 +41,7 @@ U *e.* dijelu uočite raste li brže eksponencijalna funkcija ili polinom.
 </details>
 :::
 
-<!--
+
 :::{.rjesenje}
 <details>
 <summary>Prikaži rješenje</summary>
@@ -75,7 +75,7 @@ $$
 Koristimo činjenicu da eksponencijalna funkcija raste puno brže od polinoma, tj. $\displaystyle \lim_{n \to \infty} \frac{n^k}{a^n} = 0$ za $a>1$ i $k\in\mathbb{N}$. Za $0 < \alpha <1$ vrijedi $\displaystyle \lim_{n \to \infty} \alpha^n = 0$ pa slijedi rješenje. 
 
 </details>
-::: -->
+:::
 
 ---
 
@@ -98,7 +98,6 @@ U *a.* i *b.* dijelu probajte faktorizirati. *c.* dio koristi poznati limes za s
 </details>
 :::
 
-<!--
 :::{.rjesenje}
 <details>
 <summary>Prikaži rješenje</summary>
@@ -128,7 +127,7 @@ $$
 $$
 
 </details>
-::: -->
+:::
 
 ---
 
@@ -143,7 +142,6 @@ Ako u jednom trenutku dobijete razliku korijena, izvedite obrnutu racionalizacij
 </details>
 :::
 
-<!--
 :::{.rjesenje}
 <details>
 <summary>Prikaži rješenje</summary>
@@ -169,4 +167,4 @@ $$
 Sada možemo odabrati $\delta = \varepsilon$ i time smo pokazali da je funkcija $f(x) = \sqrt{x}$ neprekidna u točki $c = 1$.
 
 </details>
-::: -->
+:::

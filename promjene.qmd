@@ -4,11 +4,17 @@ title: "Povijest promjena na stranici"
 
 ---
 
+02.07.2026.
+
+- 08:16 objavljena rješenja zadataka iz poglavlja o limesima ([Zadatci](limesi/limesi-zadatci.qmd))
+
+---
+
 01.07.2026.
 
-- dodano poglavlje o limesima i neprekidnosti
+- 11:00 dodano poglavlje o limesima i neprekidnosti
 
-- dodano poglavlje o derivacijama i diferencijabilnosti
+- 08:00 dodano poglavlje o derivacijama i diferencijabilnosti
 
 ---
 
