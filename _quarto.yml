@@ -38,6 +38,12 @@ website:
             href: derivacije/derivacije-racunanje.qmd
           - text: "Zadatci - prvi dio"
             href: derivacije/derivacije-zadaci1.qmd
+          - text: "2.4 Temeljni rezultati"
+            href: derivacije/derivacije-rezultati.qmd
+          - text: "2.5 Analiza toka funkcije"
+            href: derivacije/derivacije-tok.qmd
+          - text: "Zadatci - drugi dio"
+            href: derivacije/derivacije-zadaci2.qmd
 
 format:
   html:

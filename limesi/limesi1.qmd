@@ -1,4 +1,4 @@
-# Definicija i temeljna teorija, neprekidnost {.unnumbered}
+# 1.1 Definicija i temeljna teorija, neprekidnost {.unnumbered}
 
 ## Limes niza {.unnumbered}
 

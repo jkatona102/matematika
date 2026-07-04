@@ -1,4 +1,4 @@
-# Uvod u derivacije {.unnumbered}
+# 2.1 Uvod u derivacije {.unnumbered}
 
 Povijesno su postojala dva bitna problema koja su potaknula razvoj derivacija i diferencijalnog računa:
 

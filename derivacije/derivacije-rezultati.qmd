@@ -1,4 +1,4 @@
-# Temeljni rezultati {.unnumbered}
+# 2.4 Temeljni rezultati {.unnumbered}
 
 U ovom poglavlju prikazat ćemo nekoliko temeljnih rezultata iz diferencijalnog računa. Ovi su rezultati vrlo važni za analizu funkcija. Obradit ćemo sljedeće rezultate:
 

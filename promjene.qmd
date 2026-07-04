@@ -4,6 +4,8 @@ title: "Povijest promjena na stranici"
 
 04.07.2026.
 
+- 21:40 dodana poglavlja [2.4](derivacije/derivacije-rezultati.qmd) i [2.5](derivacije/derivacije-tok.qmd) i drugi dio [zadataka](derivacije/derivacije-zadaci2.qmd) iz derivacija
+
 - 15:56 objavljena rješenja prvog dijela zadataka iz poglavlja o derivacijama ([Zadatci 1](derivacije/derivacije-zadaci1.qmd))
 
 ---

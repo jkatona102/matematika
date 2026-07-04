@@ -1,4 +1,4 @@
-# DERIVACIJE {.unnumbered}
+# 2. DERIVACIJE {.unnumbered}
 
 U ovom poglavlju dat ćemo povijesni pregled pojma derivacije, definirati pojam derivacije funkcije i navesti osnovna pravila za računanje derivacija. Također ćemo se upoznati s primjenama derivacija u različitim područjima matematike i znanosti.
 
@@ -8,19 +8,13 @@ U ovom poglavlju dat ćemo povijesni pregled pojma derivacije, definirati pojam 
 - [2.2 Definicija](derivacije-definicija.qmd)
 - [2.3 Pravila za računanje derivacija](derivacije-racunanje.qmd)
 - [Zadatci - prvi dio](derivacije-zadaci1.qmd)
-
-<!--
 - [2.4 Temeljni rezultati](derivacije-rezultati.qmd)
 - [2.5 Analiza toka funkcije](derivacije-tok.qmd)
 - [Zadatci - drugi dio](derivacije-zadaci2.qmd)
+
+<!--
 - [2.6 Primjene derivacija](derivacije-primjena.qmd)
 - [Zadatci - treći dio](derivacije-zadatci3.qmd)
-          - text: "2.4 Temeljni rezultati"
-            href: derivacije/derivacije-rezultati.qmd
-          - text: "2.5 Analiza toka funkcije"
-            href: derivacije/derivacije-tok.qmd
-          - text: "Zadatci - drugi dio"
-            href: derivacije/derivacije-zadaci2.qmd
           - text: "2.6 Primjene derivacija"
             href: derivacije/derivacije-primjena.qmd
           - text: "Zadatci - treći dio"

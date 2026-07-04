@@ -1,4 +1,4 @@
-# Analiza toka funkcije {.unnumbered}
+# 2.5 Analiza toka funkcije {.unnumbered}
 
 ## Dovoljni uvjeti ekstrema {.unnumbered}
 

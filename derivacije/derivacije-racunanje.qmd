@@ -1,4 +1,4 @@
-# Pravila za računanje derivacija {.unnumbered}
+# 2.3 Pravila za računanje derivacija {.unnumbered}
 
 Vidjeli smo da su zbroj, produkt i kvocijent diferencijabilnih funkcija također diferencijabilni i da je derivacija linearne kombinacije diferenicijalnih funkcija linearna kombinacija njihovih derivacija. 
 

@@ -1,4 +1,4 @@
-# Definicija {.unnumbered}
+# 2.2 Definicija {.unnumbered}
 
 :::{.def}
 Neka je $I \subseteq \mathbb{R}$ otvoreni interval. Kažemo da je funkcija $f \colon I \to \mathbb{R}$ diferencijabilna ili derivabilna u točki $c \in I$, ako postoji limes

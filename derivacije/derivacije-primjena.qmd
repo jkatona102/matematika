@@ -1,4 +1,4 @@
-# Primjena derivacija {.unnumbered}
+# 2.6 Primjena derivacija {.unnumbered}
 
 Diferencijalni račun ima veliku ulogu u raznim granama matematike, a najviše se ističe u optimizaciji i numeričkim metodama traženja nultočki funkcije. Naravno, puni potencijal dostiže tek u više dimenzija.
 

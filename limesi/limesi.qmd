@@ -1,4 +1,4 @@
-# LIMESI {.unnumbered}
+# 1. LIMESI {.unnumbered}
 
 U ovom kratkom poglavlju dat ćemo pregled osnovnih svojstava limesa i neprekidnih funkcija radi jednostavnosti shvaćanja diferencijalnog računa.
 
