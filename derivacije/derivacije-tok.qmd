@@ -1,0 +1,573 @@
+# Analiza toka funkcije {.unnumbered}
+
+## Dovoljni uvjeti ekstrema {.unnumbered}
+
+U ovom poglavlju dajemo dovoljne uvjete za određivanje ekstrema funkcije.
+
+:::{.teorem}
+Neka je $I \subseteq \mathbb{R}$ otvoren interval, $f \colon I \to \mathbb{R}$, $f \in C^{n+1}(I)$. Neka je $c \in I$ stacionarna točka, tj. $f'(c) = 0$. Ako postoji $n \in \mathbb{N}$, takav da $\forall k \in \{1,...,n\}$ vrijedi $f^{(k)}(c) = 0$ i $f^{(n+1)}(c)  \neq 0$, tada u slučaju
+
+1. kada je $n+1$ paran broj i $f^{(n+1)}(c) > 0$, $f$ ima u $c$ strogi lokalni minimum.
+
+2. kada je $n+1$ paran broj i $f^{(n+1)}(c) < 0$, $f$ ima u $c$ strogi lokalni maksimum.
+
+3. kada je $n+1$ neparan broj, $f$ nema u $c$ lokalni ekstrem (ima horizontalnu infleksiju).
+:::
+
+Dokaz izostavljamo, u suportnom bismo morali uvesti Taylorov polinom što za naše potrebe nije bitno.
+
+U praksi ćemo najčešće provjeravati predznak druge derivacije funkcije $f$, rijetko je potrebno ići prema derivacijama višeg reda. Tada za $f''(c)<0$ imamo lokalni maksimum u $c$, a ako je $f''(c)>0$ lokalni minimum u $c$.
+
+:::{.primjer}
+Ispitati lokalne ekstreme funkcije $f(x) = \dfrac{1}{4}x^4-x^3-2x^2+1$.
+
+Kako je $f$ polinom, klase je $C^\infty (\mathbb{R})$. Imamo $f'(x) = x^3 - 3x^2-4x$ i $f''(x)=3x^2-6x-4$. 
+Stacionarne točke su $x_1 =−1, x_2 = 0$ i $x_3 = 4$. Vrijedi $f''(−1) = 5 >0, f''(0) =−4 <0, f''(4) = 20 >0$, pa su točke lokalnih ekstrema:
+
+- minimumi: $\left (-1,\dfrac{1}{4} \right )$, $(4,-31)$
+- maksimum: $(0,1)$
+:::
+
+Uočimo da ove metode ne određuju globalne ekstreme već lokalne. Kad bi se tražio globalni ekstrem potrebna je dodatna argumentacija.
+
+## Konveksne funkcije, infleksija {.unnumbered}
+
+:::{.def}
+Za realnu funkciju $f$ kažemo da je **konveksna** na intervalu $I \subseteq \mathbb{R}$ ako
+$$
+(\forall x_1,x_2 \in I) \quad f\left (\dfrac{x_1+x_2}{2} \right ) \leq \dfrac{f(x_1)+f(x_2)}{2}
+$$
+
+Funkcija je **strogo konveksna** ako je za $x_1 \neq x_2$ nejednakost stroga.
+
+Funkcija $f$ je **konkavna** ako
+$$
+(\forall x_1,x_2 \in I) \quad f\left (\dfrac{x_1+x_2}{2} \right ) \geq \dfrac{f(x_1)+f(x_2)}{2}
+$$
+
+Funkcija je **strogo konveksna** ako je za $x_1 \neq x_2$ nejednakost stroga.
+:::
+
+Iskažimo Jensenovu nejednakost za lakše shvaćanje konveksnosti:
+
+:::{.teorem}
+Neka je $f \colon I \to \mathbb{R}$ funkcija definirana na otvorenom intervalu $I \subseteq \mathbb{R}$. Funkcija $f$ je neprekidna i konveksna na $I$ ako i samo ako vrijedi nejednakost
+$$
+(\forall x_1,x_2 \in I)(\forall t \in [0,1]) \quad f((1-t)x_1+tx_2) \leq (1-t)f(x_1) + tf(x_2)
+$$
+
+Ako jednakost vrijedi za neko $t \in \langle 0,1 \rangle$, onda jednakost vrijedi $\forall t \in [0,1]$.
+:::
+
+
+Izraz $(1-t)x_1+tx_2$ zovemo konveksna kombinacija. Formalno definiramo:
+
+:::{.def}
+Neka su $x_1,...x_k \in \mathbb{R}^n$. Definiramo **konveksnu kombinaciju** kao
+$$
+\alpha _1 x_1 + \cdots + \alpha _k x_k
+$$
+
+za $\alpha _i \in \mathbb{R}$ takvi da vrijedi $\alpha _1 + \cdots + \alpha _k = 1$.
+:::
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| code-summary: "Prikaži Python kod"
+#| fig-align: center
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Konveksna funkcija
+def f(x):
+    return x**2
+
+# Točke
+x1 = -1.5
+x2 = 2.0
+t = 0.35
+
+# Točka iz Jensenove nejednakosti
+x = (1 - t) * x1 + t * x2
+
+# Vrijednosti
+y = f(x)
+y_chord = (1 - t) * f(x1) + t * f(x2)
+
+# Graf funkcije
+xx = np.linspace(-2.3, 2.6, 500)
+
+fig, ax = plt.subplots(figsize=(7,5))
+
+ax.plot(xx, f(xx), lw=2, label=r"$f(x)$")
+
+# Tetiva
+ax.plot([x1, x2],
+        [f(x1), f(x2)],
+        color="tab:red",
+        lw=2,
+        label="tetiva")
+
+# Točke A i B
+ax.scatter([x1, x2],
+           [f(x1), f(x2)],
+           color="tab:red",
+           s=60)
+
+# Jensenova točka na grafu
+ax.scatter(x, y,
+           color="tab:green",
+           s=70,
+           zorder=5)
+
+# Točka na tetivi
+ax.scatter(x, y_chord,
+           color="tab:orange",
+           s=70,
+           zorder=5)
+
+# Okomica
+ax.vlines(x,
+          y,
+          y_chord,
+          colors="gray",
+          linestyles="--")
+
+ax.text(x1, f(x1)-0.5, r"$x_1$", ha="center")
+ax.text(x2, f(x2)-0.5, r"$x_2$", ha="center")
+ax.text(x, -0.6, r"$(1-t)x_1+tx_2$", ha="center")
+
+ax.text(x+0.08, y+0.15, r"$f((1-t)x_1+tx_2)$",
+        fontsize=10)
+
+ax.text(x+0.08, y_chord-0.2,
+        r"$(1-t)f(x_1)+tf(x_2)$",
+        fontsize=10)
+
+ax.set_xlim(-2.3,2.6)
+ax.set_ylim(-1,5)
+
+ax.set_xlabel("$x$")
+ax.set_ylabel("$y$")
+ax.set_title("Geometrijska interpretacija Jensenove nejednakosti")
+
+ax.grid(alpha=0.3)
+ax.legend()
+
+plt.show()
+```
+
+Iz priloga vidimo da je slika konveksne kombinacije dviju točaka  manja od konveksne kombinacije slika tih točaka.
+
+:::{.teorem}
+Neka je $f \colon I \to \mathbb{R}$ diferencijabilna funkcija na otvorenom intervalu $I \subseteq \mathbb{R}$. Funkcija $f$ je konveksna na $I$, ako i samo ako je njena derivacija $f'$ rastuća funkcija na $I$.
+:::
+
+Zahtjev prethodnog teorema je ekvivalentan s $f''(x) \geq 0, \forall x \in I$.
+
+:::{.def}
+Neka je $I \subseteq \mathbb{R}$ otvoren interval i $f \colon I \to \mathbb{R}$. Točka $c \in I$ je točka infleksije ili prijevojna točka, ako postoji $\delta > 0$ takav da je na intervalu $\langle c− \delta,c\rangle$ funkcija $f$ strogo konveksna, a na intervalu $\langle c,c+ \delta \rangle$ je $f$ strogo konkavna ili obratno. Još kažemo da je točka $(c,f(c))$ točka infleksije grafa funkcije $f$.
+:::
+
+:::{.teorem}
+Neka je $f \colon I \to \mathbb{R}$ dva puta diferencijabilna funkcija na otvorenom intervalu $I \subseteq \mathbb{R}$ i neka je $c \in I$ izolirana nultočka od $f''$, tj. $f''(c) = 0$ i $f''(x) \neq 0$ na nekom intervalu oko $c$. Točka $c$ je točka infleksije funkcije $f$ ako i samo ako funkcija $f'$ ima u $c$ strogi lokalni ekstrem.
+:::
+
+Konveksnost i konkavnost nam zapravo govori gdje se nalazi tangenta u odnosu na graf. Ako je funkcija na intervalu konveksna, tada je tangenta u točkama tog intervala ispod grafa, a ako je konkavna, tada je tangenta iznad grafa.
+
+:::{.primjer}
+Odredimo točke infleksije funkcije $f(x)=x^4-2x^2+x+1$ te intervale konveksnosti i konkavnosti.
+
+$f'(x) = 4x^3-4x+1$ i $f''(x) = 12x^2-4$. Točka $c$ je točka infleksije ako je $f''(c) = 0$, odnosno $12c^2=4$. Dobivamo dvije točke infleksije $c_1 = -\dfrac{1}{\sqrt{3}}$ i $c_1 = \dfrac{1}{\sqrt{3}}$. Vidimo da je $f'' < 0$ na intervalu $\left \langle -\dfrac{1}{\sqrt{3}}, \dfrac{1}{\sqrt{3}} \right \rangle$, zaključujemo da je na tom intervalu funkcija konkavna, dok je na ostalom dijelu domene konveksna.
+:::
+
+## Asimptote {.unnumbered}
+
+:::{.def}
+Neka je $I \subseteq \mathbb{R}$ otvoren skup i $f \colon I \to \mathbb{R}$ funkcija čiji je graf $\Gamma _f \subset \mathbb{R} \times \mathbb{R}$. Kažemo da je pravac $p$ asimptota na graf funkcije $f$ ako udaljenost izmedu pravca i točke $T \in \Gamma _f$ teži k $0$ kako se točka $T$ beskonačno udaljava od ishodišta.
+:::
+
+Graf $\Gamma _f$ ima vertikalnu asimptotu u rubnoj točki područja definicije $c \in \mathbb{R}$ ako je $\displaystyle \lim_{x \to c} f(x) = \pm \infty$.
+
+Graf $\Gamma _f$ ima kosu asimptotu $y=kx+l$ u $\pm \infty$ ako:
+
+1. $\displaystyle \lim_{x \to \pm \infty} \dfrac{f(x)}{x} = \lim_{x \to \pm \infty} f'(x) = k \in \mathbb{R}$
+
+2. $\displaystyle \lim_{x \to \pm \infty} (f(x) - kx) = l \in \mathbb{R}$
+
+Radi pokrate smo pisali $\pm \infty$, ali moramo paziti da lijeva kosa asimptota ne mora biti jednaka desnoj kosoj asimptoti pa je potreban detaljnija analiza.
+
+Horizontalne asimptote računamo kao $y = \displaystyle \lim_{x \to \pm \infty} f(x)$.
+
+Uočimo da funkcija ne može istovremeno imati i kosu i horizontalnu asimptotu na istoj grani $\langle - \infty, 0 \rangle$ ili $\langle 0, + \infty \rangle$. Isto tako, primijetimo da je horizontalna asimptota poseban slučaj kose asimptote.
+
+:::{.primjer}
+Odredimo asimptote sljedećih funkcije $f(x) = \dfrac{1}{e^x-1}$
+
+Uočimo da $f$ nije definirana u $x=0$ pa je to vertikalna asimptota jer je $\displaystyle \lim_{x \to 0-} f(x) = - \infty$ i $\displaystyle \lim_{x \to 0+} f(x) = \infty$.
+
+Odredimo kose ili horizontalne asimptote:
+$$
+\displaystyle \lim_{x \to - \infty} \dfrac{f(x)}{x} = \lim_{x \to - \infty} \dfrac{1}{x(e^x-1)} = 0 = k
+$$
+
+$$
+\displaystyle \lim_{x \to - \infty} (f(x)-kx) = \lim_{x \to - \infty} f(x) = 1 = l
+$$
+
+Imamo lijevu kosu asimptotu, koja je zapravo lijeva horizontalna asimptota $y = 1$.
+
+$$
+\displaystyle \lim_{x \to \infty} \dfrac{f(x)}{x} = \lim_{x \to \infty} \dfrac{1}{x(e^x-1)} = 0 = k
+$$
+
+$$
+\displaystyle \lim_{x \to \infty} (f(x)-kx) = \lim_{x \to \infty} f(x) = 0 = l
+$$
+
+Desna kosa, tj. horizontalna asimptota je pravac $y = 0$.
+:::
+
+Za shvaćanje asimptota poželjno je vizualno pogledati odnos grafa i asimptote.
+
+## Ispitivanje toka funkcije {.unnumbered}
+
+Kod ispitivanja toka funkcije koristimo sljedeći postupak:
+
+1. Naći prirodno područje definicije.
+
+2. Ispitati simetrije funkcije: parnost/neparnost, periodičnost.
+
+3. Ispitati neprekidnost funkcije i naći točke prekida, ako postoje.
+
+4. Naći nultočke funkcije i područja stalnog predznaka.
+
+5. Naći intervale monotonosti i točke lokalnih ekstrema.
+
+6. Naći intervale konveksnosti i konkavnosti te točke infleksije.
+
+7. Naći asimptote.
+
+8. Skicirati graf funkcije.
+
+Također je dobro prilikom skiciranja funkcije odrediti još nekoliko točaka koje je lako izračunati kako bi skica bila što vjernija.
+
+**Napomena:** osim stacionarnih točaka, kandidati za lokalne ekstreme su i točke u kojima funkcija nije diferencijabilna (primjerice rubovi domene). Jednim imenom sve te kandidate nazivamo kritičnim točkama.
+
+**Napomena:** u definiciji kritičnih točki i vertikalni asimptota spominjemo rubove domene. Pod time mislimo na topološku definiciju ruba skupa, ali to trenutno nije bitno. Primjerice rub skupa $\langle 0,1 \rangle \cup \langle 1,2 \rangle$ je $\{0,1,2 \}$. Kad bi rub bio uključen u dani skup, tada bi skup bio zatvoren i imali bismo $[0,2]$. Zatvoreni skupovi sadrže svoj rub pa je i to bitno razumjeti.
+
+Promotrimo postupak na sljedećim primjerima:
+
+:::{.primjer}
+Ispitajte tok funkcije $\displaystyle f(x) = \frac{x-2}{\sqrt{x^2+1}}$ i skicirajte njezin graf.
+
+**1. Domena** | Nazivnik mora biti različit od $0$, a argument drugog korijena veći od $0$. Imamo: 
+
+$$
+\sqrt{x^2+1} = 0 \Longleftrightarrow x^2+1 = 0 \Rightarrow x \notin \mathbb{R}
+$$
+
+Primijetimo da je $x^2+1 >0, \forall x \in \mathbb{R}$. Dakle, domena od $f$ je $D_f = \mathbb{R}$.
+
+---
+
+**2. Parnost, neparnost i periodičnost** | Radi se o polinomu pa nije periodičan. Ispitajmo (ne)parnost:
+$$
+\displaystyle f(-x) = \frac{-x-2}{\sqrt{(-x)^2+1}} = \frac{-x-2}{\sqrt{x^2+1}} 
+$$
+
+Funkcija nije ni parna ni neparna.
+
+---
+
+**3. Neprekidnost** | Funkcija je kompozicija elementarnih funkcija i definirana je na cijelom $\mathbb{R}$ pa zaključujemo da je neprekidna na cijeloj domeni.
+
+---
+
+**4. Nultočke** | $f(x) = 0$ ako je $x-2 = 0$, tj. $x=2$ je jedina nultočka. Nazivnik je uvijek pozitivan pa predznak funkcije ovisi samo o brojniku. Imamo da je $f < 0$ za $x < 2$ i $f>0$ za $x>2$.
+
+---
+
+**5. Monotonost i lokalni ekstremi** | Računamo $f'$ i $f''$:
+$$
+\displaystyle f'(x) = \frac{2x+1}{(x^2+1)^\frac{3}{2}} \qquad f''(x) = \frac{-4x^2-3x+2}{(x^2+1)^\frac{5}{2}}
+$$
+
+$f'(x) = 0$ za $x = x_0 = \dfrac{-1}{2}$. Funkcija nema drugih kritičnih točki jer je $f'$ definirana na cijeloj domeni. Dakle, jedini kandidat za lokalni ekstrem je $x_0 = \dfrac{-1}{2}$. Provjerimo karakter ekstrema:
+$$
+f''(x_0) = f''\left (-\dfrac{1}{2} \right) = 1.431 > 0 
+$$
+
+pa je $x_0 = -\dfrac{1}{2}$ lokalni minimum i iznosi $-\sqrt{5}$.
+
+---
+
+**6. Koveksnost, konkavnost i točke infleksije** | Odredimo predznake $f''$. Uočimo da je nazivnik od $f''$ veći od $0$ pa predznak ovisi samo o brojniku. U brojniku je kvadratna funkcija pa se problem svodi na rješavanje nejednadžbe $-4x^2-3x+2 > 0$. Nultočke navedene funkcije su $x_{1,2}=\dfrac{-3\pm\sqrt{41}}{8}$. Primijetimo da je tada $f''(x) > 0$ za $x \in \left \langle \dfrac{-3-\sqrt{41}}{8}, \dfrac{-3+\sqrt{41}}{8} \right \rangle$. Iz pozitivnosti druge derivacije zaključujemo da je na tom intrvalu funkcija konveksna, a izvan tog intervala je konkavna.
+
+Točke infleksije su nultočke druge derivacije, tj. upravo $x_{1,2}=\dfrac{-3\pm\sqrt{41}}{8}$.
+
+---
+
+**7. Asimptote** | Budući da je funkcija definirana na cijelom $\mathbb{R}$ nemamo vertikalnih asimptota. 
+
+Provjerimo kose asimptote. Moguće je provesti standardni račun, ali postaje kompliciran. Uočimo da je stupanj brojnika od $f(x)$ točno $1$, a u nazivniku imamo $\sqrt{x^2+1}$ što je *otprilike* stupnja $1$. Tada zaključujemo da je stopa rasta brojnika i nazivnika gotovo ista pa vrijedi $\displaystyle \lim_{x \to -\infty} f(x) = -1$ i $\displaystyle \lim_{x \to \infty} f(x) = 1$ (nazivnik uvijek ide u $+\infty$ pa predznak ovisi o brojniku, a rekli smo da brojnik i nazivnik rastu jednako brzo pa im je omjer 1). 
+
+Naravno, ovo argumentacija odgovara jer se radi o polinomima. Svakako preporučujemo standardni postupak ako intuicija za ovakve argumente nije razvijena.
+
+---
+
+**8. Graf** Prije crtanja grafa preporučujemo izradu sljedeće tablice:
+
+| $x$ | $-\infty$ | $\longrightarrow$ | $x_1$ | $\longrightarrow$ | $x_0$ | $\longrightarrow$ | $x_2$ | $\longrightarrow$ | $2$ | $\longrightarrow$ | $+\infty$ |
+|:---:|:---------:|:-----------------:|:-----:|:-----------------:|:-----:|:-----------------:|:-----:|:-----------------:|:---:|:-----------------:|:----------:|
+| $f'(x)$ | | $-$ | | $+$ | | $+$ | | $+$ | | $+$ | |
+| $f''(x)$ || $-$  | | $+$ | | $+$ | | $-$ | | $-$ | |
+| $f(x)$ | | $-\searrow \cap$  | | $-\searrow \cup$ | | $-\nearrow \cup$ | | $-\nearrow \cap$ | | $+\nearrow \cap$ | |
+
+Promatramo intervala između točaka koje su nam bile bitne (nultočke derivacija) i ispod pišemo predznake prve i druge derivacije. Iz njih iščitavamo pad i raste od $f$ te intervale konveksnosti. Ispod rubnih točaka ništa ne pišemo. U zadnjem retku redom označujemo predznak od $f$, pad/rast i konveksnost/konkavnost (respektivno $\cup$ i $\cap$).
+
+Sad crtamo graf.
+
+```{python}
+#| echo: true
+#| output: true
+#| code-fold: true
+#| code-summary: "Prikaži Python kod"
+#| fig-align: center
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+def f(x):
+    return (x - 2) / np.sqrt(x**2 + 1)
+
+x = np.linspace(-10, 10, 2000)
+
+x0 = -0.5
+x1 = (-3 - np.sqrt(41)) / 8
+x2 = (-3 + np.sqrt(41)) / 8
+x3 = 2.0
+
+fig, ax = plt.subplots(figsize=(8,5))
+
+ax.plot(x, f(x), color="blue", linewidth=2)
+
+# asimptote
+ax.plot([-10, 0], [-1, -1], color="orange", linestyle="--")  # y = -1, lijevo
+ax.plot([0, 10], [1, 1], color="orange", linestyle="--")     # y = 1, desno
+
+#natpisi asimptota
+ax.text(-5, -0.9, "y = -1", fontsize=10)
+ax.text(5, 1.1, "y = 1", fontsize=10)
+
+# osi
+ax.axhline(0, linewidth=1)
+ax.axvline(0, linewidth=1)
+
+# točke
+ax.scatter([x0, x1, x2, x3],
+            [f(x0), f(x1), f(x2), f(x3)],
+            zorder=5)
+
+ax.text(x0-0.55, f(x0)-0.3, "f(x0)")
+ax.text(x1+0.1, f(x1)+0.1, "f(x1)")
+ax.text(x2+0.3, f(x2)-0.2, "f(x2)")
+ax.text(x3, f(x3)-0.3, "2")
+
+ax.set_xlim(-10, 10)
+ax.set_ylim(-3, 3)
+
+ax.annotate('', xy=(10, 0), xytext=(-10, 0),
+            arrowprops=dict(arrowstyle='->', linewidth=1.2, color='black'))
+
+ax.annotate('', xy=(0, 3), xytext=(0, -3),
+            arrowprops=dict(arrowstyle='->', linewidth=1.2, color='black'))
+
+ax.grid(True, linestyle="--",linewidth=0.5, alpha=0.5)
+plt.show()
+```
+
+:::
+
+:::{.primjer}
+Ispitajte tok funkcije $\displaystyle f(x) = \frac{2x^3}{x^2-4}$ i skicirajte njezin graf.
+
+---
+
+**1. Domena** | Nazivnik mora biti različit od $0$:
+$$
+x^2 - 4 = 0 \Longleftrightarrow x = \pm 2
+$$
+Dakle, domena je:
+$$
+D_f = \mathbb{R} \setminus \{-2,2\}
+$$
+
+---
+
+**2. Parnost, neparnost i periodičnost** | Provjerimo parnost:
+$$
+f(-x)=\frac{2(-x)^3}{(-x)^2-4}=\frac{-2x^3}{x^2-4}=-f(x)
+$$
+Funkcija je **neparna**, pa je graf centralno simetričan u odnosu na ishodište. Nije periodična.
+
+---
+
+**3. Neprekidnost** | Funkcija je racionalna pa je neprekidna na svojoj domeni, tj. na $\mathbb{R}\setminus\{-2,2\}$, a u točkama $\pm 2$ ima prekid druge vrste, zaključujemo da će tamo imati i vertikalne asimptote.
+
+---
+
+**4. Nultočke** | 
+$$
+\frac{2x^3}{x^2-4}=0 \Longleftrightarrow 2x^3=0 \Longleftrightarrow x=0
+$$
+Jedina nultočka je $x=0$.
+
+---
+
+**5. Monotonost i lokalni ekstremi** |
+
+Računamo prvu i drugu derivaciju:
+$$
+f'(x)=\frac{2x^2(x^2-12)}{(x^2-4)^2} \qquad f''(x)=\frac{4x(x^2+12)}{(x^2-4)^3}
+$$
+
+Kritične točke:
+$$
+f'(x)=0 \Longleftrightarrow x_0=0 \;\; \text{ili} \;\; x_{1,2}=\pm 2\sqrt{3}
+$$
+
+Predznak $f'(x)$ ovisi o $x^2(x^2-12)$ pa:
+
+- $f''(-2\sqrt{3}) < 0 \Rightarrow$ lokalni minimum 
+
+- $f''(2\sqrt{3})>0 \Rightarrow$ lokalni maksimum
+
+- $f''(0) = 0 \Rightarrow$ kandidat za točku infleksije
+
+Imamo
+
+- lokalni maksimum u $x=-2\sqrt{3}$, iznosi $-6\sqrt{3}$
+
+- lokalni minimum u $x=2\sqrt{3}$ iznosi $6\sqrt{3}$
+
+---
+
+**6. Koveksnost, konkavnost i točke infleksije** | Budući da je $x^2+12>0$, predznak ovisi o $x(x^2-4)$.
+
+Kandidat za infleksiju:
+$$
+x=0
+$$
+
+$f''$ mijenja predznak u $x=0$, pa je to točka infleksije:
+$$
+(0,0)
+$$
+
+---
+
+**7. Asimptote** |
+
+Vertikalne asimptote (točke u kojima funkcija nije definirana određuju vertikalne asimptote):
+$$
+x=-2,\quad x=2
+$$
+
+Kosa asimptota:
+$$
+\displaystyle \lim_{x \to \pm \infty} \left (\dfrac{f(x)}{x} \right ) = \lim_{x \to \pm \infty} \frac{2x^3}{x(x^2-4)} = 2 = k
+$$
+
+$$
+\displaystyle \lim_{x \to \pm \infty} (f(x) - kx) = \lim_{x \to \pm \infty} \frac{2x^3}{x^2-4} - kx = 0
+$$
+
+Dakle, kosa asimptota je:
+$$
+y=2x
+$$
+
+Uočimo da je to jedina kosa asimptota jer su gornji limesi jednaki  u $-\infty$ i $+\infty$.
+
+---
+
+**8. Graf** | Radimo tablicu:
+
+| $x$ | $-\infty$ | $\longrightarrow$ | $x_1$ | $\longrightarrow$ | $-2$ | $\longrightarrow$ | $x_0$ | $\longrightarrow$ | $2$ | $\longrightarrow$ | $x_2$ | $\longrightarrow$ | $+\infty$ |
+|:---:|:---------:|:-----------------:|:----:|:-----------------:|:-----:|:-----------------:|:-----:|:-----------------:|:-----:|:-----------------:|:---:|:-----------------:|:----------:|
+| $f'(x)$ | | $+$ | | $-$ | | $-$ | | $-$ | | $-$ | | $+$|
+| $f''(x)$ | | $-$ | | $-$ | | $+$ | | $-$ | | $+$ | | $+$|
+| $f(x)$ | | $-\nearrow \cap$ | | $-\searrow \cap$ | | $+\searrow \cup$ | | $-\searrow \cap$ | | $+\searrow \cup$ | | $+\nearrow \cup$|
+
+```{python}
+#| echo: true
+#| output: true
+#| code-fold: true
+#| code-summary: "Prikaži Python kod"
+#| fig-align: center
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+def f(x):
+    return 2*x**3/(x**2 - 4)
+
+x = np.linspace(-10, 10, 4000)
+
+y0 = 0
+y1 = -2*np.sqrt(3)
+y2 = 2*np.sqrt(3)
+
+fig, ax = plt.subplots(figsize=(8,5))
+
+eps = 0.05
+
+x1 = np.linspace(-10, -2-eps, 1000)
+x2 = np.linspace(-2+eps, 2-eps, 1000)
+x3 = np.linspace(2+eps, 10, 1000)
+
+ax.plot(x1, f(x1), color="blue", linewidth=2)
+ax.plot(x2, f(x2), color="blue", linewidth=2)
+ax.plot(x3, f(x3), color="blue", linewidth=2)
+
+# vertikalne asimptote
+ax.axvline(-2, color="orange", linestyle="--")
+ax.axvline(2, color="orange", linestyle="--")
+
+ax.text(-3.5, 8, "x = -2", fontsize=10)
+ax.text(2.1, 8, "x = 2", fontsize=10)
+
+# kosa asimptota y = 2x
+ax.plot(x, 2*x, color="orange", linestyle="--")
+ax.text(5, 8, "y = 2x", fontsize=10)
+
+# osi
+ax.axhline(0, linewidth=1)
+ax.axvline(0, linewidth=1)
+
+# točke
+ax.scatter([y0, y1, y2],
+           [f(y0), f(y1), f(y2)],
+           zorder=5)
+
+ax.text(y0, f(y0)-1.5, "f(x0)")
+ax.text(y1, f(y1)+0.5, "f(x1)")
+ax.text(y2-0.3, f(y2)+0.8, "f(x2)")
+
+ax.set_xlim(-10, 10)
+ax.set_ylim(-15, 15)
+
+ax.annotate('', xy=(10, 0), xytext=(-10, 0),
+            arrowprops=dict(arrowstyle='->', linewidth=1.2))
+
+ax.annotate('', xy=(0, 15), xytext=(0, -15),
+            arrowprops=dict(arrowstyle='->', linewidth=1.2))
+
+ax.grid(True, linestyle="--", linewidth=0.5, alpha=0.5)
+plt.show()
+```
+
+:::

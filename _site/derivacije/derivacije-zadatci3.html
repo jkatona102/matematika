@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Povijest promjena na stranici – Matematika</title>
+<title>derivacije-zadatci3 – Matematika</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1b8143a5af30aa0587ead8c64582f750.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1b8143a5af30aa0587ead8c64582f750.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,8 +71,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -82,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Matematika</span>
     </a>
   </div>
@@ -93,19 +122,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">O stranici</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./promjene.html" aria-current="page"> 
+    <a class="nav-link" href="../promjene.html"> 
 <span class="menu-text">Novosti</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./literatura.html"> 
+    <a class="nav-link" href="../literatura.html"> 
 <span class="menu-text">Literatura</span></a>
   </li>  
 </ul>
@@ -119,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Povijest promjena na stranici</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../derivacije/derivacije.html">2. DERIVACIJE</a></li><li class="breadcrumb-item"><a href="../derivacije/derivacije-zadatci3.html">Zadatci - treći dio</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Pretraživanje" onclick="window.quartoOpenSearch();">
@@ -141,13 +170,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./predaja.html" class="sidebar-item-text sidebar-link">
+  <a href="../predaja.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Predavanje zadataka</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./limesi/limesi.html" class="sidebar-item-text sidebar-link">
+            <a href="../limesi/limesi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">1. LIMESI</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -156,13 +185,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limesi/limesi1.html" class="sidebar-item-text sidebar-link">
+  <a href="../limesi/limesi1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">1.1 Definicija i temeljna teorija, neprekidnost</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limesi/limesi-zadatci.html" class="sidebar-item-text sidebar-link">
+  <a href="../limesi/limesi-zadatci.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zadatci</span></a>
   </div>
 </li>
@@ -170,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./derivacije/derivacije.html" class="sidebar-item-text sidebar-link">
+            <a href="../derivacije/derivacije.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2. DERIVACIJE</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -179,32 +208,56 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivacije/derivacije-uvod.html" class="sidebar-item-text sidebar-link">
+  <a href="../derivacije/derivacije-uvod.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2.1 Uvod u derivacije</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivacije/derivacije-definicija.html" class="sidebar-item-text sidebar-link">
+  <a href="../derivacije/derivacije-definicija.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2.2 Definicija</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivacije/derivacije-racunanje.html" class="sidebar-item-text sidebar-link">
+  <a href="../derivacije/derivacije-racunanje.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2.3 Pravila za računanje derivacija</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivacije/derivacije-zadaci1.html" class="sidebar-item-text sidebar-link">
+  <a href="../derivacije/derivacije-zadaci1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zadatci - prvi dio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivacije/derivacije-rezultati.html" class="sidebar-item-text sidebar-link">
+  <a href="../derivacije/derivacije-rezultati.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2.4 Temeljni rezultati</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../derivacije/derivacije-tok.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 Analiza toka funkcije</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../derivacije/derivacije-zadaci2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Zadatci - drugi dio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../derivacije/derivacije-primjena.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 Primjene derivacija</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../derivacije/derivacije-zadatci3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Zadatci - treći dio</span></a>
   </div>
 </li>
       </ul>
@@ -214,49 +267,158 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sadržaj</h2>
+   
+  <ul>
+  <li><a href="#zadatci" id="toc-zadatci" class="nav-link active" data-scroll-target="#zadatci">Zadatci</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../derivacije/derivacije.html">2. DERIVACIJE</a></li><li class="breadcrumb-item"><a href="../derivacije/derivacije-zadatci3.html">Zadatci - treći dio</a></li></ol></nav></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Povijest promjena na stranici</h1>
+
+
+
+<section id="zadatci" class="level1 unnumbered">
+<h1 class="unnumbered">Zadatci</h1>
+<div class="zadatak">
+<p>Odredite tangentu na krivulju <span class="math inline">\(f(x) = x^2 \ln x\)</span> u točki <span class="math inline">\(x = 1\)</span>.</p>
 </div>
+<!--
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+$$
+f'(x) = 2x \ln x + x^2 \dfrac{1}{x} = x(2 \ln x +1)
+$$
 
+Tada je tangenta dana kao
+$$
+y = f'(x)(x-1)+f(1) = (2 \ln 1 +1)(x-1) + f(1) = x - 1
+$$
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+</details>
+:::
+-->
 <hr>
-<p>02.07.2026.</p>
-<ul>
-<li>08:16 objavljena rješenja zadataka iz poglavlja o limesima (<a href="./limesi/limesi-zadatci.html">Zadatci</a>)</li>
-</ul>
+<div class="zadatak">
+<p>Neka je dan pravokutnik površine <span class="math inline">\(100\)</span>. Odredite pravokutnik dane površine koji ima minimalni opseg.</p>
+</div>
+<!--
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Opseg pravokutnika sa stranicama $a$ i $b$ računamo kao $O = 2(a+b)$. Površina je dana s $P = ab$ odakle imamo $b = \dfrac{100}{a}$. Tada je opseg
+$$
+O(a) = 2 \left (a+\dfrac{100}{a} \right )
+$$
+
+Računamo 
+$$
+O'(a) = 2 \left (1 - \frac{100}{a^2} \right) \ \Longrightarrow \ O'(a) = 0 \ \Longleftrightarrow \ 1 - \frac{100}{a^2} = 0
+$$
+
+Slijedi $a = 10$ i $b = 10$.
+</details>
+:::
+-->
 <hr>
-<p>01.07.2026.</p>
-<ul>
-<li><p>11:00 dodano poglavlje o limesima i neprekidnosti</p></li>
-<li><p>08:00 dodano poglavlje o derivacijama i diferencijabilnosti</p></li>
-</ul>
+<div class="zadatak">
+<p>Položaj čestice na pravcu dan je izrazom <span class="math inline">\(s(t) = t^3 - 9t^2 +24t\)</span>.</p>
+<ol type="a">
+<li><p>Odredite brzinu i akceleraciju.</p></li>
+<li><p>U kojim trenutcima čestica miruje?</p></li>
+<li><p>Kada tijelo mijenja smjer?</p></li>
+</ol>
+</div>
+<!--
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a)
+$$
+v(t) = s'(t) = 3t^2-18t+24 \qquad a(t) = v'(t) = s''(t) = 6t-18
+$$
+
+(b) Čestica miruje ako je brzina jednaka $0$, tj
+$$
+3t^2-18t+24 = 0 \ \Longleftrightarrow t_1 = 2, \ \ t_2 = 4 
+$$
+
+(c) Promjena smjera čestice je zapravo promjena smjera brzine. Znamo da su nultočke brzine $t= 2$ i $t=4$ pa su to vremena u kojima čestica mijenja smjer. 
+
+</details>
+:::
+-->
 <hr>
-<p>30.06.2026.</p>
-<ul>
-<li>stranica stvorena</li>
-</ul>
+<div class="zadatak">
+<p>Tvrtka koja proizvodi gazirana pića dizajnira novu limenku u obliku valjka. Limenka treba biti volumena <span class="math inline">\(0,4\text{L}\)</span>, ali imati što manje oplošje kako bi potrošili što manje materijala. Izračunajte optimalne dimenzije limenke.</p>
+</div>
+<!--
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Volumen limenke je $0,4 \text{L} = 400 \text{cm}^3$. Volmen računamo po formuli 
+$$
+V = r^2 \pi h = 400 \ \Longleftrightarrow h = \frac{400}{r^2 \pi}
+$$
+
+Oplošje valjka dano je formulom $S = 2 \pi r^2 + 2 \pi r h$. Uvrstimo $h$ pa dobijemo
+$$
+S(r) = 2 \pi r^2 + \frac{800}{r}
+$$
+
+Odredimo $S'(r)$:
+$$
+S'(r) = 4 \pi r - \frac{800}{r^2}
+$$
+
+Sada imamo $S'(r) = 0$ ako je $4 \pi r = \dfrac{800}{r^2}$. Tada je $r = \sqrt[3]{\dfrac{200}{\pi}} \approx 3.98\text{cm}$ i $h \approx 8.04 \text{cm}$.
+</details>
+:::
+-->
+<hr>
+<div class="zadatak">
+<p>Brojnost populacije bakterija u trenutku <span class="math inline">\(t\)</span> dan je s <span class="math inline">\(N(t) = 100000te^{-0.2t}\)</span>, gdje je <span class="math inline">\(t\)</span> vrijeme u danima.</p>
+<ol type="a">
+<li><p>Odredit brzinu rasta populacije.</p></li>
+<li><p>Nakon koliko dana populacija dostiže maksimum? Odredite taj maksimum.</p></li>
+<li><p>Procijenite brojnost populacije nakon <span class="math inline">\(50\)</span> dana i nakon <span class="math inline">\(60\)</span> dana.</p></li>
+<li><p>Što se događa s populacijom nakon prozivoljnog vremena <span class="math inline">\(t\)</span> kako odmiče u beskonačno?</p></li>
+</ol>
+</div>
+<!--
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a) Brzina je upravo derivacija brojnosti populacije po vremenu:
+$$
+N'(t) = 100000e^{-0.2t} - 20000te^{-0.2t} = 20000e^{-0.2t} (5 - t)
+$$
+
+(b) Odredimo stacionarnu točku
+$$
+N'(t) = 0 \ \Longleftrightarrow \ t = 5
+$$
+
+Maksimum se dostiže nakon $5$ dana, a tada brojnost iznosi $183939.7$.
+
+(c) 
+$$
+N(50) = 226.9 \qquad N(60) = 36.9
+$$
+
+(d) Vidimo da je $\displaystyle \lim_{t \to \infty} N(t) = 0$ pa očekujemo izumiranje populacije što smo i očekivali nakon podzadatka *c.*
+
+</details>
+:::
+-->
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

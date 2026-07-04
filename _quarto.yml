@@ -39,7 +39,6 @@ website:
           - text: "Zadatci - prvi dio"
             href: derivacije/derivacije-zadaci1.qmd
 
-
 format:
   html:
     theme:

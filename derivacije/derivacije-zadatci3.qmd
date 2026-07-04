@@ -1,0 +1,150 @@
+# Zadatci {.unnumbered}
+
+:::{.zadatak}
+Odredite tangentu na krivulju $f(x) = x^2 \ln x$ u točki $x = 1$.
+:::
+
+<!--
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+$$
+f'(x) = 2x \ln x + x^2 \dfrac{1}{x} = x(2 \ln x +1)
+$$
+
+Tada je tangenta dana kao
+$$
+y = f'(x)(x-1)+f(1) = (2 \ln 1 +1)(x-1) + f(1) = x - 1
+$$
+
+</details>
+:::
+-->
+
+---
+
+:::{.zadatak}
+Neka je dan pravokutnik površine $100$. Odredite pravokutnik dane površine koji ima minimalni opseg.
+:::
+
+<!--
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Opseg pravokutnika sa stranicama $a$ i $b$ računamo kao $O = 2(a+b)$. Površina je dana s $P = ab$ odakle imamo $b = \dfrac{100}{a}$. Tada je opseg
+$$
+O(a) = 2 \left (a+\dfrac{100}{a} \right )
+$$
+
+Računamo 
+$$
+O'(a) = 2 \left (1 - \frac{100}{a^2} \right) \ \Longrightarrow \ O'(a) = 0 \ \Longleftrightarrow \ 1 - \frac{100}{a^2} = 0
+$$
+
+Slijedi $a = 10$ i $b = 10$.
+</details>
+:::
+-->
+
+---
+
+:::{.zadatak}
+Položaj čestice na pravcu dan je izrazom $s(t) = t^3 - 9t^2 +24t$. 
+
+(a) Odredite brzinu i akceleraciju.
+
+(b) U kojim trenutcima čestica miruje?
+
+(c) Kada tijelo mijenja smjer?
+:::
+
+<!--
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a)
+$$
+v(t) = s'(t) = 3t^2-18t+24 \qquad a(t) = v'(t) = s''(t) = 6t-18
+$$
+
+(b) Čestica miruje ako je brzina jednaka $0$, tj
+$$
+3t^2-18t+24 = 0 \ \Longleftrightarrow t_1 = 2, \ \ t_2 = 4 
+$$
+
+(c) Promjena smjera čestice je zapravo promjena smjera brzine. Znamo da su nultočke brzine $t= 2$ i $t=4$ pa su to vremena u kojima čestica mijenja smjer. 
+
+</details>
+:::
+-->
+
+---
+
+:::{.zadatak}
+Tvrtka koja proizvodi gazirana pića dizajnira novu limenku u obliku valjka. Limenka treba biti volumena $0,4\text{L}$, ali imati što manje oplošje kako bi potrošili što manje materijala. Izračunajte optimalne dimenzije limenke.
+:::
+
+<!--
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Volumen limenke je $0,4 \text{L} = 400 \text{cm}^3$. Volmen računamo po formuli 
+$$
+V = r^2 \pi h = 400 \ \Longleftrightarrow h = \frac{400}{r^2 \pi}
+$$
+
+Oplošje valjka dano je formulom $S = 2 \pi r^2 + 2 \pi r h$. Uvrstimo $h$ pa dobijemo
+$$
+S(r) = 2 \pi r^2 + \frac{800}{r}
+$$
+
+Odredimo $S'(r)$:
+$$
+S'(r) = 4 \pi r - \frac{800}{r^2}
+$$
+
+Sada imamo $S'(r) = 0$ ako je $4 \pi r = \dfrac{800}{r^2}$. Tada je $r = \sqrt[3]{\dfrac{200}{\pi}} \approx 3.98\text{cm}$ i $h \approx 8.04 \text{cm}$.
+</details>
+:::
+-->
+
+---
+
+:::{.zadatak}
+Brojnost populacije bakterija u trenutku $t$ dan je s $N(t) = 100000te^{-0.2t}$, gdje je $t$ vrijeme u danima.
+
+(a) Odredit brzinu rasta populacije.
+
+(b) Nakon koliko dana populacija dostiže maksimum? Odredite taj maksimum.
+
+(c) Procijenite brojnost populacije nakon $50$ dana i nakon $60$ dana.
+
+(d) Što se događa s populacijom nakon prozivoljnog vremena $t$ kako odmiče u beskonačno?
+:::
+
+<!--
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a) Brzina je upravo derivacija brojnosti populacije po vremenu:
+$$
+N'(t) = 100000e^{-0.2t} - 20000te^{-0.2t} = 20000e^{-0.2t} (5 - t)
+$$
+
+(b) Odredimo stacionarnu točku
+$$
+N'(t) = 0 \ \Longleftrightarrow \ t = 5
+$$
+
+Maksimum se dostiže nakon $5$ dana, a tada brojnost iznosi $183939.7$.
+
+(c) 
+$$
+N(50) = 226.9 \qquad N(60) = 36.9
+$$
+
+(d) Vidimo da je $\displaystyle \lim_{t \to \infty} N(t) = 0$ pa očekujemo izumiranje populacije što smo i očekivali nakon podzadatka *c.*
+
+</details>
+:::
+-->

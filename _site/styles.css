@@ -136,6 +136,29 @@ body {
   box-sizing: border-box;
 }
 
+.lema{
+  border-left: 5px solid rgb(0, 141, 197) !important;
+  border-radius: 4px;
+  background-color: #fafafa !important;
+  padding: 1em;
+  margin: 1em 0;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.lema::before {
+  content: "Lema";
+  display: block;
+  margin: -1em -1em 1em -1em;
+  padding: 0.6em 1em;
+
+  background: #dbe9ff;
+  font-weight: bold;
+
+  box-sizing: border-box;
+}
+
 .dokaz {
   border-left: 6px solid #dcdcdc !important;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);

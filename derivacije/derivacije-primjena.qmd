@@ -1,0 +1,123 @@
+# Primjena derivacija {.unnumbered}
+
+Diferencijalni račun ima veliku ulogu u raznim granama matematike, a najviše se ističe u optimizaciji i numeričkim metodama traženja nultočki funkcije. Naravno, puni potencijal dostiže tek u više dimenzija.
+
+U ovom poglavlju promotrit ćemo nekoliko najbitnih primjena uz primjere.
+
+## Tangenta na krivulju {.unnumbered}
+
+Neka je $f \colon I \to \mathbb{R}$ diferencijabilna funkcija. Tada je nagib tangente na graf $\Gamma _f$ u točki $(c,f(c))$ upravo $f'(c)$. Sjetimo se jednadžbe pravca kroz jednu točku $(x_0,y_0)$:
+$$
+y-y_0=k(x-x_0)
+$$
+
+Neka je sada $(x_0,y_0) = (c,f(c))$ i $k=f'(c)$. Tada imamo:
+$$
+y=f'(c)(x-c)+f(c)
+$$
+
+što je upravo jednadžba tangente u točki $(c,f(c))$.
+
+Isto tako možemo odrediti i jednadžbu normale krivulje u točki $(c,f(c))$. Sjetimo se, normala je okomita na graf, tj. okomita na tangentu u danoj točki. Uvjet okomitosti dvaju pravaca s koeficijentima smjera $k_1$ i $k_2$ je $k_1 k_2 = -1$ pa imamo jednadžbu normale u $(c,f(c))$:
+$$
+y=-\dfrac{1}{f'(c)}(x-c)+f(c)
+$$
+
+:::{.primjer}
+Odredite jednadžbu tangente na krivulju $K \dots \; y = x^2-\dfrac{1}{x}$ u točki $c=-1$.
+
+Neka je $f(x)=x^2-\dfrac{1}{x}$. Računamo $f'(x) = 2x+\dfrac{1}{x^2}$. Imamo
+$$
+T \dots y=f'(c)(x-c)+f(c) = -1 \cdot (x-(-1))+f(-1) = -x+1 
+$$
+:::
+
+:::{.primjer}
+Odredite zajedničku tangentu na krivulje 
+$$
+\begin{align*}
+y &= x^2-6x+5 \\
+y &= -x^2-4x
+\end{align*}
+$$
+
+Označimo $f(x) = x^2-6x+5$ i $g(x) = -x^2-4x$. Tada je $f'(x)=2x-6$ i $g'(x)=-2x-4$. Zapišimo jednadžbe tangenti ovih dviju funkcija:
+$$
+y = f'(x_1)(x-x_1)+f(x_1) = (2x_1-6)(x-x_1) + x_1^2-6x_1+5 = (2x_1-6)x - x_1^2+5
+$$
+
+$$
+y= g'(x_2)(x-x_2)+g(x_2) = (-2x_2-4)(x-x_2)-x_2^2-4x_2 = (-2x_2-4)x + x_2^2
+$$
+
+Dva pravca su jednaka ako su im jednaki koeficijenti smjera i slobodni koeficijenti. Imamo sustav
+$$
+\begin{cases}
+2x_1-6 = -2x_2-4 \\
+-x_1^2+5 = x_2^2
+\end{cases}
+\; \Longrightarrow \;
+\begin{cases}
+2x_1+2x_2 = 2 \\
+x_1^2+x_2^2 = 5
+\end{cases}
+\quad \overset{x_1+x_2=1}{\Longrightarrow} \quad
+x_1^2-x_1-2 = 0
+$$
+
+Rješavanjem kvadratne jednadžbe dobijemo $x_1 = 2$ ili $x_1 = -1$. Dakle postoje dvije zajedničke tangente. Uvrštavanjem u jednadžbu tangente dobijemo 
+$$
+y = -2x+1 \qquad  y = -8x +4
+$$
+:::
+
+## Korištenje derivacija za maksimizaciju i minimizaciju {.unnumbered}
+
+:::{.primjer}
+Među svim jednakokračnim trokutima opsega $30$ nađite onaj koji ima najveću površinu. Izračunajte tu površinu.
+
+Opseg jednakokračnog trokuta s osnovicom $a$ i kracima $b$ dana je s $\ O = a+2b$, površinu računamo kao $P=\dfrac{1}{2}av_a$, gdje je $v_a=\sqrt{b^2-\dfrac{a^2}{4}}$. Uvrstimo u formulu površine izraz za visinu na osnovicu i $b=\dfrac{30-a}{2}$:
+$$
+P(a) = \dfrac{1}{2}a \sqrt{\left (\dfrac{30-a}{2}\right )^2-\dfrac{a^2}{4}} = 
+\dfrac{1}{2}a \sqrt{\dfrac{900-60a+a^2}{4}-\dfrac{a^2}{4}} =
+\dfrac{1}{4}a \sqrt{900-60a}
+$$
+
+Računamo
+$$
+P'(a) = \dfrac{1}{4} \sqrt{900-60a} + \dfrac{1}{4}a\dfrac{-60}{2\sqrt{900-60a}} =
+\dfrac{1}{4} \sqrt{900-60a} - \dfrac{-15a}{2\sqrt{900-60a}}
+$$
+
+Konačno dobijemo
+$$
+P'(a) = \dfrac{45(10-a)}{2\sqrt{900-60a}}
+$$
+
+$$
+P'(a) = 0 \Longleftrightarrow a = 10
+$$
+
+Tada je $b = 10$, tražena površina $P = 25 \sqrt{3}$.
+
+To se sada potpuno slaže s intuicijom da među svim trokutima zadanog opsega najveću površinu ima jednakostranični trokut.
+:::
+
+## Primjena u fizici {.unnumbered}
+
+Sjetimo se fizikalne interpretacije: ako znamo položaj tijela u vremenu $t$, onda možemo izračunati brzinu i akceleraciju u tom trenutku, a to su upravo derivacije funkcije puta.
+
+:::{.primjer}
+Tijelo slobodno pada s visine $h$. Ako je prijeđeni put jednak $s(t) = \dfrac{1}{2}gt^2$, odredimo brzinu i akceleraciju tog tijela u trenutku t.
+
+Računamo:
+$$
+v(t) = s'(t) = gt
+$$
+
+$$
+a(t) = v'(t) = s''(t) = g
+$$
+
+Primjer je prilično lagan, ali možemo bez fizikalne interpretacije odrediti dobro poznate formule.
+:::
