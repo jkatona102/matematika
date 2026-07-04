@@ -45,7 +45,7 @@ Također, za $x \in \langle c, c + \delta \rangle$ imamo $x-c > 0$ pa je $f(x) -
 </details>
 :::
 
-Protumačimo ovu lemu. Ako je derivacija u točki $c$ pozitivna, tada su na lijevoj okolini od $c$ funkcijske vrijednosti manje od $f(c)$, a na desnoj okolini veće od $f(c)$. Drukčije rečeno, funkcija $f$ raste na $\langle c - \delta, c + \delta \rangle$ ako je $f'(c)>0$. Ali to će biti tema jednog od kasnijih teorema.
+Protumačimo ovu lemu. Ako je derivacija u točki $c$ pozitivna, tada su na lijevoj okolini od $c$ funkcijske vrijednosti manje od $f(c)$, a na desnoj okolini veće od $f(c)$. Drukčije rečeno, funkcija $f$ raste na $\langle c - \delta, c + \delta \rangle$ ako je $f'(c)$ pozitivna. Ali to će biti tema jednog od kasnijih teorema.
 
 ## Teoremi srednje vrijednosti {.unnumbered}
 
