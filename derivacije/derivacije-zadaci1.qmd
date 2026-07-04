@@ -22,7 +22,7 @@ U *c.* dijelu zadatka koristite formule pretvorbe i limes $\displaystyle \lim_{t
 </details>
 :::
 
-<!-- :::{.rjesenje}
+:::{.rjesenje}
 <details>
 <summary>Prikaži rješenje</summary>
 (a) 
@@ -60,7 +60,7 @@ f'(c) &= \displaystyle \lim_{x \to c} \frac{f(x) - f(c)}{x - c} = \lim_{x \to c}
 $$
 
 </details>
-::: -->
+:::
 
 ---
 
@@ -89,7 +89,7 @@ Koristite poznata pravila deriviranja zbroja, produkta, kvocijenta, kompozicije.
 </details>
 :::
 
-<!--:::{.rjesenje}
+:::{.rjesenje}
 <details>
 <summary>Prikaži rješenje</summary>
 (a)
@@ -135,7 +135,7 @@ f'(x) = (e^x)'\arcsin x + e^x \arcsin ' x = e^x \arcsin x + \frac{e^x}{\sqrt{1-x
 $$
 
 </details>
-::: -->
+:::
 
 ---
 
@@ -151,7 +151,7 @@ Koristeći pravilo kompozicije odredite derivacije sljedećih funkcija:
 (d) $f(x) = \displaystyle \frac{1}{5^{x^2}}$
 :::
 
-<!--:::{.rjesenje}
+:::{.rjesenje}
 <details>
 <summary>Prikaži rješenje</summary>
 (a)
@@ -175,7 +175,7 @@ f'(x) = (5^{-x^2})' = (5^{-x^2})' (-x^2)' = 5^{-x^2} \ln 5 \cdot (-2x)
 $$
 
 </details>
-::: -->
+:::
 
 ---
 
@@ -194,7 +194,7 @@ Svojstvo logaritma $\ln (e^x) = x$ i $e^{\ln x}=x$, općenito $\log_b a^n = n \l
 </details>
 :::
 
-<!--:::{.rjesenje}
+:::{.rjesenje}
 <details>
 <summary>Prikaži rješenje</summary>
 (a) Neka je $g(x)=e^x$, tada je $g^{-1}(x)=f(x)=\ln x$
@@ -208,7 +208,7 @@ f'(x) = \displaystyle (g^{-1})'(x)=\frac{1}{g'(g^{-1}(x))} = \frac{1}{-\sin \arc
 $$
 
 </details>
-::: -->
+:::
 
 ---
 
@@ -223,11 +223,11 @@ Razmislite što se događa s funkcijom koja bi više puta u različitim točkama
 </details>
 :::
 
-<!--:::{.rjesenje}
+:::{.rjesenje}
 <details>
 <summary>Prikaži rješenje</summary>
 Izračunajmo derivaciju: $f'(x) = 1 + e^x$. Uočimo $f'(x) > 0, \forall x \in \mathbb{R}$. Sjetimo se interpretacije derivacije, ako je derivacija pozitivna, funkcija raste. Ova funkcija $f$ raste na cijeloj domeni, i to strogo raste. Stoga nepostoje različite točke $x_1,x_2$ takve da vrijedi $f(x_1)=f(x_2)$. 
 
 Analogno smo mogli argumentirati da je $f$ zbroj dviju strogo rastućih funkcija pa je i ona sama strogo rastuća.
 </details>
-::: -->
+:::
