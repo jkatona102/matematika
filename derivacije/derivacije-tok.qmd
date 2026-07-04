@@ -326,7 +326,7 @@ Naravno, ovo argumentacija odgovara jer se radi o polinomima. Svakako preporuču
 | $f''(x)$ || $-$  | | $+$ | | $+$ | | $-$ | | $-$ | |
 | $f(x)$ | | $-\searrow \cap$  | | $-\searrow \cup$ | | $-\nearrow \cup$ | | $-\nearrow \cap$ | | $+\nearrow \cap$ | |
 
-Promatramo intervala između točaka koje su nam bile bitne (nultočke derivacija) i ispod pišemo predznake prve i druge derivacije. Iz njih iščitavamo pad i raste od $f$ te intervale konveksnosti. Ispod rubnih točaka ništa ne pišemo. U zadnjem retku redom označujemo predznak od $f$, pad/rast i konveksnost/konkavnost (respektivno $\cup$ i $\cap$).
+Promatramo intervale između točaka koje su nam bile bitne (nultočke funkcije, nultočke derivacija, vertikalne asimptote...) i ispod pišemo predznake prve i druge derivacije. Iz njih iščitavamo pad i raste od $f$ te intervale konveksnosti. Ispod rubnih točaka ništa ne pišemo. U zadnjem retku redom označujemo predznak od $f$, pad/rast i konveksnost/konkavnost (respektivno $\cup$ i $\cap$).
 
 Sad crtamo graf.
 
