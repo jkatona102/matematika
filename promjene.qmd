@@ -2,6 +2,10 @@
 title: "Povijest promjena na stranici"
 ---
 
+04.07.2026.
+
+- 15:56 objavljena rješenja prvog dijela zadataka iz poglavlja o derivacijama ([Zadatci 1](derivacije/derivacije-zadaci1.qmd))
+
 ---
 
 02.07.2026.
