@@ -1,0 +1,181 @@
+# 3.2 Osnovna svojstva i primitivna funkcija {.unnumbered}
+
+U ovom poglavlju vidjet ćemo neke od najbitnijih rezultata za Riemannov integral te pokazati koje su to funkcije integrabilne.
+
+:::{.teorem}
+Neka je $f \colon [a,b] \to \mathbb{R}$ ograničena funkcija na $[a,b] \subset \mathbb{R}$. Funkcija $f$ je integrabilna na $[a,b]$ ako i samo ako $\forall \varepsilon > 0$ postoji subdivizija segmenta $[a,b]$ takva da za pripadne Darbouxove sume vrijedi $S − s < \varepsilon$.
+:::
+
+Uočite da je ograničenost bitna jer funkcija koja na segmentu nije ograničena ne bi imala supremum ili infimum u $\mathbb{R}$.
+
+:::{.teorem}
+Neka su $f,g \colon [a,b] \to \mathbb{R}$ integrabilne funkcije na $[a,b] \subset \mathbb{R}$.
+Za bilo koje $\alpha, \beta \in \mathbb{R}$ funkcija $\alpha f + \beta g$ je integrabilna na $[a,b]$ i vrijedi
+$$
+\int _a^b (\alpha f + \beta g) = \alpha \int _a^b f + \beta \int _a^b g
+$$
+.
+
+Ako je $f \leq g$ na $[a,b]$, onda je 
+$$
+\int _a^b f \leq \int _a^b g
+$$
+
+Također vrijedi 
+$$
+\left | \int _a^b f \ \right | \leq \int _a^b |f|
+$$
+:::
+
+Prethodni teorem kaže da je skup funkcija integrabilnih na segmentu $[a,b]$ realni vektorski prostor, a integral je linearan i monoton funkcional na tom prostoru što nam uvelike olakšava računanje integrala.
+
+:::{.teorem}
+Neka je $f \colon [a,b] \to \mathbb{R}$ ograničena funkcija na $[a,b] \subset \mathbb{R}$ i $c \in \langle a,b \rangle$. Ako je $f$ integrabilna na segmentima $[a,c]$ i $[c,b]$, onda je integrabilna na $[a,b]$ i vrijedi
+$$
+\int _a^b f = \int _a^c f + \int _c^b f
+$$
+:::
+
+Primijetimo da ograničenost nije dovoljna za integrabilnost. Definirajmo funkciju $\chi _\mathbb{Q}$ kao 
+$$
+\chi _\mathbb{Q} = 
+\begin{cases}
+0 \ , \ x \notin \mathbb{Q} \\
+1 \ , \ x \in \mathbb{Q}
+\end{cases}
+$$
+
+Općenito se funkcija $\chi _C$ zove karakteristična funkcija skupa $C$. U vjerojatnosti se često označava s $\mathbb{1} _C$ i zove se indikatorska funkcija.
+
+Promatramo sad restrikciju funkcije $\chi _\mathbb{Q}$ na segmentu $[0,1]$. Tada je supremum donjih Darbouxovih suma uvijek $0$, a infimum gornjih Darbouxovih suma $1$. Kako oni nisu jednaki, funkcija nije Riemann integrabilna iako je ograničena.
+
+## Integrabilnost monotonih i neprekidnih funkcija {.unnumbered}
+
+:::{.teorem}
+Neka je $f \colon [a,b] \to \mathbb{R}$ monotona funkcija na $[a,b] \subset \mathbb{R}$. Tada je $f$ Riemann integrabilna na $[a,b]$.
+:::
+
+:::{.dokaz}
+<details>
+<summary>Prikaži dokaz</summary>
+Bez smanjenja općenitosti možemo pretpostaviti da je $f$ rastuća. na $[a,b]$. Ako je $f(a) = f(b)$ onda je funkcija konstanta, a u primjeru u prethodnom poglavlju smo pokazali da je konstantna funkcija integrabilna. Stoga pretpostavimo $f(b) - f(a) > 0$. 
+
+Neka je $\varepsilon > 0$ i $n \in \mathbb{N}$ takav da vrijedi 
+$$
+n \varepsilon > \frac{f(b)-f(a)}{b-a}
+$$
+
+Uzmimo sada ekvidistantnu subdiviziju $x_k = a + kh$, za $k = 0, \dots, n$ i $h = \dfrac{b-a}{n}$. Zbog monotonosti zaključujemo da za svaki $[\alpha, \beta] \subset [a,b]$ vrijedi $\displaystyle \inf_{[\alpha, \beta]} f = f(\alpha)$ i $\displaystyle \sup_{[\alpha, \beta]} f = f(\beta)$. Stoga su pripadne Darbouxove sume
+$$
+s = \sum _{k=1}^n f(x_{k-1}) h \qquad S = \sum _{k=1}^n f(x_{k}) h 
+$$
+
+Tada imamo
+$$
+\begin{align*}
+S - s = \sum _{k=1}^n f(x_{k}) h - \sum _{k=1}^n f(x_{k-1}) h &= 
+h \left ( \sum _{k=1}^n f(x_{k}) - f(x_{k-1})\right) =
+h(f(b) - f(a)) = \\ 
+\frac{(f(b)-f(a))(b-a)}{n} &< \varepsilon
+\end{align*}
+$$
+
+Čime je teorem dokazan.
+**Napomena:** suma $\displaystyle \sum _{k=1}^n f(x_{k}) - f(x_{k-1})$ se teleskopira pa ostane samo $f(b)-f(a)$.
+
+</details>
+:::
+
+Definirajmo monotonost po dijelovima.
+
+:::{.def}
+Za funkciju $f \colon [a,b] \to \mathbb{R}$ kažemo da je monotona po dijelovima na segmentu $[a,b]$ ako postoji subdivizija 
+$$
+a= c_0 < c_1 < \dots < c_{k−1} < c_k < \dots < c_{n−1} < c_n = b
+$$ 
+
+takva da je $f|_{[c_{k-1},c_k]}$ monotona funkcija za sve $k= 1, \dots ,n$.
+:::
+
+:::{.korolar}
+Neka je $f \colon [a,b] \to \mathbb{R}$ po dijelovima monotona funkcija na $[a,b] \subset \mathbb{R}$. Tada je $f$ Riemann integrabilna na $[a,b]$.
+:::
+
+:::{.dokaz}
+<details>
+<summary>Prikaži dokaz</summary>
+
+Dokaz slijedi iz prethodnog teorema i svojstva aditivnosti integrala po području integracije
+$$
+\int _a^b f(x) \, dx = \sum _{k=1}^n \int_{c_{k-1}}^{c_k} f(x) \, dx
+$$
+
+</details>
+:::
+
+Sljedeći teorem puno je teže dokazati od prethodnog, a govori o integrabilnosti neprekidne funkcije na segmentu $[a,b]$.
+
+:::{.teorem}
+Neka je $f \colon [a,b] \to \mathbb{R}$ neprekidna na $[a,b] \subset \mathbb{R}$. Tada je $f$ Riemann integrabilna na $[a,b]$. Također, psotoji točka $c \in [a,b]$ takva da je 
+$$
+\int _{[a,b]} f = f(c)(b-a)
+$$
+:::
+
+Uočimo da je ovo upravo teorem srednje vrijednosti za integrale, kao što smo imali [Lagrangeov teorem srednje vrijednosti](../derivacije/derivacije-rezultati.qmd) u poglavlju o derivacijama.
+
+:::{.korolar}
+Neka je $f \colon I \to \mathbb{R}$ neprekidna funkcija na otvorenom intervalu $I = \langle a,b \rangle$. Ako za svaki segment $[u,v] \subset \langle a,b \rangle$ vrijedi $\displaystyle \int _u^v f(x) \, dx = 0$, onda je $f(x) = 0$ za svaki $x \in I$.
+:::
+
+Na kraju ovog odjeljka navodimo jedan jaki kriterij Riemann integrabilnosti.
+
+***Lebesgueov teorem***
+
+:::{.teorem}
+Ograničena funkcija $f \colon [a,b] \to \mathbb{R}$ je integrabilna na $[a,b]$ ako i samo ako skup njezinih prekida $S$ ima (Lebesgueovu) mjeru nula.
+:::
+
+Pri tome za skup $S \subset \mathbb{R}$ kažemo da ima (Lebesgueovu) mjeru nula ako se za bilo koji $\varepsilon >0$ skup $S$ može pokriti sa najviše prebrojivo mnogo otvorenih intervala čija je ukupna duljina (tj. suma njihovih duljina) manja od $\varepsilon$.
+
+Primjeri skupa mjere nula u $\mathbb{R}$ uključuju točku, konačnu uniju točka, prebrojivu uniju točaka.
+
+## Primitivna funkcija {.unnumbered}
+
+:::{.def}
+Neka je $I \subseteq \mathbb{R}$ otvoren interval i $f \colon I \to \mathbb{R}$. **Primitivna funkcija** ili **antiderivacija** funkcije $f$ na skupu $I$ je svaka funkcija $F \colon I \to \mathbb{R}$ sa svojstvom $F'(x) = f(x)$, $\forall x \in I$.
+:::
+
+:::{.teorem}
+Neka je $I \subseteq \mathbb{R}$ otvoren interval i $f \colon I \to \mathbb{R}$. Ako su $F$ i $G$ bilo koje dvije primitivne funkcije od $f$ na intervalu $I$, onda postoji konstanta $C \in \mathbb{R}$ takva da vrijedi $G(x) = F(x) + C$, $\forall x \in I$.
+:::
+
+Ovo će biti bitno kod određivanja neodređenog integrala. Vidimo da funkcija $f$ nema jedinstvenu primitivnu funkciju, odnosno sve su joj primitivne funkcije jednake do na konstantu.
+
+Sljedeći teorem daje dovoljne uvjete za postojanje primitivne funkcije.
+
+:::{.teorem}
+Neka je $I \subseteq \mathbb{R}$ otvoren interval i $f \colon I \to \mathbb{R}$ funkcija neprekidna na $I$. Tada postoji primitivna funkcija od $f$ na $I$.
+:::
+
+Sad smo spremni pokazati **Newtonon-Leibnizovu** formulu koja daje vezu između primitivne funkcije (odnosno pojma derivacije) i Riemannovog integrala funkcije.
+
+:::{.teorem}
+Ako je $f$ neprekidna funkcija na otvorenom intervalu $I$ i $F$ bilo koja primitivna funkcija funkcije $f$ na $I$, onda za svaki segment $[a,b] \subset I$ vrijedi
+$$
+\int _a^b f(x) \, dx = F(b) - F(a)
+$$
+:::
+
+**Napomena:** Prethodni teorem je istinit i bez pretpostavke da je $f$ neprekidna na $I$. Dovoljno je pretpostaviti da je $f$ integrabilna funkcija i da postoji $F$ primitivna funkcija od $f$ na $I$.
+
+:::{.def}
+Skup $\{F + C : C \in \mathbb{R}\}$ svih primitivnih funkcija od $f$ zovemo **neodređeni** integral ili antiderivacija od $f$ i taj skup označavamo s 
+$$
+\int f(x) \, dx= F(x) + C
+$$
+:::
+
+:::{.def}
+Neka je $f \colon [a,b] \to \mathbb{R}$ ograničena funkcija. Ako je $f$ Riemann integrabilna, onda realni broj $\displaystyle \int_a^bf(x) \, dx$ zovemo **određeni integral**.
+:::

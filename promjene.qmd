@@ -2,6 +2,12 @@
 title: "Povijest promjena na stranici"
 ---
 
+05.07.2026.
+
+- 18:00 ispravljen dokaz Lagrangeovog teorema srednje vrijednosti u poglavlju [2.4](derivacije/derivacije-rezultati.qmd)
+
+---
+
 04.07.2026.
 
 - 21:40 dodana poglavlja [2.4](derivacije/derivacije-rezultati.qmd) i [2.5](derivacije/derivacije-tok.qmd) i drugi dio [zadataka](derivacije/derivacije-zadaci2.qmd) iz derivacija

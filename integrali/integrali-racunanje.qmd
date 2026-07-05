@@ -1,0 +1,166 @@
+# 3.3 Metode integriranja {.unnumbered}
+
+## Direktna integracija {.unnumbered}
+
+Derivacije elementarnih funkcija su opet elementarne funkcije. Nažalost to nije istina kada se radi o primitivnim funkcijama ili antiderivacijama. Primjeri elementarnih funkcija čije primitivne funkcije nisu elementarne su $e^{-x^2}$, $\dfrac{1}{\ln x}$, $\sqrt{x} \sin x$.
+
+Ne postoji opći način kako utvrditi je li primitivna funkcija elementarne funkcije opet elementarna funkcija. Navodimo tablicu osnovnih elementarnih funkcija i njihovih primitivnih funkcija. U pravilu pokušavamo nalaženje primitivnih funkcija za složenije funkcije raznim postupcima svesti na te jednostavne funkcije.
+
+***Tablica integrala***
+
+| $\displaystyle \int \ dx = x + C$ | $\displaystyle \int x^a \, dx = \dfrac{x^{a+1}}{a+1} + C, \  (a \neq 1)$ |
+|:---:|:---:|
+| $\displaystyle \int \dfrac{dx}{x} = \ln |x| + C$| $\displaystyle \int e^x \, dx = e^x + C$|
+| $\displaystyle \int \sin x \, dx = - \cos x + C$| $\displaystyle \int \cos x \, dx = \sin x + C$|
+| $\displaystyle \int \dfrac{dx}{\sin^2 x} = - \operatorname{ctg} x + C$| $\displaystyle\int \dfrac{dx}{\cos^2 x} = \operatorname{tg} x + C$ |
+| $\displaystyle \int \operatorname{sh} x \, dx = \operatorname{ch} x + C$| $\displaystyle \int \operatorname{ch} x \, dx = \operatorname{sh} x + C$|
+| $\displaystyle\int \dfrac{dx}{\operatorname{sh}^2 x} = -\operatorname{cth} x + C$|  $\displaystyle \int \dfrac{dx}{\operatorname{ch}^2 x} = \operatorname{th} x + C$|
+| $\displaystyle \int \dfrac{dx}{\sqrt{1-x^2}} = \arcsin x + C$| $\displaystyle \int \dfrac{dx}{1+x^2} = \operatorname{arctg} x + C$|
+| $\displaystyle \int \dfrac{dx}{\sqrt{1+x^2}} = \operatorname{Arsh} x + C$| $\displaystyle \int \dfrac{dx}{\sqrt{x^2-1}} = \operatorname{Arch} x + C$|
+| $\displaystyle \int \dfrac{dx}{\sqrt{a^2-x^2}} = \arcsin \dfrac{x}{a} + C$| $\displaystyle \int \dfrac{dx}{a^2+x^2} = \dfrac{1}{a}\operatorname{arctg} \dfrac{x}{a} + C$|
+| $\displaystyle \int \dfrac{dx}{\sqrt{a^2+x^2}} = \ln \left(x + \sqrt{a^2+x^2}\right) + C$| $\displaystyle \int \dfrac{dx}{\sqrt{x^2-a^2}} = \ln \left|x + \sqrt{a^2+x^2}\right| + C$|
+| $\displaystyle \int \dfrac{dx}{a^2-x^2} = \dfrac{1}{2a} \ln \left| \dfrac{x+a}{x-a}\right| + C$ | $\displaystyle \int a^x \, dx = \dfrac{a^x}{\ln a} + C, \ (a > 0, a\neq 0)$|
+
+**Napomena:** u zadnja tri retka treba dodatno pisati uvjet $(a>0)$.
+
+Kod upotrebe Newton-Leibnizove formule često se koristi oznaka
+$$
+F \ \Big|_a^b = F(b) - F(a)
+$$
+
+:::{.primjer}
+Izračunajmo $\displaystyle \int _1^3 (5x^2-2x+1)\, dx$. Koristimo linearnost integrala pa vrijedi
+$$
+\begin{align*}
+\displaystyle \int _1^3 (5x^2-2x+1)\ dx &= 5 \int _1^3 x^2 \, dx - 2 \int _1^3 x \, dx + \int _1^3 \, dx \\
+&= 5 \cdot \dfrac{x^3}{3} \Big|_1^3 -2\cdot \dfrac{x^2}{2} \Big|_1^3 + x \Big|_1^3 \\
+&= \dfrac{5}{3} (3^3-1^3) - (3^2-1) + (3-1) \\
+&= \dfrac{112}{3}
+\end{align*}
+$$
+
+Naravno, nećemo ovako rješavati integrale. Praksom ćete usvojiti osjećaj za integriranje pa će se integral zapravo računati kao
+$$
+\begin{align*}
+\displaystyle \int _1^3 (5x^2-2x+1)\ dx &= 5 \int _1^3 x^2 \, dx - 2 \int _1^3 x \, dx + \int _1^3 \, dx \\
+&= \left(\dfrac{5x^3}{3} - x^2 + x \right) \Bigg|_1^3 \\
+&=\left(\dfrac{5\cdot 3^3}{3} - 3^2 + 3 \right) - \left(\dfrac{5\cdot 1^3}{3} - 1^2 + 1 \right) \\
+&= \dfrac{112}{3}
+\end{align*}
+$$
+:::
+
+## Metoda supstitucije (metoda zamjene varijabli) {.unnumbered}
+
+:::{.teorem}
+Neka su $I$ i $J$ otvoreni intervali, $\varphi$ diferencijabilna funkcija na $J$ i $F$ primitivna funkcija od $f$ na $I$. Neka je $\varphi (J) \subseteq I$, tj. $f \circ \varphi$ je definirana na $J$. Tada je $G = F \circ \varphi$ primitivna funkcija od $(f \circ \varphi)'\varphi '$ na $J$. Također, za sve $\alpha$, $\beta \in J$ vrijedi
+$$
+\int _\alpha^\beta f(\varphi(t))\varphi '(t) \, dt = \int _{\varphi(\alpha)}^{\varphi(\beta)} f(x) \, dx
+$$
+:::
+
+:::{.dokaz}
+<details>
+<summary>Prikaži dokaz</summary>
+Zbog $\varphi (J) \subseteq I$ je funkcija $G = F \circ \varphi$ dobro definirana i diferencijabilna na $J$. Vrijedi
+$$
+G'(x) = F'(\varphi (x))\varphi '(x) = f(\varphi (x))\varphi '(x)
+$$
+
+Stoga slijedi
+$$
+\int _\alpha^\beta f(\varphi(t))\varphi '(t) \, dt
+= G(\beta) - G(\alpha)
+= F(\varphi (\beta)) - F(\varphi (\alpha))
+= \int _{\varphi(\alpha)}^{\varphi(\beta)} f(x) \, dx
+$$
+
+</details>
+:::
+
+Ako je $\varphi$ **strogo monotona** funkcija s $J$ na $I$ i $\psi = \varphi ^{-1}$ inverzna funkcija od $\varphi$, onda uz oznake $a = \varphi{\alpha}$, $b = \varphi{\beta}$ dobivamo
+$$
+\int_a^b f(x) \, dx = \int _{\psi(\alpha)}^{\psi(\beta)} f(\varphi(t))\varphi '(t) \, dt
+$$
+
+Sada primitivnu funkciju $F$ nalazimo uz supstituciju $x= \varphi (t)$, odnosno $t= \psi(x)$, na sljedeći način:
+$$
+F(x) = \int f(x) \, dx = \int f(\varphi(t))\varphi '(t) \, dt = G(t) + C = G(\psi (x)) + C
+$$
+
+gdje je $C$ konstanta po volji.
+
+Naravno, ova metoda trenutno djeluje previše apstraktno pa ćemo riješiti dva primjera.
+
+:::{.primjer}
+Odredite $\displaystyle \int \dfrac{2x-1}{x^2-x+1} \, dx$.
+$$
+\int \dfrac{2x-1}{x^2-x+1} \, dx =
+\left | 
+\begin{aligned}
+t &= x^2-x+1 \\
+dt &= (2x-1)dx
+\end{aligned}
+\right | =
+\int \dfrac{dt}{t} = \ln |t| + C = \ln |x^2-x+1| + C
+$$
+:::
+
+Ideja je pokušati pronaći neki dio podintegralne funkcije koji deriviran odgovara drugom dijelu dane podintegralne funkcije. Izračunajmo sad jedan određeni integral.
+
+:::{.primjer}
+Izračunajte $\displaystyle \int _0^2 x^2(2x^3+4)^2 \, dx$.
+$$
+\int _0^2 x^2(2x^3+4)^2 \, dx =
+\left | 
+\begin{aligned}
+t &= 2x^3+4 & 2 &\mapsto 20 \\
+dt &= 6x^2dx & 0 &\mapsto 4
+\end{aligned}
+\right | =
+\int _0^2 \dfrac{t^2}{6} \, dt = \dfrac{t^3}{18} \Big|_0^2 = \frac{4}{9}
+$$
+:::
+
+**Napomena:** Uočimo da kod određenog integrala nemamo konstantu $C$. Izraz $2 \mapsto 20$ označava da kad uvrstimo granicu $2$ kao argument funkcije $t(x)$ dobijemo granicu $20$. Dio $dt = 6x^2dx$ označava derivaciju od $t$ po varijabli $x$. Granice moraju ostati na istom mjestu, a ako dobijemo da je nova gornja granica manja od nove donje granice, tada ih smijemo okrenuti, ali tada stavljamo $-$ ispred integrala. 
+
+Primjerice, da smo dobili gornju granicu $10$, a donju $15$, vrijedilo bi
+$$
+\int _{15}^{10} f(t)\, dt = - \int _{10}^{15} f(t)\, dt
+$$
+
+## Metoda parcijalne integracije {.unnumbered}
+
+:::{.teorem}
+Za funkcije $u$, $v \colon I \to \mathbb{R}$ i za svaki par $a,b \in I$ vrijedi
+$$
+\int _a^b udv = uv \Big|_a^b - \int _a^b vdu
+$$
+:::
+
+:::{.dokaz}
+<details>
+<summary>Prikaži dokaz</summary>
+Funkcija $F = uv$ je primitivna funkcija od $f = u'v+uv'$ pa vrijedi
+$$
+F \Big|_a^b = uv \Big|_a^b = \int _a^b (u'v + uv') = \int _a^b u'v + \int _a^b uv' = \int _a^b vdu + \int _a^b udv
+$$
+
+Primijetimo da metoda parcijalne integracije slijedi iz pravila deriviranja produkta. Oznaka $du$ označava $u'$.
+</details>
+:::
+
+:::{.primjer}
+Izračunajte integral $\displaystyle \int _0^1 xe^x \, dx$.
+$$
+\int _0^1 xe^x \, dx =
+\left | 
+\begin{aligned}
+u &= x & du &= dx \\
+dv &= e^xdx & v &= e^x
+\end{aligned}
+\right | =
+xe^x \Big|_0^1 - \int _0^1 e^x \, dx = 
+e - e^x \Big|_0^1 = e - (e - 1) = 1
+$$
+:::

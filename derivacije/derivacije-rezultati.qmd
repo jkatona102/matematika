@@ -118,10 +118,10 @@ $$
 <summary>Prikaži dokaz</summary>
 Neka je funkcija $g \colon I \to \mathbb{R}$ dana s 
 $$
-g(x) = f(x) - f(a)- \dfrac{f(b)-f(a)}{b-a}
+g(x) = f(x) - f(a)- \dfrac{f(b)-f(a)}{b-a}(x-a)
 $$
 
-Funkcija $g$ je diferencijabilna na $I$ i $g'(x) = f'(x)− \dfrac{f(b)−f(a)}{b−a} , \forall x \in I$. Takoder je $g(a) = g(b) = 0$ pa $g$ zadovoljava sve uvjete Rolleovog teorema, tj. $\exists c \in \langle a,b \rangle$ takva da je 
+Funkcija $g$ je diferencijabilna na $I$ i $g'(x) = f'(x)− \dfrac{f(b)−f(a)}{b−a} , \forall x \in I$. Također je $g(a) = g(b) = 0$ pa $g$ zadovoljava sve uvjete Rolleovog teorema, tj. $\exists c \in \langle a,b \rangle$ takva da je 
 $$
 0 = g'(c) = f'(c)−\dfrac{f(b)-f(a)}{b-a}
 $$

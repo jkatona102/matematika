@@ -230,6 +230,53 @@ window.Quarto = {
  <span class="menu-text">Zadatci - prvi dio</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../derivacije/derivacije-rezultati.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 Temeljni rezultati</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../derivacije/derivacije-tok.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 Analiza toka funkcije</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../derivacije/derivacije-zadaci2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Zadatci - drugi dio</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../integrali/integrali.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. RIEMANNOV INTEGRAL</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.1 Uvod i definicija</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-svojstva.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.2 Osnovna svojstva i primitivna funkcija</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-racunanje.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.3 Metode integriranja</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -242,7 +289,7 @@ window.Quarto = {
     <h2 id="toc-title">Sadržaj</h2>
    
   <ul>
-  <li><a href="#pravila-za-računanje-derivacija" id="toc-pravila-za-računanje-derivacija" class="nav-link active" data-scroll-target="#pravila-za-računanje-derivacija">Pravila za računanje derivacija</a>
+  <li><a href="#pravila-za-računanje-derivacija" id="toc-pravila-za-računanje-derivacija" class="nav-link active" data-scroll-target="#pravila-za-računanje-derivacija">2.3 Pravila za računanje derivacija</a>
   <ul class="collapse">
   <li><a href="#derivacija-kompozicije" id="toc-derivacija-kompozicije" class="nav-link" data-scroll-target="#derivacija-kompozicije">Derivacija kompozicije</a></li>
   <li><a href="#derivacija-inverzne-funkcije" id="toc-derivacija-inverzne-funkcije" class="nav-link" data-scroll-target="#derivacija-inverzne-funkcije">Derivacija inverzne funkcije</a></li>
@@ -263,7 +310,7 @@ window.Quarto = {
 
 
 <section id="pravila-za-računanje-derivacija" class="level1 unnumbered">
-<h1 class="unnumbered">Pravila za računanje derivacija</h1>
+<h1 class="unnumbered">2.3 Pravila za računanje derivacija</h1>
 <p>Vidjeli smo da su zbroj, produkt i kvocijent diferencijabilnih funkcija također diferencijabilni i da je derivacija linearne kombinacije diferenicijalnih funkcija linearna kombinacija njihovih derivacija.</p>
 <p>U ovom poglavlju navest ćemo još neka pravila za računanje derivacija koja nam omogućuju da izračunamo derivaciju složenijih funkcija.</p>
 <p>Za početak pokažimo rezultat za derivaciju kompozicije:</p>
@@ -451,11 +498,11 @@ f'(c) = \arcsin'(x) = (\sin^{-1}(c))' &amp;= \frac{1}{g'(g^{-1}(c))} \\
 <td style="text-align: center;"><span class="math inline">\(-\sin x\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\tan x\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\operatorname{tg} x\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(\dfrac{1}{\cos^2 x}\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\cot x\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\operatorname{ctg} x\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(-\dfrac{1}{\sin^2 x}\)</span></td>
 </tr>
 <tr class="even">
@@ -467,28 +514,28 @@ f'(c) = \arcsin'(x) = (\sin^{-1}(c))' &amp;= \frac{1}{g'(g^{-1}(c))} \\
 <td style="text-align: center;"><span class="math inline">\(-\dfrac{1}{\sqrt{1-x^2}}\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\arctan x\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\operatorname{arctg} x\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(\dfrac{1}{1+x^2}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\sinh x\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\cosh x\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\cosh x\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\sinh x\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\tanh x\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\dfrac{1}{\cosh^2 x}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\coth x\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(-\dfrac{1}{\sinh^2 x}\)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;"><span class="math inline">\(\operatorname{arcctg}x\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(-\dfrac{1}{1+x^2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\operatorname{sh} x\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\operatorname{ch} x\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\operatorname{ch} x\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\operatorname{sh} x\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\operatorname{th} x\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\dfrac{1}{\operatorname{ch}^2 x}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\operatorname{cth} x\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\dfrac{1}{\operatorname{sh}^2 x}\)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;"><span class="math inline">\(\operatorname{Arsh}x\)</span></td>
@@ -577,12 +624,12 @@ f'(c) = \arcsin'(x) = (\sin^{-1}(c))' &amp;= \frac{1}{g'(g^{-1}(c))} \\
 <td style="text-align: center;"><span class="math inline">\((\cos x)^{(n)} = \cos\!\left(x+\dfrac{n\pi}{2}\right)\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\sinh x\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\begin{cases}\sinh x,&amp; n \text{ paran}\\ \cosh x,&amp; n \text{ neparan}\end{cases}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\operatorname{sh} x\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\begin{cases}\operatorname{sh} x,&amp; n \text{ paran}\\ \operatorname{ch} x,&amp; n \text{ neparan}\end{cases}\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\cosh x\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\begin{cases}\cosh x,&amp; n \text{ paran}\\ \sinh x,&amp; n \text{ neparan}\end{cases}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\operatorname{ch} x\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\begin{cases}\operatorname{ch} x,&amp; n \text{ paran}\\ \operatorname{sh} x,&amp; n \text{ neparan}\end{cases}\)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;"><span class="math inline">\(x^m\)</span></td>

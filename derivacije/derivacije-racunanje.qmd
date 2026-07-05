@@ -196,16 +196,16 @@ Dakle, $f'(x) = \displaystyle \frac{1}{1 - x^2}$.
 | $\ln x$ | $\dfrac{1}{x}$ |
 | $\sin x$ | $\cos x$ |
 | $\cos x$ | $-\sin x$ |
-| $\tan x$ | $\dfrac{1}{\cos^2 x}$ |
-| $\cot x$ | $-\dfrac{1}{\sin^2 x}$ |
+| $\operatorname{tg} x$ | $\dfrac{1}{\cos^2 x}$ |
+| $\operatorname{ctg} x$ | $-\dfrac{1}{\sin^2 x}$ |
 | $\arcsin x$ | $\dfrac{1}{\sqrt{1-x^2}}$ |
 | $\arccos x$ | $-\dfrac{1}{\sqrt{1-x^2}}$ |
-| $\arctan x$ | $\dfrac{1}{1+x^2}$ |
-| $\sinh x$ | $\cosh x$ |
-| $\cosh x$ | $\sinh x$ |
-| $\tanh x$ | $\dfrac{1}{\cosh^2 x}$ |
-| $\coth x$ | $-\dfrac{1}{\sinh^2 x}$ |
+| $\operatorname{arctg} x$ | $\dfrac{1}{1+x^2}$ |
 | $\operatorname{arcctg}x$ | $-\dfrac{1}{1+x^2}$ |
+| $\operatorname{sh} x$ | $\operatorname{ch} x$ |
+| $\operatorname{ch} x$ | $\operatorname{sh} x$ |
+| $\operatorname{th} x$ | $\dfrac{1}{\operatorname{ch}^2 x}$ |
+| $\operatorname{cth} x$ | $-\dfrac{1}{\operatorname{sh}^2 x}$ |
 | $\operatorname{Arsh}x$ | $\dfrac{1}{\sqrt{1+x^2}}$ |
 | $\operatorname{Arch}x$ | $\dfrac{1}{\sqrt{x^2-1}}$ |
 | $\operatorname{Arth}x$ | $\dfrac{1}{1-x^2}$ |
@@ -227,7 +227,7 @@ Dakle, $f'(x) = \displaystyle \frac{1}{1 - x^2}$.
 | $a^x$ | $(a^x)^{(n)} = a^x(\ln a)^n$ |
 | $\sin x$ | $(\sin x)^{(n)} = \sin\!\left(x+\dfrac{n\pi}{2}\right)$ |
 | $\cos x$ | $(\cos x)^{(n)} = \cos\!\left(x+\dfrac{n\pi}{2}\right)$ |
-| $\sinh x$ | $\begin{cases}\sinh x,& n \text{ paran}\\ \cosh x,& n \text{ neparan}\end{cases}$ |
-| $\cosh x$ | $\begin{cases}\cosh x,& n \text{ paran}\\ \sinh x,& n \text{ neparan}\end{cases}$ |
+| $\operatorname{sh} x$ | $\begin{cases}\operatorname{sh} x,& n \text{ paran}\\ \operatorname{ch} x,& n \text{ neparan}\end{cases}$ |
+| $\operatorname{ch} x$ | $\begin{cases}\operatorname{ch} x,& n \text{ paran}\\ \operatorname{sh} x,& n \text{ neparan}\end{cases}$ |
 | $x^m$ | $(x^m)^{(n)} = m(m-1)\cdots(m-n+1)x^{m-n}$ |
 | Leibnizova formula | $(uv)^{(n)} = \displaystyle\sum_{k=0}^{n}\binom{n}{k}u^{(k)}v^{(n-k)}$ |

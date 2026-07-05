@@ -183,7 +183,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Analiza toka funkcije</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../derivacije/derivacije.html">2. DERIVACIJE</a></li><li class="breadcrumb-item"><a href="../derivacije/derivacije-tok.html">2.5 Analiza toka funkcije</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Pretraživanje" onclick="window.quartoOpenSearch();">
@@ -265,6 +265,24 @@ window.Quarto = {
  <span class="menu-text">Zadatci - prvi dio</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../derivacije/derivacije-rezultati.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 Temeljni rezultati</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../derivacije/derivacije-tok.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">2.5 Analiza toka funkcije</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../derivacije/derivacije-zadaci2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Zadatci - drugi dio</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -287,9 +305,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../derivacije/derivacije.html">2. DERIVACIJE</a></li><li class="breadcrumb-item"><a href="../derivacije/derivacije-tok.html">2.5 Analiza toka funkcije</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Analiza toka funkcije</h1>
+<h1 class="title">2.5 Analiza toka funkcije</h1>
 </div>
 
 
@@ -355,7 +373,7 @@ window.Quarto = {
 \]</span></p>
 <p>za <span class="math inline">\(\alpha _i \in \mathbb{R}\)</span> takvi da vrijedi <span class="math inline">\(\alpha _1 + \cdots + \alpha _k = 1\)</span>.</p>
 </div>
-<div id="74fefa29" class="cell" data-execution_count="1">
+<div id="361fc2c4" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Prikaži Python kod</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -624,9 +642,9 @@ f''(x_0) = f''\left (-\dfrac{1}{2} \right) = 1.431 &gt; 0
 </tr>
 </tbody>
 </table>
-<p>Promatramo intervala između točaka koje su nam bile bitne (nultočke derivacija) i ispod pišemo predznake prve i druge derivacije. Iz njih iščitavamo pad i raste od <span class="math inline">\(f\)</span> te intervale konveksnosti. Ispod rubnih točaka ništa ne pišemo. U zadnjem retku redom označujemo predznak od <span class="math inline">\(f\)</span>, pad/rast i konveksnost/konkavnost (respektivno <span class="math inline">\(\cup\)</span> i <span class="math inline">\(\cap\)</span>).</p>
+<p>Promatramo intervale između točaka koje su nam bile bitne (nultočke funkcije, nultočke derivacija, vertikalne asimptote…) i ispod pišemo predznake prve i druge derivacije. Iz njih iščitavamo pad i raste od <span class="math inline">\(f\)</span> te intervale konveksnosti. Ispod rubnih točaka ništa ne pišemo. U zadnjem retku redom označujemo predznak od <span class="math inline">\(f\)</span>, pad/rast i konveksnost/konkavnost (respektivno <span class="math inline">\(\cup\)</span> i <span class="math inline">\(\cap\)</span>).</p>
 <p>Sad crtamo graf.</p>
-<div id="8030b80c" class="cell" data-execution_count="2">
+<div id="2d621a50" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Prikaži Python kod</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -837,7 +855,7 @@ y=2x
 </tr>
 </tbody>
 </table>
-<div id="6f8d3cc0" class="cell" data-execution_count="3">
+<div id="5638bc75" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Prikaži Python kod</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>

@@ -1,0 +1,23 @@
+# 3. RIEMANNOV INTEGRAL {.unnumbered}
+
+Nakon derivacija na red dolazi obrnuti alat - integriranje. Kako to obično bude kad imamo dva smjera, jedan bude teži, a to je upravo određivanje integrala.
+
+U ovom poglavlju dat ćemo definiciju integrala, upoznati se s osnovnim rezultatima i metoda rješavanja, a zatim i s primjenama i važnosti integralnog računa.
+
+## Sadržaj poglavlja {.unnumbered}
+
+- [Uvod i definicija](integrali-def.qmd)
+- [Osnovna svojstva i primitivna funkcija](integrali-svojstva.qmd)
+- [Metode integriranja](integrali-racunanje.qmd)
+
+<!--
+- section: "3. RIEMANNOV INTEGRAL"
+        href: integrali/integrali.qmd
+        contents:
+          - text: "3.1 Uvod i definicija"
+            href: integrali/integrali-def.qmd
+          - text: "3.2 Osnovna svojstva i primitivna funkcija"
+            href: integrali/integrali-svojstva.qmd
+          - text: "3.3 Metode integriranja"
+            href: integrali/integrali-racunanje.qmd
+-->

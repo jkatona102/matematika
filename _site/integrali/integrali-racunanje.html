@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>derivacije – Matematika</title>
+<title>integrali-racunanje – Matematika</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -119,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../derivacije/derivacije.html">2. DERIVACIJE</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../integrali/integrali.html">3. RIEMANNOV INTEGRAL</a></li><li class="breadcrumb-item"><a href="../integrali/integrali-racunanje.html">3.3 Metode integriranja</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Pretraživanje" onclick="window.quartoOpenSearch();">
@@ -170,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../derivacije/derivacije.html" class="sidebar-item-text sidebar-link active">
+            <a href="../derivacije/derivacije.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2. DERIVACIJE</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -221,6 +250,35 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../integrali/integrali.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. RIEMANNOV INTEGRAL</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.1 Uvod i definicija</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-svojstva.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.2 Osnovna svojstva i primitivna funkcija</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-racunanje.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">3.3 Metode integriranja</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -231,41 +289,197 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sadržaj</h2>
    
   <ul>
-  <li><a href="#derivacije" id="toc-derivacije" class="nav-link active" data-scroll-target="#derivacije">2. DERIVACIJE</a>
+  <li><a href="#metode-integriranja" id="toc-metode-integriranja" class="nav-link active" data-scroll-target="#metode-integriranja">3.3 Metode integriranja</a>
   <ul class="collapse">
-  <li><a href="#sadržaj-poglavlja" id="toc-sadržaj-poglavlja" class="nav-link" data-scroll-target="#sadržaj-poglavlja">Sadržaj poglavlja</a></li>
+  <li><a href="#direktna-integracija" id="toc-direktna-integracija" class="nav-link" data-scroll-target="#direktna-integracija">Direktna integracija</a></li>
+  <li><a href="#metoda-supstitucije-metoda-zamjene-varijabli" id="toc-metoda-supstitucije-metoda-zamjene-varijabli" class="nav-link" data-scroll-target="#metoda-supstitucije-metoda-zamjene-varijabli">Metoda supstitucije (metoda zamjene varijabli)</a></li>
+  <li><a href="#metoda-parcijalne-integracije" id="toc-metoda-parcijalne-integracije" class="nav-link" data-scroll-target="#metoda-parcijalne-integracije">Metoda parcijalne integracije</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../integrali/integrali.html">3. RIEMANNOV INTEGRAL</a></li><li class="breadcrumb-item"><a href="../integrali/integrali-racunanje.html">3.3 Metode integriranja</a></li></ol></nav></header>
 
 
 
 
-<section id="derivacije" class="level1 unnumbered">
-<h1 class="unnumbered">2. DERIVACIJE</h1>
-<p>U ovom poglavlju dat ćemo povijesni pregled pojma derivacije, definirati pojam derivacije funkcije i navesti osnovna pravila za računanje derivacija. Također ćemo se upoznati s primjenama derivacija u različitim područjima matematike i znanosti.</p>
-<section id="sadržaj-poglavlja" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sadržaj-poglavlja">Sadržaj poglavlja</h2>
-<ul>
-<li><a href="../derivacije/derivacije-uvod.html">2.1 Uvod u derivacije</a></li>
-<li><a href="../derivacije/derivacije-definicija.html">2.2 Definicija</a></li>
-<li><a href="../derivacije/derivacije-racunanje.html">2.3 Pravila za računanje derivacija</a></li>
-<li><a href="../derivacije/derivacije-zadaci1.html">Zadatci - prvi dio</a></li>
-<li><a href="../derivacije/derivacije-rezultati.html">2.4 Temeljni rezultati</a></li>
-<li><a href="../derivacije/derivacije-tok.html">2.5 Analiza toka funkcije</a></li>
-<li><a href="../derivacije/derivacije-zadaci2.html">Zadatci - drugi dio</a></li>
-</ul>
-<!--
-- [2.6 Primjene derivacija](derivacije-primjena.qmd)
-- [Zadatci - treći dio](derivacije-zadatci3.qmd)
-          - text: "2.6 Primjene derivacija"
-            href: derivacije/derivacije-primjena.qmd
-          - text: "Zadatci - treći dio"
-            href: derivacije/derivacije-zadatci3.qmd
--->
+<section id="metode-integriranja" class="level1 unnumbered">
+<h1 class="unnumbered">3.3 Metode integriranja</h1>
+<section id="direktna-integracija" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="direktna-integracija">Direktna integracija</h2>
+<p>Derivacije elementarnih funkcija su opet elementarne funkcije. Nažalost to nije istina kada se radi o primitivnim funkcijama ili antiderivacijama. Primjeri elementarnih funkcija čije primitivne funkcije nisu elementarne su <span class="math inline">\(e^{-x^2}\)</span>, <span class="math inline">\(\dfrac{1}{\ln x}\)</span>, <span class="math inline">\(\sqrt{x} \sin x\)</span>.</p>
+<p>Ne postoji opći način kako utvrditi je li primitivna funkcija elementarne funkcije opet elementarna funkcija. Navodimo tablicu osnovnih elementarnih funkcija i njihovih primitivnih funkcija. U pravilu pokušavamo nalaženje primitivnih funkcija za složenije funkcije raznim postupcima svesti na te jednostavne funkcije.</p>
+<p><strong><em>Tablica integrala</em></strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(\displaystyle \int \ dx = x + C\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\displaystyle \int x^a \, dx = \dfrac{x^{a+1}}{a+1} + C, \  (a \neq 1)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \dfrac{dx}{x} = \ln |x| + C\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int e^x \, dx = e^x + C\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \sin x \, dx = - \cos x + C\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \cos x \, dx = \sin x + C\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \dfrac{dx}{\sin^2 x} = - \operatorname{ctg} x + C\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle\int \dfrac{dx}{\cos^2 x} = \operatorname{tg} x + C\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \operatorname{sh} x \, dx = \operatorname{ch} x + C\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \operatorname{ch} x \, dx = \operatorname{sh} x + C\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle\int \dfrac{dx}{\operatorname{sh}^2 x} = -\operatorname{cth} x + C\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \dfrac{dx}{\operatorname{ch}^2 x} = \operatorname{th} x + C\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \dfrac{dx}{\sqrt{1-x^2}} = \arcsin x + C\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \dfrac{dx}{1+x^2} = \operatorname{arctg} x + C\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \dfrac{dx}{\sqrt{1+x^2}} = \operatorname{Arsh} x + C\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \dfrac{dx}{\sqrt{x^2-1}} = \operatorname{Arch} x + C\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \dfrac{dx}{\sqrt{a^2-x^2}} = \arcsin \dfrac{x}{a} + C\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \dfrac{dx}{a^2+x^2} = \dfrac{1}{a}\operatorname{arctg} \dfrac{x}{a} + C\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \dfrac{dx}{\sqrt{a^2+x^2}} = \ln \left(x + \sqrt{a^2+x^2}\right) + C\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \dfrac{dx}{\sqrt{x^2-a^2}} = \ln \left|x + \sqrt{a^2+x^2}\right| + C\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int \dfrac{dx}{a^2-x^2} = \dfrac{1}{2a} \ln \left| \dfrac{x+a}{x-a}\right| + C\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\displaystyle \int a^x \, dx = \dfrac{a^x}{\ln a} + C, \ (a &gt; 0, a\neq 0)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Napomena:</strong> u zadnja tri retka treba dodatno pisati uvjet <span class="math inline">\((a&gt;0)\)</span>.</p>
+<p>Kod upotrebe Newton-Leibnizove formule često se koristi oznaka <span class="math display">\[
+F \ \Big|_a^b = F(b) - F(a)
+\]</span></p>
+<div class="primjer">
+<p>Izračunajmo <span class="math inline">\(\displaystyle \int _1^3 (5x^2-2x+1)\, dx\)</span>. Koristimo linearnost integrala pa vrijedi <span class="math display">\[
+\begin{align*}
+\displaystyle \int _1^3 (5x^2-2x+1)\ dx &amp;= 5 \int _1^3 x^2 \, dx - 2 \int _1^3 x \, dx + \int _1^3 \, dx \\
+&amp;= 5 \cdot \dfrac{x^3}{3} \Big|_1^3 -2\cdot \dfrac{x^2}{2} \Big|_1^3 + x \Big|_1^3 \\
+&amp;= \dfrac{5}{3} (3^3-1^3) - (3^2-1) + (3-1) \\
+&amp;= \dfrac{112}{3}
+\end{align*}
+\]</span></p>
+<p>Naravno, nećemo ovako rješavati integrale. Praksom ćete usvojiti osjećaj za integriranje pa će se integral zapravo računati kao <span class="math display">\[
+\begin{align*}
+\displaystyle \int _1^3 (5x^2-2x+1)\ dx &amp;= 5 \int _1^3 x^2 \, dx - 2 \int _1^3 x \, dx + \int _1^3 \, dx \\
+&amp;= \left(\dfrac{5x^3}{3} - x^2 + x \right) \Bigg|_1^3 \\
+&amp;=\left(\dfrac{5\cdot 3^3}{3} - 3^2 + 3 \right) - \left(\dfrac{5\cdot 1^3}{3} - 1^2 + 1 \right) \\
+&amp;= \dfrac{112}{3}
+\end{align*}
+\]</span></p>
+</div>
+</section>
+<section id="metoda-supstitucije-metoda-zamjene-varijabli" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="metoda-supstitucije-metoda-zamjene-varijabli">Metoda supstitucije (metoda zamjene varijabli)</h2>
+<div class="teorem">
+<p>Neka su <span class="math inline">\(I\)</span> i <span class="math inline">\(J\)</span> otvoreni intervali, <span class="math inline">\(\varphi\)</span> diferencijabilna funkcija na <span class="math inline">\(J\)</span> i <span class="math inline">\(F\)</span> primitivna funkcija od <span class="math inline">\(f\)</span> na <span class="math inline">\(I\)</span>. Neka je <span class="math inline">\(\varphi (J) \subseteq I\)</span>, tj. <span class="math inline">\(f \circ \varphi\)</span> je definirana na <span class="math inline">\(J\)</span>. Tada je <span class="math inline">\(G = F \circ \varphi\)</span> primitivna funkcija od <span class="math inline">\((f \circ \varphi)'\varphi '\)</span> na <span class="math inline">\(J\)</span>. Također, za sve <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta \in J\)</span> vrijedi <span class="math display">\[
+\int _\alpha^\beta f(\varphi(t))\varphi '(t) \, dt = \int _{\varphi(\alpha)}^{\varphi(\beta)} f(x) \, dx
+\]</span></p>
+</div>
+<div class="dokaz">
+<details>
+<summary>
+Prikaži dokaz
+</summary>
+<p>Zbog <span class="math inline">\(\varphi (J) \subseteq I\)</span> je funkcija <span class="math inline">\(G = F \circ \varphi\)</span> dobro definirana i diferencijabilna na <span class="math inline">\(J\)</span>. Vrijedi <span class="math display">\[
+G'(x) = F'(\varphi (x))\varphi '(x) = f(\varphi (x))\varphi '(x)
+\]</span></p>
+<p>Stoga slijedi <span class="math display">\[
+\int _\alpha^\beta f(\varphi(t))\varphi '(t) \, dt
+= G(\beta) - G(\alpha)
+= F(\varphi (\beta)) - F(\varphi (\alpha))
+= \int _{\varphi(\alpha)}^{\varphi(\beta)} f(x) \, dx
+\]</span></p>
+</details>
+</div>
+<p>Ako je <span class="math inline">\(\varphi\)</span> <strong>strogo monotona</strong> funkcija s <span class="math inline">\(J\)</span> na <span class="math inline">\(I\)</span> i <span class="math inline">\(\psi = \varphi ^{-1}\)</span> inverzna funkcija od <span class="math inline">\(\varphi\)</span>, onda uz oznake <span class="math inline">\(a = \varphi{\alpha}\)</span>, <span class="math inline">\(b = \varphi{\beta}\)</span> dobivamo <span class="math display">\[
+\int_a^b f(x) \, dx = \int _{\psi(\alpha)}^{\psi(\beta)} f(\varphi(t))\varphi '(t) \, dt
+\]</span></p>
+<p>Sada primitivnu funkciju <span class="math inline">\(F\)</span> nalazimo uz supstituciju <span class="math inline">\(x= \varphi (t)\)</span>, odnosno <span class="math inline">\(t= \psi(x)\)</span>, na sljedeći način: <span class="math display">\[
+F(x) = \int f(x) \, dx = \int f(\varphi(t))\varphi '(t) \, dt = G(t) + C = G(\psi (x)) + C
+\]</span></p>
+<p>gdje je <span class="math inline">\(C\)</span> konstanta po volji.</p>
+<p>Naravno, ova metoda trenutno djeluje previše apstraktno pa ćemo riješiti dva primjera.</p>
+<div class="primjer">
+<p>Odredite <span class="math inline">\(\displaystyle \int \dfrac{2x-1}{x^2-x+1} \, dx\)</span>. <span class="math display">\[
+\int \dfrac{2x-1}{x^2-x+1} \, dx =
+\left |
+\begin{aligned}
+t &amp;= x^2-x+1 \\
+dt &amp;= (2x-1)dx
+\end{aligned}
+\right | =
+\int \dfrac{dt}{t} = \ln |t| + C = \ln |x^2-x+1| + C
+\]</span></p>
+</div>
+<p>Ideja je pokušati pronaći neki dio podintegralne funkcije koji deriviran odgovara drugom dijelu dane podintegralne funkcije. Izračunajmo sad jedan određeni integral.</p>
+<div class="primjer">
+<p>Izračunajte <span class="math inline">\(\displaystyle \int _0^2 x^2(2x^3+4)^2 \, dx\)</span>. <span class="math display">\[
+\int _0^2 x^2(2x^3+4)^2 \, dx =
+\left |
+\begin{aligned}
+t &amp;= 2x^3+4 &amp; 2 &amp;\mapsto 20 \\
+dt &amp;= 6x^2dx &amp; 0 &amp;\mapsto 4
+\end{aligned}
+\right | =
+\int _0^2 \dfrac{t^2}{6} \, dt = \dfrac{t^3}{18} \Big|_0^2 = \frac{4}{9}
+\]</span></p>
+</div>
+<p><strong>Napomena:</strong> Uočimo da kod određenog integrala nemamo konstantu <span class="math inline">\(C\)</span>. Izraz <span class="math inline">\(2 \mapsto 20\)</span> označava da kad uvrstimo granicu <span class="math inline">\(2\)</span> kao argument funkcije <span class="math inline">\(t(x)\)</span> dobijemo granicu <span class="math inline">\(20\)</span>. Dio <span class="math inline">\(dt = 6x^2dx\)</span> označava derivaciju od <span class="math inline">\(t\)</span> po varijabli <span class="math inline">\(x\)</span>. Granice moraju ostati na istom mjestu, a ako dobijemo da je nova gornja granica manja od nove donje granice, tada ih smijemo okrenuti, ali tada stavljamo <span class="math inline">\(-\)</span> ispred integrala.</p>
+<p>Primjerice, da smo dobili gornju granicu <span class="math inline">\(10\)</span>, a donju <span class="math inline">\(15\)</span>, vrijedilo bi <span class="math display">\[
+\int _{15}^{10} f(t)\, dt = - \int _{10}^{15} f(t)\, dt
+\]</span></p>
+</section>
+<section id="metoda-parcijalne-integracije" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="metoda-parcijalne-integracije">Metoda parcijalne integracije</h2>
+<div class="teorem">
+<p>Za funkcije <span class="math inline">\(u\)</span>, <span class="math inline">\(v \colon I \to \mathbb{R}\)</span> i za svaki par <span class="math inline">\(a,b \in I\)</span> vrijedi <span class="math display">\[
+\int _a^b udv = uv \Big|_a^b - \int _a^b vdu
+\]</span></p>
+</div>
+<div class="dokaz">
+<details>
+<summary>
+Prikaži dokaz
+</summary>
+<p>Funkcija <span class="math inline">\(F = uv\)</span> je primitivna funkcija od <span class="math inline">\(f = u'v+uv'\)</span> pa vrijedi <span class="math display">\[
+F \Big|_a^b = uv \Big|_a^b = \int _a^b (u'v + uv') = \int _a^b u'v + \int _a^b uv' = \int _a^b vdu + \int _a^b udv
+\]</span></p>
+Primijetimo da metoda parcijalne integracije slijedi iz pravila deriviranja produkta. Oznaka <span class="math inline">\(du\)</span> označava <span class="math inline">\(u'\)</span>.
+</details>
+</div>
+<div class="primjer">
+<p>Izračunajte integral <span class="math inline">\(\displaystyle \int _0^1 xe^x \, dx\)</span>. <span class="math display">\[
+\int _0^1 xe^x \, dx =
+\left |
+\begin{aligned}
+u &amp;= x &amp; du &amp;= dx \\
+dv &amp;= e^xdx &amp; v &amp;= e^x
+\end{aligned}
+\right | =
+xe^x \Big|_0^1 - \int _0^1 e^x \, dx =
+e - e^x \Big|_0^1 = e - (e - 1) = 1
+\]</span></p>
+</div>
 
 
 </section>
