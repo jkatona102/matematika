@@ -55,7 +55,7 @@ Položaj čestice na pravcu dan je izrazom $s(t) = t^3 - 9t^2 +24t$.
 
 (b) U kojim trenutcima čestica miruje?
 
-(c) Kada tijelo mijenja smjer?
+(c) Kada čestica mijenja smjer?
 :::
 
 <!--
