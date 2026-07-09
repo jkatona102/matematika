@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -148,7 +183,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Zadatci</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../derivacije/derivacije.html">2. DERIVACIJE</a></li><li class="breadcrumb-item"><a href="../derivacije/derivacije-zadaci2.html">Zadatci - drugi dio</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Pretraživanje" onclick="window.quartoOpenSearch();">
@@ -230,6 +265,59 @@ window.Quarto = {
  <span class="menu-text">Zadatci - prvi dio</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../derivacije/derivacije-rezultati.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 Temeljni rezultati</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../derivacije/derivacije-tok.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 Analiza toka funkcije</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../derivacije/derivacije-zadaci2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Zadatci - drugi dio</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../integrali/integrali.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. RIEMANNOV INTEGRAL</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.1 Uvod i definicija</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-svojstva.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.2 Osnovna svojstva i primitivna funkcija</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-racunanje.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.3 Metode integriranja</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-zadatci1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Zadatci - prvi dio</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -243,7 +331,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../derivacije/derivacije.html">2. DERIVACIJE</a></li><li class="breadcrumb-item"><a href="../derivacije/derivacije-zadaci2.html">Zadatci - drugi dio</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Zadatci</h1>
 </div>
@@ -271,296 +359,330 @@ window.Quarto = {
 <li><p><span class="math inline">\(\displaystyle \lim_{x \to 0} \dfrac{1-\cos x}{x^2}\)</span></p></li>
 </ol>
 </div>
-<!--
-:::{.rjesenje}
+<div class="rjesenje">
 <details>
-<summary>Prikaži rješenje</summary>
-
-(a) 
-$$
+<summary>
+Prikaži rješenje
+</summary>
+<ol type="a">
+<li><p><span class="math display">\[
 \lim_{x \to 0} \dfrac{e^x-x-1}{\cos x -1} = \left [ \dfrac{0}{0}\right ] \overset{L'H}{=}
 \lim_{x \to 0} \dfrac{e^x-1}{-\sin x } = \left [ \dfrac{0}{0}\right ] \overset{L'H}{=}
 -\lim_{x \to 0} \dfrac{e^x}{\cos x} = -1
-$$
-
-(b)
-$$
+\]</span></p></li>
+<li><p><span class="math display">\[
 \lim_{x \to -2} \dfrac{x^3-x^2-10x-8}{5x^3+12x^2-2x-12} = \left [ \dfrac{0}{0}\right ] \overset{L'H}{=}
 \lim_{x \to -2} \dfrac{3x^2-2x-10}{15x^2+24x-2} = \dfrac{6}{10} = \dfrac{3}{5}
-$$
-
-(c)
-$$ 
+\]</span></p></li>
+<li><p><span class="math display">\[
 \lim_{x \to a} \dfrac{x-a}{\ln x - \ln a} = \left [ \dfrac{0}{0}\right ] \overset{L'H}{=}
 \lim_{x \to a} \dfrac{1}{\dfrac{1}{x}} = a
-$$
-
-(d)
-$$
+\]</span></p></li>
+<li><p><span class="math display">\[
 \lim_{x \to 0} \dfrac{1-\cos x}{x^2} = \left [ \dfrac{0}{0}\right ] \overset{L'H}{=}
 \lim_{x \to 0} \dfrac{\sin x}{2x} = \left [ \dfrac{0}{0}\right ] \overset{L'H}{=}
 \lim_{x \to 0} \dfrac{\cos x}{2} = \dfrac{1}{2}
-$$
-
+\]</span></p></li>
+</ol>
 </details>
-:::
--->
+</div>
 <hr>
 <div class="zadatak">
 <p>Ispitajte tok funkcije <span class="math inline">\(f(x) = \sqrt{8+x} - \sqrt{8-x}\)</span> i skicirajte njezin graf.</p>
 </div>
-<!--
-:::{.rjesenje}
+<div class="rjesenje">
 <details>
-<summary>Prikaži rješenje</summary>
-
-**1. Domena** | Imamo uvjete
-$$
-8+x \geq 0 \quad 8-x \geq 0 \qquad \Rightarrow x \in [-8,8] = D_f
-$$
-
----
-
-**2. Parnost, neparnost i periodičnost** | Ispitajmo (ne)parnost:
-$$
+<summary>
+Prikaži rješenje
+</summary>
+<p><strong>1. Domena</strong> | Imamo uvjete <span class="math display">\[
+8+x \geq 0 \quad 8-x \geq 0 \qquad \Longrightarrow \qquad x \in [-8,8] = D_f
+\]</span></p>
+<hr>
+<p><strong>2. Parnost, neparnost i periodičnost</strong> | Ispitajmo (ne)parnost: <span class="math display">\[
 \displaystyle f(-x) = \sqrt{8-x} - \sqrt{8+x} = - (\sqrt{8+x} - \sqrt{8-x}) = -f(x)
-$$
-
-Funkcija je neparna.
-
----
-
-**3. Neprekidnost** | Funkcija je kompozicija elementarnih funkcija pa zaključujemo da je neprekidna na cijeloj domeni.
-
----
-
-**4. Nultočke** | Vrijedi
-$$
+\]</span></p>
+<p>Funkcija je neparna.</p>
+<hr>
+<p><strong>3. Neprekidnost</strong> | Funkcija je kompozicija elementarnih funkcija pa zaključujemo da je neprekidna na cijeloj domeni.</p>
+<hr>
+<p><strong>4. Nultočke</strong> | Vrijedi <span class="math display">\[
 \begin{align*}
-\sqrt{8+x} - \sqrt{8-x} &= 0 \\
-\sqrt{8+x} &= \sqrt{8-x} \\
-8+x &= 8-x \\
-x &= 0
+\sqrt{8+x} - \sqrt{8-x} &amp;= 0 \\
+\sqrt{8+x} &amp;= \sqrt{8-x} \\
+8+x &amp;= 8-x \\
+x &amp;= 0
 \end{align*}
-$$
-
-pa je $x_0 = 0$ nultočka.
-
----
-
-**5. Monotonost i lokalni ekstremi** | Računamo $f'$ i $f''$:
-$$
-\displaystyle f'(x) = \frac{1}{2\sqrt{8+x}}+\frac{1}{2\sqrt{8-x}} \qquad 
+\]</span></p>
+<p>pa je <span class="math inline">\(x_0 = 0\)</span> nultočka.</p>
+<hr>
+<p><strong>5. Monotonost i lokalni ekstremi</strong> | Računamo <span class="math inline">\(f'\)</span> i <span class="math inline">\(f''\)</span>: <span class="math display">\[
+\displaystyle f'(x) = \frac{1}{2\sqrt{8+x}}+\frac{1}{2\sqrt{8-x}} \qquad
 f''(x) = \frac{1}{4(8-x)^{3/2}} -\frac{1}{4(8+x)^{3/2}}
-$$
-
-Pripazimo kod računanja derivacije kompozicije jer je $(\sqrt{8-x})' = \dfrac{-1}{2\sqrt{8-x}}$. Uočimo da je prva derivacija uvijek veća od $0$ pa nema nultočku. Također, zbog toga je funkcija $f$ strogo rastuća na cijelom $[-8,8]$. Tada su jedine kritične točke ove funkcije upravo rubovi domene, tj. $-8$ i $8$. 
-
-Budući da je $f$ strogo rastuća, minimum je u lijevom, a maksimum u desnom rubu i oni iznose $-4$ i $4$, respektivno.
-
-Uočimo da se radi o globalnim ekstremima!
-
----
-
-**6. Koveksnost, konkavnost i točke infleksije** | Uočimo da je $f''(x) = 0$ samo za $x=0$ pa je to točka infleksije. Provjerom vidimo da je za $x < 0$ funkcija konkavna jer je $f''(x) < 0$, a za $x>0$ je funkcija koveksna.
-
----
-
-**7. Asimptote** | Kako je funkcija definirana na segmentu $[-8,8]$ nema smisla tražiti kose ili horizontalne asimptote jer njih ispitujemo za argument $x \to \infty$ što nije moguće. Isto tako, vertikalne asimptote tražimo u rubovima domene, što su $x = \pm 8$, ali ondje funkcija postiže konkretne vrijednosti pa ni tamo nema asimptote.
-
----
-
-**8. Graf** Tablica:
-
-| $x$ | $-8$ | $\longrightarrow$ | $0$ | $\longrightarrow$ | $8$ |
-|:--:|:--:|:-----------------:|:---:|:-----------------:|:---:|
-| $f'(x)$ | | $+$ | | $+$ | |
-| $f''(x)$ |  | $-$  | | $+$ | | 
-| $f(x)$ | | $-\nearrow \cap$  | | $+\nearrow \cup$ | |
-
-Promatramo intervala između točaka koje su nam bile bi tne (nultočke derivacija) i ispod pišemo predznake prve i druge derivacije. Iz njih iščitavamo pad i raste od $f$ te intervale konveksnosti. Ispod rubnih točaka ništa ne pišemo.
-
-Graf:
-
-
-::: {#f5ecfd7a .cell execution_count=1}
-``` {.python .cell-code code-fold="true" code-summary="Prikaži Python kod"}
-import numpy as np
-import matplotlib.pyplot as plt
-
-def f(x):
-    return np.sqrt(8+x) - np.sqrt(8-x)
-
-x = np.linspace(-8, 8, 2000)
-
-x0 = 0
-
-fig, ax = plt.subplots(figsize=(8,5))
-
-ax.plot(x, f(x), color="blue", linewidth=2)
-
-# osi
-ax.axhline(0, linewidth=1)
-ax.axvline(0, linewidth=1)
-
-# točke
-ax.scatter(x0, f(x0), zorder=5)
-
-ax.text(x0+0.4, f(x0)-0.5, "f(x0)")
-
-ax.set_xlim(-10, 10)
-ax.set_ylim(-6, 6)
-
-ax.annotate('', xy=(10, 0), xytext=(-10, 0),
-            arrowprops=dict(arrowstyle='->', linewidth=1.2, color='black'))
-
-ax.annotate('', xy=(0, 6), xytext=(0, -6),
-            arrowprops=dict(arrowstyle='->', linewidth=1.2, color='black'))
-
-ax.grid(True, linestyle="--",linewidth=0.5, alpha=0.5)
-plt.show()
-```
-
-::: {.cell-output .cell-output-display}
-![](derivacije-zadaci2_files/figure-html/cell-2-output-1.png){width=658 height=416 fig-align='center'}
-:::
-:::
-
-
+\]</span></p>
+<p>Pripazimo kod računanja derivacije kompozicije jer je <span class="math inline">\((\sqrt{8-x})' = \dfrac{-1}{2\sqrt{8-x}}\)</span>. Uočimo da je prva derivacija uvijek veća od <span class="math inline">\(0\)</span> pa nema nultočku. Također, zbog toga je funkcija <span class="math inline">\(f\)</span> strogo rastuća na cijelom <span class="math inline">\([-8,8]\)</span>. Tada su jedine kritične točke ove funkcije upravo rubovi domene, tj. <span class="math inline">\(-8\)</span> i <span class="math inline">\(8\)</span>.</p>
+<p>Budući da je <span class="math inline">\(f\)</span> strogo rastuća, minimum je u lijevom, a maksimum u desnom rubu i oni iznose <span class="math inline">\(-4\)</span> i <span class="math inline">\(4\)</span>, respektivno.</p>
+<p>Uočimo da se radi o globalnim ekstremima!</p>
+<hr>
+<p><strong>6. Koveksnost, konkavnost i točke infleksije</strong> | Uočimo da je <span class="math inline">\(f''(x) = 0\)</span> samo za <span class="math inline">\(x=0\)</span> pa je to točka infleksije. Provjerom vidimo da je za <span class="math inline">\(x &lt; 0\)</span> funkcija konkavna jer je <span class="math inline">\(f''(x) &lt; 0\)</span>, a za <span class="math inline">\(x&gt;0\)</span> je funkcija koveksna.</p>
+<hr>
+<p><strong>7. Asimptote</strong> | Kako je funkcija definirana na segmentu <span class="math inline">\([-8,8]\)</span> nema smisla tražiti kose ili horizontalne asimptote jer njih ispitujemo za argument <span class="math inline">\(x \to \infty\)</span> što nije moguće. Isto tako, vertikalne asimptote tražimo u rubovima domene, što su <span class="math inline">\(x = \pm 8\)</span>, ali ondje funkcija postiže konkretne vrijednosti pa ni tamo nema asimptote.</p>
+<hr>
+<p><strong>8. Graf</strong> Tablica:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(-8\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\longrightarrow\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\longrightarrow\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(8\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(f'(x)\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(f''(x)\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(f(x)\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\nearrow \cap\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(+\nearrow \cup\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Promatramo intervala između točaka koje su nam bile bi tne (nultočke derivacija) i ispod pišemo predznake prve i druge derivacije. Iz njih iščitavamo pad i raste od <span class="math inline">\(f\)</span> te intervale konveksnosti. Ispod rubnih točaka ništa ne pišemo.</p>
+<p>Graf:</p>
+<div id="d10ca003" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Prikaži Python kod</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.sqrt(<span class="dv">8</span><span class="op">+</span>x) <span class="op">-</span> np.sqrt(<span class="dv">8</span><span class="op">-</span>x)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">2000</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">5</span>))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>ax.plot(x, f(x), color<span class="op">=</span><span class="st">"blue"</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># osi</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># točke</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>ax.scatter(x0, f(x0), zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>ax.text(x0<span class="op">+</span><span class="fl">0.4</span>, f(x0)<span class="op">-</span><span class="fl">0.5</span>, <span class="st">"f(x0)"</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">6</span>, <span class="dv">6</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">''</span>, xy<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">0</span>), xytext<span class="op">=</span>(<span class="op">-</span><span class="dv">10</span>, <span class="dv">0</span>),</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>, linewidth<span class="op">=</span><span class="fl">1.2</span>, color<span class="op">=</span><span class="st">'black'</span>))</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">''</span>, xy<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">6</span>), xytext<span class="op">=</span>(<span class="dv">0</span>, <span class="op">-</span><span class="dv">6</span>),</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>, linewidth<span class="op">=</span><span class="fl">1.2</span>, color<span class="op">=</span><span class="st">'black'</span>))</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">"--"</span>,linewidth<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-:::
--->
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="derivacije-zadaci2_files/figure-html/cell-2-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="658" height="416"></p>
+</figure>
+</div>
+</div>
+</div>
+</details>
+</div>
 <hr>
 <div class="zadatak">
-<p>Ispitajte tok funkcije <span class="math inline">\(f(x) = xe^x\)</span> i skicirajte njezin graf.a</p>
+<p>Ispitajte tok funkcije <span class="math inline">\(f(x) = xe^x\)</span> i skicirajte njezin graf.</p>
 </div>
-<!--
-:::{.rjesenje}
+<div class="rjesenje">
 <details>
-<summary>Prikaži rješenje</summary>
-
-**1. Domena** | $D_f = \mathbb{R}$.
-
----
-
-**2. Parnost, neparnost i periodičnost** | Odmah uočavamo da $f$ nije ni parna ni neparna.
-
----
-
-**3. Neprekidnost** | Funkcija je kompozicija elementarnih funkcija pa zaključujemo da je neprekidna na cijeloj domeni.
-
----
-
-**4. Nultočke** | $f(x)=0$ samo za $x_0 = 0$.
-
----
-
-**5. Monotonost i lokalni ekstremi** | Računamo $f'$ i $f''$:
-$$
+<summary>
+Prikaži rješenje
+</summary>
+<p><strong>1. Domena</strong> | <span class="math inline">\(D_f = \mathbb{R}\)</span>.</p>
+<hr>
+<p><strong>2. Parnost, neparnost i periodičnost</strong> | Odmah uočavamo da <span class="math inline">\(f\)</span> nije ni parna ni neparna.</p>
+<hr>
+<p><strong>3. Neprekidnost</strong> | Funkcija je kompozicija elementarnih funkcija pa zaključujemo da je neprekidna na cijeloj domeni.</p>
+<hr>
+<p><strong>4. Nultočke</strong> | <span class="math inline">\(f(x)=0\)</span> samo za <span class="math inline">\(x_0 = 0\)</span>.</p>
+<hr>
+<p><strong>5. Monotonost i lokalni ekstremi</strong> | Računamo <span class="math inline">\(f'\)</span> i <span class="math inline">\(f''\)</span>: <span class="math display">\[
 f'(x) = (1+x)e^x \qquad f''(x) = (2+x)e^x
-$$
-
-Stacionarna točka je $x_1 = -1$. Ispitajmo karakter:
-$$
-f''(-1) = 2e^{-1} > 0
-$$
-
-pa $f$ ima lokalni minimum u $x=-1$ i iznosi $-e^{-1}$.
-
----
-
-**6. Koveksnost, konkavnost i točke infleksije** | Nultočka od $f''(x)$ je $x_2 = -2$ pa je to točka infleksije. Za $x<2$ je $f''(x)<0$ pa je funkcija konkavna, a za $x>2$ je funkcija konveksna.
-
----
-
-**7. Asimptote** | Vertikalnih asimptota nema. Za kose i horizontalne ispitajmo limese:
-$$
+\]</span></p>
+<p>Stacionarna točka je <span class="math inline">\(x_1 = -1\)</span>. Ispitajmo karakter: <span class="math display">\[
+f''(-1) = 2e^{-1} &gt; 0
+\]</span></p>
+<p>pa <span class="math inline">\(f\)</span> ima lokalni minimum u <span class="math inline">\(x=-1\)</span> i iznosi <span class="math inline">\(-e^{-1}\)</span>.</p>
+<hr>
+<p><strong>6. Koveksnost, konkavnost i točke infleksije</strong> | Nultočka od <span class="math inline">\(f''(x)\)</span> je <span class="math inline">\(x_2 = -2\)</span> pa je to točka infleksije. Za <span class="math inline">\(x&lt;2\)</span> je <span class="math inline">\(f''(x)&lt;0\)</span> pa je funkcija konkavna, a za <span class="math inline">\(x&gt;2\)</span> je funkcija konveksna.</p>
+<hr>
+<p><strong>7. Asimptote</strong> | Vertikalnih asimptota nema. Za kose i horizontalne ispitajmo limese: <span class="math display">\[
 \lim_{x \to \infty} \dfrac{f(x)}{x} = \infty
-$$
-
-pa u pozitivnoj grani nema kosih ni horizontalnih asimptota.
-$$
+\]</span></p>
+<p>pa u pozitivnoj grani nema kosih ni horizontalnih asimptota. <span class="math display">\[
 \lim_{x \to -\infty} \dfrac{f(x)}{x} = 0 = k
-$$
-
-$$
+\]</span></p>
+<p><span class="math display">\[
 \lim_{x \to -\infty} f(x) - kx = 0
-$$
-
-pa je horizontalna asimptota u negativnoj grani $y=0$.
-
-
----
-
-**8. Graf** Tablica:
-
-| $x$ | $-\infty$ | $\longrightarrow$ | $x_2$ | $\longrightarrow$ | $x_1$ | $\longrightarrow$ | $x_0$ | $\longrightarrow$ | $+\infty$ |
-|:---:|:---------:|:-----------------:|:----:|:-----------------:|:-----:|:-----------------:|:-----:|:-----------------:|:-----:|
-| $f'(x)$ | | $-$ | | $-$ | | $+$ | | $+$ | |
-| $f''(x)$ | | $-$ | | $+$ | | $+$ | | $+$ | |
-| $f(x)$ | | $-\searrow \cap$ | | $-\searrow \cup$ | | $-\nearrow \cup$ | | $+\nearrow \cup$ | |
-
-Graf:
-
-::: {#a90041a2 .cell execution_count=2}
-``` {.python .cell-code code-fold="true" code-summary="Prikaži Python kod"}
-import numpy as np
-import matplotlib.pyplot as plt
-
-def f(x):
-    return x*np.exp(x)
-
-x = np.linspace(-10, 10, 2000)
-
-x0 = 0
-x1 = -1
-x2 = -2
-
-fig, ax = plt.subplots(figsize=(8,5))
-
-ax.plot(x, f(x), color="blue", linewidth=2)
-
-# asimptote
-ax.plot([-10, 0], [0, 0], linewidth=3.2, color="orange", linestyle="--")  # y = 0, lijevo
-
-#natpisi asimptota
-ax.text(-3.5, 0.2, "y = 0", fontsize=10)
-
-# osi
-ax.axhline(0, linewidth=1)
-ax.axvline(0, linewidth=1)
-
-# točke
-ax.scatter([x0, x1, x2],
-            [f(x0), f(x1), f(x2)],
-            zorder=5)
-
-ax.text(x0+0.2, f(x0)-0.3, "f(x0)")
-ax.text(x1-0.1, f(x1)-0.3, "f(x1)")
-ax.text(x2-0.1, f(x2)-0.3, "f(x2)")
-
-ax.set_xlim(-6, 3)
-ax.set_ylim(-1.5, 4)
-
-ax.annotate('', xy=(3, 0), xytext=(-6, 0),
-            arrowprops=dict(arrowstyle='->', linewidth=1.2, color='black'))
-
-ax.annotate('', xy=(0, 4), xytext=(0, -1.5),
-            arrowprops=dict(arrowstyle='->', linewidth=1.2, color='black'))
-
-ax.grid(True, linestyle="--",linewidth=0.5, alpha=0.5)
-plt.show()
-```
-
-::: {.cell-output .cell-output-display}
-![](derivacije-zadaci2_files/figure-html/cell-3-output-1.png){width=648 height=416 fig-align='center'}
-:::
-:::
-
-
+\]</span></p>
+<p>pa je horizontalna asimptota u negativnoj grani <span class="math inline">\(y=0\)</span>.</p>
+<hr>
+<p><strong>8. Graf</strong> Tablica:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 9%">
+<col style="width: 15%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(-\infty\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\longrightarrow\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\longrightarrow\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\longrightarrow\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\longrightarrow\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(+\infty\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(f'(x)\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(f''(x)\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(f(x)\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\searrow \cap\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\searrow \cup\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\nearrow \cup\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(+\nearrow \cup\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Graf:</p>
+<div id="d91961e4" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Prikaži Python kod</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">*</span>np.exp(x)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">2000</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> <span class="op">-</span><span class="dv">2</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">5</span>))</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>ax.plot(x, f(x), color<span class="op">=</span><span class="st">"blue"</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># asimptote</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="op">-</span><span class="dv">10</span>, <span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>], linewidth<span class="op">=</span><span class="fl">3.2</span>, color<span class="op">=</span><span class="st">"orange"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>)  <span class="co"># y = 0, lijevo</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co">#natpisi asimptota</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="op">-</span><span class="fl">3.5</span>, <span class="fl">0.2</span>, <span class="st">"y = 0"</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co"># osi</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co"># točke</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>ax.scatter([x0, x1, x2],</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>            [f(x0), f(x1), f(x2)],</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>            zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>ax.text(x0<span class="op">+</span><span class="fl">0.2</span>, f(x0)<span class="op">-</span><span class="fl">0.3</span>, <span class="st">"f(x0)"</span>)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>ax.text(x1<span class="op">-</span><span class="fl">0.1</span>, f(x1)<span class="op">-</span><span class="fl">0.3</span>, <span class="st">"f(x1)"</span>)</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>ax.text(x2<span class="op">-</span><span class="fl">0.1</span>, f(x2)<span class="op">-</span><span class="fl">0.3</span>, <span class="st">"f(x2)"</span>)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">6</span>, <span class="dv">3</span>)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="fl">1.5</span>, <span class="dv">4</span>)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">''</span>, xy<span class="op">=</span>(<span class="dv">3</span>, <span class="dv">0</span>), xytext<span class="op">=</span>(<span class="op">-</span><span class="dv">6</span>, <span class="dv">0</span>),</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>, linewidth<span class="op">=</span><span class="fl">1.2</span>, color<span class="op">=</span><span class="st">'black'</span>))</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">''</span>, xy<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">4</span>), xytext<span class="op">=</span>(<span class="dv">0</span>, <span class="op">-</span><span class="fl">1.5</span>),</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>, linewidth<span class="op">=</span><span class="fl">1.2</span>, color<span class="op">=</span><span class="st">'black'</span>))</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">"--"</span>,linewidth<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-:::
--->
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="derivacije-zadaci2_files/figure-html/cell-3-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="648" height="416"></p>
+</figure>
+</div>
+</div>
+</div>
+</details>
+</div>
 <hr>
 <div class="zadatak">
 <p>Ispitajte tok funkcije <span class="math inline">\(f(x) = \dfrac{1 - \ln x}{1 + \ln x}\)</span> i skicirajte njezin graf.</p>
@@ -573,145 +695,177 @@ Prikaži hint
 Domena logaritma je <span class="math inline">\(\langle 0, +\infty \rangle\)</span> i vrijedi <span class="math inline">\(\log _a a = 1, \; \forall a \in \mathbb{R}^+\)</span>.
 </details>
 </div>
-<!--
-:::{.rjesenje}
+<div class="rjesenje">
 <details>
-<summary>Prikaži rješenje</summary>
-
-**1. Domena** | Imamo uvjet $x > 0$ i $1 + \ln x \neq 0$ što je zadovoljeno za $x \neq e^{-1}$. Dakle domena je $D_f = \langle 0, \infty \rangle \backslash \{e^{-1} \}$.
-
----
-
-**2. Parnost, neparnost i periodičnost** | Vidimo da ne treba provjeravati ova svojstva zbog domene (ako je $a \in D_f$, onda $-a \notin D_f$).
-
----
-
-**3. Neprekidnost** | Funkcija ima prekid druge vrste u točki $x_0 = e^{-1}$ pa će ondje imati vertikalnu asimptotu.
-
----
-
-**4. Nultočke** | $f(x)=0$ ako je $1-\ln x = 0$, tj. za $x_1 = e$.
-
----
-
-**5. Monotonost i lokalni ekstremi** | Računamo $f'$ i $f''$:
-$$
-f'(x) = -\dfrac{2}{x(1+\ln x)^2} \qquad f''(x) = \dfrac{2(3+\ln x)}{x^2(\ln x + 1)^3}
-$$
-
-Funkcija $f$ nema stacionarnih točaka pa promatramo skup kritičnih točaka $\{0,e^{-1}\}$. Budući da $f$ ima prekid druge vrste u $e^{-1}$, to nije kandidat za ekstrem. Jednako tako, funkcija nije definirana u $0$ pa ni tamo ne može postići ekstrem.
-
-Dodatno, uočimo da je $f'(x) < 0$ na cijeloj domeni pa je $f$ strogo padajuća.
-
----
-
-**6. Koveksnost, konkavnost i točke infleksije** | Odredimo točku infleksije: $f''(x) = 0$ ako je $3+\ln x = 0$ pa $f$ ima točku infleksije u $x_2 = e^{-3}$. Za $x<e^{-3}$ je $f''(x)>0$ pa je funkcija konveksa, a za $x\in \langle e^{-3}, e^{-1}\rangle$ je funkcija konkavna. Zatim nakon prekida funkcije $f$ u točki $e^{-1}$ opet imamo $f''(x) > 0$ pa je funkcija konveksna.
-
----
-
-**7. Asimptote** | Imamo vertikalnu asimptotu $x = e^{-1}$. Provjerimo funkciju oko te asimptote promatrajući lijevi i desni limes:
-
-$$
-\lim_{x \to e^{-1}-} f(x) = \lim_{x \to e^{-1}-} \dfrac{1 - \ln x}{1 + \ln x}
-$$
-
-Uočimo da je tada brojnik $>2$, a nazivnik teži u $0^-$, dakle limes je jednak $- \infty$.
-
-Analogno dobijemo $\displaystyle \lim_{x \to e^{-1}+} f(x) = \infty$.
-
-Ispitajmo kose i horizontalne asimptote:
-$$
-\lim_{x \to \infty} \dfrac{f(x)}{x} = 0 = k
-$$
-
-$$
-\lim_{x \to \infty} f(x) = -1
-$$
-
-pa je $y = -1$ horizontalna asimptota.
-
-Ispitajmo još ponašanje blizu $x = 0$. Tvrdimo da ondje nemamo vertikalnu asimptotu. Imamo limes
-$$
-\lim_{x \to 0+} f(x) = \lim_{x \to 0+} \dfrac{1 - \ln x}{1 + \ln x} \overset{L'H}{=} \lim_{x \to 0+} \frac{-\dfrac{1}{x}}{\dfrac{1}{x}} = -1
-$$
-
-Dakle, funkcija *kreće* od $-1$, a zatim strogo pada. Dakle, ondje nema vertikalnu asimptotu.
-
----
-
-**8. Graf** Tablica:
-
-| $x$ | $0$ | $\longrightarrow$ | $x_2$ | $\longrightarrow$ | $x_0$ | $\longrightarrow$ | $x_1$ | $\longrightarrow$ | $+\infty$ |
-|:---:|:---------:|:-----------------:|:----:|:-----------------:|:-----:|:-----------------:|:-----:|:-----------------:|:-----:|
-| $f'(x)$ | | $-$ | | $-$ | | $-$ | | $-$ | |
-| $f''(x)$ | | $+$ | | $-$ | | $+$ | | $+$ | |
-| $f(x)$ | | $-\searrow \cup$ | | $-\searrow \cap$ | | $+\searrow \cup$ | | $-\searrow \cup$ | |
-
-Graf:
-
-::: {#ad635636 .cell execution_count=3}
-``` {.python .cell-code code-fold="true" code-summary="Prikaži Python kod"}
-import numpy as np
-import matplotlib.pyplot as plt
-
-def f(x):
-    return (1-np.log(x))/(1+np.log(x))
-
-y1 = np.linspace(np.exp(-9), np.exp(-1)-np.exp(-6), 2000)
-y2 = np.linspace(np.exp(-1)+np.exp(-6), 8, 2000)
-
-
-x0 = np.exp(-1)
-x1 = np.exp(1)
-x2 = np.exp(-2)
-
-fig, ax = plt.subplots(figsize=(8,5))
-
-ax.plot(y1, f(y1), color="blue", linewidth=2)
-ax.plot(y2, f(y2), color="blue", linewidth=2)
-
-# asimptote
-ax.plot([0, 10], [-1, -1], color="orange", linestyle="--")  # y = 0, lijevo
-ax.axvline(np.exp(-1), color='orange', linestyle="--")
-
-#natpisi asimptota
-ax.text(4, -1.4, "y = -1", fontsize=10)
-ax.text(np.exp(-1)+0.1, -2, "x = e^-1", fontsize=10)
-
-# osi
-ax.axhline(0, linewidth=1)
-ax.axvline(0, linewidth=1)
-
-# točke
-ax.scatter([x1, x2],
-            [f(x1), f(x2)],
-            zorder=5)
-
-ax.text(x1-0.1, f(x1)-0.45, "f(x1)")
-ax.text(x2+0.3, f(x2)-0.3, "f(x2)")
-
-ax.set_xlim(0, 8)
-ax.set_ylim(-5, 5)
-
-ax.annotate('', xy=(8, 0), xytext=(0, 0),
-            arrowprops=dict(arrowstyle='->', linewidth=1.2, color='black'))
-
-ax.annotate('', xy=(0, 5), xytext=(0, -5),
-            arrowprops=dict(arrowstyle='->', linewidth=1.2, color='black'))
-
-ax.grid(True, linestyle="--",linewidth=0.5, alpha=0.5)
-plt.show()
-```
-
-::: {.cell-output .cell-output-display}
-![](derivacije-zadaci2_files/figure-html/cell-4-output-1.png){width=648 height=411 fig-align='center'}
-:::
-:::
-
-
+<summary>
+Prikaži rješenje
 </summary>
-:::
--->
+<p><strong>1. Domena</strong> | Imamo uvjet <span class="math inline">\(x &gt; 0\)</span> i <span class="math inline">\(1 + \ln x \neq 0\)</span> što je zadovoljeno za <span class="math inline">\(x \neq e^{-1}\)</span>. Dakle domena je <span class="math inline">\(D_f = \langle 0, \infty \rangle \backslash \{e^{-1} \}\)</span>.</p>
+<hr>
+<p><strong>2. Parnost, neparnost i periodičnost</strong> | Vidimo da ne treba provjeravati ova svojstva zbog domene (ako je <span class="math inline">\(a \in D_f\)</span>, onda <span class="math inline">\(-a \notin D_f\)</span>).</p>
+<hr>
+<p><strong>3. Neprekidnost</strong> | Funkcija ima prekid druge vrste u točki <span class="math inline">\(x_0 = e^{-1}\)</span> pa će ondje imati vertikalnu asimptotu.</p>
+<hr>
+<p><strong>4. Nultočke</strong> | <span class="math inline">\(f(x)=0\)</span> ako je <span class="math inline">\(1-\ln x = 0\)</span>, tj. za <span class="math inline">\(x_1 = e\)</span>.</p>
+<hr>
+<p><strong>5. Monotonost i lokalni ekstremi</strong> | Računamo <span class="math inline">\(f'\)</span> i <span class="math inline">\(f''\)</span>: <span class="math display">\[
+f'(x) = -\dfrac{2}{x(1+\ln x)^2} \qquad f''(x) = \dfrac{2(3+\ln x)}{x^2(\ln x + 1)^3}
+\]</span></p>
+<p>Funkcija <span class="math inline">\(f\)</span> nema stacionarnih točaka pa promatramo skup kritičnih točaka <span class="math inline">\(\{0,e^{-1}\}\)</span>. Budući da <span class="math inline">\(f\)</span> ima prekid druge vrste u <span class="math inline">\(e^{-1}\)</span>, to nije kandidat za ekstrem. Jednako tako, funkcija nije definirana u <span class="math inline">\(0\)</span> pa ni tamo ne može postići ekstrem.</p>
+<p>Dodatno, uočimo da je <span class="math inline">\(f'(x) &lt; 0\)</span> na cijeloj domeni pa je <span class="math inline">\(f\)</span> strogo padajuća.</p>
+<hr>
+<p><strong>6. Koveksnost, konkavnost i točke infleksije</strong> | Odredimo točku infleksije: <span class="math inline">\(f''(x) = 0\)</span> ako je <span class="math inline">\(3+\ln x = 0\)</span> pa <span class="math inline">\(f\)</span> ima točku infleksije u <span class="math inline">\(x_2 = e^{-3}\)</span>. Za <span class="math inline">\(x&lt;e^{-3}\)</span> je <span class="math inline">\(f''(x)&gt;0\)</span> pa je funkcija konveksa, a za <span class="math inline">\(x\in \langle e^{-3}, e^{-1}\rangle\)</span> je funkcija konkavna. Zatim nakon prekida funkcije <span class="math inline">\(f\)</span> u točki <span class="math inline">\(e^{-1}\)</span> opet imamo <span class="math inline">\(f''(x) &gt; 0\)</span> pa je funkcija konveksna.</p>
+<hr>
+<p><strong>7. Asimptote</strong> | Imamo vertikalnu asimptotu <span class="math inline">\(x = e^{-1}\)</span>. Provjerimo funkciju oko te asimptote promatrajući lijevi i desni limes:</p>
+<p><span class="math display">\[
+\lim_{x \to e^{-1}-} f(x) = \lim_{x \to e^{-1}-} \dfrac{1 - \ln x}{1 + \ln x}
+\]</span></p>
+<p>Uočimo da je tada brojnik <span class="math inline">\(&gt;2\)</span>, a nazivnik teži u <span class="math inline">\(0^-\)</span>, dakle limes je jednak <span class="math inline">\(- \infty\)</span>.</p>
+<p>Analogno dobijemo <span class="math inline">\(\displaystyle \lim_{x \to e^{-1}+} f(x) = \infty\)</span>.</p>
+<p>Ispitajmo kose i horizontalne asimptote: <span class="math display">\[
+\lim_{x \to \infty} \dfrac{f(x)}{x} = 0 = k
+\]</span></p>
+<p><span class="math display">\[
+\lim_{x \to \infty} f(x) = -1
+\]</span></p>
+<p>pa je <span class="math inline">\(y = -1\)</span> horizontalna asimptota.</p>
+<p>Ispitajmo još ponašanje blizu <span class="math inline">\(x = 0\)</span>. Tvrdimo da ondje nemamo vertikalnu asimptotu. Imamo limes <span class="math display">\[
+\lim_{x \to 0+} f(x) = \lim_{x \to 0+} \dfrac{1 - \ln x}{1 + \ln x} \overset{L'H}{=} \lim_{x \to 0+} \frac{-\dfrac{1}{x}}{\dfrac{1}{x}} = -1
+\]</span></p>
+<p>Dakle, funkcija <em>kreće</em> od <span class="math inline">\(-1\)</span>, a zatim strogo pada. Dakle, ondje nema vertikalnu asimptotu.</p>
+<hr>
+<p><strong>8. Graf</strong> Tablica:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 9%">
+<col style="width: 15%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\longrightarrow\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\longrightarrow\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\longrightarrow\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x_1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\longrightarrow\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(+\infty\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(f'(x)\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(f''(x)\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(+\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(f(x)\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\searrow \cup\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\searrow \cap\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(+\searrow \cup\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(-\searrow \cup\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Graf:</p>
+<div id="1ae9dbff" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Prikaži Python kod</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (<span class="dv">1</span><span class="op">-</span>np.log(x))<span class="op">/</span>(<span class="dv">1</span><span class="op">+</span>np.log(x))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> np.linspace(np.exp(<span class="op">-</span><span class="dv">9</span>), np.exp(<span class="op">-</span><span class="dv">1</span>)<span class="op">-</span>np.exp(<span class="op">-</span><span class="dv">6</span>), <span class="dv">2000</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>y2 <span class="op">=</span> np.linspace(np.exp(<span class="op">-</span><span class="dv">1</span>)<span class="op">+</span>np.exp(<span class="op">-</span><span class="dv">6</span>), <span class="dv">8</span>, <span class="dv">2000</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> np.exp(<span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.exp(<span class="dv">1</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> np.exp(<span class="op">-</span><span class="dv">2</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">5</span>))</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>ax.plot(y1, f(y1), color<span class="op">=</span><span class="st">"blue"</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>ax.plot(y2, f(y2), color<span class="op">=</span><span class="st">"blue"</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co"># asimptote</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="dv">0</span>, <span class="dv">10</span>], [<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>], color<span class="op">=</span><span class="st">"orange"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>)  <span class="co"># y = 0, lijevo</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>ax.axvline(np.exp(<span class="op">-</span><span class="dv">1</span>), color<span class="op">=</span><span class="st">'orange'</span>, linestyle<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co">#natpisi asimptota</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="dv">4</span>, <span class="op">-</span><span class="fl">1.4</span>, <span class="st">"y = -1"</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>ax.text(np.exp(<span class="op">-</span><span class="dv">1</span>)<span class="op">+</span><span class="fl">0.1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="st">"x = e^-1"</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># osi</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="co"># točke</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>ax.scatter([x1, x2],</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>            [f(x1), f(x2)],</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>            zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>ax.text(x1<span class="op">-</span><span class="fl">0.1</span>, f(x1)<span class="op">-</span><span class="fl">0.45</span>, <span class="st">"f(x1)"</span>)</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>ax.text(x2<span class="op">+</span><span class="fl">0.3</span>, f(x2)<span class="op">-</span><span class="fl">0.3</span>, <span class="st">"f(x2)"</span>)</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">8</span>)</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>)</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">''</span>, xy<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">0</span>), xytext<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>),</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>, linewidth<span class="op">=</span><span class="fl">1.2</span>, color<span class="op">=</span><span class="st">'black'</span>))</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">''</span>, xy<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">5</span>), xytext<span class="op">=</span>(<span class="dv">0</span>, <span class="op">-</span><span class="dv">5</span>),</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>, linewidth<span class="op">=</span><span class="fl">1.2</span>, color<span class="op">=</span><span class="st">'black'</span>))</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">"--"</span>,linewidth<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="derivacije-zadaci2_files/figure-html/cell-4-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="648" height="411"></p>
+</figure>
+</div>
+</div>
+</div>
+</details>
+</div>
 <hr>
 <div class="zadatak">
 <p><strong>(napredno)</strong> Koliko najviše nultočaka može imati strogo konveksna funkcija?</p>
@@ -724,33 +878,24 @@ Prikaži hint
 Pokušajte pronaći neku konveksnu funkciju i prebrojite joj nultočke, a zatim pretpostavite da ih postoji više. Tada u jednom trenutku trebate dobiti Jensenovu (strogu) nejednakost.
 </details>
 </div>
-<!--
-:::{.rjesenje}
+<div class="rjesenje">
 <details>
-<summary>Prikaži rješenje</summary>
-
-Neka je $f$ strogo konveksna funkcija. Primjerice, $f(x) = x^2 - 4$ je konveksna funkcija. Uočimo da ona ima dvije nultočke, $x_{1,2} = \pm 2$. Dokažimo da svaka strogo konveksna funkcija ima najviše dvije nultočke.
-
-Pretpostavimo da neka konveksna funkcija $f$ ima nultočke $x_1,x_2$ i $x_3$ takve da je $x_1 < x_2 < x_3$. Budući da je $x_2$ između ostalih dviju nultočki, možemo ju prikazati kao konveksnu kombinaciju točaka $x_1$ i $x_3$, tj. $\exists t \in [0,1]$ takav da je
-$$
+<summary>
+Prikaži rješenje
+</summary>
+<p>Neka je <span class="math inline">\(f\)</span> strogo konveksna funkcija. Primjerice, <span class="math inline">\(f(x) = x^2 - 4\)</span> je konveksna funkcija. Uočimo da ona ima dvije nultočke, <span class="math inline">\(x_{1,2} = \pm 2\)</span>. Dokažimo da svaka strogo konveksna funkcija ima najviše dvije nultočke.</p>
+<p>Pretpostavimo da neka konveksna funkcija <span class="math inline">\(f\)</span> ima nultočke <span class="math inline">\(x_1,x_2\)</span> i <span class="math inline">\(x_3\)</span> takve da je <span class="math inline">\(x_1 &lt; x_2 &lt; x_3\)</span>. Budući da je <span class="math inline">\(x_2\)</span> između ostalih dviju nultočki, možemo ju prikazati kao konveksnu kombinaciju točaka <span class="math inline">\(x_1\)</span> i <span class="math inline">\(x_3\)</span>, tj. <span class="math inline">\(\exists t \in [0,1]\)</span> takav da je <span class="math display">\[
 x_2 = (1-t)x_1 + tx_3
-$$
-
-Kako je $f$ strogo konveksna vrijedi 
-$$
-f((1-t)x_1 + tx_3) < (1-t)f(x_1) + tf(x_3) 
-$$
-
-Odnosno, dobijemo
-$$
-0 = f(x_2) = f((1-t)x_1 + tx_3) < (1-t)f(x_1) + tf(x_3) 0
-$$
-
-što je očito kontradikcija. Dakle, strogo konveksne funkcije imaju najviše $2$ nultočke.
-
+\]</span></p>
+<p>Kako je <span class="math inline">\(f\)</span> strogo konveksna vrijedi <span class="math display">\[
+f((1-t)x_1 + tx_3) &lt; (1-t)f(x_1) + tf(x_3)
+\]</span></p>
+<p>Odnosno, dobijemo <span class="math display">\[
+0 = f(x_2) = f((1-t)x_1 + tx_3) &lt; (1-t)f(x_1) + tf(x_3) = 0
+\]</span></p>
+<p>što je očito kontradikcija. Dakle, strogo konveksne funkcije imaju najviše <span class="math inline">\(2\)</span> nultočke.</p>
 </details>
-:::
--->
+</div>
 
 
 

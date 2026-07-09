@@ -303,7 +303,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../integrali/integrali-svojstva.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3.2 Osnovna svojstva i računanje</span></a>
+ <span class="menu-text">3.2 Osnovna svojstva i primitivna funkcija</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-racunanje.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.3 Metode integriranja</span></a>
   </div>
 </li>
       </ul>
@@ -438,9 +444,9 @@ f(b)-f(a) = f'(c)(b-a)
 Prikaži dokaz
 </summary>
 <p>Neka je funkcija <span class="math inline">\(g \colon I \to \mathbb{R}\)</span> dana s <span class="math display">\[
-g(x) = f(x) - f(a)- \dfrac{f(b)-f(a)}{b-a}
+g(x) = f(x) - f(a)- \dfrac{f(b)-f(a)}{b-a}(x-a)
 \]</span></p>
-<p>Funkcija <span class="math inline">\(g\)</span> je diferencijabilna na <span class="math inline">\(I\)</span> i <span class="math inline">\(g'(x) = f'(x)− \dfrac{f(b)−f(a)}{b−a} , \forall x \in I\)</span>. Takoder je <span class="math inline">\(g(a) = g(b) = 0\)</span> pa <span class="math inline">\(g\)</span> zadovoljava sve uvjete Rolleovog teorema, tj. <span class="math inline">\(\exists c \in \langle a,b \rangle\)</span> takva da je <span class="math display">\[
+<p>Funkcija <span class="math inline">\(g\)</span> je diferencijabilna na <span class="math inline">\(I\)</span> i <span class="math inline">\(g'(x) = f'(x)− \dfrac{f(b)−f(a)}{b−a} , \forall x \in I\)</span>. Također je <span class="math inline">\(g(a) = g(b) = 0\)</span> pa <span class="math inline">\(g\)</span> zadovoljava sve uvjete Rolleovog teorema, tj. <span class="math inline">\(\exists c \in \langle a,b \rangle\)</span> takva da je <span class="math display">\[
 0 = g'(c) = f'(c)−\dfrac{f(b)-f(a)}{b-a}
 \]</span></p>
 </details>
@@ -450,7 +456,7 @@ g(x) = f(x) - f(a)- \dfrac{f(b)-f(a)}{b-a}
 f'(c) = \frac{f(b) - f(a)}{b-a}
 \]</span></p>
 <p>a to je upravo koeficijent smjera tangente u <span class="math inline">\((c,f(c))\)</span>.</p>
-<div id="6bbac116" class="cell" data-execution_count="1">
+<div id="b45f3973" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Prikaži Python kod</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>

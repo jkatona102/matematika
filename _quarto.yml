@@ -44,7 +44,10 @@ website:
             href: derivacije/derivacije-tok.qmd
           - text: "Zadatci - drugi dio"
             href: derivacije/derivacije-zadaci2.qmd
-
+          - text: "2.6 Primjene derivacija"
+            href: derivacije/derivacije-primjena.qmd
+          - text: "Zadatci - treći dio"
+            href: derivacije/derivacije-zadatci3.qmd
       
 format:
   html:

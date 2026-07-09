@@ -12,7 +12,6 @@ Koristeći L'Hospitalovo pravilo izračunajte sljedeće limese:
 (d) $\displaystyle \lim_{x \to 0} \dfrac{1-\cos x}{x^2}$
 :::
 
-<!--
 :::{.rjesenje}
 <details>
 <summary>Prikaži rješenje</summary>
@@ -45,22 +44,19 @@ $$
 
 </details>
 :::
--->
-
 ---
 
 :::{.zadatak}
 Ispitajte tok funkcije $f(x) = \sqrt{8+x} - \sqrt{8-x}$ i skicirajte njezin graf.
 :::
 
-<!--
 :::{.rjesenje}
 <details>
 <summary>Prikaži rješenje</summary>
 
 **1. Domena** | Imamo uvjete
 $$
-8+x \geq 0 \quad 8-x \geq 0 \qquad \Rightarrow x \in [-8,8] = D_f
+8+x \geq 0 \quad 8-x \geq 0 \qquad \Longrightarrow \qquad x \in [-8,8] = D_f
 $$
 
 ---
@@ -171,15 +167,13 @@ plt.show()
 
 </details>
 :::
--->
 
 ---
 
 :::{.zadatak}
-Ispitajte tok funkcije $f(x) = xe^x$ i skicirajte njezin graf.a
+Ispitajte tok funkcije $f(x) = xe^x$ i skicirajte njezin graf.
 :::
 
-<!--
 :::{.rjesenje}
 <details>
 <summary>Prikaži rješenje</summary>
@@ -304,7 +298,6 @@ plt.show()
 
 </details>
 :::
--->
 
 ---
 
@@ -319,7 +312,6 @@ Domena logaritma je $\langle 0, +\infty \rangle$ i vrijedi $\log _a a = 1, \; \f
 </details>
 :::
 
-<!--
 :::{.rjesenje}
 <details>
 <summary>Prikaži rješenje</summary>
@@ -394,7 +386,6 @@ Dakle, funkcija *kreće* od $-1$, a zatim strogo pada. Dakle, ondje nema vertika
 | $f(x)$ | | $-\searrow \cup$ | | $-\searrow \cap$ | | $+\searrow \cup$ | | $-\searrow \cup$ | |
 
 Graf:
-
 ```{python}
 #| echo: true
 #| output: true
@@ -454,9 +445,8 @@ ax.grid(True, linestyle="--",linewidth=0.5, alpha=0.5)
 plt.show()
 ```
 
-</summary>
+</details>
 :::
--->
 
 ---
 
@@ -471,7 +461,6 @@ Pokušajte pronaći neku konveksnu funkciju i prebrojite joj nultočke, a zatim 
 </details>
 :::
 
-<!--
 :::{.rjesenje}
 <details>
 <summary>Prikaži rješenje</summary>
@@ -490,11 +479,10 @@ $$
 
 Odnosno, dobijemo
 $$
-0 = f(x_2) = f((1-t)x_1 + tx_3) < (1-t)f(x_1) + tf(x_3) 0
+0 = f(x_2) = f((1-t)x_1 + tx_3) < (1-t)f(x_1) + tf(x_3) = 0
 $$
 
 što je očito kontradikcija. Dakle, strogo konveksne funkcije imaju najviše $2$ nultočke.
 
 </details>
 :::
--->

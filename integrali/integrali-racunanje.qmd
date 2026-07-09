@@ -28,6 +28,8 @@ $$
 F \ \Big|_a^b = F(b) - F(a)
 $$
 
+što označava evaluaciju u krajnjim točkama.
+
 :::{.primjer}
 Izračunajmo $\displaystyle \int _1^3 (5x^2-2x+1)\, dx$. Koristimo linearnost integrala pa vrijedi
 $$
@@ -42,8 +44,7 @@ $$
 Naravno, nećemo ovako rješavati integrale. Praksom ćete usvojiti osjećaj za integriranje pa će se integral zapravo računati kao
 $$
 \begin{align*}
-\displaystyle \int _1^3 (5x^2-2x+1)\ dx &= 5 \int _1^3 x^2 \, dx - 2 \int _1^3 x \, dx + \int _1^3 \, dx \\
-&= \left(\dfrac{5x^3}{3} - x^2 + x \right) \Bigg|_1^3 \\
+\displaystyle \int _1^3 (5x^2-2x+1)\ dx &=  \left(\dfrac{5x^3}{3} - x^2 + x \right) \Bigg|_1^3 \\
 &=\left(\dfrac{5\cdot 3^3}{3} - 3^2 + 3 \right) - \left(\dfrac{5\cdot 1^3}{3} - 1^2 + 1 \right) \\
 &= \dfrac{112}{3}
 \end{align*}
@@ -78,7 +79,7 @@ $$
 </details>
 :::
 
-Ako je $\varphi$ **strogo monotona** funkcija s $J$ na $I$ i $\psi = \varphi ^{-1}$ inverzna funkcija od $\varphi$, onda uz oznake $a = \varphi{\alpha}$, $b = \varphi{\beta}$ dobivamo
+Ako je $\varphi$ **strogo monotona** funkcija s $J$ na $I$ i $\psi = \varphi ^{-1}$ inverzna funkcija od $\varphi$, onda uz oznake $a = \varphi({\alpha})$, $b = \varphi({\beta})$ dobivamo
 $$
 \int_a^b f(x) \, dx = \int _{\psi(\alpha)}^{\psi(\beta)} f(\varphi(t))\varphi '(t) \, dt
 $$
@@ -129,6 +130,13 @@ $$
 \int _{15}^{10} f(t)\, dt = - \int _{10}^{15} f(t)\, dt
 $$
 
+Općenito, vrijedi:
+$$
+\int _a^b f = - \int _b^a f 
+$$
+
+Naravno, nije greška računati integral gdje je gornja granica manja od donje, ali moramo paziti na ispravnost pristupa.
+
 ## Metoda parcijalne integracije {.unnumbered}
 
 :::{.teorem}
@@ -151,7 +159,7 @@ Primijetimo da metoda parcijalne integracije slijedi iz pravila deriviranja prod
 :::
 
 :::{.primjer}
-Izračunajte integral $\displaystyle \int _0^1 xe^x \, dx$.
+Izračunajmo integral $\displaystyle \int _0^1 xe^x \, dx$.
 $$
 \int _0^1 xe^x \, dx =
 \left | 
@@ -164,3 +172,127 @@ xe^x \Big|_0^1 - \int _0^1 e^x \, dx =
 e - e^x \Big|_0^1 = e - (e - 1) = 1
 $$
 :::
+
+:::{.primjer}
+Izračunajmo integral $\displaystyle \int _1^2 \dfrac{\ln x}{x^2} \, dx$.
+$$
+\int _1^2 \dfrac{\ln x}{x^2} \, dx =
+\left | 
+\begin{aligned}
+u &= \ln x & du &= \dfrac{dx}{x} \\
+dv &= \dfrac{dx}{x^2} & v &= -\dfrac{1}{x}
+\end{aligned}
+\right | =
+-\dfrac{\ln x}{x} \Big|_1^2 + \int _1^2 \dfrac{dx}{x^2} = 
+-\dfrac{\ln 2}{2} - \dfrac{1}{x} \Big|_1^2 = \dfrac{1- \ln 2}{2}
+$$
+:::
+
+Rješavanjem zadataka stječete intuiciju koji dio podintegralne funkcije trebate derivirati, a koji integrirati.
+
+Parcijalnu integraciju uglavnom primjenjujemo kad je podintegralna funkcija oblika 
+
+- polinom $\cdot$ trigonometrijska funkcija
+
+- polinom $\cdot$ inverzi trigonometrijskih funkcija funkcija
+
+- polinom $\cdot$ eksponencijalna ili logaritamska funkcija
+
+- eksponencijalna funkcija $\cdot$ trigonometrijska funkcija
+
+Posljednje je poseban slučaj gdje je potrebno dva puta provesti parcijalnu integraciju, a zatim manipulirati izrazom. To ćemo vidjeti na sljedećem primjeru.
+
+:::{.primjer}
+Integrirajte $\displaystyle \int _0^{\frac{\pi}{2}} e^x \sin x \, dx$.
+$$
+\begin{align*}
+I = \int _0^{\frac{\pi}{2}} e^x \sin x \, dx &= 
+\left | 
+\begin{aligned}
+u &= \sin x & du &= \cos x dx \\
+dv &= e^x dx & v &= e^x
+\end{aligned}
+\right | \\
+&= (e^x \sin x) \Big|_0^{\frac{\pi}{2}} - \int _0^{\frac{\pi}{2}} e^x \cos x \, dx \\
+&=
+\left | 
+\begin{aligned}
+u &= \cos x & du &= -\sin x dx \\
+dv &= e^x dx & v &= e^x
+\end{aligned}
+\right | \\
+&= e^{\frac{\pi}{2}} - \left ( (e^x \cos x) \Big|_0^{\frac{\pi}{2}} +\int _0^{\frac{\pi}{2}} e^x \sin x \, dx \right ) \\
+&= e^{\frac{\pi}{2}} - 1 - \int _0^{\frac{\pi}{2}} e^x \sin x \, dx \\
+&= e^{\frac{\pi}{2}} - 1 - I
+\end{align*}
+$$
+
+Sada imamo $2I = e^{\frac{\pi}{2}} - 1$ pa slijedi da je rješenje
+$$
+\int _0^{\frac{\pi}{2}} e^x \sin x \, dx = \frac{e^{\frac{\pi}{2}} - 1}{2}
+$$
+:::
+
+**Napomena:** Promotrimo sljedeći primjer
+$$
+\begin{align*}
+I = \int e^x \operatorname{sh} x \, dx &= 
+\left | 
+\begin{aligned}
+u &= \operatorname{sh} x & du &= \operatorname{ch} x dx \\
+dv &= e^x dx & v &= e^x
+\end{aligned}
+\right | \\
+&= e^x \operatorname{sh} x - \int e^x \operatorname{ch} x \, dx \\
+&=
+\left | 
+\begin{aligned}
+u &= \operatorname{ch} x & du &= \operatorname{sh} x dx \\
+dv &= e^x dx & v &= e^x
+\end{aligned}
+\right | \\
+&= e^x \operatorname{sh} x - \left ( e^x \operatorname{ch} x - \int e^x \operatorname{sh} x \, dx \right ) \\
+&= e^x({\operatorname{sh} x - \operatorname{ch} x}) + \int e^x \operatorname{sh} x \, dx
+\end{align*}
+$$
+
+Dakle imamo 
+$$
+\int e^x \operatorname{sh} x \, dx = e^x({\operatorname{sh} x - \operatorname{ch} x}) + \int e^x \operatorname{sh} x \, dx
+$$
+
+pa slijedi $e^x({\operatorname{sh} x - \operatorname{ch} x}) = 0$, odnosno $\operatorname{sh} x = \operatorname{ch} x$ što je očito kontradikcija.
+
+Problem je nastupio pri doslovnoj interpretaciji formule parcijalne integracije. Naime, neka je $I$ otvoren interval i $f \colon I \to \mathbb{R}$ funkcija koja ima primitivnu funkciju $F \colon I \to \mathbb{R}$. Neodređeni integral $\displaystyle \int f(x) \, dx$ funkcije $f$ je po definiciji **klasa ekvivalencije** $F(x) + C := [F]_{\sim}$ funkcije $F$ po relaciji $\sim$, gdje je $\sim$ definirana na skupu $\mathcal{D}(I)$ svih derivabilnih funkcija na $I$ s
+$$
+G \sim H \quad \Leftrightarrow \quad G'=H' \quad \Leftrightarrow \quad G'-H'=0 \quad
+\Leftrightarrow \quad (\exists c \in \mathbb{R})(\forall x \in I)(G(x) - H(x) = c)
+$$
+
+Eksplicitno imamo
+$$
+\int f(x) \, dx := F(x) + C = \{x \mapsto F(x) + c: \ c \in \mathbb{R} \} 
+$$
+
+Zbog toga bismo formulu parcijalne integracije mogli zapisati u sljedećem obliku
+$$
+\int udv = (uv + C) - \int vdu
+$$
+
+Stoga za prethodni primjer možemo zaključiti
+$$
+e^x({\operatorname{sh} x - \operatorname{ch} x}) + C = 0 + C
+$$
+
+tj.
+$$
+\{x \mapsto e^x({\operatorname{sh} x - \operatorname{ch} x}) + c: \ c \in \mathbb{R}\}
+= \{x \mapsto c: \ c \in \mathbb{R}\}
+$$
+
+Odavde posebno slijedi da postoji $c \in \mathbb{R}$ takav da je $e^x({\operatorname{sh} x - \operatorname{ch} x}) = c$. Direktnim računom dobivamo $c = -1$.
+
+Sjetimo se da su hiperboličke funkcije $\operatorname{sh}$ i $\operatorname{ch}$ definirane kao
+$$
+\operatorname{sh} x = \frac{e^x-e^{-x}}{2} \qquad \operatorname{ch} x = \frac{e^x+e^{-x}}{2}
+$$

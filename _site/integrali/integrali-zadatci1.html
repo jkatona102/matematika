@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>derivacije-primjena – Matematika</title>
+<title>integrali-zadatci1 – Matematika</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -148,7 +148,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../derivacije/derivacije.html">2. DERIVACIJE</a></li><li class="breadcrumb-item"><a href="../derivacije/derivacije-primjena.html">2.6 Primjene derivacija</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../integrali/integrali.html">3. RIEMANNOV INTEGRAL</a></li><li class="breadcrumb-item"><a href="../integrali/integrali-zadatci1.html">Zadatci - prvi dio</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Pretraživanje" onclick="window.quartoOpenSearch();">
@@ -250,7 +250,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../derivacije/derivacije-primjena.html" class="sidebar-item-text sidebar-link active">
+  <a href="../derivacije/derivacije-primjena.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2.6 Primjene derivacija</span></a>
   </div>
 </li>
@@ -291,7 +291,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../integrali/integrali-zadatci1.html" class="sidebar-item-text sidebar-link">
+  <a href="../integrali/integrali-zadatci1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Zadatci - prvi dio</span></a>
   </div>
 </li>
@@ -307,113 +307,393 @@ window.Quarto = {
     <h2 id="toc-title">Sadržaj</h2>
    
   <ul>
-  <li><a href="#primjena-derivacija" id="toc-primjena-derivacija" class="nav-link active" data-scroll-target="#primjena-derivacija">2.6 Primjena derivacija</a>
-  <ul class="collapse">
-  <li><a href="#tangenta-na-krivulju" id="toc-tangenta-na-krivulju" class="nav-link" data-scroll-target="#tangenta-na-krivulju">Tangenta na krivulju</a></li>
-  <li><a href="#korištenje-derivacija-za-maksimizaciju-i-minimizaciju" id="toc-korištenje-derivacija-za-maksimizaciju-i-minimizaciju" class="nav-link" data-scroll-target="#korištenje-derivacija-za-maksimizaciju-i-minimizaciju">Korištenje derivacija za maksimizaciju i minimizaciju</a></li>
-  <li><a href="#primjena-u-fizici" id="toc-primjena-u-fizici" class="nav-link" data-scroll-target="#primjena-u-fizici">Primjena u fizici</a></li>
-  </ul></li>
+  <li><a href="#zadatci" id="toc-zadatci" class="nav-link active" data-scroll-target="#zadatci">Zadatci</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../derivacije/derivacije.html">2. DERIVACIJE</a></li><li class="breadcrumb-item"><a href="../derivacije/derivacije-primjena.html">2.6 Primjene derivacija</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../integrali/integrali.html">3. RIEMANNOV INTEGRAL</a></li><li class="breadcrumb-item"><a href="../integrali/integrali-zadatci1.html">Zadatci - prvi dio</a></li></ol></nav></header>
 
 
 
 
-<section id="primjena-derivacija" class="level1 unnumbered">
-<h1 class="unnumbered">2.6 Primjena derivacija</h1>
-<p>Diferencijalni račun ima veliku ulogu u raznim granama matematike, a najviše se ističe u optimizaciji i numeričkim metodama traženja nultočki funkcije. Naravno, puni potencijal dostiže tek u više dimenzija.</p>
-<p>U ovom poglavlju promotrit ćemo nekoliko najbitnih primjena uz primjere.</p>
-<section id="tangenta-na-krivulju" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="tangenta-na-krivulju">Tangenta na krivulju</h2>
-<p>Neka je <span class="math inline">\(f \colon I \to \mathbb{R}\)</span> diferencijabilna funkcija. Tada je nagib tangente na graf <span class="math inline">\(\Gamma _f\)</span> u točki <span class="math inline">\((c,f(c))\)</span> upravo <span class="math inline">\(f'(c)\)</span>. Sjetimo se jednadžbe pravca kroz jednu točku <span class="math inline">\((x_0,y_0)\)</span>: <span class="math display">\[
-y-y_0=k(x-x_0)
-\]</span></p>
-<p>Neka je sada <span class="math inline">\((x_0,y_0) = (c,f(c))\)</span> i <span class="math inline">\(k=f'(c)\)</span>. Tada imamo: <span class="math display">\[
-y=f'(c)(x-c)+f(c)
-\]</span></p>
-<p>što je upravo jednadžba tangente u točki <span class="math inline">\((c,f(c))\)</span>.</p>
-<p>Isto tako možemo odrediti i jednadžbu normale krivulje u točki <span class="math inline">\((c,f(c))\)</span>. Sjetimo se, normala je okomita na graf, tj. okomita na tangentu u danoj točki. Uvjet okomitosti dvaju pravaca s koeficijentima smjera <span class="math inline">\(k_1\)</span> i <span class="math inline">\(k_2\)</span> je <span class="math inline">\(k_1 k_2 = -1\)</span> pa imamo jednadžbu normale u <span class="math inline">\((c,f(c))\)</span>: <span class="math display">\[
-y=-\dfrac{1}{f'(c)}(x-c)+f(c)
-\]</span></p>
-<div class="primjer">
-<p>Odredite jednadžbu tangente na krivulju <span class="math inline">\(K \dots \; y = x^2-\dfrac{1}{x}\)</span> u točki <span class="math inline">\(c=-1\)</span>.</p>
-<p>Neka je <span class="math inline">\(f(x)=x^2-\dfrac{1}{x}\)</span>. Računamo <span class="math inline">\(f'(x) = 2x+\dfrac{1}{x^2}\)</span>. Imamo <span class="math display">\[
-T \dots y=f'(c)(x-c)+f(c) = -1 \cdot (x-(-1))+f(-1) = -x+1
-\]</span></p>
+<section id="zadatci" class="level1 unnumbered">
+<h1 class="unnumbered">Zadatci</h1>
+<div class="zadatak">
+<p>Odredite sljedeće integrale metodom supstitucije:</p>
+<ol type="a">
+<li><p><span class="math inline">\(\displaystyle \int (3x^2-2x+1)(x^3-x^2+x-9)^7 \, dx\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \frac{e^x+1}{e^x+x} \, dx\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int _e^{e^e} x^3e^{x^4} \, dx\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int _0^4 x \sqrt{x^2 + 9} \, dx\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \frac{\cos \sqrt{x}}{\sqrt{x}} \, dx\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \frac{x}{\sqrt{x+1}} \, dx\)</span></p></li>
+</ol>
 </div>
-<div class="primjer">
-<p>Odredite zajedničku tangentu na krivulje <span class="math display">\[
+<div class="hint">
+<details>
+<summary>
+Prikaži hint
+</summary>
+U <em>f.</em> dijelu iskoristite supstituciju <span class="math inline">\(t = \sqrt{x+1}\)</span>, a zatim zapišite kao <span class="math inline">\(t^2 = x+1\)</span>. Tada je puno lakše pronaći odgovarajući izraz za <span class="math inline">\(dt\)</span>, ali pazite, pri derivaciji lijeve strane morate primijeniti pravilo za kompoziciju pa dobijete <span class="math inline">\(2t \, dt\)</span>, tj. derivacija vanjske funkcije puta derivacija unutarnje, što je <span class="math inline">\(dt\)</span>. To se zove implicitno deriviranje.
+</details>
+</div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<ol type="a">
+<li><p><span class="math display">\[
 \begin{align*}
-y &amp;= x^2-6x+5 \\
-y &amp;= -x^2-4x
+\int (3x^2-2x+1)&amp;(x^3-x^2+x-9)^7 \, dx =
+\left |
+\begin{aligned}
+t &amp;= x^3-x^2+x-9 \\
+dt &amp;= (3x^2 - 2x +1) \,dx
+\end{aligned}
+\right | \\
+&amp;= \int t^7 \, dt = \frac{t^8}{8} + C = \frac{(x^3-x^2+x-9)^8}{8} + C, \ C \in \mathbb{R}
 \end{align*}
-\]</span></p>
-<p>Označimo <span class="math inline">\(f(x) = x^2-6x+5\)</span> i <span class="math inline">\(g(x) = -x^2-4x\)</span>. Tada je <span class="math inline">\(f'(x)=2x-6\)</span> i <span class="math inline">\(g'(x)=-2x-4\)</span>. Zapišimo jednadžbe tangenti ovih dviju funkcija: <span class="math display">\[
-y = f'(x_1)(x-x_1)+f(x_1) = (2x_1-6)(x-x_1) + x_1^2-6x_1+5 = (2x_1-6)x - x_1^2+5
-\]</span></p>
-<p><span class="math display">\[
-y= g'(x_2)(x-x_2)+g(x_2) = (-2x_2-4)(x-x_2)-x_2^2-4x_2 = (-2x_2-4)x + x_2^2
-\]</span></p>
-<p>Dva pravca su jednaka ako su im jednaki koeficijenti smjera i slobodni koeficijenti. Imamo sustav <span class="math display">\[
-\begin{cases}
-2x_1-6 = -2x_2-4 \\
--x_1^2+5 = x_2^2
-\end{cases}
-\; \Longrightarrow \;
-\begin{cases}
-2x_1+2x_2 = 2 \\
-x_1^2+x_2^2 = 5
-\end{cases}
-\quad \overset{x_1+x_2=1}{\Longrightarrow} \quad
-x_1^2-x_1-2 = 0
-\]</span></p>
-<p>Rješavanjem kvadratne jednadžbe dobijemo <span class="math inline">\(x_1 = 2\)</span> ili <span class="math inline">\(x_1 = -1\)</span>. Dakle postoje dvije zajedničke tangente. Uvrštavanjem u jednadžbu tangente dobijemo <span class="math display">\[
-y = -2x+1 \qquad  y = -8x +4
-\]</span></p>
+\]</span></p></li>
+<li><p><span class="math display">\[
+\int \frac{e^x+1}{e^x+x} \, dx =
+\left |
+\begin{aligned}
+t &amp;= e^x+x \\
+dt &amp;= (e^x+1) \,dx
+\end{aligned}
+\right |=
+\int \frac{dt}{t} = \ln |t| + C = \ln |e^x+x| + C, \ C \in \mathbb{R}
+\]</span></p></li>
+<li><p><span class="math display">\[
+\int _e^{e^e} x^3e^{x^4} \, dx =
+\left |
+\begin{aligned}
+t &amp;= x^4 &amp; e &amp;\mapsto e^4 \\
+dt &amp;= 4x^3 \,dx &amp; e^e &amp;\mapsto e^{4e}
+\end{aligned}
+\right |=
+\dfrac{1}{4}\int _{e^4}^{e^{4e}} e^t \, dt = \frac{1}{4}\left(e^{e^{4e}} - e^{e^4} \right)
+\]</span></p></li>
+<li><p><span class="math display">\[
+\int _0^4 x \sqrt{x^2 + 9} \, dx =
+\left |
+\begin{aligned}
+t &amp;= x^2 + 9 &amp; 0 &amp;\mapsto 9 \\
+dt &amp;= 2x \,dx &amp; 4 &amp;\mapsto 25
+\end{aligned}
+\right |=
+\frac{1}{2}\int _9^{25} \sqrt{t} \, dt = \frac{1}{2}\left(\frac{t^\frac{3}{2}}{\frac{3}{2}} \right) \Big|_9^{25} = \frac{98}{3}
+\]</span></p></li>
+<li><p><span class="math display">\[
+\int \frac{\cos \sqrt{x}}{\sqrt{x}} \, dx =
+\left |
+\begin{aligned}
+t &amp;= \sqrt{x} \\
+dt &amp;= \frac{1}{2\sqrt{x}} \,dx
+\end{aligned}
+\right |=
+2 \int \cos t \, dt = 2\sin t + C = 2\sin \sqrt{x} + C, \ C \in \mathbb{R}
+\]</span></p></li>
+<li><p><span class="math display">\[
+\begin{align*}
+\int \frac{x}{\sqrt{x+1}} \, dx =
+\left |
+\begin{aligned}
+t = \sqrt{x+1} &amp;\Rightarrow t^2 = x+1 \\
+2t\, dt &amp;= dx
+\end{aligned}
+\right | &amp;=
+\int \frac{t^2-1}{t}2t \, dt = 2 \int (t^2-1) \, dt \\
+= 2 \left (\frac{t^3}{3} - t \right ) + C = 2 &amp;\left (\frac{(x+1)^\frac{3}{2}}{3} - \sqrt{x+1} \right ) + C, \ C \in \mathbb{R}
+\end{align*}
+\]</span></p></li>
+</ol>
+</details>
 </div>
-</section>
-<section id="korištenje-derivacija-za-maksimizaciju-i-minimizaciju" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="korištenje-derivacija-za-maksimizaciju-i-minimizaciju">Korištenje derivacija za maksimizaciju i minimizaciju</h2>
-<div class="primjer">
-<p>Među svim jednakokračnim trokutima opsega <span class="math inline">\(30\)</span> nađite onaj koji ima najveću površinu. Izračunajte tu površinu.</p>
-<p>Opseg jednakokračnog trokuta s osnovicom <span class="math inline">\(a\)</span> i kracima <span class="math inline">\(b\)</span> dana je s <span class="math inline">\(\ O = a+2b\)</span>, površinu računamo kao <span class="math inline">\(P=\dfrac{1}{2}av_a\)</span>, gdje je <span class="math inline">\(v_a=\sqrt{b^2-\dfrac{a^2}{4}}\)</span>. Uvrstimo u formulu površine izraz za visinu na osnovicu i <span class="math inline">\(b=\dfrac{30-a}{2}\)</span>: <span class="math display">\[
-P(a) = \dfrac{1}{2}a \sqrt{\left (\dfrac{30-a}{2}\right )^2-\dfrac{a^2}{4}} =
-\dfrac{1}{2}a \sqrt{\dfrac{900-60a+a^2}{4}-\dfrac{a^2}{4}} =
-\dfrac{1}{4}a \sqrt{900-60a}
-\]</span></p>
-<p>Računamo <span class="math display">\[
-P'(a) = \dfrac{1}{4} \sqrt{900-60a} + \dfrac{1}{4}a\dfrac{-60}{2\sqrt{900-60a}} =
-\dfrac{1}{4} \sqrt{900-60a} - \dfrac{-15a}{2\sqrt{900-60a}}
-\]</span></p>
-<p>Konačno dobijemo <span class="math display">\[
-P'(a) = \dfrac{45(10-a)}{2\sqrt{900-60a}}
-\]</span></p>
-<p><span class="math display">\[
-P'(a) = 0 \Longleftrightarrow a = 10
-\]</span></p>
-<p>Tada je <span class="math inline">\(b = 10\)</span>, tražena površina <span class="math inline">\(P = 25 \sqrt{3}\)</span>.</p>
-<p>To se sada potpuno slaže s intuicijom da među svim trokutima zadanog opsega najveću površinu ima jednakostranični trokut.</p>
+<hr>
+<div class="zadatak">
+<p>Odredite sljedeće integrale metodom parcijalne integracije:</p>
+<ol type="a">
+<li><p><span class="math inline">\(\displaystyle \int _0^1 \ln (1+x^2) \, dx\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \ln x \, dx\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \frac{x}{\cos^2 x} \, dx\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int 4 x \cos ⁡(2−3⁢𝑥) \, dx\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int (x^4 + 3x) \cos x \, dx\)</span> (<strong>napredno</strong>)</p></li>
+</ol>
 </div>
-</section>
-<section id="primjena-u-fizici" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="primjena-u-fizici">Primjena u fizici</h2>
-<p>Sjetimo se fizikalne interpretacije: ako znamo položaj tijela u vremenu <span class="math inline">\(t\)</span>, onda možemo izračunati brzinu i akceleraciju u tom trenutku, a to su upravo derivacije funkcije puta.</p>
-<div class="primjer">
-<p>Tijelo slobodno pada s visine <span class="math inline">\(h\)</span>. Ako je prijeđeni put jednak <span class="math inline">\(s(t) = \dfrac{1}{2}gt^2\)</span>, odredimo brzinu i akceleraciju tog tijela u trenutku t.</p>
-<p>Računamo: <span class="math display">\[
-v(t) = s'(t) = gt
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<ol type="a">
+<li><p><span class="math display">\[
+\begin{align*}
+\int _0^1 \ln (1+x^2) \, dx &amp;=
+\left |
+\begin{aligned}
+u &amp;= \ln (1+x^2) &amp; du &amp;= \frac{2x}{1+x^2}\\
+dv &amp;= dx &amp; v &amp;= x
+\end{aligned}
+\right | \\
+&amp;= x\ln (1+x^2) \Big| _0^1 - \int _0^1 \frac{2x^2}{1+x^2}\, dx = \ln 2 - \int _0^1 \left ( 2- \frac{2}{1+x^2} \right )\, dx \\
+&amp;= \ln 2 -2x \Big| _0^1 -2 \operatorname{arctg} x \Big| _0^1 = \ln2 - 2 - \frac{\pi}{2}
+\end{align*}
+\]</span></p></li>
+<li><p><span class="math display">\[
+\int \ln x \, dx =
+\left |
+\begin{aligned}
+u &amp;= \ln x &amp; du &amp;= \frac{dx}{x}\\
+dv &amp;= dx &amp; v &amp;= x
+\end{aligned}
+\right | \\
+= x\ln x - \int \, dx = x(\ln x - 1) + C, \ C \in \mathbb{R}
+\]</span></p></li>
+<li><p><span class="math display">\[
+\int \frac{x}{\cos^2 x} \, dx =
+\left |
+\begin{aligned}
+u &amp;= x &amp; du &amp;= dx\\
+dv &amp;= \frac{dx}{\cos ^2 x } &amp; v &amp;= \operatorname{tg} x
+\end{aligned}
+\right | \\
+= x \operatorname{tg} x - \int \operatorname{tg} x \, dx
+\]</span></p></li>
+</ol>
+<p>Riješimo metodom zamjene varijabli zadnji integral <span class="math display">\[
+\int \operatorname{tg} x \, dx = \int \frac{\sin x}{\cos x} \, dx =
+\left |
+\begin{aligned}
+t &amp;= \cos x \\
+dt &amp;= -\sin x \, dx
+\end{aligned}
+\right | =
+- \int \frac{dt}{t} = - \ln |\cos t| + C
 \]</span></p>
-<p><span class="math display">\[
-a(t) = v'(t) = s''(t) = g
+<p>Konačno imamo <span class="math display">\[
+\int \frac{x}{\cos^2 x} \, dx = x \operatorname{tg} x + \ln |\cos t| + C, \ C \in \mathbb{R}
 \]</span></p>
-<p>Primjer je prilično lagan, ali možemo bez fizikalne interpretacije odrediti dobro poznate formule.</p>
+<ol start="4" type="a">
+<li><p><span class="math display">\[
+\begin{align*}
+\int 4x \cos(2-3x)\, dx &amp;=
+\left |
+\begin{aligned}
+u &amp;= 4x &amp; du &amp;= 4\,dx\\
+dv &amp;= \cos(2-3x)\,dx &amp; v &amp;= -\frac13\sin(2-3x)
+\end{aligned}
+\right | \\
+&amp;= -\frac{4x}{3}\sin(2-3x) +\frac{4}{3}\int \sin(2-3x)\,dx \\
+&amp;= -\frac{4x}{3}\sin(2-3x) +\frac{4}{9}\cos(2-3x) + C, \ C \in \mathbb{R}
+\end{align*}
+\]</span></p></li>
+<li><p><span class="math display">\[
+\begin{align*}
+\int (x^4+3x)\cos x\,dx
+&amp;=
+\left|
+\begin{aligned}
+u &amp;= x^4+3x &amp; du &amp;= (4x^3+3)\,dx\\
+dv &amp;= \cos x\,dx &amp; v &amp;= \sin x
+\end{aligned}
+\right| \\
+&amp;= (x^4+3x)\sin x-\int(4x^3+3)\sin x\,dx\\
+&amp;= (x^4+3x)\sin x
++\left|
+\begin{aligned}
+u &amp;= 4x^3+3 &amp; du &amp;= 12x^2\,dx\\
+dv &amp;= \sin x\,dx &amp; v &amp;= -\cos x
+\end{aligned}
+\right| \\
+&amp;= (x^4+3x)\sin x +(4x^3+3)\cos x -12\int x^2\cos x\,dx\\
+&amp;= (x^4+3x)\sin x +(4x^3+3)\cos x -12\left(
+\left|
+\begin{aligned}
+u &amp;= x^2 &amp; du &amp;= 2x\,dx\\
+dv &amp;= \cos x\,dx &amp; v &amp;= \sin x
+\end{aligned}
+\right|
+\right)\\
+&amp;= (x^4+3x)\sin x +(4x^3+3)\cos x -12x^2\sin x +24\int x\sin x\,dx\\
+&amp;= (x^4+3x)\sin x +(4x^3+3)\cos x -12x^2\sin x +24\left(
+\left|
+\begin{aligned}
+u &amp;= x &amp; du &amp;= dx\\
+dv &amp;= \sin x\,dx &amp; v &amp;= -\cos x
+\end{aligned}
+\right|
+\right)\\
+&amp;= (x^4+3x)\sin x +(4x^3+3)\cos x -12x^2\sin x -24x\cos x +24\int\cos x\,dx\\
+&amp;= (x^4-12x^2+3x+24)\sin x +(4x^3-24x+3)\cos x +C,\ C\in\mathbb{R}.
+\end{align*}
+\]</span></p></li>
+</ol>
+</details>
 </div>
+<hr>
+<div class="zadatak">
+<p>Odredite sljedeće integrale proizvoljnom metodom:</p>
+<ol type="a">
+<li><p><span class="math inline">\(\displaystyle \int \sin 3x \sin 5x \, dx\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int x^2 \sqrt{1-x^2} \, dx\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \sqrt{e^x-1} \, dx\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \int \frac{6}{7+x^2} \, dx\)</span></p></li>
+</ol>
+</div>
+<div class="hint">
+<details>
+<summary>
+Prikaži hint
+</summary>
+<em>d.</em> dio probajte namjestiti na tablični integral.
+</details>
+</div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<ol type="a">
+<li><p>Iskoristimo formulu pretvorbe, a zatim direktno integrirajmo: <span class="math display">\[
+\begin{align*}
+\int \sin 3x \sin 5x\,dx
+&amp;= \frac12\int\left(\cos(2x)-\cos(8x)\right)\,dx\\
+&amp;= \frac12\left(\int\cos(2x)\,dx-\int\cos(8x)\,dx\right)\\
+&amp;= \frac12\left(\frac12\sin(2x)-\frac18\sin(8x)\right)+C\\
+&amp;= \frac14\sin(2x)-\frac1{16}\sin(8x)+C,\qquad C\in\mathbb{R}.
+\end{align*}
+\]</span></p></li>
+<li><p>Uvrstimo supstituciju <span class="math inline">\(x = \sin t\)</span> jer ćemo tada pod kroijenom dobiti <span class="math inline">\(\cos ^2 t\)</span>: <span class="math display">\[
+\begin{align*}
+\int x^2\sqrt{1-x^2}\,dx
+&amp;=
+\left|
+\begin{aligned}
+x &amp;= \sin t\\
+dx &amp;= \cos t\,dt
+\end{aligned}
+\right|\\
+&amp;= \int \sin^2 t\,\cos^2 t\,dt\\
+&amp;= \frac14\int\sin^2(2t)\,dt\\
+&amp;= \frac14\int\frac{1-\cos(4t)}{2}\,dt\\
+&amp;= \frac18\int(1-\cos(4t))\,dt\\
+&amp;= \frac{t}{8}-\frac{\sin(4t)}{32}+C.
+\end{align*}
+\]</span></p></li>
+</ol>
+<p>gdje smo u četvrtoj jednakosti koristili izraz <span class="math inline">\(\sin ^2 \theta = \dfrac{1 - \cos 2\theta}{2}\)</span>.</p>
+<ol start="3" type="a">
+<li><p><span class="math display">\[
+\begin{align*}
+\int \sqrt{e^x-1}\,dx
+&amp;=
+\left|
+\begin{aligned}
+t &amp;= \sqrt{e^x-1}\\
+t^2 &amp;= e^x-1\\
+2t\,dt &amp;= e^x\,dx=(t^2+1)\,dx
+\end{aligned}
+\right|\\
+&amp;= \int \frac{2t^2}{t^2+1}\,dt\\
+&amp;= 2\int\left(1-\frac{1}{t^2+1}\right)\,dt\\
+&amp;= 2\left(t-\arctan t\right)+C\\
+&amp;= 2\sqrt{e^x-1}-2\arctan\!\left(\sqrt{e^x-1}\right)+C,\qquad C\in\mathbb{R}.
+\end{align*}
+\]</span></p></li>
+<li><p><span class="math display">\[
+\begin{align*}
+\int \frac{6}{7+x^2}\,dx
+&amp;=
+\left|
+\begin{aligned}
+x &amp;= \sqrt7\tan t\\
+dx &amp;= \sqrt7\sec^2 t\,dt
+\end{aligned}
+\right|\\
+&amp;= \int \frac{6\sqrt7\sec^2 t}{7+7\tan^2 t}\,dt\\
+&amp;= \frac{6\sqrt7}{7}\int
+\frac{\sec^2 t}{1+\tan^2 t}\,dt\\
+&amp;= \frac{6\sqrt7}{7}\int dt\\
+&amp;= \frac{6\sqrt7}{7}t+C\\
+&amp;= \frac{6}{\sqrt7}\arctan\!\left(\frac{x}{\sqrt7}\right)+C,\qquad C\in\mathbb{R}.
+\end{align*}
+\]</span></p></li>
+</ol>
+</details>
+</div>
+<hr>
+<div class="zadatak">
+<p>Neka je <span class="math inline">\(f \colon [−a,a] \to \mathbb{R}\)</span> Riemann integrabilna funkcija.</p>
+<ol type="a">
+<li><p>Ako je <span class="math inline">\(f\)</span> neparna funkcija, dokažite <span class="math display">\[
+\int _{-a}^a f(x) \, dx = 0
+\]</span></p></li>
+<li><p>Ako je <span class="math inline">\(f\)</span> parna funkcija, dokažite <span class="math display">\[
+\int _{-a}^a f(x) \, dx = 2 \int _0^a f(x) \, dx
+\]</span></p></li>
+</ol>
+</div>
+<div class="hint">
+<details>
+<summary>
+Prikaži hint
+</summary>
+Koristite zamjenu varijabli <span class="math inline">\(t = -x\)</span>.
+</details>
+</div>
+<!--
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a)
+$$
+\begin{align*}
+\int _{-a}^a f(x)\,dx
+&=
+\left|
+\begin{aligned}
+t &= -x & -a &\mapsto a\\
+dt &= -dx & a &\mapsto -a
+\end{aligned}
+\right|\\
+&= -\int _{a}^{-a} f(-t) dt \\
+&= \int _{-a}^{a} -f(t) dt \\
+&= -\int _{-a}^{a} f(t) dt \\
+\end{align*}
+$$
+
+Izjednačavanjem integrala dobivamo traženu tvrdnju.
+
+Uočite da smo iskoristili činjenicu $\displaystyle -\int _a^b f = \int _b^a f$.
+
+(b)
+$$
+\begin{align*}
+\int _{-a}^a f(x)\,dx
+&= \int _{-a}^0 f(x)\,dx + \int _0^a f(x)\,dx \\
+&= \left|
+\begin{aligned}
+t &= -x & -a &\mapsto a\\
+dt &= -dx & a &\mapsto -a
+\end{aligned}
+\right|\\
+&= -\int _{a}^0 f(-t)\,dt + \int _0^a f(x)\,dx \\
+&= \int _0^{a} f(t)\,dt + \int _0^a f(x)\,dx \\
+&= 2 \int _0^x f(x) \, dx
+\end{align*}
+$$
+
+</details>
+:::
+-->
+<hr>
+<p>Za vježbu upućujemo čitatelja na samostalno rješavanje dodatnih zadataka. Neki gore navedeni zadatci koriste (na prvu) neočekivanu supstituciju, ali osjećaj se za to postiže samostalnim rješavanjem što većeg broja zadataka.</p>
+<p>Postoje vrste integrala za koje je odmah jasno kakvu supstituciju traže, tako primjerice postoje trigonometrijske i hiperboličke supstitucije. Postoje i univerzalne metode za integraciju racionalnih funkcija, kao i (kvadratnih) iracionalnosti. O tim će metoda biti riječ u sljedećim poglavljima.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

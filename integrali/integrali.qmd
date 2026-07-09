@@ -9,6 +9,7 @@ U ovom poglavlju dat ćemo definiciju integrala, upoznati se s osnovnim rezultat
 - [Uvod i definicija](integrali-def.qmd)
 - [Osnovna svojstva i primitivna funkcija](integrali-svojstva.qmd)
 - [Metode integriranja](integrali-racunanje.qmd)
+- [Zadatci - prvi dio](integrali-zadatci1.qmd)
 
 <!--
 - section: "3. RIEMANNOV INTEGRAL"
@@ -20,4 +21,6 @@ U ovom poglavlju dat ćemo definiciju integrala, upoznati se s osnovnim rezultat
             href: integrali/integrali-svojstva.qmd
           - text: "3.3 Metode integriranja"
             href: integrali/integrali-racunanje.qmd
+          - text: "Zadatci - prvi dio"
+            href: integrali/integrali-zadatci1.qmd
 -->

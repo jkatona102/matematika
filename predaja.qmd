@@ -12,7 +12,8 @@ Na ovoj stranici predajete zadatke.
     <option value="">Odaberi set zadataka</option>
     <option value="Derivacije1">Derivacije 1. dio</option>
     <option value="Derivacije2">Derivacije 2. dio</option>
-    <!-- <option value="Derivacije3">Derivacije 3. dio</option> -->
+    <option value="Derivacije3">Derivacije 3. dio</option>
+    <option value="Integrali1">Integrali 1. dio </option>
   </select>
 
   <input type="file" id="file" multiple>

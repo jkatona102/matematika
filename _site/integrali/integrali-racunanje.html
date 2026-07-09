@@ -277,6 +277,12 @@ window.Quarto = {
  <span class="menu-text">3.3 Metode integriranja</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-zadatci1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Zadatci - prvi dio</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -369,6 +375,7 @@ window.Quarto = {
 <p>Kod upotrebe Newton-Leibnizove formule često se koristi oznaka <span class="math display">\[
 F \ \Big|_a^b = F(b) - F(a)
 \]</span></p>
+<p>što označava evaluaciju u krajnjim točkama.</p>
 <div class="primjer">
 <p>Izračunajmo <span class="math inline">\(\displaystyle \int _1^3 (5x^2-2x+1)\, dx\)</span>. Koristimo linearnost integrala pa vrijedi <span class="math display">\[
 \begin{align*}
@@ -380,8 +387,7 @@ F \ \Big|_a^b = F(b) - F(a)
 \]</span></p>
 <p>Naravno, nećemo ovako rješavati integrale. Praksom ćete usvojiti osjećaj za integriranje pa će se integral zapravo računati kao <span class="math display">\[
 \begin{align*}
-\displaystyle \int _1^3 (5x^2-2x+1)\ dx &amp;= 5 \int _1^3 x^2 \, dx - 2 \int _1^3 x \, dx + \int _1^3 \, dx \\
-&amp;= \left(\dfrac{5x^3}{3} - x^2 + x \right) \Bigg|_1^3 \\
+\displaystyle \int _1^3 (5x^2-2x+1)\ dx &amp;=  \left(\dfrac{5x^3}{3} - x^2 + x \right) \Bigg|_1^3 \\
 &amp;=\left(\dfrac{5\cdot 3^3}{3} - 3^2 + 3 \right) - \left(\dfrac{5\cdot 1^3}{3} - 1^2 + 1 \right) \\
 &amp;= \dfrac{112}{3}
 \end{align*}
@@ -411,7 +417,7 @@ G'(x) = F'(\varphi (x))\varphi '(x) = f(\varphi (x))\varphi '(x)
 \]</span></p>
 </details>
 </div>
-<p>Ako je <span class="math inline">\(\varphi\)</span> <strong>strogo monotona</strong> funkcija s <span class="math inline">\(J\)</span> na <span class="math inline">\(I\)</span> i <span class="math inline">\(\psi = \varphi ^{-1}\)</span> inverzna funkcija od <span class="math inline">\(\varphi\)</span>, onda uz oznake <span class="math inline">\(a = \varphi{\alpha}\)</span>, <span class="math inline">\(b = \varphi{\beta}\)</span> dobivamo <span class="math display">\[
+<p>Ako je <span class="math inline">\(\varphi\)</span> <strong>strogo monotona</strong> funkcija s <span class="math inline">\(J\)</span> na <span class="math inline">\(I\)</span> i <span class="math inline">\(\psi = \varphi ^{-1}\)</span> inverzna funkcija od <span class="math inline">\(\varphi\)</span>, onda uz oznake <span class="math inline">\(a = \varphi({\alpha})\)</span>, <span class="math inline">\(b = \varphi({\beta})\)</span> dobivamo <span class="math display">\[
 \int_a^b f(x) \, dx = \int _{\psi(\alpha)}^{\psi(\beta)} f(\varphi(t))\varphi '(t) \, dt
 \]</span></p>
 <p>Sada primitivnu funkciju <span class="math inline">\(F\)</span> nalazimo uz supstituciju <span class="math inline">\(x= \varphi (t)\)</span>, odnosno <span class="math inline">\(t= \psi(x)\)</span>, na sljedeći način: <span class="math display">\[
@@ -448,6 +454,10 @@ dt &amp;= 6x^2dx &amp; 0 &amp;\mapsto 4
 <p>Primjerice, da smo dobili gornju granicu <span class="math inline">\(10\)</span>, a donju <span class="math inline">\(15\)</span>, vrijedilo bi <span class="math display">\[
 \int _{15}^{10} f(t)\, dt = - \int _{10}^{15} f(t)\, dt
 \]</span></p>
+<p>Općenito, vrijedi: <span class="math display">\[
+\int _a^b f = - \int _b^a f
+\]</span></p>
+<p>Naravno, nije greška računati integral gdje je gornja granica manja od donje, ali moramo paziti na ispravnost pristupa.</p>
 </section>
 <section id="metoda-parcijalne-integracije" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="metoda-parcijalne-integracije">Metoda parcijalne integracije</h2>
@@ -468,7 +478,7 @@ Primijetimo da metoda parcijalne integracije slijedi iz pravila deriviranja prod
 </details>
 </div>
 <div class="primjer">
-<p>Izračunajte integral <span class="math inline">\(\displaystyle \int _0^1 xe^x \, dx\)</span>. <span class="math display">\[
+<p>Izračunajmo integral <span class="math inline">\(\displaystyle \int _0^1 xe^x \, dx\)</span>. <span class="math display">\[
 \int _0^1 xe^x \, dx =
 \left |
 \begin{aligned}
@@ -480,6 +490,101 @@ xe^x \Big|_0^1 - \int _0^1 e^x \, dx =
 e - e^x \Big|_0^1 = e - (e - 1) = 1
 \]</span></p>
 </div>
+<div class="primjer">
+<p>Izračunajmo integral <span class="math inline">\(\displaystyle \int _1^2 \dfrac{\ln x}{x^2} \, dx\)</span>. <span class="math display">\[
+\int _1^2 \dfrac{\ln x}{x^2} \, dx =
+\left |
+\begin{aligned}
+u &amp;= \ln x &amp; du &amp;= \dfrac{dx}{x} \\
+dv &amp;= \dfrac{dx}{x^2} &amp; v &amp;= -\dfrac{1}{x}
+\end{aligned}
+\right | =
+-\dfrac{\ln x}{x} \Big|_1^2 + \int _1^2 \dfrac{dx}{x^2} =
+-\dfrac{\ln 2}{2} - \dfrac{1}{x} \Big|_1^2 = \dfrac{1- \ln 2}{2}
+\]</span></p>
+</div>
+<p>Rješavanjem zadataka stječete intuiciju koji dio podintegralne funkcije trebate derivirati, a koji integrirati.</p>
+<p>Parcijalnu integraciju uglavnom primjenjujemo kad je podintegralna funkcija oblika</p>
+<ul>
+<li><p>polinom <span class="math inline">\(\cdot\)</span> trigonometrijska funkcija</p></li>
+<li><p>polinom <span class="math inline">\(\cdot\)</span> inverzi trigonometrijskih funkcija funkcija</p></li>
+<li><p>polinom <span class="math inline">\(\cdot\)</span> eksponencijalna ili logaritamska funkcija</p></li>
+<li><p>eksponencijalna funkcija <span class="math inline">\(\cdot\)</span> trigonometrijska funkcija</p></li>
+</ul>
+<p>Posljednje je poseban slučaj gdje je potrebno dva puta provesti parcijalnu integraciju, a zatim manipulirati izrazom. To ćemo vidjeti na sljedećem primjeru.</p>
+<div class="primjer">
+<p>Integrirajte <span class="math inline">\(\displaystyle \int _0^{\frac{\pi}{2}} e^x \sin x \, dx\)</span>. <span class="math display">\[
+\begin{align*}
+I = \int _0^{\frac{\pi}{2}} e^x \sin x \, dx &amp;=
+\left |
+\begin{aligned}
+u &amp;= \sin x &amp; du &amp;= \cos x dx \\
+dv &amp;= e^x dx &amp; v &amp;= e^x
+\end{aligned}
+\right | \\
+&amp;= (e^x \sin x) \Big|_0^{\frac{\pi}{2}} - \int _0^{\frac{\pi}{2}} e^x \cos x \, dx \\
+&amp;=
+\left |
+\begin{aligned}
+u &amp;= \cos x &amp; du &amp;= -\sin x dx \\
+dv &amp;= e^x dx &amp; v &amp;= e^x
+\end{aligned}
+\right | \\
+&amp;= e^{\frac{\pi}{2}} - \left ( (e^x \cos x) \Big|_0^{\frac{\pi}{2}} +\int _0^{\frac{\pi}{2}} e^x \sin x \, dx \right ) \\
+&amp;= e^{\frac{\pi}{2}} - 1 - \int _0^{\frac{\pi}{2}} e^x \sin x \, dx \\
+&amp;= e^{\frac{\pi}{2}} - 1 - I
+\end{align*}
+\]</span></p>
+<p>Sada imamo <span class="math inline">\(2I = e^{\frac{\pi}{2}} - 1\)</span> pa slijedi da je rješenje <span class="math display">\[
+\int _0^{\frac{\pi}{2}} e^x \sin x \, dx = \frac{e^{\frac{\pi}{2}} - 1}{2}
+\]</span></p>
+</div>
+<p><strong>Napomena:</strong> Promotrimo sljedeći primjer <span class="math display">\[
+\begin{align*}
+I = \int e^x \operatorname{sh} x \, dx &amp;=
+\left |
+\begin{aligned}
+u &amp;= \operatorname{sh} x &amp; du &amp;= \operatorname{ch} x dx \\
+dv &amp;= e^x dx &amp; v &amp;= e^x
+\end{aligned}
+\right | \\
+&amp;= e^x \operatorname{sh} x - \int e^x \operatorname{ch} x \, dx \\
+&amp;=
+\left |
+\begin{aligned}
+u &amp;= \operatorname{ch} x &amp; du &amp;= \operatorname{sh} x dx \\
+dv &amp;= e^x dx &amp; v &amp;= e^x
+\end{aligned}
+\right | \\
+&amp;= e^x \operatorname{sh} x - \left ( e^x \operatorname{ch} x - \int e^x \operatorname{sh} x \, dx \right ) \\
+&amp;= e^x({\operatorname{sh} x - \operatorname{ch} x}) + \int e^x \operatorname{sh} x \, dx
+\end{align*}
+\]</span></p>
+<p>Dakle imamo <span class="math display">\[
+\int e^x \operatorname{sh} x \, dx = e^x({\operatorname{sh} x - \operatorname{ch} x}) + \int e^x \operatorname{sh} x \, dx
+\]</span></p>
+<p>pa slijedi <span class="math inline">\(e^x({\operatorname{sh} x - \operatorname{ch} x}) = 0\)</span>, odnosno <span class="math inline">\(\operatorname{sh} x = \operatorname{ch} x\)</span> što je očito kontradikcija.</p>
+<p>Problem je nastupio pri doslovnoj interpretaciji formule parcijalne integracije. Naime, neka je <span class="math inline">\(I\)</span> otvoren interval i <span class="math inline">\(f \colon I \to \mathbb{R}\)</span> funkcija koja ima primitivnu funkciju <span class="math inline">\(F \colon I \to \mathbb{R}\)</span>. Neodređeni integral <span class="math inline">\(\displaystyle \int f(x) \, dx\)</span> funkcije <span class="math inline">\(f\)</span> je po definiciji <strong>klasa ekvivalencije</strong> <span class="math inline">\(F(x) + C := [F]_{\sim}\)</span> funkcije <span class="math inline">\(F\)</span> po relaciji <span class="math inline">\(\sim\)</span>, gdje je <span class="math inline">\(\sim\)</span> definirana na skupu <span class="math inline">\(\mathcal{D}(I)\)</span> svih derivabilnih funkcija na <span class="math inline">\(I\)</span> s <span class="math display">\[
+G \sim H \quad \Leftrightarrow \quad G'=H' \quad \Leftrightarrow \quad G'-H'=0 \quad
+\Leftrightarrow \quad (\exists c \in \mathbb{R})(\forall x \in I)(G(x) - H(x) = c)
+\]</span></p>
+<p>Eksplicitno imamo <span class="math display">\[
+\int f(x) \, dx := F(x) + C = \{x \mapsto F(x) + c: \ c \in \mathbb{R} \}
+\]</span></p>
+<p>Zbog toga bismo formulu parcijalne integracije mogli zapisati u sljedećem obliku <span class="math display">\[
+\int udv = (uv + C) - \int vdu
+\]</span></p>
+<p>Stoga za prethodni primjer možemo zaključiti <span class="math display">\[
+e^x({\operatorname{sh} x - \operatorname{ch} x}) + C = 0 + C
+\]</span></p>
+<p>tj. <span class="math display">\[
+\{x \mapsto e^x({\operatorname{sh} x - \operatorname{ch} x}) + c: \ c \in \mathbb{R}\}
+= \{x \mapsto c: \ c \in \mathbb{R}\}
+\]</span></p>
+<p>Odavde posebno slijedi da postoji <span class="math inline">\(c \in \mathbb{R}\)</span> takav da je <span class="math inline">\(e^x({\operatorname{sh} x - \operatorname{ch} x}) = c\)</span>. Direktnim računom dobivamo <span class="math inline">\(c = -1\)</span>.</p>
+<p>Sjetimo se da su hiperboličke funkcije <span class="math inline">\(\operatorname{sh}\)</span> i <span class="math inline">\(\operatorname{ch}\)</span> definirane kao <span class="math display">\[
+\operatorname{sh} x = \frac{e^x-e^{-x}}{2} \qquad \operatorname{ch} x = \frac{e^x+e^{-x}}{2}
+\]</span></p>
 
 
 </section>
