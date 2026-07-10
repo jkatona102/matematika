@@ -147,7 +147,7 @@ $$
 
 gdje je $m' = \displaystyle \inf_{[a',b']} f$ i $M' = \displaystyle \sup_{[a',b']} f$. Dakle, infimum $[a,b]$ na podsegmentu je veći ili jednak infimumu na segmentu i supremum na podsegmentu je manji ili jednak supremumu na segmentu.
 
-Za subdiviziju $P$ uzmimo $m_k = \displaystyle \inf_{[x_{k-1},x_k]} f$ i $M_k = \displaystyle \sup_{[x_{k-1},x_k]} f$, $k=1, \dots , n$. Za po volji odabrane točke $t_k \in [x_{k-1},x_k]$ definiramo sume: 
+Za subdiviziju $P$ uzmimo $m_k = \displaystyle \inf_{[x_{k-1},x_k]} f$ i $M_k = \displaystyle \sup_{[x_{k-1},x_k]} f$, $k=1, \dots , n$. Za po volji odabrane točke $t_k \in [x_{k-1},x_k]$ definiramo sume:  
 $$
 s = \sum_{k=1}^n m_k(x_k-x_{k-1}) \qquad 
 \sigma = \sum_{k=1}^n f(t_k)(x_k-x_{k-1}) \qquad S = \sum_{k=1}^n M_k(x_k-x_{k-1})

@@ -14,7 +14,6 @@ Za bilo koje $\alpha, \beta \in \mathbb{R}$ funkcija $\alpha f + \beta g$ je int
 $$
 \int _a^b (\alpha f + \beta g) = \alpha \int _a^b f + \beta \int _a^b g
 $$
-.
 
 Ako je $f \leq g$ na $[a,b]$, onda je 
 $$
@@ -158,7 +157,7 @@ Sljedeći teorem daje dovoljne uvjete za postojanje primitivne funkcije.
 Neka je $I \subseteq \mathbb{R}$ otvoren interval i $f \colon I \to \mathbb{R}$ funkcija neprekidna na $I$. Tada postoji primitivna funkcija od $f$ na $I$.
 :::
 
-Sad smo spremni pokazati **Newtonon-Leibnizovu** formulu koja daje vezu između primitivne funkcije (odnosno pojma derivacije) i Riemannovog integrala funkcije.
+Sad smo spremni pokazati **Newton-Leibnizovu** formulu koja daje vezu između primitivne funkcije (odnosno pojma derivacije) i Riemannovog integrala funkcije.
 
 :::{.teorem}
 Ako je $f$ neprekidna funkcija na otvorenom intervalu $I$ i $F$ bilo koja primitivna funkcija funkcije $f$ na $I$, onda za svaki segment $[a,b] \subset I$ vrijedi
