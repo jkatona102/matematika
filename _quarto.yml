@@ -48,7 +48,18 @@ website:
             href: derivacije/derivacije-primjena.qmd
           - text: "Zadatci - treći dio"
             href: derivacije/derivacije-zadatci3.qmd
-      
+      - section: "3. RIEMANNOV INTEGRAL"
+        href: integrali/integrali.qmd
+        contents:
+          - text: "3.1 Uvod i definicija"
+            href: integrali/integrali-def.qmd
+          - text: "3.2 Osnovna svojstva i primitivna funkcija"
+            href: integrali/integrali-svojstva.qmd
+          - text: "3.3 Metode integriranja"
+            href: integrali/integrali-racunanje.qmd
+          - text: "Zadatci - prvi dio"
+            href: integrali/integrali-zadatci1.qmd
+            
 format:
   html:
     theme:
