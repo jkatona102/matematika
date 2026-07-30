@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>integrali-zadatci1 – Matematika</title>
+<title>integrali-racionalne – Matematika</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -148,7 +148,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../integrali/integrali.html">3. RIEMANNOV INTEGRAL</a></li><li class="breadcrumb-item"><a href="../integrali/integrali-zadatci1.html">Zadatci - prvi dio</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../integrali/integrali.html">3. RIEMANNOV INTEGRAL</a></li><li class="breadcrumb-item"><a href="../integrali/integrali-racionalne.html">3.4 Integrali racionalnih funkcija</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Pretraživanje" onclick="window.quartoOpenSearch();">
@@ -291,13 +291,13 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../integrali/integrali-zadatci1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../integrali/integrali-zadatci1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zadatci - prvi dio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../integrali/integrali-racionalne.html" class="sidebar-item-text sidebar-link">
+  <a href="../integrali/integrali-racionalne.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">3.4 Integrali racionalnih funkcija</span></a>
   </div>
 </li>
@@ -331,391 +331,120 @@ window.Quarto = {
     <h2 id="toc-title">Sadržaj</h2>
    
   <ul>
-  <li><a href="#zadatci" id="toc-zadatci" class="nav-link active" data-scroll-target="#zadatci">Zadatci</a></li>
+  <li><a href="#integrali-racionalnih-funkcija" id="toc-integrali-racionalnih-funkcija" class="nav-link active" data-scroll-target="#integrali-racionalnih-funkcija">3.4 Integrali racionalnih funkcija</a>
+  <ul class="collapse">
+  <li><a href="#parcijalni-razlomci" id="toc-parcijalni-razlomci" class="nav-link" data-scroll-target="#parcijalni-razlomci">Parcijalni razlomci</a></li>
+  <li><a href="#integrali-racionalnih-funkcija-1" id="toc-integrali-racionalnih-funkcija-1" class="nav-link" data-scroll-target="#integrali-racionalnih-funkcija-1">Integrali racionalnih funkcija</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../integrali/integrali.html">3. RIEMANNOV INTEGRAL</a></li><li class="breadcrumb-item"><a href="../integrali/integrali-zadatci1.html">Zadatci - prvi dio</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../integrali/integrali.html">3. RIEMANNOV INTEGRAL</a></li><li class="breadcrumb-item"><a href="../integrali/integrali-racionalne.html">3.4 Integrali racionalnih funkcija</a></li></ol></nav></header>
 
 
 
 
-<section id="zadatci" class="level1 unnumbered">
-<h1 class="unnumbered">Zadatci</h1>
-<div class="zadatak">
-<p>Odredite sljedeće integrale metodom supstitucije:</p>
-<ol type="a">
-<li><p><span class="math inline">\(\displaystyle \int (3x^2-2x+1)(x^3-x^2+x-9)^7 \, dx\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \int \frac{e^x+1}{e^x+x} \, dx\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \int _e^{e^e} x^3e^{x^4} \, dx\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \int _0^4 x \sqrt{x^2 + 9} \, dx\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \int \frac{\cos \sqrt{x}}{\sqrt{x}} \, dx\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \int \frac{x}{\sqrt{x+1}} \, dx\)</span></p></li>
-</ol>
+<section id="integrali-racionalnih-funkcija" class="level1 unnumbered">
+<h1 class="unnumbered">3.4 Integrali racionalnih funkcija</h1>
+<p>Racionalna funkcija <span class="math inline">\(f \colon S \to \mathbb{R}\)</span> je funkcija oblika <span class="math inline">\(f(x) = \dfrac{p(x)}{q(x)}\)</span> gdje su <span class="math inline">\(p\)</span> i <span class="math inline">\(q\)</span> polinomi (<span class="math inline">\(q\)</span> nije nul-polinom), a <span class="math inline">\(S\subseteq \mathbb{R}\)</span> skup gdje je <span class="math inline">\(f\)</span> definirana, odnosno skup gdje <span class="math inline">\(q\)</span> ne postiže vrijednost <span class="math inline">\(0\)</span>. Primjeri nekih racionalnih funkcija:</p>
+<ul>
+<li><p><span class="math inline">\(f(x) = \dfrac{x^3-2x}{x+5}\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \dfrac{1}{x^2}\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = \dfrac{2x^2+x+1}{x^2+1}\)</span></p></li>
+</ul>
+<p>Vidjet ćemo da se puno integrala metodom supstitucije može svesti na integral racionalne funkcije. Prije toga naučimo rastaviti razlomak na parcijalne razlomke.</p>
+<section id="parcijalni-razlomci" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="parcijalni-razlomci">Parcijalni razlomci</h2>
+<div class="def">
+<p>Neka je <span class="math inline">\(\mathbb{F}\)</span> polje. Kažemo da je polinom <span class="math inline">\(f(x)\)</span> nad poljem <span class="math inline">\(\mathbb{F}\)</span> ireducibilan ako je <span class="math inline">\(\text{deg}(f(x)) \geq 1\)</span> i ako <span class="math inline">\(f(x) = g(x)h(x)\)</span>, za <span class="math inline">\(g(x),h(x) \in F[x]\)</span>, povlači <span class="math inline">\(g(x) \in \mathbb{F}\)</span> ili <span class="math inline">\(h(x) \in \mathbb{F}\)</span>.</p>
 </div>
-<div class="hint">
-<details>
-<summary>
-Prikaži hint
-</summary>
-U <em>f.</em> dijelu iskoristite supstituciju <span class="math inline">\(t = \sqrt{x+1}\)</span>, a zatim zapišite kao <span class="math inline">\(t^2 = x+1\)</span>. Tada je puno lakše pronaći odgovarajući izraz za <span class="math inline">\(dt\)</span>, ali pazite, pri derivaciji lijeve strane morate primijeniti pravilo za kompoziciju pa dobijete <span class="math inline">\(2t \, dt\)</span>, tj. derivacija vanjske funkcije puta derivacija unutarnje, što je <span class="math inline">\(dt\)</span>. To se zove implicitno deriviranje.
-</details>
+<p>Drugim riječima, ako je <span class="math inline">\(f(x)\)</span> ireducibilan onda je jedan od faktora <span class="math inline">\(h\)</span> i <span class="math inline">\(g\)</span> konstantan polinom.</p>
+<div class="teorem">
+<p>Neka su <span class="math inline">\(f\)</span> i <span class="math inline">\(g\)</span> polinomi različiti od <span class="math inline">\(0\)</span> nad poljem <span class="math inline">\(\mathbb{F}\)</span>. Neka se <span class="math inline">\(g\)</span> može zapisati kao produkt potencija ireducibilnih polinoma <span class="math inline">\(p_i (x)\)</span> kao <span class="math display">\[
+g =\displaystyle \prod _{i=1}^{k} p _{i}^{n_i}
+\]</span></p>
+<p>Tada postoje (jedinstveni) polinomi <span class="math inline">\(b\)</span> i <span class="math inline">\(a_{ij}\)</span>, <span class="math inline">\(\text{deg} a_{ij}\)</span> <span class="math inline">\(&lt;\)</span> <span class="math inline">\(\text{deg} p_{i}\)</span>, takvi da <span class="math display">\[
+\frac{f(x)}{g(x)} = b(x) + \sum _{i=1}^{k} \sum _{j=1}^{n_1} \frac{a_{ij}(x)}{p_i^j(x)}
+\]</span></p>
+<p>Ako je <span class="math inline">\(\text{deg} f\)</span> <span class="math inline">\(&lt;\)</span> <span class="math inline">\(\text{deg} g\)</span>, onda je <span class="math inline">\(b=0\)</span>.</p>
 </div>
-<div class="rjesenje">
-<details>
-<summary>
-Prikaži rješenje
-</summary>
-<ol type="a">
-<li><p><span class="math display">\[
-\begin{align*}
-\int (3x^2-2x+1)&amp;(x^3-x^2+x-9)^7 \, dx =
-\left |
-\begin{aligned}
-t &amp;= x^3-x^2+x-9 \\
-dt &amp;= (3x^2 - 2x +1) \,dx
-\end{aligned}
-\right | \\
-&amp;= \int t^7 \, dt = \frac{t^8}{8} + C = \frac{(x^3-x^2+x-9)^8}{8} + C, \ C \in \mathbb{R}
-\end{align*}
-\]</span></p></li>
-<li><p><span class="math display">\[
-\int \frac{e^x+1}{e^x+x} \, dx =
-\left |
-\begin{aligned}
-t &amp;= e^x+x \\
-dt &amp;= (e^x+1) \,dx
-\end{aligned}
-\right |=
-\int \frac{dt}{t} = \ln |t| + C = \ln |e^x+x| + C, \ C \in \mathbb{R}
-\]</span></p></li>
-<li><p><span class="math display">\[
-\int _e^{e^e} x^3e^{x^4} \, dx =
-\left |
-\begin{aligned}
-t &amp;= x^4 &amp; e &amp;\mapsto e^4 \\
-dt &amp;= 4x^3 \,dx &amp; e^e &amp;\mapsto e^{4e}
-\end{aligned}
-\right |=
-\dfrac{1}{4}\int _{e^4}^{e^{4e}} e^t \, dt = \frac{1}{4}\left(e^{e^{4e}} - e^{e^4} \right)
-\]</span></p></li>
-<li><p><span class="math display">\[
-\int _0^4 x \sqrt{x^2 + 9} \, dx =
-\left |
-\begin{aligned}
-t &amp;= x^2 + 9 &amp; 0 &amp;\mapsto 9 \\
-dt &amp;= 2x \,dx &amp; 4 &amp;\mapsto 25
-\end{aligned}
-\right |=
-\frac{1}{2}\int _9^{25} \sqrt{t} \, dt = \frac{1}{2}\left(\frac{t^\frac{3}{2}}{\frac{3}{2}} \right) \Big|_9^{25} = \frac{98}{3}
-\]</span></p></li>
-<li><p><span class="math display">\[
-\int \frac{\cos \sqrt{x}}{\sqrt{x}} \, dx =
-\left |
-\begin{aligned}
-t &amp;= \sqrt{x} \\
-dt &amp;= \frac{1}{2\sqrt{x}} \,dx
-\end{aligned}
-\right |=
-2 \int \cos t \, dt = 2\sin t + C = 2\sin \sqrt{x} + C, \ C \in \mathbb{R}
-\]</span></p></li>
-<li><p><span class="math display">\[
-\begin{align*}
-\int \frac{x}{\sqrt{x+1}} \, dx =
-\left |
-\begin{aligned}
-t = \sqrt{x+1} &amp;\Rightarrow t^2 = x+1 \\
-2t\, dt &amp;= dx
-\end{aligned}
-\right | &amp;=
-\int \frac{t^2-1}{t}2t \, dt = 2 \int (t^2-1) \, dt \\
-= 2 \left (\frac{t^3}{3} - t \right ) + C = 2 &amp;\left (\frac{(x+1)^\frac{3}{2}}{3} - \sqrt{x+1} \right ) + C, \ C \in \mathbb{R}
-\end{align*}
-\]</span></p></li>
-</ol>
-</details>
+<p>Promotrimo što ovo znači na nekoliko primjera.</p>
+<div class="primjer">
+<p>Rastavite na parcijalne razlomke <span class="math inline">\(f(x) = \dfrac{1}{x^2+2x-3}\)</span>.</p>
+<p>Uočimo da se nazivnik može faktorizirati kao <span class="math inline">\((x+3)(x-1)\)</span>. Tada želimo pronaći <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> takve da vrijedi <span class="math display">\[
+\frac{1}{x^2+2x-3} = \frac{A}{x+3} + \frac{B}{x-1}
+\]</span></p>
+<p>Pomnožimo li obje strane s <span class="math inline">\(x^2+2x-3\)</span> dobijemo <span class="math display">\[
+1 = A(x-1) + B(x+3)
+\]</span></p>
+<p>Uvrstimo li <span class="math inline">\(x=-3\)</span> (da eliminiramo <span class="math inline">\(B\)</span>) dobijemo <span class="math inline">\(A = -\dfrac{1}{4}\)</span>, a za <span class="math inline">\(B\)</span> tada imamo <span class="math inline">\(B=\dfrac{1}{4}\)</span>.</p>
+<p>Konačno dobijemo <span class="math display">\[
+f(x) = -\frac{1}{4(x+3)} + \frac{1}{4(x-1)}
+\]</span></p>
+<p>Alternativno, zapiši jednakost kao <span class="math inline">\((A+B)x - A +3B = 1\)</span> pa po teoremu o jednakosti polinoma imamo da je <span class="math inline">\(A+B=0\)</span> i <span class="math inline">\(3B-A = 1\)</span>.</p>
 </div>
-<hr>
-<div class="zadatak">
-<p>Odredite sljedeće integrale metodom parcijalne integracije:</p>
-<ol type="a">
-<li><p><span class="math inline">\(\displaystyle \int _0^1 \ln (1+x^2) \, dx\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \int \ln x \, dx\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \int \frac{x}{\cos^2 x} \, dx\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \int 4 x \cos ⁡(2−3⁢𝑥) \, dx\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \int (x^4 + 3x) \cos x \, dx\)</span> (<strong>napredno</strong>)</p></li>
-</ol>
+<p>Ukoliko je jedan od faktora u nazivniku oblika, primjerice, <span class="math inline">\((x+1)^2\)</span>, tada ćemo za taj faktor imati <span class="math inline">\(\dfrac{A}{x+1}\)</span> <span class="math inline">\(+\)</span> <span class="math inline">\(\dfrac{B}{(x+1)^2}\)</span>. Isto tako, ako je polinom iz faktorizacije stupnja <span class="math inline">\(n\)</span>, tada je <span class="math inline">\(a_{ij}\)</span>, odnosno naš <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> i slično, stupnja <span class="math inline">\(n-1\)</span>.</p>
+<div class="primjer">
+<p>Rastavite na parcijalne razlomke <span class="math inline">\(f(x) = \dfrac{1}{x^3-2x^2+x}\)</span>.</p>
+<p>Vidimo da je <span class="math inline">\(f(x) = \dfrac{1}{x(x-1)^2}\)</span> pa tražimo <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> i <span class="math inline">\(C\)</span> takve da vrijedi <span class="math display">\[
+f(x) = \frac{1}{x(x-1)^2} = \frac{A}{x} + \frac{B}{x-1} + \frac{C}{(x-1)^2}
+\]</span></p>
+<p>Množenjem jednakosti s <span class="math inline">\(x(x-1)^2\)</span> ponovno dobijemo jednadžbu s tri nepoznanice te ponovimo postupak kao u prethodnom primjeru i dobijemo <span class="math inline">\(A=1\)</span>, <span class="math inline">\(B=-1\)</span> i <span class="math inline">\(C=1\)</span>. <span class="math display">\[
+f(x) = \frac{1}{x(x-1)^2} = \frac{1}{x} - \frac{1}{x-1} + \frac{1}{(x-1)^2}
+\]</span></p>
 </div>
-<div class="rjesenje">
-<details>
-<summary>
-Prikaži rješenje
-</summary>
-<ol type="a">
-<li><p><span class="math display">\[
-\begin{align*}
-\int _0^1 \ln (1+x^2) \, dx &amp;=
-\left |
+<div class="primjer">
+<p>Rastavite na parcijalne razlomke <span class="math inline">\(f(x) = \dfrac{x^3}{x^2+x+1}\)</span>. <span class="math display">\[
+f(x) = \frac{x^3}{x^2+x+1} = \frac{x^3-1+1}{x^2+x+1} = \frac{(x-1)(x^2+x+1)+1}{x^2+x+1} = x-1 + \frac{1}{x^2+x+1}
+\]</span></p>
+<p>U prvom smo koraku proširili brojnik kako bismo mogli pokratiti s faktorom u nazivniku. Uočimo da se nazivnik zadnjeg razlomka ne može dalje faktorizirati (nad <span class="math inline">\(\mathbb{R}\)</span>).</p>
+</div>
+</section>
+<section id="integrali-racionalnih-funkcija-1" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="integrali-racionalnih-funkcija-1">Integrali racionalnih funkcija</h2>
+<p>Ideja kod rješavanja ovakvih zadataka je svesti podintegralnu funkciju na parcijalne razlomke koje znamo integrirati.</p>
+<div class="primjer">
+<p>Odredite <span class="math inline">\(\displaystyle\int \dfrac{dx}{x^3-2x^2+x}\)</span>. Iz <strong>Primjera 2</strong> imamo <span class="math display">\[
+\frac{1}{x^3-2x^2+x} = \frac{1}{x} - \frac{1}{x-1} + \frac{1}{(x-1)^2}
+\]</span></p>
+<p>Tada je <span class="math display">\[
 \begin{aligned}
-u &amp;= \ln (1+x^2) &amp; du &amp;= \frac{2x}{1+x^2}\\
-dv &amp;= dx &amp; v &amp;= x
+\int \dfrac{dx}{x^3-2x^2+x} &amp;= \int \left ( \frac{1}{x} - \frac{1}{x-1} + \frac{1}{(x-1)^2} \right)dx \\
+&amp;= \ln|x| - \ln|x-1| - \frac{1}{x-1} + C \\
+&amp;= \ln \left| \frac{x}{x-1} \right| + \frac{1}{x-1} + C, \quad C \in \mathbb{R}
 \end{aligned}
-\right | \\
-&amp;= x\ln (1+x^2) \Big| _0^1 - \int _0^1 \frac{2x^2}{1+x^2}\, dx = \ln 2 - \int _0^1 \left ( 2- \frac{2}{1+x^2} \right )\, dx \\
-&amp;= \ln 2 -2x \Big| _0^1 -2 \operatorname{arctg} x \Big| _0^1 = \ln2 - 2 - \frac{\pi}{2}
-\end{align*}
-\]</span></p></li>
-<li><p><span class="math display">\[
-\int \ln x \, dx =
+\]</span></p>
+</div>
+<p>Ponekad integrale funkcija koje nisu racionalne možemo metodom zamjene varijabli svesti na integrale racionalnih funkcija, kao u sljedećem primjeru.</p>
+<div class="primjer">
+<p>Odredite <span class="math inline">\(\displaystyle\int \dfrac{e^{3x}(10-2e^{3x})}{2e^{6x}-10e^{3x}+12}\, dx\)</span>. <span class="math display">\[
+\begin{aligned}
+\int \dfrac{e^{3x}(10-2e^{3x})}{2e^{6x}-10e^{3x}+12} \, dx &amp;=
 \left |
 \begin{aligned}
-u &amp;= \ln x &amp; du &amp;= \frac{dx}{x}\\
-dv &amp;= dx &amp; v &amp;= x
-\end{aligned}
-\right | \\
-= x\ln x - \int \, dx = x(\ln x - 1) + C, \ C \in \mathbb{R}
-\]</span></p></li>
-<li><p><span class="math display">\[
-\int \frac{x}{\cos^2 x} \, dx =
-\left |
-\begin{aligned}
-u &amp;= x &amp; du &amp;= dx\\
-dv &amp;= \frac{dx}{\cos ^2 x } &amp; v &amp;= \operatorname{tg} x
-\end{aligned}
-\right | \\
-= x \operatorname{tg} x - \int \operatorname{tg} x \, dx
-\]</span></p></li>
-</ol>
-<p>Riješimo metodom zamjene varijabli zadnji integral <span class="math display">\[
-\int \operatorname{tg} x \, dx = \int \frac{\sin x}{\cos x} \, dx =
-\left |
-\begin{aligned}
-t &amp;= \cos x \\
-dt &amp;= -\sin x \, dx
+t &amp;= e^{3x}\\
+dt &amp;= 3e^{3x} \,dx
 \end{aligned}
 \right | =
-- \int \frac{dt}{t} = - \ln |\cos t| + C
+\frac{1}{3}\int \frac{10-2t}{2t^2-10t+12} \, dt \\
+&amp;= \frac{1}{3}\int \frac{5-t}{t^2-5t+6} \, dt = (*)
+\end{aligned}
 \]</span></p>
-<p>Konačno imamo <span class="math display">\[
-\int \frac{x}{\cos^2 x} \, dx = x \operatorname{tg} x + \ln |\cos t| + C, \ C \in \mathbb{R}
+<p>Rastav na parcijalne razlomke: <span class="math display">\[
+\frac{5-t}{t^2-5t+6} = \frac{5-t}{(t-2)(t-3)} = \frac{A}{t-2} + \frac{B}{t-3}
 \]</span></p>
-<ol start="4" type="a">
-<li><p><span class="math display">\[
-\begin{align*}
-\int 4x \cos(2-3x)\, dx &amp;=
-\left |
+<p>Dobijemo <span class="math inline">\(A = -\dfrac{3}{5}\)</span> i <span class="math inline">\(B = -\dfrac{2}{5}\)</span> <span class="math display">\[
 \begin{aligned}
-u &amp;= 4x &amp; du &amp;= 4\,dx\\
-dv &amp;= \cos(2-3x)\,dx &amp; v &amp;= -\frac13\sin(2-3x)
+(*) &amp;= -\frac{1}{5} \int \frac{dt}{t-2} - \frac{2}{15} \int \frac{dt}{t-3} = -\frac{1}{5} \ln|t-2| - \frac{2}{15} \ln|t-3| + C \\
+&amp;= -\frac{3}{15} \ln|t-2| - \frac{2}{15} \ln|t-3| + C = \frac{1}{15} \ln \left | \frac{(t-2)^{-3}}{(t-3)^{-2}} \right | + C \\
+&amp;= \frac{1}{15} \ln \frac{(t-3)^2}{|t-2|^3}+ C = \frac{1}{15} \ln \frac{(e^{3x}-3)^2}{|e^{3x}-2|^3}+ C, \quad C \in \mathbb{R}
 \end{aligned}
-\right | \\
-&amp;= -\frac{4x}{3}\sin(2-3x) +\frac{4}{3}\int \sin(2-3x)\,dx \\
-&amp;= -\frac{4x}{3}\sin(2-3x) +\frac{4}{9}\cos(2-3x) + C, \ C \in \mathbb{R}
-\end{align*}
-\]</span></p></li>
-<li><p><span class="math display">\[
-\begin{align*}
-\int (x^4+3x)\cos x\,dx
-&amp;=
-\left|
-\begin{aligned}
-u &amp;= x^4+3x &amp; du &amp;= (4x^3+3)\,dx\\
-dv &amp;= \cos x\,dx &amp; v &amp;= \sin x
-\end{aligned}
-\right| \\
-&amp;= (x^4+3x)\sin x-\int(4x^3+3)\sin x\,dx\\
-&amp;= (x^4+3x)\sin x
-+\left|
-\begin{aligned}
-u &amp;= 4x^3+3 &amp; du &amp;= 12x^2\,dx\\
-dv &amp;= \sin x\,dx &amp; v &amp;= -\cos x
-\end{aligned}
-\right| \\
-&amp;= (x^4+3x)\sin x +(4x^3+3)\cos x -12\int x^2\cos x\,dx\\
-&amp;= (x^4+3x)\sin x +(4x^3+3)\cos x -12\left(
-\left|
-\begin{aligned}
-u &amp;= x^2 &amp; du &amp;= 2x\,dx\\
-dv &amp;= \cos x\,dx &amp; v &amp;= \sin x
-\end{aligned}
-\right|
-\right)\\
-&amp;= (x^4+3x)\sin x +(4x^3+3)\cos x -12x^2\sin x +24\int x\sin x\,dx\\
-&amp;= (x^4+3x)\sin x +(4x^3+3)\cos x -12x^2\sin x +24\left(
-\left|
-\begin{aligned}
-u &amp;= x &amp; du &amp;= dx\\
-dv &amp;= \sin x\,dx &amp; v &amp;= -\cos x
-\end{aligned}
-\right|
-\right)\\
-&amp;= (x^4+3x)\sin x +(4x^3+3)\cos x -12x^2\sin x -24x\cos x +24\int\cos x\,dx\\
-&amp;= (x^4-12x^2+3x+24)\sin x +(4x^3-24x+3)\cos x +C,\ C\in\mathbb{R}.
-\end{align*}
-\]</span></p></li>
-</ol>
-</details>
+\]</span></p>
 </div>
-<hr>
-<div class="zadatak">
-<p>Odredite sljedeće integrale proizvoljnom metodom:</p>
-<ol type="a">
-<li><p><span class="math inline">\(\displaystyle \int \sin 3x \sin 5x \, dx\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \int x^2 \sqrt{1-x^2} \, dx\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \int \sqrt{e^x-1} \, dx\)</span></p></li>
-<li><p><span class="math inline">\(\displaystyle \int \frac{6}{7+x^2} \, dx\)</span></p></li>
-</ol>
-</div>
-<div class="hint">
-<details>
-<summary>
-Prikaži hint
-</summary>
-<em>d.</em> dio probajte namjestiti na tablični integral.
-</details>
-</div>
-<div class="rjesenje">
-<details>
-<summary>
-Prikaži rješenje
-</summary>
-<ol type="a">
-<li><p>Iskoristimo formulu pretvorbe, a zatim direktno integrirajmo: <span class="math display">\[
-\begin{align*}
-\int \sin 3x \sin 5x\,dx
-&amp;= \frac12\int\left(\cos(2x)-\cos(8x)\right)\,dx\\
-&amp;= \frac12\left(\int\cos(2x)\,dx-\int\cos(8x)\,dx\right)\\
-&amp;= \frac12\left(\frac12\sin(2x)-\frac18\sin(8x)\right)+C\\
-&amp;= \frac14\sin(2x)-\frac1{16}\sin(8x)+C,\qquad C\in\mathbb{R}.
-\end{align*}
-\]</span></p></li>
-<li><p>Uvrstimo supstituciju <span class="math inline">\(x = \sin t\)</span> jer ćemo tada pod kroijenom dobiti <span class="math inline">\(\cos ^2 t\)</span>: <span class="math display">\[
-\begin{align*}
-\int x^2\sqrt{1-x^2}\,dx
-&amp;=
-\left|
-\begin{aligned}
-x &amp;= \sin t\\
-dx &amp;= \cos t\,dt
-\end{aligned}
-\right|\\
-&amp;= \int \sin^2 t\,\cos^2 t\,dt\\
-&amp;= \frac14\int\sin^2(2t)\,dt\\
-&amp;= \frac14\int\frac{1-\cos(4t)}{2}\,dt\\
-&amp;= \frac18\int(1-\cos(4t))\,dt\\
-&amp;= \frac{t}{8}-\frac{\sin(4t)}{32}+C.
-\end{align*}
-\]</span></p></li>
-</ol>
-<p>gdje smo u četvrtoj jednakosti koristili izraz <span class="math inline">\(\sin ^2 \theta = \dfrac{1 - \cos 2\theta}{2}\)</span>.</p>
-<ol start="3" type="a">
-<li><p><span class="math display">\[
-\begin{align*}
-\int \sqrt{e^x-1}\,dx
-&amp;=
-\left|
-\begin{aligned}
-t &amp;= \sqrt{e^x-1}\\
-t^2 &amp;= e^x-1\\
-2t\,dt &amp;= e^x\,dx=(t^2+1)\,dx
-\end{aligned}
-\right|\\
-&amp;= \int \frac{2t^2}{t^2+1}\,dt\\
-&amp;= 2\int\left(1-\frac{1}{t^2+1}\right)\,dt\\
-&amp;= 2\left(t-\arctan t\right)+C\\
-&amp;= 2\sqrt{e^x-1}-2\arctan\!\left(\sqrt{e^x-1}\right)+C,\qquad C\in\mathbb{R}.
-\end{align*}
-\]</span></p></li>
-<li><p><span class="math display">\[
-\begin{align*}
-\int \frac{6}{7+x^2}\,dx
-&amp;=
-\left|
-\begin{aligned}
-x &amp;= \sqrt7\tan t\\
-dx &amp;= \sqrt7\sec^2 t\,dt
-\end{aligned}
-\right|\\
-&amp;= \int \frac{6\sqrt7\sec^2 t}{7+7\tan^2 t}\,dt\\
-&amp;= \frac{6\sqrt7}{7}\int
-\frac{\sec^2 t}{1+\tan^2 t}\,dt\\
-&amp;= \frac{6\sqrt7}{7}\int dt\\
-&amp;= \frac{6\sqrt7}{7}t+C\\
-&amp;= \frac{6}{\sqrt7}\arctan\!\left(\frac{x}{\sqrt7}\right)+C,\qquad C\in\mathbb{R}.
-\end{align*}
-\]</span></p></li>
-</ol>
-</details>
-</div>
-<hr>
-<div class="zadatak">
-<p>Neka je <span class="math inline">\(f \colon [−a,a] \to \mathbb{R}\)</span> Riemann integrabilna funkcija.</p>
-<ol type="a">
-<li><p>Ako je <span class="math inline">\(f\)</span> neparna funkcija, dokažite <span class="math display">\[
-\int _{-a}^a f(x) \, dx = 0
-\]</span></p></li>
-<li><p>Ako je <span class="math inline">\(f\)</span> parna funkcija, dokažite <span class="math display">\[
-\int _{-a}^a f(x) \, dx = 2 \int _0^a f(x) \, dx
-\]</span></p></li>
-</ol>
-</div>
-<div class="hint">
-<details>
-<summary>
-Prikaži hint
-</summary>
-Koristite zamjenu varijabli <span class="math inline">\(t = -x\)</span>.
-</details>
-</div>
-<div class="rjesenje">
-<details>
-<summary>
-Prikaži rješenje
-</summary>
-<ol type="a">
-<li><span class="math display">\[
-\begin{align*}
-\int _{-a}^a f(x)\,dx
-&amp;=
-\left|
-\begin{aligned}
-t &amp;= -x &amp; -a &amp;\mapsto a\\
-dt &amp;= -dx &amp; a &amp;\mapsto -a
-\end{aligned}
-\right|\\
-&amp;= -\int _{a}^{-a} f(-t) dt \\
-&amp;= \int _{-a}^{a} -f(t) dt \\
-&amp;= -\int _{-a}^{a} f(t) dt \\
-\end{align*}
-\]</span></li>
-</ol>
-<p>Izjednačavanjem integrala dobivamo traženu tvrdnju.</p>
-<p>Uočite da smo iskoristili činjenicu <span class="math inline">\(\displaystyle -\int _a^b f = \int _b^a f\)</span>.</p>
-<ol start="2" type="a">
-<li><span class="math display">\[
-\begin{align*}
-\int _{-a}^a f(x)\,dx
-&amp;= \int _{-a}^0 f(x)\,dx + \int _0^a f(x)\,dx \\
-&amp;= \left|
-\begin{aligned}
-t &amp;= -x &amp; -a &amp;\mapsto a\\
-dt &amp;= -dx &amp; a &amp;\mapsto -a
-\end{aligned}
-\right|\\
-&amp;= -\int _{a}^0 f(-t)\,dt + \int _0^a f(x)\,dx \\
-&amp;= \int _0^{a} f(t)\,dt + \int _0^a f(x)\,dx \\
-&amp;= 2 \int _0^x f(x) \, dx
-\end{align*}
-\]</span></li>
-</ol>
-</details>
-</div>
-<hr>
-<p>Za vježbu upućujemo čitatelja na samostalno rješavanje dodatnih zadataka. Neki gore navedeni zadatci koriste (na prvu) neočekivanu supstituciju, ali osjećaj se za to postiže samostalnim rješavanjem što većeg broja zadataka.</p>
-<p>Postoje vrste integrala za koje je odmah jasno kakvu supstituciju traže, tako primjerice postoje trigonometrijske i hiperboličke supstitucije. Postoje i univerzalne metode za integraciju racionalnih funkcija, kao i (kvadratnih) iracionalnosti. O tim će metoda biti riječ u sljedećim poglavljima.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

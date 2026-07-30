@@ -1,0 +1,72 @@
+# 3.5 Integrali iracionalnih funkcija {.unnumbered}
+
+Osnovna je ideja pri računanju integrala iracionalne funkcije naći pogodnu supstituciju (ukoliko je to moguće) kojom bi se taj integral sveo na integral neke racionalne funkcije. To je moguće samo u nekim slučajevima koje obrađujemo redom.
+
+## Frakcionalne linearne iracionalnosti {.unnumbered}
+
+Dane funkcije u sebi sadrže članove oblika $\sqrt[n]{\left(\dfrac{ax+b}{cx+d}\right)^m}$, za $ad-bc \neq 0$. Tada, ako se javljaju korijeni $n_1$ do $n_k$ i potencije $m_1$ do $m_k$, možemo koristiti univerzalnu supstituciju oblika 
+$$
+\sqrt[N]{\frac{ax+b}{cx+d}}
+$$
+
+gdje je $N$ najmanji zajednički višekratnik od $n_1$ do $n_k$.
+
+:::{.primjer}
+Odredite integral $\displaystyle \int _{-1}^0 \frac{1-\sqrt{x+1}}{1+ \sqrt[3]{x+1}}\, dx$. Koristimo supstituciju $t = \sqrt[6]{x+1}$. Računamo
+$$
+\begin{aligned}
+\int _{-1}^0 \frac{1-\sqrt{x+1}}{1+ \sqrt[3]{x+1}}\, dx = 
+\left |
+\begin{aligned}
+t &= \sqrt[6]{x+1} \Rightarrow x = t^6 -1 & 0 \mapsto 1\\
+dx &= 6t^5dt & -1 \mapsto 0
+\end{aligned}
+\right |
+= 6 \int _0^1 \frac{t^5-t^8}{1+t^2}\,dt
+\end{aligned}
+$$
+
+Dijeljenjem polinoma integral postaje
+$$
+\begin{aligned}
+6 \int _0^1 (1−t−t^2 +t^3 + t^4−&t^6)\, dt + 6 \int_0^1  \frac{t\, dt}{1+t^2} - 6\int_0^1  \frac{dt}{1+t^2} \\
+= \dots &= \frac{199}{70} + 3\ln 2 - \frac{3 \pi}{2}
+\end{aligned}
+$$
+:::
+
+## Kvadratne iracionalnosti {.unnumbered}
+
+Uočimo da dani izraz $ax^2+bx+c$ možemo zapisati kao
+$$
+ax^2+bx+c= a\left(x+\frac{b}{2a} \right)^2 + c - \frac{b^2}{4a}
+$$
+
+pa je pogodno koristiti supstituciju oblika $t =x+ \dfrac{b}{2a}$. Tako možemo početni integral svesti na jedan od sljedećih oblika:
+
+- za oblik $\sqrt{k^2-x^2}$ koristimo $x=k\sin t$ ili $x = k \operatorname{th}t$
+
+- za oblik $\sqrt{x^2-k^2}$ koristimo $x=\dfrac{k}{\cos t}$ ili $x = k \operatorname{ch}t$
+
+- za oblik $\sqrt{x^2+k^2}$ koristimo $x=k\operatorname{tg} t$ ili $x = k \operatorname{sh}t$
+
+Ovakvom zamjenom varijebli svodimo dani integal na integriranje trigonometrijskih i hiperbolnih funkcija.
+
+:::{.primjer}
+Odredite integral $\displaystyle \int _{-3}^3 \sqrt{9-x^2}\, dx$. 
+$$
+\begin{align}
+\int _{-3}^3 \sqrt{9-x^2}\, dx &= 2\int _0^3 \sqrt{9-x^2}\, dx = 
+\left |
+\begin{aligned}
+x &= 3 \sin t \Rightarrow t= \arcsin x & 0 \mapsto 0\\
+dx &= 3\cos t \,dt & 3 \mapsto \frac{\pi}{2}
+\end{aligned}
+\right | \\
+&= 2 \int _0^{\frac{\pi}{2}} \sqrt{9(1-\sin ^2 t)} \cdot 3\cos t \, dt = 18 \int _0^{\frac{\pi}{2}} \cos ^2 t \, dt \\
+&= 18 \int _0^{\frac{\pi}{2}} \frac{1+\cos 2t}{2}\, dt = \frac{9\pi}{2}
+\end{align}
+$$
+
+Zapravo smo računali površinu gornjeg polukruga radijusa $3$ s centrom u $(0,0)$.
+:::

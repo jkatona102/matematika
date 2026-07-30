@@ -2,12 +2,20 @@
 title: "Povijest promjena na stranici"
 ---
 
+30.07.2026.
+
+- 19:53 objavljena poglavlja [3.4](integrali/integrali-racionalne.qmd), [3.5](integrali/integrali-iracionalne.qmd), [3.6](integrali/integrali-trig.qmd) i [drugi dio zadataka iz integrala](integrali/integrali-zadatci2.qmd).
+
+---
+
 10.07.2026.
+
 - 16:45 objavljena rješenja trećeg dijela zadataka iz poglavlja o derivacijama ([Zadatci 3](derivacije/derivacije-zadatci3.qmd)). Dodana cjelina [3. Riemannov integral](integrali/integrali.qmd) i prva poglavlja sa [zadatcima](integrali/integrali-zadatci1.qmd)
 
 ---
 
 09.07.2026.
+
 - 06:40 objavljena rješenja drugog dijela zadataka iz poglavlja o derivacijama ([Zadatci 2](derivacije/derivacije-zadaci2.qmd)) i dodan treći dio derivacija
 
 ---

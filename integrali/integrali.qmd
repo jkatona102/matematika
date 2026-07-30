@@ -6,7 +6,11 @@ U ovom poglavlju dat ćemo definiciju integrala, upoznati se s osnovnim rezultat
 
 ## Sadržaj poglavlja {.unnumbered}
 
-- [Uvod i definicija](integrali-def.qmd)
-- [Osnovna svojstva i primitivna funkcija](integrali-svojstva.qmd)
-- [Metode integriranja](integrali-racunanje.qmd)
+- [3.1 Uvod i definicija](integrali-def.qmd)
+- [3.2 Osnovna svojstva i primitivna funkcija](integrali-svojstva.qmd)
+- [3.3 Metode integriranja](integrali-racunanje.qmd)
 - [Zadatci - prvi dio](integrali-zadatci1.qmd)
+- [3.4 Integrali racionalnih funkcija](integrali-racionalne.qmd)
+- [3.5 Integrali iracionalnih funkcija](integrali-iracionalne.qmd)
+- [3.6 Integrali trigonometrijskih i hiperbolnih funkcija](integrali-trig.qmd)
+- [Zadatci - drugi dio](integrali-zadatci2.qmd)

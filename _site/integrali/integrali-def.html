@@ -283,6 +283,18 @@ window.Quarto = {
  <span class="menu-text">Zadatci - drugi dio</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../derivacije/derivacije-primjena.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.6 Primjene derivacija</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../derivacije/derivacije-zadatci3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Zadatci - treći dio</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -361,7 +373,7 @@ window.Quarto = {
 <h2 class="unnumbered anchored" data-anchor-id="intuitivni-pristup">Intuitivni pristup</h2>
 <p>Određivanje površine pravilnih likova nije problem, primjerice određivanje površine kvadrata, kruga ili trapeza. Međutim, određivanje površine lika složenijih granica je dosta složenije.</p>
 <p>Recimo da želimo odrediti površinu lika <span class="math inline">\(A\)</span> kao na sljedećem prikazu:</p>
-<div id="ec9b85be" class="cell" data-execution_count="1">
+<div id="56bc48c5" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Prikaži Python kod</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -422,7 +434,7 @@ window.Quarto = {
 a = x_0 &lt; x_1 &lt; \dots &lt; x_{n-1} &lt; x_n = b
 \]</span></p>
 <p>Ovakvu podjelu nazivamo <strong>subdivizijom segmenta <span class="math inline">\([a,b]\)</span></strong>. Sada povucimo dužine iz tih točaka prema grafu funkcije i dobit ćemo pravokutnike. Za svaku stranicu pravokutnika <span class="math inline">\([x_{i-1},x_{i}]\)</span> možemo nacrtati pravokutnik kojemu je to jedna stranica. U sljedećem prikazu odabrana je visina <span class="math inline">\((f(x_{i-1})+f(x_i))/2\)</span>, to je, naravno, potpuno proizvoljno za ovaj primjer.</p>
-<div id="7c41bb63" class="cell" data-execution_count="2">
+<div id="d41c33e4" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Prikaži Python kod</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -501,15 +513,16 @@ a = x_0 &lt; x_1 &lt; \dots &lt; x_{n-1} &lt; x_n = b
 \forall x \in [a,b], \  m \leq m' \leq f(x) \leq M' \leq M
 \]</span></p>
 <p>gdje je <span class="math inline">\(m' = \displaystyle \inf_{[a',b']} f\)</span> i <span class="math inline">\(M' = \displaystyle \sup_{[a',b']} f\)</span>. Dakle, infimum <span class="math inline">\([a,b]\)</span> na podsegmentu je veći ili jednak infimumu na segmentu i supremum na podsegmentu je manji ili jednak supremumu na segmentu.</p>
-<p>Za subdiviziju <span class="math inline">\(P\)</span> uzmimo <span class="math inline">\(m_k = \displaystyle \inf_{[x_{k-1},x_k]} f\)</span> i <span class="math inline">\(M_k = \displaystyle \sup_{[x_{k-1},x_k]} f\)</span>, <span class="math inline">\(k=1, \dots , n\)</span>. Za po volji odabrane točke <span class="math inline">\(t_k \in [x_{k-1},x_k]\)</span> definiramo sume: <span class="math display">\[
+<p>Za subdiviziju <span class="math inline">\(P\)</span> uzmimo <span class="math inline">\(m_k = \displaystyle \inf_{[x_{k-1},x_k]} f\)</span> i <span class="math inline">\(M_k = \displaystyle \sup_{[x_{k-1},x_k]} f\)</span>, <span class="math inline">\(k=1, \dots , n\)</span>. Za po volji odabrane točke <span class="math inline">\(t_k \in [x_{k-1},x_k]\)</span> definiramo sume:<br>
+<span class="math display">\[
 s = \sum_{k=1}^n m_k(x_k-x_{k-1}) \qquad
-\sigma = \sum_{k=1}^n t_k(x_k-x_{k-1}) \qquad S = \sum_{k=1}^n M_k(x_k-x_{k-1})
+\sigma = \sum_{k=1}^n f(t_k)(x_k-x_{k-1}) \qquad S = \sum_{k=1}^n M_k(x_k-x_{k-1})
 \]</span></p>
 <p>Broj <span class="math inline">\(s\)</span> nazivamo <strong>donja Darbouxova suma</strong>, <span class="math inline">\(\sigma\)</span> <strong>integralna suma</strong>, a <span class="math inline">\(S\)</span> <strong>gornja Darbouxova suma</strong>. U ovisnosti o subdiviziji <span class="math inline">\(P\)</span> česta je oznaka <span class="math inline">\(s(P)\)</span> i <span class="math inline">\(S(P)\)</span>. Uočimo da je <span class="math inline">\(m_k(x_k-x_{k-1})\)</span> površina upisanog pravokutnika jer je visina upravo infimum, a za <span class="math inline">\(M_k(x_k-x_{k-1})\)</span> vrijedi da je visina supremum. Jasno je da vrijedi <span class="math display">\[
 m(b-a) \leq s \leq \sigma \leq S \leq M(b-a)
 \]</span></p>
 <p>Primijetimo to vizualno:</p>
-<div id="5f27406b" class="cell" data-execution_count="3">
+<div id="1bcf7ae2" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Prikaži Python kod</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -628,7 +641,7 @@ I = \int_{[a,b]} f(t)dt = \int _a^b f(x)dx
 </div>
 <div class="primjer">
 <p>Izračunajmo po definiciji integral konstante funkcije <span class="math inline">\(f(x) = c\)</span>, za <span class="math inline">\(c \in \mathbb{R}^+\)</span> na segmentu <span class="math inline">\([a,b]\)</span>. Uočimo da tražimo površinu pravokutnika</p>
-<div id="aba99c40" class="cell" data-execution_count="4">
+<div id="d2188496" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Prikaži Python kod</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>

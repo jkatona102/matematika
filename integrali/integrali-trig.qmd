@@ -1,0 +1,44 @@
+# 3.6 Integrali trigonometrijskih i hiperbolnih funkcija {.unnumbered}
+
+Za integrale racionalnih funkcija u kojima se pojavljuju trigonometrijske ili hiperbolne funkcije koristit ćemo univerzalnu supstituciju.
+
+**Za trigonometrijske funkcije**
+$$
+t = \operatorname{tg} \frac{x}{2} 
+$$
+
+i tada vrijedi
+$$
+dx = \frac{2\,dt}{1+t^2} \qquad \sin x = \frac{2t}{1+t^2} \qquad \cos x = \frac{1-t^2}{1+t^2}
+$$
+
+**Za hiperbolne funkcije**
+$$
+t = \operatorname{th} \frac{x}{2} 
+$$
+
+i tada vrijedi
+$$
+dx = \frac{2\,dt}{1-t^2} \qquad \operatorname{sh} x = \frac{2t}{1-t^2} \qquad \operatorname{ch} x = \frac{1+t^2}{1-t^2}
+$$
+
+**Napomena:** ne treba uvijek koristiti univerzalne supstitucije, možda postoje neke lakše metode. Naravno, ova supstitucija dovodi do rješenja, ali postupak može biti nešto zahtjevniji.
+
+:::{.primjer}
+Izračunajte integral koristeći univerzalne supstitucije
+$$
+\int \frac{dx}{1 + 2 \operatorname{sh} +3 \operatorname{ch}}
+$$
+
+Koristimo supstitucije za hiperbolne funkcije. Integral postaje
+$$
+\begin{aligned}
+\int \frac{dx}{1 + 2 \operatorname{sh} +3 \operatorname{ch}} &= 
+\int \frac{1}{1 + 2 \left(\frac{2t}{1-t^2}\right) +3 \left(\frac{1+t^2}{1-t^2}\right)} \frac{2\,dt}{1-t^2} \\
+&= \int \frac{dt}{t^2+2t+2} \\
+&= \int \frac{dt}{(t+1)^2+1} \\
+&= \operatorname{arctg}(t+1) + C \\
+&= \operatorname{arctg}\left(\operatorname{th} \frac{x}{2} +1\right) + C, \quad C \in \mathbb{R}
+\end{aligned}
+$$
+:::

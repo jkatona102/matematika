@@ -1,0 +1,137 @@
+# 3.4 Integrali racionalnih funkcija {.unnumbered}
+
+Racionalna funkcija $f \colon S \to \mathbb{R}$ je funkcija oblika $f(x) = \dfrac{p(x)}{q(x)}$ gdje su $p$ i $q$ polinomi ($q$ nije nul-polinom), a $S\subseteq \mathbb{R}$ skup gdje je $f$ definirana, odnosno skup gdje $q$ ne postiže vrijednost $0$. Primjeri nekih racionalnih funkcija:
+
+- $f(x) = \dfrac{x^3-2x}{x+5}$
+
+- $f(x) = \dfrac{1}{x^2}$
+
+- $f(x) = \dfrac{2x^2+x+1}{x^2+1}$
+
+Vidjet ćemo da se puno integrala metodom supstitucije može svesti na integral racionalne funkcije. Prije toga naučimo rastaviti razlomak na parcijalne razlomke.
+
+## Parcijalni razlomci {.unnumbered}
+
+:::{.def}
+Neka je $\mathbb{F}$ polje. Kažemo da je polinom $f(x)$ nad poljem $\mathbb{F}$ ireducibilan ako je $\text{deg}(f(x)) \geq 1$ i ako $f(x) = g(x)h(x)$, za $g(x),h(x) \in F[x]$,
+povlači $g(x) \in \mathbb{F}$ ili $h(x) \in \mathbb{F}$.
+:::
+
+Drugim riječima, ako je $f(x)$ ireducibilan onda je jedan od faktora $h$ i $g$ konstantan polinom.
+
+:::{.teorem}
+Neka su $f$ i $g$ polinomi različiti od $0$ nad poljem $\mathbb{F}$. Neka se $g$ može zapisati kao produkt potencija ireducibilnih polinoma $p_i (x)$ kao
+$$
+g =\displaystyle \prod _{i=1}^{k} p _{i}^{n_i}
+$$
+
+Tada postoje (jedinstveni) polinomi $b$ i $a_{ij}$, $\text{deg} a_{ij}$ $<$ $\text{deg} p_{i}$, takvi da
+$$
+\frac{f(x)}{g(x)} = b(x) + \sum _{i=1}^{k} \sum _{j=1}^{n_1} \frac{a_{ij}(x)}{p_i^j(x)}
+$$
+
+Ako je $\text{deg} f$ $<$ $\text{deg} g$, onda je $b=0$.
+:::
+
+Promotrimo što ovo znači na nekoliko primjera.
+
+:::{.primjer}
+Rastavite na parcijalne razlomke $f(x) = \dfrac{1}{x^2+2x-3}$. 
+
+Uočimo da se nazivnik može faktorizirati kao $(x+3)(x-1)$. Tada želimo pronaći $A$ i $B$ takve da vrijedi
+$$
+\frac{1}{x^2+2x-3} = \frac{A}{x+3} + \frac{B}{x-1}
+$$
+
+Pomnožimo li obje strane s $x^2+2x-3$ dobijemo
+$$
+1 = A(x-1) + B(x+3)
+$$
+
+Uvrstimo li $x=-3$ (da eliminiramo $B$) dobijemo $A = -\dfrac{1}{4}$, a za $B$ tada imamo $B=\dfrac{1}{4}$.
+
+Konačno dobijemo
+$$
+f(x) = -\frac{1}{4(x+3)} + \frac{1}{4(x-1)}
+$$
+
+Alternativno, zapiši jednakost kao $(A+B)x - A +3B = 1$ pa po teoremu o jednakosti polinoma imamo da je $A+B=0$ i $3B-A = 1$. 
+:::
+
+Ukoliko je jedan od faktora u nazivniku oblika, primjerice, $(x+1)^2$, tada ćemo za taj faktor imati $\dfrac{A}{x+1}$ $+$ $\dfrac{B}{(x+1)^2}$. Isto tako, ako je polinom iz faktorizacije stupnja $n$, tada je $a_{ij}$, odnosno naš $A$, $B$ i slično, stupnja $n-1$.
+
+:::{.primjer}
+Rastavite na parcijalne razlomke $f(x) = \dfrac{1}{x^3-2x^2+x}$.
+
+Vidimo da je $f(x) = \dfrac{1}{x(x-1)^2}$ pa tražimo $A$, $B$ i $C$ takve da vrijedi
+$$
+f(x) = \frac{1}{x(x-1)^2} = \frac{A}{x} + \frac{B}{x-1} + \frac{C}{(x-1)^2}
+$$
+
+Množenjem jednakosti s $x(x-1)^2$ ponovno dobijemo jednadžbu s tri nepoznanice te ponovimo postupak kao u prethodnom primjeru i dobijemo $A=1$, $B=-1$ i $C=1$.
+$$
+f(x) = \frac{1}{x(x-1)^2} = \frac{1}{x} - \frac{1}{x-1} + \frac{1}{(x-1)^2}
+$$
+:::
+
+:::{.primjer}
+Rastavite na parcijalne razlomke $f(x) = \dfrac{x^3}{x^2+x+1}$.
+$$
+f(x) = \frac{x^3}{x^2+x+1} = \frac{x^3-1+1}{x^2+x+1} = \frac{(x-1)(x^2+x+1)+1}{x^2+x+1} = x-1 + \frac{1}{x^2+x+1}
+$$
+
+U prvom smo koraku proširili brojnik kako bismo mogli pokratiti s faktorom u nazivniku. Uočimo da se nazivnik zadnjeg razlomka ne može dalje faktorizirati (nad $\mathbb{R}$).
+:::
+
+## Integrali racionalnih funkcija {.unnumbered}
+
+Ideja kod rješavanja ovakvih zadataka je svesti podintegralnu funkciju na parcijalne razlomke koje znamo integrirati.
+
+:::{.primjer}
+Odredite $\displaystyle\int \dfrac{dx}{x^3-2x^2+x}$. Iz **Primjera 2** imamo
+$$
+\frac{1}{x^3-2x^2+x} = \frac{1}{x} - \frac{1}{x-1} + \frac{1}{(x-1)^2}
+$$
+
+Tada je
+$$
+\begin{aligned}
+\int \dfrac{dx}{x^3-2x^2+x} &= \int \left ( \frac{1}{x} - \frac{1}{x-1} + \frac{1}{(x-1)^2} \right)dx \\
+&= \ln|x| - \ln|x-1| - \frac{1}{x-1} + C \\
+&= \ln \left| \frac{x}{x-1} \right| + \frac{1}{x-1} + C, \quad C \in \mathbb{R}
+\end{aligned}
+$$
+:::
+
+Ponekad integrale funkcija koje nisu racionalne možemo metodom zamjene varijabli svesti na integrale racionalnih funkcija, kao u sljedećem primjeru.
+
+:::{.primjer}
+Odredite $\displaystyle\int \dfrac{e^{3x}(10-2e^{3x})}{2e^{6x}-10e^{3x}+12}\, dx$.
+$$
+\begin{aligned}
+\int \dfrac{e^{3x}(10-2e^{3x})}{2e^{6x}-10e^{3x}+12} \, dx &=
+\left | 
+\begin{aligned}
+t &= e^{3x}\\
+dt &= 3e^{3x} \,dx
+\end{aligned}
+\right | =
+\frac{1}{3}\int \frac{10-2t}{2t^2-10t+12} \, dt \\
+&= \frac{1}{3}\int \frac{5-t}{t^2-5t+6} \, dt = (*)
+\end{aligned}
+$$
+
+Rastav na parcijalne razlomke:
+$$
+\frac{5-t}{t^2-5t+6} = \frac{5-t}{(t-2)(t-3)} = \frac{A}{t-2} + \frac{B}{t-3}
+$$
+
+Dobijemo $A = -\dfrac{3}{5}$ i $B = -\dfrac{2}{5}$
+$$
+\begin{aligned}
+(*) &= -\frac{1}{5} \int \frac{dt}{t-2} - \frac{2}{15} \int \frac{dt}{t-3} = -\frac{1}{5} \ln|t-2| - \frac{2}{15} \ln|t-3| + C \\
+&= -\frac{3}{15} \ln|t-2| - \frac{2}{15} \ln|t-3| + C = \frac{1}{15} \ln \left | \frac{(t-2)^{-3}}{(t-3)^{-2}} \right | + C \\
+&= \frac{1}{15} \ln \frac{(t-3)^2}{|t-2|^3}+ C = \frac{1}{15} \ln \frac{(e^{3x}-3)^2}{|e^{3x}-2|^3}+ C, \quad C \in \mathbb{R}
+\end{aligned}
+$$
+:::

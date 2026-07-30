@@ -361,7 +361,6 @@ Koristite zamjenu varijabli $t = -x$.
 </details>
 :::
 
-<!--
 :::{.rjesenje}
 <details>
 <summary>Prikaži rješenje</summary>
@@ -405,7 +404,6 @@ $$
 
 </details>
 :::
--->
 
 ---
 

@@ -262,6 +262,47 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../integrali/integrali.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. RIEMANNOV INTEGRAL</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.1 Uvod i definicija</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-svojstva.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.2 Osnovna svojstva i primitivna funkcija</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-racunanje.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.3 Metode integriranja</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-zadatci1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Zadatci - prvi dio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../integrali/integrali-racionalne.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3.4 Integrali racionalnih funkcija</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -287,44 +328,37 @@ window.Quarto = {
 <div class="zadatak">
 <p>Odredite tangentu na krivulju <span class="math inline">\(f(x) = x^2 \ln x\)</span> u točki <span class="math inline">\(x = 1\)</span>.</p>
 </div>
-<!--
-:::{.rjesenje}
+<div class="rjesenje">
 <details>
-<summary>Prikaži rješenje</summary>
-$$
+<summary>
+Prikaži rješenje
+</summary>
+<p><span class="math display">\[
 f'(x) = 2x \ln x + x^2 \dfrac{1}{x} = x(2 \ln x +1)
-$$
-
-Tada je tangenta dana kao
-$$
+\]</span></p>
+<p>Tada je tangenta dana kao <span class="math display">\[
 y = f'(x)(x-1)+f(1) = (2 \ln 1 +1)(x-1) + f(1) = x - 1
-$$
-
+\]</span></p>
 </details>
-:::
--->
+</div>
 <hr>
 <div class="zadatak">
 <p>Neka je dan pravokutnik površine <span class="math inline">\(100\)</span>. Odredite pravokutnik dane površine koji ima minimalni opseg.</p>
 </div>
-<!--
-:::{.rjesenje}
+<div class="rjesenje">
 <details>
-<summary>Prikaži rješenje</summary>
-Opseg pravokutnika sa stranicama $a$ i $b$ računamo kao $O = 2(a+b)$. Površina je dana s $P = ab$ odakle imamo $b = \dfrac{100}{a}$. Tada je opseg
-$$
+<summary>
+Prikaži rješenje
+</summary>
+<p>Opseg pravokutnika sa stranicama <span class="math inline">\(a\)</span> i <span class="math inline">\(b\)</span> računamo kao <span class="math inline">\(O = 2(a+b)\)</span>. Površina je dana s <span class="math inline">\(P = ab\)</span> odakle imamo <span class="math inline">\(b = \dfrac{100}{a}\)</span>. Tada je opseg <span class="math display">\[
 O(a) = 2 \left (a+\dfrac{100}{a} \right )
-$$
-
-Računamo 
-$$
+\]</span></p>
+<p>Računamo <span class="math display">\[
 O'(a) = 2 \left (1 - \frac{100}{a^2} \right) \ \Longrightarrow \ O'(a) = 0 \ \Longleftrightarrow \ 1 - \frac{100}{a^2} = 0
-$$
-
-Slijedi $a = 10$ i $b = 10$.
+\]</span></p>
+Slijedi <span class="math inline">\(a = 10\)</span> i <span class="math inline">\(b = 10\)</span>.
 </details>
-:::
--->
+</div>
 <hr>
 <div class="zadatak">
 <p>Položaj čestice na pravcu dan je izrazom <span class="math inline">\(s(t) = t^3 - 9t^2 +24t\)</span>.</p>
@@ -334,52 +368,43 @@ Slijedi $a = 10$ i $b = 10$.
 <li><p>Kada čestica mijenja smjer?</p></li>
 </ol>
 </div>
-<!--
-:::{.rjesenje}
+<div class="rjesenje">
 <details>
-<summary>Prikaži rješenje</summary>
-(a)
-$$
+<summary>
+Prikaži rješenje
+</summary>
+<ol type="a">
+<li><p><span class="math display">\[
 v(t) = s'(t) = 3t^2-18t+24 \qquad a(t) = v'(t) = s''(t) = 6t-18
-$$
-
-(b) Čestica miruje ako je brzina jednaka $0$, tj
-$$
-3t^2-18t+24 = 0 \ \Longleftrightarrow t_1 = 2, \ \ t_2 = 4 
-$$
-
-(c) Promjena smjera čestice je zapravo promjena smjera brzine. Znamo da su nultočke brzine $t= 2$ i $t=4$ pa su to vremena u kojima čestica mijenja smjer. 
-
+\]</span></p></li>
+<li><p>Čestica miruje ako je brzina jednaka <span class="math inline">\(0\)</span>, tj <span class="math display">\[
+3t^2-18t+24 = 0 \ \Longleftrightarrow t_1 = 2, \ \ t_2 = 4
+\]</span></p></li>
+<li><p>Promjena smjera čestice je zapravo promjena smjera brzine. Znamo da su nultočke brzine <span class="math inline">\(t= 2\)</span> i <span class="math inline">\(t=4\)</span> pa su to vremena u kojima čestica mijenja smjer.</p></li>
+</ol>
 </details>
-:::
--->
+</div>
 <hr>
 <div class="zadatak">
 <p>Tvrtka koja proizvodi gazirana pića dizajnira novu limenku u obliku valjka. Limenka treba biti volumena <span class="math inline">\(0,4\text{L}\)</span>, ali imati što manje oplošje kako bi potrošili što manje materijala. Izračunajte optimalne dimenzije limenke.</p>
 </div>
-<!--
-:::{.rjesenje}
+<div class="rjesenje">
 <details>
-<summary>Prikaži rješenje</summary>
-Volumen limenke je $0,4 \text{L} = 400 \text{cm}^3$. Volmen računamo po formuli 
-$$
+<summary>
+Prikaži rješenje
+</summary>
+<p>Volumen limenke je <span class="math inline">\(0,4 \text{L} = 400 \text{cm}^3\)</span>. Volmen računamo po formuli <span class="math display">\[
 V = r^2 \pi h = 400 \ \Longleftrightarrow h = \frac{400}{r^2 \pi}
-$$
-
-Oplošje valjka dano je formulom $S = 2 \pi r^2 + 2 \pi r h$. Uvrstimo $h$ pa dobijemo
-$$
+\]</span></p>
+<p>Oplošje valjka dano je formulom <span class="math inline">\(S = 2 \pi r^2 + 2 \pi r h\)</span>. Uvrstimo <span class="math inline">\(h\)</span> pa dobijemo <span class="math display">\[
 S(r) = 2 \pi r^2 + \frac{800}{r}
-$$
-
-Odredimo $S'(r)$:
-$$
+\]</span></p>
+<p>Odredimo <span class="math inline">\(S'(r)\)</span>: <span class="math display">\[
 S'(r) = 4 \pi r - \frac{800}{r^2}
-$$
-
-Sada imamo $S'(r) = 0$ ako je $4 \pi r = \dfrac{800}{r^2}$. Tada je $r = \sqrt[3]{\dfrac{200}{\pi}} \approx 3.98\text{cm}$ i $h \approx 8.04 \text{cm}$.
+\]</span></p>
+Sada imamo <span class="math inline">\(S'(r) = 0\)</span> ako je <span class="math inline">\(4 \pi r = \dfrac{800}{r^2}\)</span>. Tada je <span class="math inline">\(r = \sqrt[3]{\dfrac{200}{\pi}} \approx 3.98\text{cm}\)</span> i <span class="math inline">\(h \approx 8.04 \text{cm}\)</span>.
 </details>
-:::
--->
+</div>
 <hr>
 <div class="zadatak">
 <p>Brojnost populacije bakterija u trenutku <span class="math inline">\(t\)</span> dan je s <span class="math inline">\(N(t) = 100000te^{-0.2t}\)</span>, gdje je <span class="math inline">\(t\)</span> vrijeme u danima.</p>
@@ -390,32 +415,28 @@ Sada imamo $S'(r) = 0$ ako je $4 \pi r = \dfrac{800}{r^2}$. Tada je $r = \sqrt[3
 <li><p>Što se događa s populacijom nakon prozivoljnog vremena <span class="math inline">\(t\)</span> kako odmiče u beskonačno?</p></li>
 </ol>
 </div>
-<!--
-:::{.rjesenje}
+<div class="rjesenje">
 <details>
-<summary>Prikaži rješenje</summary>
-(a) Brzina je upravo derivacija brojnosti populacije po vremenu:
-$$
+<summary>
+Prikaži rješenje
+</summary>
+<ol type="a">
+<li><p>Brzina je upravo derivacija brojnosti populacije po vremenu: <span class="math display">\[
 N'(t) = 100000e^{-0.2t} - 20000te^{-0.2t} = 20000e^{-0.2t} (5 - t)
-$$
-
-(b) Odredimo stacionarnu točku
-$$
+\]</span></p></li>
+<li><p>Odredimo stacionarnu točku <span class="math display">\[
 N'(t) = 0 \ \Longleftrightarrow \ t = 5
-$$
-
-Maksimum se dostiže nakon $5$ dana, a tada brojnost iznosi $183939.7$.
-
-(c) 
-$$
+\]</span></p></li>
+</ol>
+<p>Maksimum se dostiže nakon <span class="math inline">\(5\)</span> dana, a tada brojnost iznosi <span class="math inline">\(183939.7\)</span>.</p>
+<ol start="3" type="a">
+<li><p><span class="math display">\[
 N(50) = 226.9 \qquad N(60) = 36.9
-$$
-
-(d) Vidimo da je $\displaystyle \lim_{t \to \infty} N(t) = 0$ pa očekujemo izumiranje populacije što smo i očekivali nakon podzadatka *c.*
-
+\]</span></p></li>
+<li><p>Vidimo da je <span class="math inline">\(\displaystyle \lim_{t \to \infty} N(t) = 0\)</span> pa očekujemo izumiranje populacije što smo i očekivali nakon podzadatka <em>c.</em></p></li>
+</ol>
 </details>
-:::
--->
+</div>
 
 
 </section>

@@ -1,0 +1,515 @@
+# Zadatci - drugi dio {.unnumbered}
+
+:::{.zadatak}
+Odredite integrale:
+
+(a) $\displaystyle \int \frac{dx}{x^2+a^2}$
+
+(b) $\displaystyle \int \frac{dx}{x^2-a^2}$
+
+(c) $\displaystyle \int \frac{ax+b}{x^2+px+q} \,dx, \quad p^2-4q<0$ **(napredno)**
+:::
+
+::: {.hint}
+<details>
+<summary>Prikaži hint</summary>
+(a) Prepoznajte standardni integral koji vodi na $\operatorname{arctg}$.
+
+(b) Rastavite nazivnik na linearne faktore i primijenite parcijalne razlomke.
+
+(c) U brojniku izdvojite višekratnik derivacije nazivnika, a ostatak povežite s dopunjavanjem na kvadrat.
+</details>
+:::
+
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a)
+$$
+\int \frac{dx}{x^2+a^2} = \frac{1}{a^2}\int \frac{dx}{1+\left(\frac{x}{a}\right)^2} = \frac{1}{a}\operatorname{arctg}\frac{x}{a}+C.
+$$
+
+---
+
+(b)
+$$
+\begin{aligned}
+\int \frac{dx}{x^2-a^2}
+&= \int \frac{dx}{(x-a)(x+a)} \\
+&= \frac{1}{2a} \int\left( \frac{1}{x-a}-\frac{1}{x+a} \right)dx \\
+&= \frac{1}{2a} \left( \ln|x-a|-\ln|x+a| \right)+C \\
+&= \frac{1}{2a} \ln\left| \frac{x-a}{x+a} \right|+C.
+\end{aligned}
+$$
+
+---
+
+(c)
+Neka je
+$$
+Q(x)=x^2+px+q.
+$$
+
+Tada je
+$$
+Q'(x)=2x+p.
+$$
+
+Brojnik rastavimo u obliku
+$$
+ax+b = 
+\frac{a}{2}(2x+p)
++
+\left(b-\frac{ap}{2}\right).
+$$
+
+Stoga
+$$
+\int\frac{ax+b}{x^2+px+q}\,dx =
+\frac{a}{2} \int\frac{2x+p}{x^2+px+q}\,dx+ \left(b-\frac{ap}{2}\right) \int\frac{dx}{x^2+px+q}.
+$$
+
+Dopunjavanjem na kvadrat dobivamo
+$$
+x^2+px+q = \left(x+\frac p2\right)^2 + \frac{4q-p^2}{4}.
+$$
+
+Budući da je $p^2-4q<0$, vrijedi $4q-p^2>0$. Zato
+$$
+\begin{aligned}
+\int\frac{dx}{x^2+px+q}
+&=
+\frac{2}{\sqrt{4q-p^2}}\operatorname{arctg} \left( \frac{2x+p}{\sqrt{4q-p^2}} \right).
+\end{aligned}
+$$
+
+Konačno,
+$$
+\int\frac{ax+b}{x^2+px+q},dx
+= \frac a2\ln(x^2+px+q) + \frac{2b-ap}{\sqrt{4q-p^2}} \operatorname{arctg} \left(\frac{2x+p}{\sqrt{4q-p^2}} \right)+C.
+$$
+</details>
+:::
+
+---
+
+:::{.zadatak}
+Odredite integrale:
+
+(a) $\displaystyle \int \frac{2x^3 + 3x^2 +x -1}{(x^2+2x+2)^2}\, dx$
+
+(b) $\displaystyle \int \frac{x}{x^2+x+1}\,dx$
+
+(c) $\displaystyle \int \frac{dx}{x^4-1}$
+
+(d) $\displaystyle \int \frac{(x+1)^3}{x^2-x}\,dx$
+:::
+
+::: {.hint}
+<details>
+<summary>Prikaži hint</summary>
+(a) Primijetite da je nazivnik kvadrat kvadratnog polinoma. Pokušajte brojnik zapisati pomoću derivacije nazivnika i odgovarajućih jednostavnijih članova.
+
+(b) U brojniku izdvojite višekratnik derivacije nazivnika, a zatim promatrajte preostali linearni član.
+
+(c) Rastavite $x^4-1$ na faktore, a zatim primijenite parcijalne razlomke.
+
+(d) Probajte rastaviti brojnik i nazivnik na faktore, a zatim podijeliti polinome.
+</details>
+:::
+
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a)
+
+Promotrimo nazivnik:$x^2+2x+2=(x+1)^2+1$. Uvedimo $u=x+1$, odnosno $x=u-1$. Tada je
+$$
+\begin{aligned}
+2x^3+3x^2+x-1 &=2(u-1)^3+3(u-1)^2+(u-1)-1 \\
+&=2u^3-3u^2+u-1.
+\end{aligned}
+$$
+
+Prema tome,
+$$
+\int \frac{2x^3+3x^2+x-1}{(x^2+2x+2)^2}\,dx= \int \frac{2u^3-3u^2+u-1}{(u^2+1)^2}\,du.
+$$
+
+Rastavimo:
+$$
+\frac{2u^3-3u^2+u-1}{(u^2+1)^2} =
+\frac{2u}{u^2+1} - \frac{3u^2}{(u^2+1)^2} + \frac{u}{(u^2+1)^2} - \frac{1}{(u^2+1)^2}
+$$
+
+Koristimo poznate integrale
+$$
+\int\frac{u}{u^2+1}\,du = \frac{1}{2}\ln(u^2+1),
+$$
+
+$$
+\int\frac{u}{(u^2+1)^2}\,du = -\frac{1}{2(u^2+1)},
+$$
+
+te
+
+$$
+\int\frac{du}{(u^2+1)^2} = \frac{u}{2(u^2+1)} + \frac{1}{2} \operatorname{arctg}u.
+$$
+
+Tako dobivamo
+$$
+\begin{aligned}
+\int \frac{2u^3-3u^2+u-1} {(u^2+1)^2}\,du &=
+\ln(u^2+1) - 3\int\frac{u^2}{(u^2+1)^2}\,du \\
+&-\frac{1}{2(u^2+1)} - \frac{u}{2(u^2+1)} \frac12\arctan u.
+\end{aligned}
+$$
+
+Budući da
+$$
+\frac{u^2}{(u^2+1)^2} = \frac{1}{u^2+1} \frac{1}{(u^2+1)^2},
+$$
+
+nakon sređivanja dobivamo
+$$
+\begin{aligned}
+\int \frac{2x^3+3x^2+x-1}{(x^2+2x+2)^2}\,dx
+&= \ln(x^2+2x+2) - \frac{3}{2}\arctan(x+1) \\
+&+ \frac{1-x}{2(x^2+2x+2)} +C.
+\end{aligned}
+$$
+
+---
+
+(b)
+
+Brojnik izrazimo pomoću derivacije nazivnika:$x=\frac12(2x+1)-\frac12.$ Stoga
+$$
+\int\frac{x}{x^2+x+1},dx
+= \frac12 \int\frac{2x+1}{x^2+x+1}\,dx - \frac12 \int\frac{dx}{x^2+x+1}.
+$$
+
+Dopunjavanjem na kvadrat $x^2+x+1=\left(x+\dfrac{1}{2}\right)^2+\dfrac{3}{4}.$
+
+Dakle,
+$$
+\int\frac{x}{x^2+x+1}\,dx = \frac12\ln(x^2+x+1) - \frac{1}{\sqrt3} \operatorname{arctg}
+\left( \frac{2x+1}{\sqrt3} \right)+C
+$$
+
+---
+
+(c)
+
+Najprije rastavimo nazivnik:$x^4-1=(x^2-1)(x^2+1) = (x-1)(x+1)(x^2+1)$. Parcijalni razlomci daju
+$$
+\frac{1}{x^4-1} = \frac{1}{4(x-1)} - \frac{1}{4(x+1)} + \frac{1}{2(x^2+1)}.
+$$
+
+Stoga
+$$
+\begin{aligned}
+\int\frac{dx}{x^4-1} &= \frac14\int\frac{dx}{x-1} - \frac14\int\frac{dx}{x+1} + \frac12\int\frac{dx}{x^2+1} \\
+&= \frac14\ln|x-1| - \frac14\ln|x+1| + \frac12\operatorname{arctg} x+C.
+\end{aligned}
+$$
+
+Odnosno,
+$$
+\int\frac{dx}{x^4-1} = \frac14 \ln\left| \frac{x-1}{x+1} \right| + \frac12\arctan x+C.
+$$
+
+---
+
+(d)
+
+Najprije raspišemo brojnik i podijelimo brojnik i nazvinik:
+
+$$
+\frac{(x+1)^3}{x^2-x} = \frac{x^3+3x^2+3x+1}{x^2-x} = x+4+\frac{7x+1}{x^2-x}
+$$
+
+Budući da je $x^2-x=x(x-1)$, rastavimo
+$$
+\frac{7x+1}{x(x-1)} =  \frac{A}{x}+\frac{B}{x-1}.
+$$
+
+Iz toga slijedi $A=-1$ i $B=8$. Dakle,
+$$
+\int\frac{(x+1)^3}{x^2-x}\,dx =
+\int \left( x+4-\frac1x+\frac8{x-1} \right)\,dx
+= \frac{x^2}{2} +4x -\ln|x| +8\ln|x-1| +C
+$$
+</details>
+:::
+
+---
+
+:::{.zadatak}
+Odredite integrale:
+
+(a) $\displaystyle \int \frac{\sqrt{x}+1}{\sqrt{x}-1}\, dx$
+
+(b) $\displaystyle \int \frac{\sqrt{x}}{1+\sqrt{x}}\,dx$
+:::
+
+::: {.hint}
+<details>
+<summary>Prikaži hint</summary>
+(a) Uvedite supstituciju $t=\sqrt{x}$.
+
+(b) Ponovno uvedite $t=\sqrt{x}$, a zatim pojednostavnite racionalni izraz.
+
+(c) Pokušajte pronaći trigonometrijsku supstituciju koja će izraz $\dfrac{x}{2-x}$ pretvoriti u kvadrat trigonometrijske funkcije.
+</details>
+:::
+
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a)
+
+Uvedimo supstituciju
+
+$$
+t=\sqrt{x},
+\qquad
+x=t^2,
+\qquad
+dx=2t\,dt.
+$$
+
+Tada
+
+$$
+\int\frac{\sqrt{x}+1}{\sqrt{x}-1}\,dx =
+\int \frac{t+1}{t-1}2t\,dt = 2\int \frac{t(t+1)}{t-1}\,dt.
+$$
+
+Dijeljenjem polinoma dobijemo:
+
+$$
+\frac{t(t+1)}{t-1} = t+2+\frac{2}{t-1}.
+$$
+
+Stoga
+$$
+\int\frac{\sqrt{x}+1}{\sqrt{x}-1}\,dx = 2\int \left(t+2+\frac{2}{t-1} \right)dt
+= t^2+4t+4\ln|t-1|+C
+$$
+
+Vraćanjem $t=\sqrt{x}$:
+
+$$
+\int\frac{\sqrt{x}+1}{\sqrt{x}-1}\,dx = x+4\sqrt{x} + 4\ln|\sqrt{x}-1|+C
+$$
+
+---
+
+(b)
+
+Uvedimo
+$$
+t=\sqrt{x},
+\qquad
+x=t^2,
+\qquad
+dx=2t\,dt.
+$$
+
+Tada
+$$
+\int\frac{\sqrt{x}}{1+\sqrt{x}}\,dx =
+\int\frac{t}{1+t}2t\,dt =
+2\int\frac{t^2}{t+1}\,dt
+$$
+
+Dijeljenjem polinoma dobijemo:
+$$
+\frac{t^2}{t+1} = t-1+\frac{1}{t+1}
+$$
+
+Prema tome,
+$$
+\int\frac{\sqrt{x}}{1+\sqrt{x}}\,dx
+= 2\int \left( t-1+\frac{1}{t+1} \right)\,dt 
+= t^2-2t+2\ln|t+1|+C
+$$
+
+Budući da je $t=\sqrt{x}\geq0$, vrijedi $t+1>0$, pa možemo pisati
+
+$$
+\int\frac{\sqrt{x}}{1+\sqrt{x}}\,dx 
+= x-2\sqrt{x} + 2\ln(1+\sqrt{x}) +C
+$$
+</details>
+:::
+
+---
+
+:::{.zadatak}
+Odredite integrale:
+
+(a) $\displaystyle \int \frac{\cos x}{\sqrt{\sin 2x}}\, dx$
+
+(b) $\displaystyle \int \frac{dx}{\sin x - \sin a}\,dx$
+
+(c) $\displaystyle \int \frac{dx}{(2+\cos x)\sin x}\,dx$
+:::
+
+::: {.hint}
+<details>
+<summary>Prikaži hint</summary>
+(a) Iskoristite $\sin 2x=2\sin x\cos x$ i pronađite odgovarajuću supstituciju.
+
+(b) Primijenite formulu za razliku sinusa. Nakon toga razmislite o univerzalnoj supstituciji.
+
+(c) Iskoristite $t=\cos x$.
+</details>
+:::
+
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a)
+
+Koristimo $\sin2x=2\sin x\cos x$. Tada
+$$
+\int\frac{\cos x}{\sqrt{\sin2x}}\,dx=
+\frac{1}{\sqrt2} \int \frac{\cos x}{\sqrt{\sin x\cos x}}\,dx =
+\frac{1}{\sqrt2} \int \sqrt{\frac{\cos x}{\sin x}}\,dx
+$$
+
+Uvedimo $t=\sqrt{\operatorname{tg} x}$. Tada je $\operatorname{tg} x=t^2$, a deriviranjem slijedi $\sec^2x\,dx=2t\,dt$. Budući da je
+$$
+\cos^2x=\frac{1}{1+t^4},
+$$
+
+dobivamo
+$$
+dx=\frac{2t}{1+t^4}\,dt.
+$$
+
+Nadalje,
+
+$$
+\sqrt{\frac{\cos x}{\sin x}} = \frac1{\sqrt{\operatorname{tg} x}}.
+$$
+
+Stoga imamo
+$$
+\int\frac{\cos x}{\sqrt{\sin2x}}\,dx =
+\frac1{\sqrt2} \int \frac1t \frac{2t}{1+t^4}\,dt =
+\sqrt2 \int\frac{dt}{1+t^4}
+$$
+
+Rastavljamo $t^4+1 = (t^2+\sqrt2t+1)(t^2-\sqrt2t+1)$. Nakon parcijalnih razlomaka i integriranja dobivamo
+$$
+\int\frac{\cos x}{\sqrt{\sin2x}}\,dx =
+\frac{1}{2\sqrt2} \ln \left| \frac{t^2-\sqrt2t+1} {t^2+\sqrt2t+1} \right| +
+\frac{1}{\sqrt2}\left[\operatorname{arctg}(\sqrt2t+1) + \operatorname{arctg}(\sqrt2t-1)\right]+C
+$$
+
+gdje je $t=\sqrt{\operatorname{arctg} x}$.
+
+---
+
+(b)
+
+Koristimo formulu
+$$
+\sin x-\sin a = 2\cos\frac{x+a}{2} \sin\frac{x-a}{2}.
+$$
+
+Stoga
+
+$$
+\int\frac{dx}{\sin x-\sin a} =
+\frac12 \int \frac{dx} {\cos\frac{x+a}{2} \sin\frac{x-a}{2}}
+$$
+
+Uvedimo $t=\operatorname{arctg}\frac{x-a}{2}$. Tada je
+$$
+dx=\frac{2\,dt}{1+t^2}.
+$$
+
+Osim toga,
+$$
+\sin\frac{x-a}{2} = \frac{t}{\sqrt{1+t^2}}
+$$
+
+dok je
+$$
+\cos\frac{x+a}{2} = \frac{\cos a-t\sin a}{\sqrt{1+t^2}}
+$$
+
+Prema tome,
+$$
+\int\frac{dx}{\sin x-\sin a} =
+\int \frac{dt} {t(\cos a-t\sin a)}
+$$
+
+Za $\sin a\neq0$ parcijalni razlomci daju
+$$
+\frac{1}{t(\cos a-t\sin a)} = \frac{1}{\cos a}\frac1t + \frac{\sin a}{\cos a} \frac{1}{\cos a-t\sin a}.
+$$
+
+Stoga
+$$
+\int\frac{dx}{\sin x-\sin a} =
+\frac1{\cos a}\ln|t| - 
+\frac1{\cos a} \ln|\cos a-t\sin a| +C =
+\frac1{\cos a}\ln \left| \frac{t}{\cos a-t\sin a}\right| +C
+$$
+
+Vraćanjem supstitucije dobivamo
+
+$$
+\int\frac{dx}{\sin x-\sin a} =
+\frac1{\cos a} \ln \left| \frac{ \operatorname{arctg}\frac{x-a}{2}}{\cos a-\sin a\operatorname{arctg}\frac{x-a}{2}}\right|+C
+$$
+
+---
+
+(c)
+
+Uvedimo
+$$
+t=\cos x,
+\qquad
+dt=-\sin x\,dx.
+$$
+
+Tada
+$$
+\int\frac{dx}{(2+\cos x)\sin x} =
+-\int \frac{dt} {(2+t)\sin^2x}
+$$
+
+Budući da je $\sin^2x=1-\cos^2x=1-t^2$, slijedi
+$$
+\int\frac{dx}{(2+\cos x)\sin x} =
+-\int \frac{dt}{(2+t)(1-t^2)} =
+-\int \frac{dt} {(2+t)(1-t)(1+t)}
+$$
+
+Parcijalnim razlomcima:
+$$
+-\frac{1}{(2+t)(1-t)(1+t)} =
+-\frac{1}{6(t+2)} + \frac{1}{2(t+1)} - \frac{1}{3(t-1)}
+$$
+
+Prema tome,
+$$
+\int\frac{dx}{(2+\cos x)\sin x} =
+-\frac16\ln|t+2| + \frac12\ln|t+1| - \frac13\ln|t-1| +C
+$$
+
+Vraćanjem $t=\cos x$:
+$$
+\int\frac{dx}{(2+\cos x)\sin x} =
+-\frac16\ln|2+\cos x|+\frac12\ln|1+\cos x| - \frac13\ln|1-\cos x| +C
+$$
+</details>
+:::

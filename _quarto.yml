@@ -59,6 +59,14 @@ website:
             href: integrali/integrali-racunanje.qmd
           - text: "Zadatci - prvi dio"
             href: integrali/integrali-zadatci1.qmd
+          - text: "3.4 Integrali racionalnih funkcija"
+            href: integrali/integrali-racionalne.qmd
+          - text: "3.5 Integrali iracionalnih funkcija"
+            href: integrali/integrali-iracionalne.qmd
+          - text: "3.5 Integrali trigonometrijskih i hiperbolnih funkcija"
+            href: integrali/integrali-trig.qmd
+          - text: "Zadatci - drugi dio"
+            href: integrali/integrali-zadatci2.qmd
             
 format:
   html:
