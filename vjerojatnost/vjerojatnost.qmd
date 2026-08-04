@@ -1,0 +1,11 @@
+# 4. VJEROJATNOST {.unnumbered}
+
+U ovom poglavlju dat ćemo temelj proučavanju vjerojatnosti i vjerojatnosnih prostora.
+
+## Sadržaj poglavlja {.unnumbered}
+
+- [4.1 Uvod i definicija](uvod.qmd)
+
+- [4.2 Svojstva vjerojatnosti i modeli vjerojatnosti](modeli.qmd)
+
+- [Zadatci - prvi dio](zadatci1.qmd)

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>integrali-svojstva – Matematika</title>
+<title>zadatci1 – Matematika</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -148,7 +148,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../integrali/integrali.html">3. RIEMANNOV INTEGRAL</a></li><li class="breadcrumb-item"><a href="../integrali/integrali-svojstva.html">3.2 Osnovna svojstva i primitivna funkcija</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../vjerojatnost/vjerojatnost.html">4. VJEROJATNOST</a></li><li class="breadcrumb-item"><a href="../vjerojatnost/zadatci1.html">Zadatci - prvi dio</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Pretraživanje" onclick="window.quartoOpenSearch();">
@@ -279,7 +279,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../integrali/integrali-svojstva.html" class="sidebar-item-text sidebar-link active">
+  <a href="../integrali/integrali-svojstva.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3.2 Osnovna svojstva i primitivna funkcija</span></a>
   </div>
 </li>
@@ -336,6 +336,18 @@ window.Quarto = {
  <span class="menu-text">4.1 Uvod i definicija</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vjerojatnost/modeli.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4.2 Svojstva vjerojatnosti i modeli vjerojatnosti</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vjerojatnost/zadatci1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Zadatci - prvi dio</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -348,150 +360,157 @@ window.Quarto = {
     <h2 id="toc-title">Sadržaj</h2>
    
   <ul>
-  <li><a href="#osnovna-svojstva-i-primitivna-funkcija" id="toc-osnovna-svojstva-i-primitivna-funkcija" class="nav-link active" data-scroll-target="#osnovna-svojstva-i-primitivna-funkcija">3.2 Osnovna svojstva i primitivna funkcija</a>
-  <ul class="collapse">
-  <li><a href="#integrabilnost-monotonih-i-neprekidnih-funkcija" id="toc-integrabilnost-monotonih-i-neprekidnih-funkcija" class="nav-link" data-scroll-target="#integrabilnost-monotonih-i-neprekidnih-funkcija">Integrabilnost monotonih i neprekidnih funkcija</a></li>
-  <li><a href="#primitivna-funkcija" id="toc-primitivna-funkcija" class="nav-link" data-scroll-target="#primitivna-funkcija">Primitivna funkcija</a></li>
-  </ul></li>
+  <li><a href="#zadatci---prvi-dio" id="toc-zadatci---prvi-dio" class="nav-link active" data-scroll-target="#zadatci---prvi-dio">Zadatci - prvi dio</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../integrali/integrali.html">3. RIEMANNOV INTEGRAL</a></li><li class="breadcrumb-item"><a href="../integrali/integrali-svojstva.html">3.2 Osnovna svojstva i primitivna funkcija</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../vjerojatnost/vjerojatnost.html">4. VJEROJATNOST</a></li><li class="breadcrumb-item"><a href="../vjerojatnost/zadatci1.html">Zadatci - prvi dio</a></li></ol></nav></header>
 
 
 
 
-<section id="osnovna-svojstva-i-primitivna-funkcija" class="level1 unnumbered">
-<h1 class="unnumbered">3.2 Osnovna svojstva i primitivna funkcija</h1>
-<p>U ovom poglavlju vidjet ćemo neke od najbitnijih rezultata za Riemannov integral te pokazati koje su to funkcije integrabilne.</p>
-<div class="teorem">
-<p>Neka je <span class="math inline">\(f \colon [a,b] \to \mathbb{R}\)</span> ograničena funkcija na <span class="math inline">\([a,b] \subset \mathbb{R}\)</span>. Funkcija <span class="math inline">\(f\)</span> je integrabilna na <span class="math inline">\([a,b]\)</span> ako i samo ako <span class="math inline">\(\forall \varepsilon &gt; 0\)</span> postoji subdivizija segmenta <span class="math inline">\([a,b]\)</span> takva da za pripadne Darbouxove sume vrijedi <span class="math inline">\(S − s &lt; \varepsilon\)</span>.</p>
+<section id="zadatci---prvi-dio" class="level1 unnumbered">
+<h1 class="unnumbered">Zadatci - prvi dio</h1>
+<div class="zadatak">
+<p>Bacamo dvije kockice. Odredite prostor elementarnih događaja <span class="math inline">\(\Omega\)</span>.</p>
+<p>Ako su <span class="math inline">\(E\)</span>, <span class="math inline">\(F\)</span> i <span class="math inline">\(G\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(E = \{\)</span>zbroj brojeva na kockama je neparan<span class="math inline">\(\}\)</span></p></li>
+<li><p><span class="math inline">\(F = \{\)</span>barem jedna kocka je pala na <span class="math inline">\(1\}\)</span></p></li>
+<li><p><span class="math inline">\(G = \{\)</span>zbroj brojeva na kockama je <span class="math inline">\(5\}\)</span></p></li>
+</ul>
+<p>pomoću elementarnih događaja prikažite događaje <span class="math inline">\(E\)</span>, <span class="math inline">\(F\)</span>, <span class="math inline">\(G\)</span>, <span class="math inline">\(E \cap F\)</span>, <span class="math inline">\(F \cap G\)</span>, <span class="math inline">\(E \cap F \cap G\)</span>.</p>
 </div>
-<p>Uočite da je ograničenost bitna jer funkcija koja na segmentu nije ograničena ne bi imala supremum ili infimum u <span class="math inline">\(\mathbb{R}\)</span>.</p>
-<div class="teorem">
-<p>Neka su <span class="math inline">\(f,g \colon [a,b] \to \mathbb{R}\)</span> integrabilne funkcije na <span class="math inline">\([a,b] \subset \mathbb{R}\)</span>. Za bilo koje <span class="math inline">\(\alpha, \beta \in \mathbb{R}\)</span> funkcija <span class="math inline">\(\alpha f + \beta g\)</span> je integrabilna na <span class="math inline">\([a,b]\)</span> i vrijedi <span class="math display">\[
-\int _a^b (\alpha f + \beta g) = \alpha \int _a^b f + \beta \int _a^b g
-\]</span></p>
-<p>Ako je <span class="math inline">\(f \leq g\)</span> na <span class="math inline">\([a,b]\)</span>, onda je <span class="math display">\[
-\int _a^b f \leq \int _a^b g
-\]</span></p>
-<p>Također vrijedi <span class="math display">\[
-\left | \int _a^b f \ \right | \leq \int _a^b |f|
-\]</span></p>
-</div>
-<p>Prethodni teorem kaže da je skup funkcija integrabilnih na segmentu <span class="math inline">\([a,b]\)</span> realni vektorski prostor, a integral je linearan i monoton funkcional na tom prostoru što nam uvelike olakšava računanje integrala.</p>
-<div class="teorem">
-<p>Neka je <span class="math inline">\(f \colon [a,b] \to \mathbb{R}\)</span> ograničena funkcija na <span class="math inline">\([a,b] \subset \mathbb{R}\)</span> i <span class="math inline">\(c \in \langle a,b \rangle\)</span>. Ako je <span class="math inline">\(f\)</span> integrabilna na segmentima <span class="math inline">\([a,c]\)</span> i <span class="math inline">\([c,b]\)</span>, onda je integrabilna na <span class="math inline">\([a,b]\)</span> i vrijedi <span class="math display">\[
-\int _a^b f = \int _a^c f + \int _c^b f
-\]</span></p>
-</div>
-<p>Primijetimo da ograničenost nije dovoljna za integrabilnost. Definirajmo funkciju <span class="math inline">\(\chi _\mathbb{Q}\)</span> kao <span class="math display">\[
-\chi _\mathbb{Q} =
-\begin{cases}
-0 \ , \ x \notin \mathbb{Q} \\
-1 \ , \ x \in \mathbb{Q}
-\end{cases}
-\]</span></p>
-<p>Općenito se funkcija <span class="math inline">\(\chi _C\)</span> zove karakteristična funkcija skupa <span class="math inline">\(C\)</span>. U vjerojatnosti se često označava s <span class="math inline">\(\mathbb{1} _C\)</span> i zove se indikatorska funkcija.</p>
-<p>Promatramo sad restrikciju funkcije <span class="math inline">\(\chi _\mathbb{Q}\)</span> na segmentu <span class="math inline">\([0,1]\)</span>. Tada je supremum donjih Darbouxovih suma uvijek <span class="math inline">\(0\)</span>, a infimum gornjih Darbouxovih suma <span class="math inline">\(1\)</span>. Kako oni nisu jednaki, funkcija nije Riemann integrabilna iako je ograničena.</p>
-<section id="integrabilnost-monotonih-i-neprekidnih-funkcija" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="integrabilnost-monotonih-i-neprekidnih-funkcija">Integrabilnost monotonih i neprekidnih funkcija</h2>
-<div class="teorem">
-<p>Neka je <span class="math inline">\(f \colon [a,b] \to \mathbb{R}\)</span> monotona funkcija na <span class="math inline">\([a,b] \subset \mathbb{R}\)</span>. Tada je <span class="math inline">\(f\)</span> Riemann integrabilna na <span class="math inline">\([a,b]\)</span>.</p>
-</div>
-<div class="dokaz">
+<div class="hint">
 <details>
 <summary>
-Prikaži dokaz
+Prikaži hint
 </summary>
-<p>Bez smanjenja općenitosti možemo pretpostaviti da je <span class="math inline">\(f\)</span> rastuća. na <span class="math inline">\([a,b]\)</span>. Ako je <span class="math inline">\(f(a) = f(b)\)</span> onda je funkcija konstanta, a u primjeru u prethodnom poglavlju smo pokazali da je konstantna funkcija integrabilna. Stoga pretpostavimo <span class="math inline">\(f(b) - f(a) &gt; 0\)</span>.</p>
-<p>Neka je <span class="math inline">\(\varepsilon &gt; 0\)</span> i <span class="math inline">\(n \in \mathbb{N}\)</span> takav da vrijedi <span class="math display">\[
-n \varepsilon &gt; \frac{f(b)-f(a)}{b-a}
-\]</span></p>
-<p>Uzmimo sada ekvidistantnu subdiviziju <span class="math inline">\(x_k = a + kh\)</span>, za <span class="math inline">\(k = 0, \dots, n\)</span> i <span class="math inline">\(h = \dfrac{b-a}{n}\)</span>. Zbog monotonosti zaključujemo da za svaki <span class="math inline">\([\alpha, \beta] \subset [a,b]\)</span> vrijedi <span class="math inline">\(\displaystyle \inf_{[\alpha, \beta]} f = f(\alpha)\)</span> i <span class="math inline">\(\displaystyle \sup_{[\alpha, \beta]} f = f(\beta)\)</span>. Stoga su pripadne Darbouxove sume <span class="math display">\[
-s = \sum _{k=1}^n f(x_{k-1}) h \qquad S = \sum _{k=1}^n f(x_{k}) h
-\]</span></p>
-<p>Tada imamo <span class="math display">\[
-\begin{align*}
-S - s = \sum _{k=1}^n f(x_{k}) h - \sum _{k=1}^n f(x_{k-1}) h &amp;=
-h \left ( \sum _{k=1}^n f(x_{k}) - f(x_{k-1})\right) =
-h(f(b) - f(a)) = \\
-\frac{(f(b)-f(a))(b-a)}{n} &amp;&lt; \varepsilon
-\end{align*}
-\]</span></p>
-<p>Čime je teorem dokazan. <strong>Napomena:</strong> suma <span class="math inline">\(\displaystyle \sum _{k=1}^n f(x_{k}) - f(x_{k-1})\)</span> se teleskopira pa ostane samo <span class="math inline">\(f(b)-f(a)\)</span>.</p>
+Razlikujemo kockice! Dakle, bitno je koja je prva, a koja druga.
 </details>
 </div>
-<p>Definirajmo monotonost po dijelovima.</p>
-<div class="def">
-<p>Za funkciju <span class="math inline">\(f \colon [a,b] \to \mathbb{R}\)</span> kažemo da je monotona po dijelovima na segmentu <span class="math inline">\([a,b]\)</span> ako postoji subdivizija <span class="math display">\[
-a= c_0 &lt; c_1 &lt; \dots &lt; c_{k−1} &lt; c_k &lt; \dots &lt; c_{n−1} &lt; c_n = b
-\]</span></p>
-<p>takva da je <span class="math inline">\(f|_{[c_{k-1},c_k]}\)</span> monotona funkcija za sve <span class="math inline">\(k= 1, \dots ,n\)</span>.</p>
+<hr>
+<div class="zadatak">
+<p>Igraći špil od <span class="math inline">\(52\)</span> karte ima po <span class="math inline">\(13\)</span> karata svake boje (radi jednostavnosti numeriramo kralja, damu, dečka i as). Boje su <em>herc</em>, <em>tref</em>, <em>karo</em> i <em>pik</em>. Iz tog špila izvlačite <span class="math inline">\(4\)</span> karte. Odredite vjerojatnost da su sve izvučene karte iste boje.</p>
 </div>
-<div class="korolar">
-<p>Neka je <span class="math inline">\(f \colon [a,b] \to \mathbb{R}\)</span> po dijelovima monotona funkcija na <span class="math inline">\([a,b] \subset \mathbb{R}\)</span>. Tada je <span class="math inline">\(f\)</span> Riemann integrabilna na <span class="math inline">\([a,b]\)</span>.</p>
-</div>
-<div class="dokaz">
+<div class="hint">
 <details>
 <summary>
-Prikaži dokaz
+Prikaži rješenje
 </summary>
-<p>Dokaz slijedi iz prethodnog teorema i svojstva aditivnosti integrala po području integracije <span class="math display">\[
-\int _a^b f(x) \, dx = \sum _{k=1}^n \int_{c_{k-1}}^{c_k} f(x) \, dx
-\]</span></p>
+Prebrojite povoljne događaje i iskoristite to u Laplaceovom modelu.
 </details>
 </div>
-<p>Sljedeći teorem puno je teže dokazati od prethodnog, a govori o integrabilnosti neprekidne funkcije na segmentu <span class="math inline">\([a,b]\)</span>.</p>
-<div class="teorem">
-<p>Neka je <span class="math inline">\(f \colon [a,b] \to \mathbb{R}\)</span> neprekidna na <span class="math inline">\([a,b] \subset \mathbb{R}\)</span>. Tada je <span class="math inline">\(f\)</span> Riemann integrabilna na <span class="math inline">\([a,b]\)</span>. Također, psotoji točka <span class="math inline">\(c \in [a,b]\)</span> takva da je <span class="math display">\[
-\int _{[a,b]} f = f(c)(b-a)
+<hr>
+<div class="zadatak">
+<p>Bacate simetričan novčić <span class="math inline">\(2\)</span> puta. Odredite vjerojatnost</p>
+<ol type="a">
+<li><p>da će oba puta pasti glava.</p></li>
+<li><p>da će barem jednom pasti glava.</p></li>
+<li><p>da će u drugom bacanju pasti glava.</p></li>
+</ol>
+</div>
+<div class="hint">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Ispišite elementarne događaje i iskoristite Laplaceov model. Ovdje implicitno koristimo svojstvo <em>nezavisnosti događaja</em> <span class="math display">\[
+\mathbb{P}(A \cap B) = \mathbb{P}(A) \mathbb{P}(B)
+\]</span></p>
+o čemu će biti riječ u sljedećem poglavlju.
+</details>
+</div>
+<hr>
+<div class="zadatak">
+<p>U kutiji se nalazi <span class="math inline">\(6\)</span> bijelih i <span class="math inline">\(4\)</span> crne kuglice. Izvlačimo dvije kuglice jednu za drugom, dakle ne istovremeno. Odredite vjerojatnost</p>
+<ol type="a">
+<li><p>da je prva izvučena kuglica crna.</p></li>
+<li><p>da će druga izvučena kuglica biti crna ako je i prva bila crna.</p></li>
+<li><p>da je prva kuglica bijela, a druga crna.</p></li>
+</ol>
+</div>
+<div class="hint">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+Ponovo iskoristite svojstvo <em>nezavisnih događaja</em>.
+</details>
+</div>
+<hr>
+<div class="zadatak">
+<p>U ravnini <span class="math inline">\(\mathbb{R}^2\)</span> zadan je kvadrat <span class="math inline">\(I = [0,1]^2\)</span> te pravci <span class="math inline">\(y_1 = x + \dfrac12\)</span> i <span class="math inline">\(y_2 = x - \dfrac12\)</span>. Odredite vjerojatnost da se slučajno odabrana točka unutar tog kvadrata nalazi ispod pravca <span class="math inline">\(y_1\)</span> i iznad pravca <span class="math inline">\(y_2\)</span>.</p>
+</div>
+<div class="hint">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+Skicirajte dani skup i iskoristite model geometrijske vjerojatnosti.
+</details>
+</div>
+<hr>
+<div class="zadatak">
+<p>Za Okrugli stol sjeda <span class="math inline">\(n \in \mathbb{N}\)</span> vitezova, pri čemu Arthur ne želi sjediti kraj Mordreda ni kraj Lancelota. Ako sjedaju na slučajan način, kolika je vjerojatnost da Arthur ne sjedi ni kraj Mordreda ni kraj Lancelota?</p>
+</div>
+<div class="hint">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+Probajte fiksirati Arthura i pronaći moguće načine sjedenja ostalih vitezova.
+</details>
+</div>
+<hr>
+<div class="zadatak">
+<p>Iz skupa <span class="math inline">\(\{1,\dots,100\}\)</span> slučajno su odabrana dva ne nužno različita broja <span class="math inline">\(m\)</span> i <span class="math inline">\(n\)</span>. Izračunajte vjerojatnost da je</p>
+<ol type="a">
+<li><p><span class="math inline">\(m^n + n^m\)</span> neparan broj</p></li>
+<li><p><span class="math inline">\(m^n \cdot n^m\)</span> paran broj</p></li>
+</ol>
+</div>
+<div class="hint">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+Rastavite na slučajeve kad su suma i produkt članova <span class="math inline">\(m^n\)</span> i <span class="math inline">\(n^m\)</span> parni, odnosno neparni.
+</details>
+</div>
+<hr>
+<div class="zadatak">
+<p>Dokažite da vrijedi <span class="math display">\[
+\mathbb{P}(A^c) = 1 - \mathbb{P}(A)
 \]</span></p>
 </div>
-<p>Uočimo da je ovo upravo teorem srednje vrijednosti za integrale, kao što smo imali <a href="../derivacije/derivacije-rezultati.html">Lagrangeov teorem srednje vrijednosti</a> u poglavlju o derivacijama.</p>
-<div class="korolar">
-<p>Neka je <span class="math inline">\(f \colon I \to \mathbb{R}\)</span> neprekidna funkcija na otvorenom intervalu <span class="math inline">\(I = \langle a,b \rangle\)</span>. Ako za svaki segment <span class="math inline">\([u,v] \subset \langle a,b \rangle\)</span> vrijedi <span class="math inline">\(\displaystyle \int _u^v f(x) \, dx = 0\)</span>, onda je <span class="math inline">\(f(x) = 0\)</span> za svaki <span class="math inline">\(x \in I\)</span>.</p>
+<div class="hint">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+Iskoristite definiciju komplementa skupa i jedno od svojstava vjerojatnosti.
+</details>
 </div>
-<p>Na kraju ovog odjeljka navodimo jedan jaki kriterij Riemann integrabilnosti.</p>
-<p><strong><em>Lebesgueov teorem</em></strong></p>
-<div class="teorem">
-<p>Ograničena funkcija <span class="math inline">\(f \colon [a,b] \to \mathbb{R}\)</span> je integrabilna na <span class="math inline">\([a,b]\)</span> ako i samo ako skup njezinih prekida <span class="math inline">\(S\)</span> ima (Lebesgueovu) mjeru nula.</p>
+<hr>
+<div class="zadatak">
+<p>(<strong>napredno</strong>) Neka je <span class="math inline">\(\mathcal{F}\)</span> <span class="math inline">\(\sigma\)</span>-algebra na nekom <span class="math inline">\(\Omega\)</span>. Po definiciji, <span class="math inline">\(\mathcal{F}\)</span> je zatvorena na prebrojive unije. Dokažite da je zatvorena i na konačne unije.</p>
 </div>
-<p>Pri tome za skup <span class="math inline">\(S \subset \mathbb{R}\)</span> kažemo da ima (Lebesgueovu) mjeru nula ako se za bilo koji <span class="math inline">\(\varepsilon &gt;0\)</span> skup <span class="math inline">\(S\)</span> može pokriti sa najviše prebrojivo mnogo otvorenih intervala čija je ukupna duljina (tj. suma njihovih duljina) manja od <span class="math inline">\(\varepsilon\)</span>.</p>
-<p>Primjeri skupa mjere nula u <span class="math inline">\(\mathbb{R}\)</span> uključuju točku, konačnu uniju točka, prebrojivu uniju točaka.</p>
-</section>
-<section id="primitivna-funkcija" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="primitivna-funkcija">Primitivna funkcija</h2>
-<div class="def">
-<p>Neka je <span class="math inline">\(I \subseteq \mathbb{R}\)</span> otvoren interval i <span class="math inline">\(f \colon I \to \mathbb{R}\)</span>. <strong>Primitivna funkcija</strong> ili <strong>antiderivacija</strong> funkcije <span class="math inline">\(f\)</span> na skupu <span class="math inline">\(I\)</span> je svaka funkcija <span class="math inline">\(F \colon I \to \mathbb{R}\)</span> sa svojstvom <span class="math inline">\(F'(x) = f(x)\)</span>, <span class="math inline">\(\forall x \in I\)</span>.</p>
+<div class="hint">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+Probajte modificirati skupove iz prebrojive unije tako da ne pridonose uniji.
+</details>
 </div>
-<div class="teorem">
-<p>Neka je <span class="math inline">\(I \subseteq \mathbb{R}\)</span> otvoren interval i <span class="math inline">\(f \colon I \to \mathbb{R}\)</span>. Ako su <span class="math inline">\(F\)</span> i <span class="math inline">\(G\)</span> bilo koje dvije primitivne funkcije od <span class="math inline">\(f\)</span> na intervalu <span class="math inline">\(I\)</span>, onda postoji konstanta <span class="math inline">\(C \in \mathbb{R}\)</span> takva da vrijedi <span class="math inline">\(G(x) = F(x) + C\)</span>, <span class="math inline">\(\forall x \in I\)</span>.</p>
-</div>
-<p>Ovo će biti bitno kod određivanja neodređenog integrala. Vidimo da funkcija <span class="math inline">\(f\)</span> nema jedinstvenu primitivnu funkciju, odnosno sve su joj primitivne funkcije jednake do na konstantu.</p>
-<p>Sljedeći teorem daje dovoljne uvjete za postojanje primitivne funkcije.</p>
-<div class="teorem">
-<p>Neka je <span class="math inline">\(I \subseteq \mathbb{R}\)</span> otvoren interval i <span class="math inline">\(f \colon I \to \mathbb{R}\)</span> funkcija neprekidna na <span class="math inline">\(I\)</span>. Tada postoji primitivna funkcija od <span class="math inline">\(f\)</span> na <span class="math inline">\(I\)</span>.</p>
-</div>
-<p>Sad smo spremni pokazati <strong>Newton-Leibnizovu</strong> formulu koja daje vezu između primitivne funkcije (odnosno pojma derivacije) i Riemannovog integrala funkcije.</p>
-<div class="teorem">
-<p>Ako je <span class="math inline">\(f\)</span> neprekidna funkcija na otvorenom intervalu <span class="math inline">\(I\)</span> i <span class="math inline">\(F\)</span> bilo koja primitivna funkcija funkcije <span class="math inline">\(f\)</span> na <span class="math inline">\(I\)</span>, onda za svaki segment <span class="math inline">\([a,b] \subset I\)</span> vrijedi <span class="math display">\[
-\int _a^b f(x) \, dx = F(b) - F(a)
-\]</span></p>
-</div>
-<p><strong>Napomena:</strong> Prethodni teorem je istinit i bez pretpostavke da je <span class="math inline">\(f\)</span> neprekidna na <span class="math inline">\(I\)</span>. Dovoljno je pretpostaviti da je <span class="math inline">\(f\)</span> integrabilna funkcija i da postoji <span class="math inline">\(F\)</span> primitivna funkcija od <span class="math inline">\(f\)</span> na <span class="math inline">\(I\)</span>.</p>
-<div class="def">
-<p>Skup <span class="math inline">\(\{F + C : C \in \mathbb{R}\}\)</span> svih primitivnih funkcija od <span class="math inline">\(f\)</span> zovemo <strong>neodređeni</strong> integral ili antiderivacija od <span class="math inline">\(f\)</span> i taj skup označavamo s <span class="math display">\[
-\int f(x) \, dx= F(x) + C
-\]</span></p>
-</div>
-<div class="def">
-<p>Neka je <span class="math inline">\(f \colon [a,b] \to \mathbb{R}\)</span> ograničena funkcija. Ako je <span class="math inline">\(f\)</span> Riemann integrabilna, onda realni broj <span class="math inline">\(\displaystyle \int_a^bf(x) \, dx\)</span> zovemo <strong>određeni integral</strong>.</p>
+<hr>
+<div class="zadatak">
+<p>(<strong>napredno</strong>) Pokažite da vjerojatnost definirana u Laplaceovom modelu zadovoljava aksiome (A1) – (A3).</p>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

@@ -15,6 +15,7 @@ website:
 
   sidebar:
     style: "docked"
+    initially-open: false
     search: true
     contents:
       - text: "Predavanje zadataka"
@@ -67,6 +68,15 @@ website:
             href: integrali/integrali-trig.qmd
           - text: "Zadatci - drugi dio"
             href: integrali/integrali-zadatci2.qmd
+      - section: "4. VJEROJATNOST"
+        href: vjerojatnost/vjerojatnost.qmd
+        contents: 
+          - text: "4.1 Uvod i definicija"
+            href: vjerojatnost/uvod.qmd
+          - text: "4.2 Svojstva vjerojatnosti i modeli vjerojatnosti "
+            href: vjerojatnost/modeli.qmd
+          - text: "Zadatci - prvi dio"
+            href: vjerojatnost/zadatci1.qmd
             
 format:
   html:

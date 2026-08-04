@@ -1,0 +1,156 @@
+# Zadatci - prvi dio {.unnumbered}
+
+:::{.zadatak}
+Bacamo dvije kockice. Odredite prostor elementarnih događaja $\Omega$.
+
+Ako su $E$, $F$ i $G$:
+
+- $E = \{$zbroj brojeva na kockama je neparan$\}$
+
+- $F = \{$barem jedna kocka je pala na $1\}$
+
+- $G = \{$zbroj brojeva na kockama je $5\}$
+
+pomoću elementarnih događaja prikažite događaje $E$, $F$, $G$, $E \cap F$, $F \cap G$, $E \cap F \cap G$.
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži hint</summary>
+Razlikujemo kockice! Dakle, bitno je koja je prva, a koja druga.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+Igraći špil od $52$ karte ima po $13$ karata svake boje (radi jednostavnosti numeriramo kralja, damu, dečka i as). Boje su *herc*, *tref*, *karo* i *pik*. Iz tog špila izvlačite $4$ karte. Odredite vjerojatnost da su sve izvučene karte iste boje.
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži rješenje</summary>
+Prebrojite povoljne događaje i iskoristite to u Laplaceovom modelu.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+Bacate simetričan novčić $2$ puta. Odredite vjerojatnost
+
+(a) da će oba puta pasti glava.
+
+(b) da će barem jednom pasti glava.
+
+(c) da će u drugom bacanju pasti glava.
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži rješenje</summary>
+Ispišite elementarne događaje i iskoristite Laplaceov model. Ovdje implicitno koristimo svojstvo *nezavisnosti događaja* 
+$$
+\mathbb{P}(A \cap B) = \mathbb{P}(A) \mathbb{P}(B)
+$$ 
+
+o čemu će biti riječ u sljedećem poglavlju.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+U kutiji se nalazi $6$ bijelih i $4$ crne kuglice. Izvlačimo dvije kuglice jednu za drugom, dakle ne istovremeno. Odredite vjerojatnost
+
+(a) da je prva izvučena kuglica crna.
+
+(b) da će druga izvučena kuglica biti crna ako je i prva bila crna.
+
+(c) da je prva kuglica bijela, a druga crna.
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži rješenje</summary>
+Ponovo iskoristite svojstvo *nezavisnih događaja*.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+U ravnini $\mathbb{R}^2$ zadan je kvadrat $I = [0,1]^2$ te pravci $y_1 = x + \dfrac12$ i $y_2 = x - \dfrac12$. Odredite vjerojatnost da se slučajno odabrana točka unutar tog kvadrata nalazi ispod pravca $y_1$ i iznad pravca $y_2$.
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži rješenje</summary>
+Skicirajte dani skup i iskoristite model geometrijske vjerojatnosti.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+Za Okrugli stol sjeda $n \in \mathbb{N}$ vitezova, pri čemu Arthur ne želi sjediti kraj Mordreda ni kraj Lancelota. Ako sjedaju na slučajan način, kolika je vjerojatnost da Arthur ne sjedi ni kraj Mordreda ni kraj Lancelota?
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži rješenje</summary>
+Probajte fiksirati Arthura i pronaći moguće načine sjedenja ostalih vitezova.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+Iz skupa $\{1,\dots,100\}$ slučajno su odabrana dva ne nužno različita broja $m$ i $n$. Izračunajte vjerojatnost da je
+
+(a) $m^n + n^m$  neparan broj
+
+(b) $m^n \cdot n^m$ paran broj
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži rješenje</summary>
+Rastavite na slučajeve kad su suma i produkt članova $m^n$ i $n^m$ parni, odnosno neparni.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+Dokažite da vrijedi
+$$
+\mathbb{P}(A^c) = 1 - \mathbb{P}(A)
+$$
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži rješenje</summary>
+Iskoristite definiciju komplementa skupa i jedno od svojstava vjerojatnosti.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+(**napredno**) Neka je $\mathcal{F}$ $\sigma$-algebra na nekom $\Omega$. Po definiciji, $\mathcal{F}$ je zatvorena na prebrojive unije. Dokažite da je zatvorena i na konačne unije.
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži rješenje</summary>
+Probajte modificirati skupove iz prebrojive unije tako da ne pridonose uniji.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+(**napredno**) Pokažite da vjerojatnost definirana u Laplaceovom modelu zadovoljava aksiome (A1) -- (A3).
+:::

@@ -4,6 +4,10 @@ title: "Matematika"
 
 Ovo je Quarto stranica.
 
-[Limesi](limesi/limesi.qmd)
+[1. Limesi](limesi/limesi.qmd)
 
-[Derivacije](derivacije/derivacije.qmd)
+[2. Derivacije](derivacije/derivacije.qmd)
+
+[3. Riemannov integral](integrali/integrali.qmd)
+
+[4. Vjerojatnost](vjerojatnost/vjerojatnost.qmd)

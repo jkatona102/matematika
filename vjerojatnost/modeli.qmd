@@ -1,0 +1,68 @@
+# 4.2 Svojstva vjerojatnosti i modeli vjerojatnosti {.unnumbered}
+
+:::{.teorem}
+(a) $\mathbb{P}(\emptyset) = 0$
+
+(b) $\mathbb{P}$ je konačno aditivna
+
+(c) $\mathbb{P}(B\backslash A) = \mathbb{P}(B) - \mathbb{P}(A\cap B)$
+
+(d) $A \subseteq B$ povlači $\mathbb{P}(B\backslash A) = \mathbb{P}(B) - \mathbb{P}(A)$ te da je $\mathbb{P}(A) \leq \mathbb{P}(B)$ (*monotonost od* $\mathbb{P}$) 
+
+(e) $\mathbb{P}(A^c) = 1 - \mathbb{P}(A)$
+
+(f) (*Formula uključivanja-isključivanja*) Za sve $A,B \in \mathcal{F}$ vrijedi
+$$
+\mathbb{P} (A \cup B) = \mathbb{P}(A) + \mathbb{P}(B) - \mathbb{P}(A \cap B)
+$$
+:::
+
+## Laplaceov model {.unnumbered}
+
+Ako je $|\Omega| < \infty$ te su zbog simetrije svi $\omega \in \Omega$ "jednako vjerojatni", prirodno je uzeti
+$$
+\mathbb{P}(A) = \frac{|A|}{|\Omega|}
+$$
+
+uz $\mathcal{F} = \mathcal{P}(\Omega)$. Lako se vidi da tako definirana $\mathbb{P}$ zaista zadovoljava aksiome (A1) -- (A3).
+
+:::{.primjer}
+Bacamo kockicu. Kolika je vjerojatnost da će broj na kockici biti neparan?
+
+Imamo događaj $A = \{1,3,5\}$ čiji je kardinalitet (*veličina*) jednak $3$. Stoga je
+$$
+\mathbb{P}(A) = \frac{|A|}{|\Omega|} = \frac{3}{6} = \frac{1}{2}
+$$
+:::
+
+:::{.primjer}
+U kutiji se nalazi $n$ bijelih i $n$ crnih kuglica, $n \in \mathbb{N}$ i izvlačimo dvije kuglice bez vraćanja. Odredimo prostor elementarnih događaja $\Omega$ i njegov kardinalitet.
+
+Numeiriramo kuglice od $1$ do $2n$ gdje su bijele kuglice numerirane brojevima $1$, $\dots$, $n$, a crne kuglice brojevima $n+1$, $\dots$, $2n$. Tada izvlačenje dviju kuglica odgovara izboru uređenog para dvaju različitih brojeva pa iz toga imamo
+$$
+\Omega = \{(i,j) : 1 \leq i,j \leq 2n, i \neq j\}
+$$
+
+Ovo shvaćamo kao prva kuglica ima broj $i$, a druga broj $j$. Iz jednostavne kombinatorike imamo $|\Omega| = 2n(2n-1)$.
+:::
+
+## Geometrijska vjerojatnost {.unnumbered}
+
+Na *slučajan* način biramo točku iz kvadrata $I = [−1,1] \times [-1,1]$. Dakle, $\Omega = [−1,1]^2$, pri čemu $(x,y) \in \Omega$ predstavlja ishod kada smo izabrali upravo točku $(x,y) \in I$. Tada je za $\mathbb{P}$ prirodno uzeti
+$$
+\mathbb{P}(A) = \frac{\lambda (A)}{\lambda (\Omega)}, \quad A \in \mathcal{F}
+$$
+
+Na primjer
+
+- za $A = \{$ točka je upala u krug upisan kvadratu $[-1,1]^2\}$ $=$ $\{(x,y) \in \Omega : \sqrt{x^2 + y^2} \leq 1\}$ imamo
+$$
+\mathbb{P}(A) = \frac{r^2 \pi}{(2r)^2} = \frac{1 \cdot \pi}{2^2} = \frac{\pi}{4}
+$$
+
+- za $B = \{$ izabrali smo točku $(0,0)\}$ imamo
+$$
+\mathbb{P}(B) = \frac{\lambda (\{(0,0)\})}{2^2} = 0
+$$
+
+U prehodnoj definiciji i primjerima $\lambda (A)$ je oznaka *površine* skupa $A$. To je slaba definicija. Zapravo se radi na o mjeri na $\sigma$-algebri. Naravno, to je previše napredan pojam za ovo što trenutno proučavamo, ali sjetimo se mjere iz poglavlja o integralima, točka ima mjeru nula pa je jasno da je vjerojatnost izbora jedne točke u nekom geometrijskom liku upravo jednaka nuli.

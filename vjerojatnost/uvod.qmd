@@ -1,0 +1,133 @@
+# 4.1 Uvod i definicija {.unnumbered}
+
+Često nas u životu zanimaju neki budući događaji za koje smo svjesni da su neizvjesni, primjerice brojevi lota u idućem kolu, rast dionica, naše zdravlje u idućih deset godina, hoće li sutra pasti kiša, hoću li pri bacanju dviju kockica dobiti oba parna broja i mnogi drugi.
+
+Cilj je opisati i matematički analizirati koncepte slučajnosti i neizvjesnosti koji su u skladu s našom intuicijom. Ako teoriji damo dobre temelje, onda će vjerojatnosni modeli funkcionirati i kad nam intuicija ne pomaže.
+
+Evo nekih primjera.
+
+:::{.primjer}
+**Lažno pozitivni testovi**
+
+Laboratorijski krvni test je $95\%$ učinkovit u otkrivanju konkretne bolesti kada je ta bolest prisutna. Test također ukazuje na bolest i u $1\%$ slučajeva kada je osoba zdrava (*false positive*). 
+
+Poznato je da $0.1\%$ populacije ima tu bolest. Kolika je vjerojatnost da (slučajno odabrana) osoba ima tu bolest ako je rezultat testa pozitivan?
+
+Promotrimo populaciju od $1000000$ ljudi. Njih $0.1\%$ ima bolest - dakle $1000$ ljudi je bolesno. Od tih $1000$ ljudi na testiranju će biti pozitivno njih $95\%$, tj. $950$. 
+
+Od preostalih $999000$ zdravih, na testu će pozitivan rezultat imati njih $1\%$, odnosno $9990$. Dakle, ukupno pozitivnih testova bit će $950+9990=10940$, od kojih je samo $950$ bolesno. Sada zaključujemo da je tražena vjerojatnost $950/10940 \approx 0.0868$.
+
+Na ovaj ćemo se primjer vratiti kad se upoznamo s uvjetnom vjerojatnošću i Bayesovom formulom.
+:::
+
+:::{.primjer}
+U prostoriji se nalazi $n$ ljudi. Označimo s $p(n)$ vjerojatnost da barem dvije osobe imaju rođendan na isti dan. Također, pretpostavimo da promatrana godina nije prijestupna te da je svaki dan u godini jednako vjerojatan (simetrija). Koliki je najmanji $n$ takav da je $p(n) \geq 1/2$?
+
+Prvo uočimo da je $p(1) = 0$ te $p(n) = 1$ za $n\geq 366$. Nadalje, uočimo da
+$1−p(n)$ predstavlja vjerojatnost da nikoje dvije osobe nemaju rođendan na isti dan. Zbog pretpostavke simetrije, ukupan broj ishoda pokusa je $365n$. Naime, svaka od $n$ osoba može imati rođendan na bilo koji dan u godini (što je $365$) pa primjenom pravila produkta dolazimo do željenog broja. Analogno, broj ishoda događaja da nikoje dvije osobe nemaju rođendan na isti dan je $365\cdot 364\cdots(365−n+ 1)$. Preciznije, prva osoba može imati rođendan na bilo koji dan u godini (što je $365$), druga osoba može imati rođendan na bilokoji dan u godini osim dana na koji je rođena prva osoba (što je $364$) te, induktivno, $n$-ta osoba može imati rođendan na bilo koji dan u godini osim na dane na koje rođedan imaju osobe $1, 2, \dots, n−1$ (što je $365−n+ 1$).
+
+Sada, pravilom produkta dolazimo do željenog broja. Dakle, za $2 \leq n \leq 365$ imamo
+$$
+1 - p(n) = \frac{365 \cdot 364 \cdots (365-n+1)}{365^n}
+$$
+
+tj.
+$$
+p(n) = 1 - \frac{365 \cdot 364 \cdots (365-n+1)}{365^n}
+$$
+
+Konačno, imamo $p(22) \approx 0.475695$ i $p(23) \approx 0.507297$. Ovaj rezultat je prilično neočekiva, ali model po kojem smo računali funkcionira.
+:::
+
+## Vjerojatnosni prostor {.unnumbered}
+
+Neformalno, (slučajni) pokus je svaka procedura čiji ishod nije jednoznačno određen. Na primjer, bacanje novčića, sutrašnje cijene dionica na burzi...
+
+Vjerojatnosni prostor, koji ćemo kasnije formalno definirati, predstavlja matematički model za dani pokus, a sastoji se od tri komponente:
+
+(i) skupa svih mogućih ishoda pokusa (oznaka $\Omega$) --- elemente od $\Omega$ (tj. ishode pokusa) obično označavamo s $\omega$ te ih zovemo elementarni događaji, a $\Omega$ prostor elementarnih događaja
+
+(ii) familije podskupova od $\Omega$ čije elemente zovemo događaji --- znaka obično $\mathcal{F}$, pri čemu je dakle $\mathcal{F} \subseteq \mathcal{P}(\Omega)$, gdje je $\mathcal{P}(\Omega)$ partitivni skup od $\Omega$, odnosno skup svih podskupova od $\Omega$
+
+(iii) vjerojatnosti koju pridružujemo svakom dogadaju --- za $A \in \mathcal{F}$ oznaka obično $\mathbb{P}(𝐴)$.
+
+:::{.primjer}
+Bacamo kockicu.
+
+(i) Jasno je $\Omega = \{1,2,3,4,5,6\}$
+
+(ii) Primjeri nekih događaja su 
+$A = \{$pao je neparan broj$\} = \{1,3,5\}$ i $B = \{$pao je broj $6\} = \{6\}$   
+
+(iii) Za vjerojatnosti imamo $\mathbb{P}(A) = \dfrac{1}{2}$ i $\mathbb{P}(A) = \dfrac{1}{6}$
+:::
+
+### Događaji {.unnumbered}
+
+Sljedećom definicijom dajemo vezu *događaj* -- *skup* i bitno je što prije naviknuti se na ovu vezu.
+
+:::{.def}
+**Događaji**
+
+Kažemo da se događaj $A \in \mathcal{F}$ dogodio ako se dogodio ishod $\omega \in \Omega$ takav
+da je $\omega \in A$. Također, za $A,B \in \mathcal{F}$:
+
+- $A^c = \Omega \backslash A$ predstavlja događaj *$A$ se nije dogodio*
+
+- $A \cup B$ predstavlja događaj *dogodio se $A$ ili $B$*
+
+- $A \cap B$ predstavlja događaj *dogodili su se i $A$ i $B$*
+
+- $A\backslash B$ predstavlja događaj *dogodio se $A$, ali ne i $B$*
+
+- $A \subseteq B$ (tj. $\omega \in A$ povlači $\omega \in B$) interpretiramo kao *ako se dogodio $A$, dogodio se i $B$*
+
+- $A \cap B = \emptyset$ (tj. $A$ i $B$ su disjunktni) interpetiramo kao *ne mogu se istovremeno dogoditi i $A$ i $B$*
+
+- $\Omega$ nazivamo *siguran događaj*, a $\emptyset$ *nemoguć događaj*.
+:::
+
+**Napomena:** Iz tehničkih razloga neće uvijek biti moguće $\mathcal{F} = \mathcal{P}(\Omega)$. Svejedno ćemo tražiti $\mathcal{F} \subseteq \mathcal{P}(\Omega)$ i da $\mathcal{F}$ zadovoljava svojstva $\sigma$**-algebre** ($\sigma$ je grčko slovo *sigma*).
+
+:::{.def}
+Neka je $\Omega$ neprazan skup. Familija podskupova $\mathcal{F}$ od $\Omega$ zove se $\sigma$-algebra (događaja) na $\Omega$, ako vrijede sljedeća tri svojstva:
+
+(i) $\Omega \in \mathcal{F}$
+
+(ii) Ako je $A \in \mathcal{F}$, onda je i $A^c \in \mathcal{F}$ (zatvorenost na uzimanje komplementa)
+
+(iii) Ako su $A_j \in \mathcal{F}$, $j \in \mathbb{N}$, onda je i $\displaystyle \bigcup _{j = 1}^{\infty} A_j \in \mathcal{F}$  (zatvorenost na *prebrojive* unije).
+
+Uređeni par $(\Omega, \mathcal{F})$ zovemo **izmjeriv prostor**.
+:::
+
+$\mathcal{F}$ je zatvorena na (gotovo) sve konačne ili prebrojive operacije nad događajima, tj. to će opet biti događaji!
+
+:::{.primjer}
+Neka je $\Omega \neq \emptyset$.
+
+(a) $\mathcal{P}(A)$ je najveća, a $\{\emptyset, \Omega\}$ najmanja $\sigma$-algebra na $\Omega$.
+
+(b) Za $A \subseteq \Omega$, $\{\emptyset, A,\Omega\}$ nije $\sigma$-algebra, ali $\{\emptyset, A,A^c, \Omega\}$ jest i to najmanja na $\Omega$ koja sadrži $A$.
+:::
+
+### Definicija {.unnumbered}
+
+Današnju definiciju vjerojatnosti dao je Andrej Nikolajevič Kolmogorov 1933.
+
+:::{.def}
+Neka je $(\Omega, \mathcal{F})$ izmjeriv prostor. **Vjerojatnost** na $(\Omega, \mathcal{F})$ je svaka funkcija $\mathbb{P} \colon \mathcal{F} \to \mathbb{R}$ koja zadovoljava sljedeća tri aksioma:
+
+**(A1)** (*nenegativnost*) Za sve $A \in \mathcal{F}$, $\mathbb{P}(A) \geq 0$
+
+**(A2)** (*normiranost*) $\mathbb{P}(\Omega) = 1$
+
+**(A3)** ($\sigma$-*aditivnost*) Ako su $A_1, A_2, \dots \in \mathcal{F}$ u parovima disjunktni (tj. $A_i \cap A_j = \emptyset$ za $i \neq j$), vrijedi
+$$
+\mathbb{P} \left (\bigcup _{j = 1}^{\infty} A_j  \right) = \sum _{j=1}^{\infty} \mathbb{P}(A_j)
+$$
+
+Uređena trojka $(\Omega,\mathcal{F},\mathbb{P})$ zove se **vjerojatnosni prostor**.
+:::
+
+Vidjet ćemo i da vrijedi $\mathbb{P}(\emptyset) = 0$ i $\mathbb{P}(A) \in [0,1]$ za sve $A \in \mathcal{F}$.
