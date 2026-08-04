@@ -2,6 +2,12 @@
 title: "Povijest promjena na stranici"
 ---
 
+04.08.2026.
+
+- 11:15 dodano poglavlje [4. Vjerojatnost](vjerojatnost/vjerojatnost.qmd)
+
+---
+
 30.07.2026.
 
 - 19:53 objavljena poglavlja [3.4](integrali/integrali-racionalne.qmd), [3.5](integrali/integrali-iracionalne.qmd), [3.6](integrali/integrali-trig.qmd) i [drugi dio zadataka iz integrala](integrali/integrali-zadatci2.qmd).
