@@ -21,6 +21,65 @@ Razlikujemo kockice! Dakle, bitno je koja je prva, a koja druga.
 </details>
 :::
 
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Budući da razlikujemo kockice, prostor elementarnih digađaja čine uređeni parovi. Imamo
+$$
+\begin{aligned}
+\Omega = \{
+    & (1,1),(1,2),(1,3),(1,4),(1,5),(1,6), \\
+    & (2,1),(2,2),(2,3),(2,4),(2,5),(2,6), \\
+    & (3,1),(3,2),(3,3),(3,4),(3,5),(3,6), \\
+    & (4,1),(4,2),(4,3),(4,4),(4,5),(4,6), \\
+    & (5,1),(5,2),(5,3),(5,4),(5,5),(5,6), \\
+    & (6,1),(6,2),(6,3),(6,4),(6,5),(6,6)
+    \}
+\end{aligned}
+$$
+
+Za događaje $E$, $F$ i $G$ imamo
+$$
+\begin{aligned}
+E = \{
+    & (1,1),(1,3),(1,5),(2,2),(2,4),(2,6) \\
+    & (3,1),(3,3),(3,5),(4,2),(4,4),(4,6) \\
+    & (5,1),(5,3),(5,5),(6,2),(6,4),(6,6)
+    \}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+F = \{
+    & (1,1),(1,2),(1,3),(1,4),(1,5),(1,6), \\
+    & (2,1),(3,1),(4,1),(5,1),(6,1)
+    \}
+\end{aligned}
+$$
+
+$$
+G = \{(1,4),(2,3),(3,2),(4,1)\}
+$$
+
+Uočimo da za događaj $F$ nismo pisali dva puta ishod $(1,1)$. On se pojavljuje u skupu gdje je prva kockica pala na $1$ i skupu gdje je druga kockica pala na jedan $1$, dakle $(1,1)$ je u presjeku tih skupova i stoga ga ne brojimo dvaput.
+
+Za presjeke događaja $E$, $F$ i $G$ imamo
+
+$$
+E \cap F = \{(1,2),(1,4),(1,6),(3,1),(5,1)\}
+$$
+
+$$
+F \cap G = \{(1,4),(4,1)\}
+$$
+
+$$
+E \cap F \cap G = \emptyset
+$$
+</details>
+:::
+
 ---
 
 :::{.zadatak}
@@ -31,6 +90,16 @@ Igraći špil od $52$ karte ima po $13$ karata svake boje (radi jednostavnosti n
 <details>
 <summary>Prikaži rješenje</summary>
 Prebrojite povoljne događaje i iskoristite to u Laplaceovom modelu.
+</details>
+:::
+
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Neka je $A$ dani događaj. $4$ karte iz skupa od $13$ karti iste boje biramo na $\binom{13}{4} = 715 $ načina i tako za svaku od $4$ različite boje. Tada je vjerojatnost da su sve izvučene karte iste boje jednaka
+$$
+\mathbb{P} (A) = \frac{4 \cdot \binom{13}{4}}{\binom{52}{4}} = \frac{44}{4165} \approx 0.01056
+$$
 </details>
 :::
 
@@ -58,6 +127,23 @@ o čemu će biti riječ u sljedećem poglavlju.
 </details>
 :::
 
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Neka su $A = \{$ u prvom je bacanju pala glava $\}$, $B = \{$ u drugom je bacanju pala glava $\}$.
+
+(a) Intuitivno je pretpostaviti $\mathbb{P}(A \cap B) = \mathbb{P}(A) \mathbb{P}(B) = \dfrac{1}{4}$, a to je upravo i rješenje. Koristimo nezavisnost događaja $A$ i $B$, neformalno govoreći, ishod prvog bacanja ne utječe na ishod drugog.
+
+---
+
+(b) Neka je dani događaj $C$. Vidimo da je $\mathbb{P}(C) = \dfrac{3}{4}$. Mogući su ishodi $(P,G)$, $(P,P)$, $(G,P)$ i $(G,G)$. Sada je jasno da je to rješenje.
+
+---
+
+(c) Prvo nam je bacanje nebitno, a vjerojatnost pada glave za simetričan novčić je upravo $\dfrac{1}{2}$.
+</details>
+:::
+
 ---
 
 :::{.zadatak}
@@ -77,6 +163,29 @@ Ponovo iskoristite svojstvo *nezavisnih događaja*.
 </details>
 :::
 
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a) Crnu kuglicu izvlačimo s vjerojatnošću $\dfrac{2}{5}$.
+
+---
+
+(b) Neka je $A$ događaj gdje je druga kuglica crna. Znamo da je prva kuglica isto bila crna pa ponavljamo postupak kao u prehodnom zadatku. Imamo
+$$
+\mathbb{P}(A) = \frac{3}{9} = \frac{1}{3} 
+$$
+
+Jedna je crna kuglica već izvučena pa se manjuje broj mogućih odabira.
+
+---
+
+(c) $B = \{$ prva izvučena kuglica je bijela $\}$, $A$ je kao iz *b.* dijela. 
+$$
+\mathbb{P}(A \cap B) = \mathbb{P}(A) \mathbb{P}(B) = \dfrac{4}{9} \cdot \dfrac{6}{10} = \dfrac{4}{9} \cdot \dfrac{3}{5} = \dfrac{4}{15}
+$$
+</details>
+:::
+
 ---
 
 :::{.zadatak}
@@ -90,6 +199,108 @@ Skicirajte dani skup i iskoristite model geometrijske vjerojatnosti.
 </details>
 :::
 
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Napravimo prvo skicu.
+```{python}
+#| echo: true
+#| output: true
+#| code-fold: true
+#| code-summary: "Prikaži Python kod"
+#| fig-align: center
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Funkcije pravaca
+def f(x):
+    return x + 1/2
+
+def g(x):
+    return x - 1/2
+
+# Vrijednosti x-a
+x = np.linspace(0, 1, 500)
+
+fig, ax = plt.subplots(figsize=(6, 6))
+
+# Kvadrat I = [0,1]^2
+ax.set_xlim(0, 1)
+ax.set_ylim(0, 1)
+
+# Osi
+ax.axhline(0, color='black', linewidth=1)
+ax.axvline(0, color='black', linewidth=1)
+
+# Strelice na osima
+ax.annotate('', xy=(1.03, 0), xytext=(0, 0),
+            arrowprops=dict(arrowstyle='->',
+                            linewidth=1.2, color='black'))
+
+ax.annotate('', xy=(0, 1.03), xytext=(0, 0),
+            arrowprops=dict(arrowstyle='->',
+                            linewidth=1.2, color='black'))
+
+# Pravac y1 = x + 1/2
+ax.plot(x, f(x), label=r'$y_1=x+\frac{1}{2}$',
+        linewidth=2)
+
+# Pravac y2 = x - 1/2
+ax.plot(x, g(x), label=r'$y_2=x-\frac{1}{2}$',
+        linewidth=2)
+
+# Područje između pravaca unutar kvadrata
+# Donja granica: max(0, x - 1/2)
+# Gornja granica: min(1, x + 1/2)
+
+x_fill = np.linspace(0, 1, 500)
+
+donja = np.maximum(0, x_fill - 1/2)
+gornja = np.minimum(1, x_fill + 1/2)
+
+ax.fill_between(
+    x_fill,
+    donja,
+    gornja,
+    alpha=0.35,
+    label='Traženo područje'
+)
+
+# Oznake vrhova kvadrata
+ax.text(-0.08, -0.05, r'$(0,0)$', fontsize=11)
+ax.text(1.01, -0.04, r'$(1,0)$', fontsize=11)
+ax.text(-0.08, 1.01, r'$(0,1)$', fontsize=11)
+ax.text(1.01, 1.01, r'$(1,1)$', fontsize=11)
+ax.text(0.5,0.5, r'$A$', fontsize = 11)
+
+# Mreža
+ax.grid(True, linestyle="--", linewidth=0.5, alpha=0.5)
+
+# Uklanjanje oznaka na osima
+ax.tick_params(labelbottom=False, labelleft=False)
+
+# Legenda izvan grafa, desno
+ax.legend(
+    loc='upper left',
+    bbox_to_anchor=(1.05, 1),
+    frameon=True
+)
+
+# Podesi prostor kako legenda ne bi bila odrezana
+plt.tight_layout()
+
+# Omjer osi
+ax.set_aspect('equal')
+
+plt.show()
+
+```
+
+Jednostavnim računom vidimo da je $\lambda (A) = \dfrac{3}{4}$, a površina je cijelog kvadrata jednaka $1$. Dakle, tražena vjerojatnost je $\dfrac{3}{4}$.
+</details>
+:::
+
 ---
 
 :::{.zadatak}
@@ -100,6 +311,20 @@ Za Okrugli stol sjeda $n \in \mathbb{N}$ vitezova, pri čemu Arthur ne želi sje
 <details>
 <summary>Prikaži rješenje</summary>
 Probajte fiksirati Arthura i pronaći moguće načine sjedenja ostalih vitezova.
+</details>
+:::
+
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Neka je $A = \{$ Arthur ne sjedi pored Mordreda ni pored Lancelota $\}$.
+
+Smjestimo Arthura na jedno mjesto i fiksiramo ga. Budući da Lancelot i Mordred ne smiju sjesti pored Arthura, imaju na raspolaganju $n-3$ mjesta. Stoga biramo dva mjesta i permutiramo Lancelota i Mordreda na ta mjesta na $\displaystyle \binom{n+3}{2} \cdot 2$ $=$ $(n-3)(n-4)$ načina. Preostale vitezove smjestimo na $(n-3)!$ načina. Stoga je ukupno $(n-3)(n-4)(n-3)!$ povoljnih smještaja oko stola.
+
+Ukupno ima $(n-1)!$ rasporeda za stolom. Tražena vjerojatnost danog tada iznosi
+$$
+\mathbb{P}(A) = \frac{(n-3)(n-4)(n-3)!}{(n-1)!} = \frac{(n-3)(n-4)}{(n-1)(n-2)} 
+$$
 </details>
 :::
 
@@ -120,6 +345,31 @@ Rastavite na slučajeve kad su suma i produkt članova $m^n$ i $n^m$ parni, odno
 </details>
 :::
 
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+(a) $m^n + n^m$  neparan broj
+
+- Prvi slučaj: $m^n$ je neparan, $n^m$ paran. Zaključujemo da je tada $m$ neparan, a $n$ paran. Vjerojatnost da smo izabrali jedan neparan i jedan paran broj je $\dfrac{1}{4}$.
+
+- Drugi slučaj: $m^n$ je paran, $n^m$ neparan. Analogno kao u prvom slučaju imamo da je vjerojatnost takvog odabira $\dfrac{1}{4}$.
+
+Vidimo da su ovi slučajevi disjunktni pa je vjerojatnost njihove unije suma vjerojatnosti tih događaja, tj. tražena vjerojatnost je $\dfrac{1}{2}$.
+
+---
+
+(b) $m^n \cdot n^m$ paran broj
+
+- Prvi slučaj: $m^n$ je paran, $n^m$ neparan. Iz *a.* dijela imamo da je vjerojatnost $\dfrac{1}{4}$.
+
+- Drugi slučaj: $m^n$ je neparan, $n^m$ paran. Vjerojatnost je $\dfrac{1}{2}$.
+
+- Treći slučaj: $m^n$ je neparan, $n^m$ paran. Vjerojatnost je opet $\dfrac{1}{2}$.
+
+Ovi su događaji također disjunktni pa je vjerojatnost njihove unije jednaka $\dfrac{3}{4}$.
+</details>
+:::
+
 ---
 
 :::{.zadatak}
@@ -136,6 +386,18 @@ Iskoristite definiciju komplementa skupa i jedno od svojstava vjerojatnosti.
 </details>
 :::
 
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Dokaz slijedi korištenjem definicije komplementa skupa i korištenjem svojstava vjerojatnosti.
+$$
+\mathbb{P}(A^c) = \mathbb{P}(\Omega \backslash A) = \mathbb{P}(\Omega) - \mathbb{P}(A)= 1 - \mathbb{P}(A)
+$$
+
+Iskoristili smo činjenicu da za svaki $A \in \mathcal{F}$ vrijedi $A \subseteq \Omega$.
+</details>
+:::
+
 ---
 
 :::{.zadatak}
@@ -149,8 +411,81 @@ Probajte modificirati skupove iz prebrojive unije tako da ne pridonose uniji.
 </details>
 :::
 
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Po definiciji $\sigma$-algebre znamo da za $A_j \in \mathcal{F}$, $j \in \mathbb{N}$ vrijedi $\displaystyle \bigcup _{j = 1}^{\infty} A_j \in \mathcal{F}$.
+
+Neka su sada $A_1,$ $\dots ,$ $A_k$ $\neq \emptyset$ za $k \in \mathbb{N}$, a $A_{k+1},$ $A_{k+2},$ $\dots$ $= \emptyset$. Prazni skupovi ne doprinose uniji pa gornja unije postaje
+$$
+\bigcup _{j = 1}^{\infty} A_j = \bigcup _{j = 1}^{k} A_j
+$$
+
+**Napomena:** Iz ovoga direktno slijedi da je vjerojatnost $\sigma$-aditivna i na konačnom broju disjunktnih događaja.
+</details>
+:::
+
 ---
 
 :::{.zadatak}
 (**napredno**) Pokažite da vjerojatnost definirana u Laplaceovom modelu zadovoljava aksiome (A1) -- (A3).
+:::
+
+:::{.rjesenje}
+Za $\Omega$ takav da je $|\Omega| < \infty$ i da su svi elementarni događaji jednako vjerojatni vrijedi
+$$
+\mathbb{P}(A) = \frac{|A|}{|\Omega|}
+$$
+
+Provjerimo aksiome:
+
+**(A1)** Vjerojatnost je očito nenegativna za sve događaje $A$ jer je kardinalitet skupa nenegativan broj.
+
+**(A2)** Budući da je $A \subseteq \Omega$, vrijedi $|A| \leq |\Omega|$ stoga vrijedi
+$$
+\mathbb{P}(A) = \frac{|A|}{|\Omega|} \leq \frac{|\Omega|}{|\Omega|} \leq 1
+$$
+
+**(A3)** U Laplaceovu modelu prostor elementarnih događaja je konačan skup $\Omega={\omega_1,\omega_2,\ldots,\omega_n}$.
+
+Budući da je $\Omega$ konačan skup, svaki $A_j\subseteq\Omega$ je konačan. Ako su skupovi (A_1,A_2,\ldots) međusobno disjunktni i svi su neprazni, tada svaki od njih sadrži barem jedan element. Stoga može postojati najviše $|\Omega|$ nepraznih skupova $A_j$.
+
+Dakle, postoji $m\in\mathbb{N}$ takav da je
+$$
+A_j=\emptyset,
+\quad \forall j>m
+$$
+
+Prema tome,
+$$
+\bigcup_{j=1}^{\infty}A_j = \bigcup_{j=1}^{m}A_j
+$$
+
+Budući da su skupovi (A_1,\ldots,A_m) međusobno disjunktni, vrijedi
+$$
+\left|\bigcup_{j=1}^{m}A_j\right| = \sum_{j=1}^{m}|A_j|.
+$$
+
+Prema definiciji Laplaceove vjerojatnosti dobivamo
+$$
+\mathbb{P} \left(\bigcup_{j=1}^{\infty}A_j\right) =
+\frac{\left|\bigcup_{j=1}^{m}A_j\right|}{|\Omega|} =
+\frac{\sum_{j=1}^{m}|A_j|}{|\Omega|} =
+\sum_{j=1}^{m}\frac{|A_j|}{|\Omega|} =
+\sum_{j=1}^{m}\mathbb{P}(A_j)
+$$
+
+Za $j>m$ je $A_j=\emptyset$, pa je $\mathbb{P}(A_j)=0$. Stoga vrijedi
+$$
+\sum_{j=1}^{m}P(A_j) = \sum_{j=1}^{\infty}P(A_j)
+$$
+
+Konačno
+$$
+P\left(\bigcup_{j=1}^{\infty}A_j\right) = \sum_{j=1}^{\infty}P(A_j)
+$$
+
+pa je vjerojatnost definirana Laplaceovim modelom $\sigma$-aditivna.
+
+**Napomena:** U konačnom Laplaceovu modelu $\sigma$-aditivnost zapravo slijedi iz konačne aditivnosti. Naime, zbog konačnosti prostora $\Omega$, među međusobno disjunktnim događajima može biti samo konačno mnogo nepraznih skupova.
 :::

@@ -316,3 +316,33 @@ mjx-container[display="true"] {
 
   box-sizing: border-box;
 }
+
+#sigma-demo {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+#sigma-demo button {
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  cursor: pointer;
+}
+
+#sets {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 2rem;
+}
+
+.sigma-set {
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: lightblue;
+  font-size: 1.2rem;
+}

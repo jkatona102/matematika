@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -355,23 +390,31 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Sadržaj</h2>
-   
-  <ul>
-  <li><a href="#zadatci---prvi-dio" id="toc-zadatci---prvi-dio" class="nav-link active" data-scroll-target="#zadatci---prvi-dio">Zadatci - prvi dio</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../vjerojatnost/vjerojatnost.html">4. VJEROJATNOST</a></li><li class="breadcrumb-item"><a href="../vjerojatnost/zadatci1.html">Zadatci - prvi dio</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../vjerojatnost/vjerojatnost.html">4. VJEROJATNOST</a></li><li class="breadcrumb-item"><a href="../vjerojatnost/zadatci1.html">Zadatci - prvi dio</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Zadatci - prvi dio</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="zadatci---prvi-dio" class="level1 unnumbered">
-<h1 class="unnumbered">Zadatci - prvi dio</h1>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <div class="zadatak">
 <p>Bacamo dvije kockice. Odredite prostor elementarnih događaja <span class="math inline">\(\Omega\)</span>.</p>
 <p>Ako su <span class="math inline">\(E\)</span>, <span class="math inline">\(F\)</span> i <span class="math inline">\(G\)</span>:</p>
@@ -390,6 +433,56 @@ Prikaži hint
 Razlikujemo kockice! Dakle, bitno je koja je prva, a koja druga.
 </details>
 </div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Budući da razlikujemo kockice, prostor elementarnih digađaja čine uređeni parovi. Imamo <span class="math display">\[
+\begin{aligned}
+\Omega = \{
+    &amp; (1,1),(1,2),(1,3),(1,4),(1,5),(1,6), \\
+    &amp; (2,1),(2,2),(2,3),(2,4),(2,5),(2,6), \\
+    &amp; (3,1),(3,2),(3,3),(3,4),(3,5),(3,6), \\
+    &amp; (4,1),(4,2),(4,3),(4,4),(4,5),(4,6), \\
+    &amp; (5,1),(5,2),(5,3),(5,4),(5,5),(5,6), \\
+    &amp; (6,1),(6,2),(6,3),(6,4),(6,5),(6,6)
+    \}
+\end{aligned}
+\]</span></p>
+<p>Za događaje <span class="math inline">\(E\)</span>, <span class="math inline">\(F\)</span> i <span class="math inline">\(G\)</span> imamo <span class="math display">\[
+\begin{aligned}
+E = \{
+    &amp; (1,1),(1,3),(1,5),(2,2),(2,4),(2,6) \\
+    &amp; (3,1),(3,3),(3,5),(4,2),(4,4),(4,6) \\
+    &amp; (5,1),(5,3),(5,5),(6,2),(6,4),(6,6)
+    \}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+F = \{
+    &amp; (1,1),(1,2),(1,3),(1,4),(1,5),(1,6), \\
+    &amp; (2,1),(3,1),(4,1),(5,1),(6,1)
+    \}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+G = \{(1,4),(2,3),(3,2),(4,1)\}
+\]</span></p>
+<p>Uočimo da za događaj <span class="math inline">\(F\)</span> nismo pisali dva puta ishod <span class="math inline">\((1,1)\)</span>. On se pojavljuje u skupu gdje je prva kockica pala na <span class="math inline">\(1\)</span> i skupu gdje je druga kockica pala na jedan <span class="math inline">\(1\)</span>, dakle <span class="math inline">\((1,1)\)</span> je u presjeku tih skupova i stoga ga ne brojimo dvaput.</p>
+<p>Za presjeke događaja <span class="math inline">\(E\)</span>, <span class="math inline">\(F\)</span> i <span class="math inline">\(G\)</span> imamo</p>
+<p><span class="math display">\[
+E \cap F = \{(1,2),(1,4),(1,6),(3,1),(5,1)\}
+\]</span></p>
+<p><span class="math display">\[
+F \cap G = \{(1,4),(4,1)\}
+\]</span></p>
+<span class="math display">\[
+E \cap F \cap G = \emptyset
+\]</span>
+</details>
+</div>
 <hr>
 <div class="zadatak">
 <p>Igraći špil od <span class="math inline">\(52\)</span> karte ima po <span class="math inline">\(13\)</span> karata svake boje (radi jednostavnosti numeriramo kralja, damu, dečka i as). Boje su <em>herc</em>, <em>tref</em>, <em>karo</em> i <em>pik</em>. Iz tog špila izvlačite <span class="math inline">\(4\)</span> karte. Odredite vjerojatnost da su sve izvučene karte iste boje.</p>
@@ -400,6 +493,16 @@ Razlikujemo kockice! Dakle, bitno je koja je prva, a koja druga.
 Prikaži rješenje
 </summary>
 Prebrojite povoljne događaje i iskoristite to u Laplaceovom modelu.
+</details>
+</div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+Neka je <span class="math inline">\(A\)</span> dani događaj. <span class="math inline">\(4\)</span> karte iz skupa od <span class="math inline">\(13\)</span> karti iste boje biramo na $ = 715 $ načina i tako za svaku od <span class="math inline">\(4\)</span> različite boje. Tada je vjerojatnost da su sve izvučene karte iste boje jednaka <span class="math display">\[
+\mathbb{P} (A) = \frac{4 \cdot \binom{13}{4}}{\binom{52}{4}} = \frac{44}{4165} \approx 0.01056
+\]</span>
 </details>
 </div>
 <hr>
@@ -422,6 +525,25 @@ Prikaži rješenje
 o čemu će biti riječ u sljedećem poglavlju.
 </details>
 </div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Neka su <span class="math inline">\(A = \{\)</span> u prvom je bacanju pala glava <span class="math inline">\(\}\)</span>, <span class="math inline">\(B = \{\)</span> u drugom je bacanju pala glava <span class="math inline">\(\}\)</span>.</p>
+<ol type="a">
+<li>Intuitivno je pretpostaviti <span class="math inline">\(\mathbb{P}(A \cap B) = \mathbb{P}(A) \mathbb{P}(B) = \dfrac{1}{4}\)</span>, a to je upravo i rješenje. Koristimo nezavisnost događaja <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span>, neformalno govoreći, ishod prvog bacanja ne utječe na ishod drugog.</li>
+</ol>
+<hr>
+<ol start="2" type="a">
+<li>Neka je dani događaj <span class="math inline">\(C\)</span>. Vidimo da je <span class="math inline">\(\mathbb{P}(C) = \dfrac{3}{4}\)</span>. Mogući su ishodi <span class="math inline">\((P,G)\)</span>, <span class="math inline">\((P,P)\)</span>, <span class="math inline">\((G,P)\)</span> i <span class="math inline">\((G,G)\)</span>. Sada je jasno da je to rješenje.</li>
+</ol>
+<hr>
+<ol start="3" type="a">
+<li>Prvo nam je bacanje nebitno, a vjerojatnost pada glave za simetričan novčić je upravo <span class="math inline">\(\dfrac{1}{2}\)</span>.</li>
+</ol>
+</details>
+</div>
 <hr>
 <div class="zadatak">
 <p>U kutiji se nalazi <span class="math inline">\(6\)</span> bijelih i <span class="math inline">\(4\)</span> crne kuglice. Izvlačimo dvije kuglice jednu za drugom, dakle ne istovremeno. Odredite vjerojatnost</p>
@@ -439,6 +561,29 @@ Prikaži rješenje
 Ponovo iskoristite svojstvo <em>nezavisnih događaja</em>.
 </details>
 </div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<ol type="a">
+<li>Crnu kuglicu izvlačimo s vjerojatnošću <span class="math inline">\(\dfrac{2}{5}\)</span>.</li>
+</ol>
+<hr>
+<ol start="2" type="a">
+<li>Neka je <span class="math inline">\(A\)</span> događaj gdje je druga kuglica crna. Znamo da je prva kuglica isto bila crna pa ponavljamo postupak kao u prehodnom zadatku. Imamo <span class="math display">\[
+\mathbb{P}(A) = \frac{3}{9} = \frac{1}{3}
+\]</span></li>
+</ol>
+<p>Jedna je crna kuglica već izvučena pa se manjuje broj mogućih odabira.</p>
+<hr>
+<ol start="3" type="a">
+<li><span class="math inline">\(B = \{\)</span> prva izvučena kuglica je bijela <span class="math inline">\(\}\)</span>, <span class="math inline">\(A\)</span> je kao iz <em>b.</em> dijela. <span class="math display">\[
+\mathbb{P}(A \cap B) = \mathbb{P}(A) \mathbb{P}(B) = \dfrac{4}{9} \cdot \dfrac{6}{10} = \dfrac{4}{9} \cdot \dfrac{3}{5} = \dfrac{4}{15}
+\]</span></li>
+</ol>
+</details>
+</div>
 <hr>
 <div class="zadatak">
 <p>U ravnini <span class="math inline">\(\mathbb{R}^2\)</span> zadan je kvadrat <span class="math inline">\(I = [0,1]^2\)</span> te pravci <span class="math inline">\(y_1 = x + \dfrac12\)</span> i <span class="math inline">\(y_2 = x - \dfrac12\)</span>. Odredite vjerojatnost da se slučajno odabrana točka unutar tog kvadrata nalazi ispod pravca <span class="math inline">\(y_1\)</span> i iznad pravca <span class="math inline">\(y_2\)</span>.</p>
@@ -451,6 +596,111 @@ Prikaži rješenje
 Skicirajte dani skup i iskoristite model geometrijske vjerojatnosti.
 </details>
 </div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Napravimo prvo skicu.</p>
+<div id="5c46a648" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Prikaži Python kod</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Funkcije pravaca</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> <span class="dv">1</span><span class="op">/</span><span class="dv">2</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> g(x):</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">-</span> <span class="dv">1</span><span class="op">/</span><span class="dv">2</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Vrijednosti x-a</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">500</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Kvadrat I = [0,1]^2</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Osi</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Strelice na osima</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">''</span>, xy<span class="op">=</span>(<span class="fl">1.03</span>, <span class="dv">0</span>), xytext<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>),</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>,</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>                            linewidth<span class="op">=</span><span class="fl">1.2</span>, color<span class="op">=</span><span class="st">'black'</span>))</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>ax.annotate(<span class="st">''</span>, xy<span class="op">=</span>(<span class="dv">0</span>, <span class="fl">1.03</span>), xytext<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">0</span>),</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>            arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">'-&gt;'</span>,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>                            linewidth<span class="op">=</span><span class="fl">1.2</span>, color<span class="op">=</span><span class="st">'black'</span>))</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Pravac y1 = x + 1/2</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>ax.plot(x, f(x), label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">y_1=x</span><span class="op">+</span><span class="ch">\f</span><span class="vs">rac</span><span class="op">{1}{2}</span><span class="dv">$</span><span class="vs">'</span>,</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Pravac y2 = x - 1/2</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>ax.plot(x, g(x), label<span class="op">=</span><span class="vs">r'</span><span class="dv">$</span><span class="vs">y_2=x-</span><span class="ch">\f</span><span class="vs">rac</span><span class="op">{1}{2}</span><span class="dv">$</span><span class="vs">'</span>,</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Područje između pravaca unutar kvadrata</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Donja granica: max(0, x - 1/2)</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Gornja granica: min(1, x + 1/2)</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>x_fill <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">500</span>)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>donja <span class="op">=</span> np.maximum(<span class="dv">0</span>, x_fill <span class="op">-</span> <span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>gornja <span class="op">=</span> np.minimum(<span class="dv">1</span>, x_fill <span class="op">+</span> <span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>ax.fill_between(</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    x_fill,</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    donja,</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    gornja,</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.35</span>,</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">'Traženo područje'</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Oznake vrhova kvadrata</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="op">-</span><span class="fl">0.08</span>, <span class="op">-</span><span class="fl">0.05</span>, <span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="vs">0,0</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">1.01</span>, <span class="op">-</span><span class="fl">0.04</span>, <span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="vs">1,0</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="op">-</span><span class="fl">0.08</span>, <span class="fl">1.01</span>, <span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="vs">0,1</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">1.01</span>, <span class="fl">1.01</span>, <span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="vs">1,1</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">0.5</span>,<span class="fl">0.5</span>, <span class="vs">r'</span><span class="dv">$</span><span class="vs">A</span><span class="dv">$</span><span class="vs">'</span>, fontsize <span class="op">=</span> <span class="dv">11</span>)</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="co"># Mreža</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="co"># Uklanjanje oznaka na osima</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>ax.tick_params(labelbottom<span class="op">=</span><span class="va">False</span>, labelleft<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Legenda izvan grafa, desno</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>ax.legend(</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>    loc<span class="op">=</span><span class="st">'upper left'</span>,</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>    bbox_to_anchor<span class="op">=</span>(<span class="fl">1.05</span>, <span class="dv">1</span>),</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>    frameon<span class="op">=</span><span class="va">True</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Podesi prostor kako legenda ne bi bila odrezana</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="co"># Omjer osi</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="zadatci1_files/figure-html/cell-2-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="549" height="374"></p>
+</figure>
+</div>
+</div>
+</div>
+Jednostavnim računom vidimo da je <span class="math inline">\(\lambda (A) = \dfrac{3}{4}\)</span>, a površina je cijelog kvadrata jednaka <span class="math inline">\(1\)</span>. Dakle, tražena vjerojatnost je <span class="math inline">\(\dfrac{3}{4}\)</span>.
+</details>
+</div>
 <hr>
 <div class="zadatak">
 <p>Za Okrugli stol sjeda <span class="math inline">\(n \in \mathbb{N}\)</span> vitezova, pri čemu Arthur ne želi sjediti kraj Mordreda ni kraj Lancelota. Ako sjedaju na slučajan način, kolika je vjerojatnost da Arthur ne sjedi ni kraj Mordreda ni kraj Lancelota?</p>
@@ -461,6 +711,18 @@ Skicirajte dani skup i iskoristite model geometrijske vjerojatnosti.
 Prikaži rješenje
 </summary>
 Probajte fiksirati Arthura i pronaći moguće načine sjedenja ostalih vitezova.
+</details>
+</div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Neka je <span class="math inline">\(A = \{\)</span> Arthur ne sjedi pored Mordreda ni pored Lancelota <span class="math inline">\(\}\)</span>.</p>
+<p>Smjestimo Arthura na jedno mjesto i fiksiramo ga. Budući da Lancelot i Mordred ne smiju sjesti pored Arthura, imaju na raspolaganju <span class="math inline">\(n-3\)</span> mjesta. Stoga biramo dva mjesta i permutiramo Lancelota i Mordreda na ta mjesta na <span class="math inline">\(\displaystyle \binom{n+3}{2} \cdot 2\)</span> <span class="math inline">\(=\)</span> <span class="math inline">\((n-3)(n-4)\)</span> načina. Preostale vitezove smjestimo na <span class="math inline">\((n-3)!\)</span> načina. Stoga je ukupno <span class="math inline">\((n-3)(n-4)(n-3)!\)</span> povoljnih smještaja oko stola.</p>
+Ukupno ima <span class="math inline">\((n-1)!\)</span> rasporeda za stolom. Tražena vjerojatnost danog tada iznosi <span class="math display">\[
+\mathbb{P}(A) = \frac{(n-3)(n-4)(n-3)!}{(n-1)!} = \frac{(n-3)(n-4)}{(n-1)(n-2)}
+\]</span>
 </details>
 </div>
 <hr>
@@ -479,6 +741,31 @@ Prikaži rješenje
 Rastavite na slučajeve kad su suma i produkt članova <span class="math inline">\(m^n\)</span> i <span class="math inline">\(n^m\)</span> parni, odnosno neparni.
 </details>
 </div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<ol type="a">
+<li><span class="math inline">\(m^n + n^m\)</span> neparan broj</li>
+</ol>
+<ul>
+<li><p>Prvi slučaj: <span class="math inline">\(m^n\)</span> je neparan, <span class="math inline">\(n^m\)</span> paran. Zaključujemo da je tada <span class="math inline">\(m\)</span> neparan, a <span class="math inline">\(n\)</span> paran. Vjerojatnost da smo izabrali jedan neparan i jedan paran broj je <span class="math inline">\(\dfrac{1}{4}\)</span>.</p></li>
+<li><p>Drugi slučaj: <span class="math inline">\(m^n\)</span> je paran, <span class="math inline">\(n^m\)</span> neparan. Analogno kao u prvom slučaju imamo da je vjerojatnost takvog odabira <span class="math inline">\(\dfrac{1}{4}\)</span>.</p></li>
+</ul>
+<p>Vidimo da su ovi slučajevi disjunktni pa je vjerojatnost njihove unije suma vjerojatnosti tih događaja, tj. tražena vjerojatnost je <span class="math inline">\(\dfrac{1}{2}\)</span>.</p>
+<hr>
+<ol start="2" type="a">
+<li><span class="math inline">\(m^n \cdot n^m\)</span> paran broj</li>
+</ol>
+<ul>
+<li><p>Prvi slučaj: <span class="math inline">\(m^n\)</span> je paran, <span class="math inline">\(n^m\)</span> neparan. Iz <em>a.</em> dijela imamo da je vjerojatnost <span class="math inline">\(\dfrac{1}{4}\)</span>.</p></li>
+<li><p>Drugi slučaj: <span class="math inline">\(m^n\)</span> je neparan, <span class="math inline">\(n^m\)</span> paran. Vjerojatnost je <span class="math inline">\(\dfrac{1}{2}\)</span>.</p></li>
+<li><p>Treći slučaj: <span class="math inline">\(m^n\)</span> je neparan, <span class="math inline">\(n^m\)</span> paran. Vjerojatnost je opet <span class="math inline">\(\dfrac{1}{2}\)</span>.</p></li>
+</ul>
+Ovi su događaji također disjunktni pa je vjerojatnost njihove unije jednaka <span class="math inline">\(\dfrac{3}{4}\)</span>.
+</details>
+</div>
 <hr>
 <div class="zadatak">
 <p>Dokažite da vrijedi <span class="math display">\[
@@ -493,6 +780,17 @@ Prikaži rješenje
 Iskoristite definiciju komplementa skupa i jedno od svojstava vjerojatnosti.
 </details>
 </div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Dokaz slijedi korištenjem definicije komplementa skupa i korištenjem svojstava vjerojatnosti. <span class="math display">\[
+\mathbb{P}(A^c) = \mathbb{P}(\Omega \backslash A) = \mathbb{P}(\Omega) - \mathbb{P}(A)= 1 - \mathbb{P}(A)
+\]</span></p>
+Iskoristili smo činjenicu da za svaki <span class="math inline">\(A \in \mathcal{F}\)</span> vrijedi <span class="math inline">\(A \subseteq \Omega\)</span>.
+</details>
+</div>
 <hr>
 <div class="zadatak">
 <p>(<strong>napredno</strong>) Neka je <span class="math inline">\(\mathcal{F}\)</span> <span class="math inline">\(\sigma\)</span>-algebra na nekom <span class="math inline">\(\Omega\)</span>. Po definiciji, <span class="math inline">\(\mathcal{F}\)</span> je zatvorena na prebrojive unije. Dokažite da je zatvorena i na konačne unije.</p>
@@ -505,13 +803,61 @@ Prikaži rješenje
 Probajte modificirati skupove iz prebrojive unije tako da ne pridonose uniji.
 </details>
 </div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Po definiciji <span class="math inline">\(\sigma\)</span>-algebre znamo da za <span class="math inline">\(A_j \in \mathcal{F}\)</span>, <span class="math inline">\(j \in \mathbb{N}\)</span> vrijedi <span class="math inline">\(\displaystyle \bigcup _{j = 1}^{\infty} A_j \in \mathcal{F}\)</span>.</p>
+<p>Neka su sada <span class="math inline">\(A_1,\)</span> <span class="math inline">\(\dots ,\)</span> <span class="math inline">\(A_k\)</span> <span class="math inline">\(\neq \emptyset\)</span> za <span class="math inline">\(k \in \mathbb{N}\)</span>, a <span class="math inline">\(A_{k+1},\)</span> <span class="math inline">\(A_{k+2},\)</span> <span class="math inline">\(\dots\)</span> <span class="math inline">\(= \emptyset\)</span>. Prazni skupovi ne doprinose uniji pa gornja unije postaje <span class="math display">\[
+\bigcup _{j = 1}^{\infty} A_j = \bigcup _{j = 1}^{k} A_j
+\]</span></p>
+<strong>Napomena:</strong> Iz ovoga direktno slijedi da je vjerojatnost <span class="math inline">\(\sigma\)</span>-aditivna i na konačnom broju disjunktnih događaja.
+</details>
+</div>
 <hr>
 <div class="zadatak">
 <p>(<strong>napredno</strong>) Pokažite da vjerojatnost definirana u Laplaceovom modelu zadovoljava aksiome (A1) – (A3).</p>
 </div>
+<div class="rjesenje">
+<p>Za <span class="math inline">\(\Omega\)</span> takav da je <span class="math inline">\(|\Omega| &lt; \infty\)</span> i da su svi elementarni događaji jednako vjerojatni vrijedi <span class="math display">\[
+\mathbb{P}(A) = \frac{|A|}{|\Omega|}
+\]</span></p>
+<p>Provjerimo aksiome:</p>
+<p><strong>(A1)</strong> Vjerojatnost je očito nenegativna za sve događaje <span class="math inline">\(A\)</span> jer je kardinalitet skupa nenegativan broj.</p>
+<p><strong>(A2)</strong> Budući da je <span class="math inline">\(A \subseteq \Omega\)</span>, vrijedi <span class="math inline">\(|A| \leq |\Omega|\)</span> stoga vrijedi <span class="math display">\[
+\mathbb{P}(A) = \frac{|A|}{|\Omega|} \leq \frac{|\Omega|}{|\Omega|} \leq 1
+\]</span></p>
+<p><strong>(A3)</strong> U Laplaceovu modelu prostor elementarnih događaja je konačan skup <span class="math inline">\(\Omega={\omega_1,\omega_2,\ldots,\omega_n}\)</span>.</p>
+<p>Budući da je <span class="math inline">\(\Omega\)</span> konačan skup, svaki <span class="math inline">\(A_j\subseteq\Omega\)</span> je konačan. Ako su skupovi (A_1,A_2,) međusobno disjunktni i svi su neprazni, tada svaki od njih sadrži barem jedan element. Stoga može postojati najviše <span class="math inline">\(|\Omega|\)</span> nepraznih skupova <span class="math inline">\(A_j\)</span>.</p>
+<p>Dakle, postoji <span class="math inline">\(m\in\mathbb{N}\)</span> takav da je <span class="math display">\[
+A_j=\emptyset,
+\quad \forall j&gt;m
+\]</span></p>
+<p>Prema tome, <span class="math display">\[
+\bigcup_{j=1}^{\infty}A_j = \bigcup_{j=1}^{m}A_j
+\]</span></p>
+<p>Budući da su skupovi (A_1,,A_m) međusobno disjunktni, vrijedi <span class="math display">\[
+\left|\bigcup_{j=1}^{m}A_j\right| = \sum_{j=1}^{m}|A_j|.
+\]</span></p>
+<p>Prema definiciji Laplaceove vjerojatnosti dobivamo <span class="math display">\[
+\mathbb{P} \left(\bigcup_{j=1}^{\infty}A_j\right) =
+\frac{\left|\bigcup_{j=1}^{m}A_j\right|}{|\Omega|} =
+\frac{\sum_{j=1}^{m}|A_j|}{|\Omega|} =
+\sum_{j=1}^{m}\frac{|A_j|}{|\Omega|} =
+\sum_{j=1}^{m}\mathbb{P}(A_j)
+\]</span></p>
+<p>Za <span class="math inline">\(j&gt;m\)</span> je <span class="math inline">\(A_j=\emptyset\)</span>, pa je <span class="math inline">\(\mathbb{P}(A_j)=0\)</span>. Stoga vrijedi <span class="math display">\[
+\sum_{j=1}^{m}P(A_j) = \sum_{j=1}^{\infty}P(A_j)
+\]</span></p>
+<p>Konačno <span class="math display">\[
+P\left(\bigcup_{j=1}^{\infty}A_j\right) = \sum_{j=1}^{\infty}P(A_j)
+\]</span></p>
+<p>pa je vjerojatnost definirana Laplaceovim modelom <span class="math inline">\(\sigma\)</span>-aditivna.</p>
+<p><strong>Napomena:</strong> U konačnom Laplaceovu modelu <span class="math inline">\(\sigma\)</span>-aditivnost zapravo slijedi iz konačne aditivnosti. Naime, zbog konačnosti prostora <span class="math inline">\(\Omega\)</span>, među međusobno disjunktnim događajima može biti samo konačno mnogo nepraznih skupova.</p>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
