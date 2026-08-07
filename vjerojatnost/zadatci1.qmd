@@ -450,7 +450,7 @@ $$
 
 **(A3)** U Laplaceovu modelu prostor elementarnih događaja je konačan skup $\Omega={\omega_1,\omega_2,\ldots,\omega_n}$.
 
-Budući da je $\Omega$ konačan skup, svaki $A_j\subseteq\Omega$ je konačan. Ako su skupovi (A_1,A_2,\ldots) međusobno disjunktni i svi su neprazni, tada svaki od njih sadrži barem jedan element. Stoga može postojati najviše $|\Omega|$ nepraznih skupova $A_j$.
+Budući da je $\Omega$ konačan skup, svaki $A_j\subseteq\Omega$ je konačan. Ako su skupovi $A_1,$ $A_2,\ldots$ međusobno disjunktni i svi su neprazni, tada svaki od njih sadrži barem jedan element. Stoga može postojati najviše $|\Omega|$ nepraznih skupova $A_j$.
 
 Dakle, postoji $m\in\mathbb{N}$ takav da je
 $$
