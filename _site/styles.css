@@ -222,6 +222,15 @@ mjx-container[display="true"] {
   margin: 0.8em 0;
 }
 
+mjx-mtext {
+  font-family: var(--bs-body-font-family) !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  position: relative;
+  top: -0.03em;
+  font-size: 95% !important;
+}
+
 .upload-form {
   max-width: 500px;
   margin: 1rem auto;

@@ -9,3 +9,11 @@ U ovom poglavlju dat ćemo temelj proučavanju vjerojatnosti i vjerojatnosnih pr
 - [4.2 Svojstva vjerojatnosti i modeli vjerojatnosti](modeli.qmd)
 
 - [Zadatci - prvi dio](zadatci1.qmd)
+
+- [4.3 Nizovi događaja](nizovi.qmd)
+
+- [4.4 Uvjetna vjerojatnost i nezavisnost](uvjetna.qmd)
+
+- [4.5 Nezavisnost](nezavisnost.qmd)
+
+- [Zadatci - drugi dio](zadatci2.qmd)

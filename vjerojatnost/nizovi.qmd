@@ -1,0 +1,74 @@
+# 4.3 Nizovi događaja {.unnumbered}
+
+:::{.teorem}
+**$\sigma$-subaditivnost** (Booleova nejednakost)
+
+Za svaki niz događaja $A_1,$ $A_2,$ $\dots$ $\in \mathcal{F}$ vrijedi
+$$
+\mathbb{P} \left (\bigcup _{j = 1}^{\infty} A_j  \right) \leq \sum _{j=1}^{\infty} \mathbb{P}(A_j)
+$$
+
+Posebno, za sve $n \in \mathbb{N}$ vrijedi
+$$
+\mathbb{P} \left (\bigcup _{j = 1}^{n} A_j  \right) \leq \sum _{j=1}^{n} \mathbb{P}(A_j)
+$$
+:::
+
+Ako za događaj $A \in \mathcal{F}$ vrijedi $\mathbb{P} (A) = 0$ (odnosno, $\mathbb{P} (A) = 1$), kažemo da se $A$ *gotovo sigurno* (g.s.) neće (odnosno, hoće) dogoditi. Bitno je uočiti da tada nije nužno $A = \emptyset$ (odnosno, $A = \Omega$) – npr. ako slučajno biramo točku iz $[−1,1]^2$, za događaj $B = \{$ odabrali točku $(0,0)\}$ $\neq \emptyset$ imamo $\mathbb{P} (B) = 0$.
+
+:::{.primjer}
+Slučajno biramo bilo koji prirodan broj. Definiramo događaj $A_k := \{$ odabrali smo broj $k \in \mathbb{N} \}$. Možemo definirati
+$$
+\mathbb{P} (A_k) := \lim _{n \to \infty} \mathbb{P}(\{\textnormal{izabrali } k \textnormal{ iz } \{1,\dots, n \}\}) = \lim _{n \to \infty} \frac{1}{n} = 0
+$$
+
+Ipak, vrijedi
+$$
+\mathbb{P} \left(\bigcup _{k = 1}^{\infty} A_k \right) = \mathbb{P}(\{\textnormal{izabrali smo broj iz } \mathbb{N}\}) = 1
+$$
+:::
+
+Definirajmo sad neprekidnost vjerojatnosti, ali prije toga promotrimo monotonost događaja.
+
+:::{.def}
+Za niz događaja $A_1,$ $A_2,$ $\dots \in \mathcal{F}$ kažemo da je rastući (odnosno, padajući) ako vrijedi $A_n \subseteq A_{n+1}$ (odnosno, $A_{n+1} \subseteq A_n$) za sve $n \in \mathbb{N}$.
+:::
+
+:::{.teorem}
+(a) Ako je niz događaja $A_1,$ $A_2,$ $\dots \in \mathcal{F}$ rastući, vrijedi
+$$
+\mathbb{P} \left(\bigcup _{j = 1}^{\infty} A_j \right) = \lim_{n \to \infty} \mathbb{P}(A_n)
+$$
+
+(b) Ako je niz događaja $A_1,$ $A_2,$ $\dots \in \mathcal{F}$ padajući, vrijedi
+$$
+\mathbb{P} \left(\bigcap _{j = 1}^{\infty} A_j \right) = \lim_{n \to \infty} \mathbb{P}(A_n)
+$$
+:::
+
+Prethodni rezultat uglavnom koristimo na vjerojatnosnom prostoru gdje je $|\Omega| > \infty$, a često i neprebrojiv.
+
+U sljedećem ćemo primjeru konstruirati vjerojatnosni prostor za beskonačan niz bacanja simetričnog novčića.
+
+:::{.primjer}
+Bacamo simetričan novčić beskonačno mnogo puta. Stoga je
+$$
+\Omega = \{(a_1,a_2,\dots) : a_i \in \{P,G\}, \forall i \in \mathbb{N}\} = \{P,G\}^{\mathbb{N}}
+$$
+
+Uočimo da je $\Omega$ neprebrojiv, kao dokaz te tvrdnje možemo iskoristiti neku varijantu Cantorovog dijagonalnog argumenta. Zaključujemo da je tada $\mathbb{P}(\omega) = 0$ za sve $\omega \in \Omega$.
+
+Za sve $n \in \mathbb{N}$ definiramo $\Omega _n := \{P,G\}^{n}$, što predstavlja ishode prvih $n$ bacanja novčića. Tada je $\mathcal{F}_n$ pripadna $\sigma$-algebra na $\Omega _n$. Kažemo da $A \in \Omega$ ovisi o prvih $n$ bacanja (pišemo $A \in \mathcal{F}_n$) ako postoji $A_n \in \Omega _n$ takav da vrijedi
+$$
+A = \{(a_1,a_2,\dots) \in \Omega : (a_1,\dots,a_n) \in A_n\} 
+$$
+
+Primjerice, ishod $(a_1,\dots,a_n)$ je u $A_n$, a $a_{n+1},$ $a_{n+2}, \dots$ mogu biti bilo što.
+
+Ako je $A \in \mathcal{F}_n$ za neki $n \geq 1$ i budući da na $\Omega _n$ imamo Laplaceov model s funkcijom vjerojatnosti $\mathbb{P}_n$, možemo definirati
+$$
+\mathbb{P}(A) := \mathcal{P} _n (A_n) = \frac{|A_n|}{|\Omega|} = \frac{|A_n|}{2^n}
+$$
+
+**Napomena:** nije jasno da je gornja definicija konzistentna. Ipak, netrivijalan rezultat iz područja mjere pokazuje da se tako definirana vjerojatnost može jedinstveno proširiti do vjerojatnosti na $(\Omega, \mathcal{F})$ gdje je $\mathcal{F}$ najmanja $\sigma$-algebra koja sadrži $\mathcal{F}_{\infty}$.
+:::

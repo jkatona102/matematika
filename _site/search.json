@@ -4,7 +4,7 @@
     "href": "literatura.html",
     "title": "Literatura",
     "section": "",
-    "text": "References\n\nGuljaš, Boris. 2018. Matematička analiza I & II.\n\n\nIlja Gogić, Josip Tambača, Pavle Pandžić. 2021. Diferencijalni račun funkcija više varijabli.\n\n\nIlja Gogić, Josip Tambača, Pavle Pandžić. 2025. Integrali funkcija više varijabli."
+    "text": "References\n\nGuljaš, Boris. 2018. Matematička analiza I & II.\n\n\nIlja Gogić, Josip Tambača, Pavle Pandžić. 2021. Diferencijalni račun funkcija više varijabli.\n\n\nIlja Gogić, Josip Tambača, Pavle Pandžić. 2025. Integrali funkcija više varijabli.\n\n\nNikola Sandrić, Zoran Vondraček. 2019. Vjerojatnost.\n\n\nPlaninić, Hrvoje. verzija 2025. Vjerojatnost, bilješke s predavanja."
   },
   {
     "objectID": "limesi/limesi.html",
@@ -232,7 +232,7 @@
     "href": "predaja.html",
     "title": "Predaja zadataka",
     "section": "",
-    "text": "Predaja zadataka\nNa ovoj stranici predajete zadatke.\n\n\nPredaja zadataka\n\n \n Odaberi set zadataka Vjerojatnost 1. dio  \n\nPošalji rješenje",
+    "text": "Predaja zadataka\nNa ovoj stranici predajete zadatke.\n\n\nPredaja zadataka\n\n \n Odaberi set zadataka Vjerojatnost 2. dio  \n\nPošalji rješenje",
     "crumbs": [
       "Home",
       "Predavanje zadataka"
@@ -409,7 +409,7 @@
     "href": "promjene.html",
     "title": "Povijest promjena na stranici",
     "section": "",
-    "text": "04.08.2026.\n\n11:15 dodano poglavlje 4. Vjerojatnost\n\n\n30.07.2026.\n\n19:53 objavljena poglavlja 3.4, 3.5, 3.6 i drugi dio zadataka iz integrala.\n\n\n10.07.2026.\n\n16:45 objavljena rješenja trećeg dijela zadataka iz poglavlja o derivacijama (Zadatci 3). Dodana cjelina 3. Riemannov integral i prva poglavlja sa zadatcima\n\n\n09.07.2026.\n\n06:40 objavljena rješenja drugog dijela zadataka iz poglavlja o derivacijama (Zadatci 2) i dodan treći dio derivacija\n\n\n05.07.2026.\n\n18:00 ispravljen dokaz Lagrangeovog teorema srednje vrijednosti u poglavlju 2.4\n\n\n04.07.2026.\n\n21:40 dodana poglavlja 2.4 i 2.5 i drugi dio zadataka iz derivacija\n15:56 objavljena rješenja prvog dijela zadataka iz poglavlja o derivacijama (Zadatci 1)\n\n\n02.07.2026.\n\n08:16 objavljena rješenja zadataka iz poglavlja o limesima (Zadatci)\n\n\n01.07.2026.\n\n11:00 dodano poglavlje o limesima i neprekidnosti\n08:00 dodano poglavlje o derivacijama i diferencijabilnosti\n\n\n30.06.2026.\n\nstranica stvorena"
+    "text": "07.08.2026.\n\n18:57 objavljena rješenja prvog dijela zadataka iz Vjerojatnosti i dodana nova poglavlja s drugim dijelom zadataka\n\n\n04.08.2026.\n\n11:15 dodano poglavlje 4. Vjerojatnost\n\n\n30.07.2026.\n\n19:53 objavljena poglavlja 3.4, 3.5, 3.6 i drugi dio zadataka iz integrala.\n\n\n10.07.2026.\n\n16:45 objavljena rješenja trećeg dijela zadataka iz poglavlja o derivacijama (Zadatci 3). Dodana cjelina 3. Riemannov integral i prva poglavlja sa zadatcima\n\n\n09.07.2026.\n\n06:40 objavljena rješenja drugog dijela zadataka iz poglavlja o derivacijama (Zadatci 2) i dodan treći dio derivacija\n\n\n05.07.2026.\n\n18:00 ispravljen dokaz Lagrangeovog teorema srednje vrijednosti u poglavlju 2.4\n\n\n04.07.2026.\n\n21:40 dodana poglavlja 2.4 i 2.5 i drugi dio zadataka iz derivacija\n15:56 objavljena rješenja prvog dijela zadataka iz poglavlja o derivacijama (Zadatci 1)\n\n\n02.07.2026.\n\n08:16 objavljena rješenja zadataka iz poglavlja o limesima (Zadatci)\n\n\n01.07.2026.\n\n11:00 dodano poglavlje o limesima i neprekidnosti\n08:00 dodano poglavlje o derivacijama i diferencijabilnosti\n\n\n30.06.2026.\n\nstranica stvorena"
   },
   {
     "objectID": "limesi/limesi1.html",
@@ -805,7 +805,7 @@
     "href": "vjerojatnost/vjerojatnost.html",
     "title": "4. VJEROJATNOST",
     "section": "",
-    "text": "U ovom poglavlju dat ćemo temelj proučavanju vjerojatnosti i vjerojatnosnih prostora.\n\n\n\n4.1 Uvod i definicija\n4.2 Svojstva vjerojatnosti i modeli vjerojatnosti\nZadatci - prvi dio",
+    "text": "U ovom poglavlju dat ćemo temelj proučavanju vjerojatnosti i vjerojatnosnih prostora.\n\n\n\n4.1 Uvod i definicija\n4.2 Svojstva vjerojatnosti i modeli vjerojatnosti\nZadatci - prvi dio\n4.3 Nizovi događaja\n4.4 Uvjetna vjerojatnost i nezavisnost\n4.5 Nezavisnost\nZadatci - drugi dio",
     "crumbs": [
       "Home",
       "4. VJEROJATNOST"
@@ -828,7 +828,7 @@
     "href": "vjerojatnost/vjerojatnost.html#sadržaj-poglavlja",
     "title": "4. VJEROJATNOST",
     "section": "",
-    "text": "4.1 Uvod i definicija\n4.2 Svojstva vjerojatnosti i modeli vjerojatnosti\nZadatci - prvi dio",
+    "text": "4.1 Uvod i definicija\n4.2 Svojstva vjerojatnosti i modeli vjerojatnosti\nZadatci - prvi dio\n4.3 Nizovi događaja\n4.4 Uvjetna vjerojatnost i nezavisnost\n4.5 Nezavisnost\nZadatci - drugi dio",
     "crumbs": [
       "Home",
       "4. VJEROJATNOST"
@@ -855,7 +855,7 @@
     "crumbs": [
       "Home",
       "4. VJEROJATNOST",
-      "4.2 Svojstva vjerojatnosti i modeli vjerojatnosti "
+      "4.2 Svojstva vjerojatnosti i modeli vjerojatnosti"
     ]
   },
   {
@@ -867,7 +867,7 @@
     "crumbs": [
       "Home",
       "4. VJEROJATNOST",
-      "4.2 Svojstva vjerojatnosti i modeli vjerojatnosti "
+      "4.2 Svojstva vjerojatnosti i modeli vjerojatnosti"
     ]
   },
   {
@@ -879,7 +879,7 @@
     "crumbs": [
       "Home",
       "4. VJEROJATNOST",
-      "4.2 Svojstva vjerojatnosti i modeli vjerojatnosti "
+      "4.2 Svojstva vjerojatnosti i modeli vjerojatnosti"
     ]
   },
   {
@@ -904,6 +904,78 @@
       "Home",
       "4. VJEROJATNOST",
       "4.1 Uvod i definicija"
+    ]
+  },
+  {
+    "objectID": "vjerojatnost/nizovi.html",
+    "href": "vjerojatnost/nizovi.html",
+    "title": "4.3 Nizovi događaja",
+    "section": "",
+    "text": "4.3 Nizovi događaja\n\n\\(\\sigma\\)-subaditivnost (Booleova nejednakost)\nZa svaki niz događaja \\(A_1,\\) \\(A_2,\\) \\(\\dots\\) \\(\\in \\mathcal{F}\\) vrijedi \\[\n\\mathbb{P} \\left (\\bigcup _{j = 1}^{\\infty} A_j  \\right) \\leq \\sum _{j=1}^{\\infty} \\mathbb{P}(A_j)\n\\]\nPosebno, za sve \\(n \\in \\mathbb{N}\\) vrijedi \\[\n\\mathbb{P} \\left (\\bigcup _{j = 1}^{n} A_j  \\right) \\leq \\sum _{j=1}^{n} \\mathbb{P}(A_j)\n\\]\n\nAko za događaj \\(A \\in \\mathcal{F}\\) vrijedi \\(\\mathbb{P} (A) = 0\\) (odnosno, \\(\\mathbb{P} (A) = 1\\)), kažemo da se \\(A\\) gotovo sigurno (g.s.) neće (odnosno, hoće) dogoditi. Bitno je uočiti da tada nije nužno \\(A = \\emptyset\\) (odnosno, \\(A = \\Omega\\)) – npr. ako slučajno biramo točku iz \\([−1,1]^2\\), za događaj \\(B = \\{\\) odabrali točku \\((0,0)\\}\\) \\(\\neq \\emptyset\\) imamo \\(\\mathbb{P} (B) = 0\\).\n\nSlučajno biramo bilo koji prirodan broj. Definiramo događaj \\(A_k := \\{\\) odabrali smo broj \\(k \\in \\mathbb{N} \\}\\). Možemo definirati \\[\n\\mathbb{P} (A_k) := \\lim _{n \\to \\infty} \\mathbb{P}(\\{\\textnormal{izabrali } k \\textnormal{ iz } \\{1,\\dots, n \\}\\}) = \\lim _{n \\to \\infty} \\frac{1}{n} = 0\n\\]\nIpak, vrijedi \\[\n\\mathbb{P} \\left(\\bigcup _{k = 1}^{\\infty} A_k \\right) = \\mathbb{P}(\\{\\textnormal{izabrali smo broj iz } \\mathbb{N}\\}) = 1\n\\]\n\nDefinirajmo sad neprekidnost vjerojatnosti, ali prije toga promotrimo monotonost događaja.\n\nZa niz događaja \\(A_1,\\) \\(A_2,\\) \\(\\dots \\in \\mathcal{F}\\) kažemo da je rastući (odnosno, padajući) ako vrijedi \\(A_n \\subseteq A_{n+1}\\) (odnosno, \\(A_{n+1} \\subseteq A_n\\)) za sve \\(n \\in \\mathbb{N}\\).\n\n\n\nAko je niz događaja \\(A_1,\\) \\(A_2,\\) \\(\\dots \\in \\mathcal{F}\\) rastući, vrijedi \\[\n\\mathbb{P} \\left(\\bigcup _{j = 1}^{\\infty} A_j \\right) = \\lim_{n \\to \\infty} \\mathbb{P}(A_n)\n\\]\nAko je niz događaja \\(A_1,\\) \\(A_2,\\) \\(\\dots \\in \\mathcal{F}\\) padajući, vrijedi \\[\n\\mathbb{P} \\left(\\bigcap _{j = 1}^{\\infty} A_j \\right) = \\lim_{n \\to \\infty} \\mathbb{P}(A_n)\n\\]\n\n\nPrethodni rezultat uglavnom koristimo na vjerojatnosnom prostoru gdje je \\(|\\Omega| &gt; \\infty\\), a često i neprebrojiv.\nU sljedećem ćemo primjeru konstruirati vjerojatnosni prostor za beskonačan niz bacanja simetričnog novčića.\n\nBacamo simetričan novčić beskonačno mnogo puta. Stoga je \\[\n\\Omega = \\{(a_1,a_2,\\dots) : a_i \\in \\{P,G\\}, \\forall i \\in \\mathbb{N}\\} = \\{P,G\\}^{\\mathbb{N}}\n\\]\nUočimo da je \\(\\Omega\\) neprebrojiv, kao dokaz te tvrdnje možemo iskoristiti neku varijantu Cantorovog dijagonalnog argumenta. Zaključujemo da je tada \\(\\mathbb{P}(\\omega) = 0\\) za sve \\(\\omega \\in \\Omega\\).\nZa sve \\(n \\in \\mathbb{N}\\) definiramo \\(\\Omega _n := \\{P,G\\}^{n}\\), što predstavlja ishode prvih \\(n\\) bacanja novčića. Tada je \\(\\mathcal{F}_n\\) pripadna \\(\\sigma\\)-algebra na \\(\\Omega _n\\). Kažemo da \\(A \\in \\Omega\\) ovisi o prvih \\(n\\) bacanja (pišemo \\(A \\in \\mathcal{F}_n\\)) ako postoji \\(A_n \\in \\Omega _n\\) takav da vrijedi \\[\nA = \\{(a_1,a_2,\\dots) \\in \\Omega : (a_1,\\dots,a_n) \\in A_n\\}\n\\]\nPrimjerice, ishod \\((a_1,\\dots,a_n)\\) je u \\(A_n\\), a \\(a_{n+1},\\) \\(a_{n+2}, \\dots\\) mogu biti bilo što.\nAko je \\(A \\in \\mathcal{F}_n\\) za neki \\(n \\geq 1\\) i budući da na \\(\\Omega _n\\) imamo Laplaceov model s funkcijom vjerojatnosti \\(\\mathbb{P}_n\\), možemo definirati \\[\n\\mathbb{P}(A) := \\mathcal{P} _n (A_n) = \\frac{|A_n|}{|\\Omega|} = \\frac{|A_n|}{2^n}\n\\]\nNapomena: nije jasno da je gornja definicija konzistentna. Ipak, netrivijalan rezultat iz područja mjere pokazuje da se tako definirana vjerojatnost može jedinstveno proširiti do vjerojatnosti na \\((\\Omega, \\mathcal{F})\\) gdje je \\(\\mathcal{F}\\) najmanja \\(\\sigma\\)-algebra koja sadrži \\(\\mathcal{F}_{\\infty}\\).",
+    "crumbs": [
+      "Home",
+      "4. VJEROJATNOST",
+      "4.3 Nizovi događaja"
+    ]
+  },
+  {
+    "objectID": "vjerojatnost/uvjetna.html",
+    "href": "vjerojatnost/uvjetna.html",
+    "title": "4.4 Uvjetna vjerojatnost i nezavisnost",
+    "section": "",
+    "text": "Motivaciju za promatranje uvjetne vjerojatnosti daju nam razni pokusi. Primjerice, bacamo dvije kockice, kao i prije imamo \\[\n\\Omega = \\{(i,j): i,j \\in \\{1,2,\\dots,6\\}\\}\n\\]\n\n\\(A = \\{\\) zbroj je \\(5\\} = \\{(1,4),(2,3),(3,2),(4,1)\\}\\), imamo \\[\n\\mathbb{P}(A) = \\frac{|A|}{|\\Omega|} = \\frac{4}{36} = \\frac{1}{9}\n\\]\n\\(B = \\{\\) na prvoj kockici pala \\(2\\} = \\{(2,1),(2,2),\\dots,(2,6)\\}\\). Kolika je sada vjerojatnost događaja \\(A\\)?\n\nSada prostor elementarnih događaja \\(\\Omega\\) nije više relevantan jer imamo uvjet da je na prvoj kockici pao broj \\(2\\). Možemo \\(B\\) promatrati kao “novi” \\(\\Omega\\) pa su opet svi događaji jednako vjerojatni pa je od svih \\(\\omega \\in B\\) samo jedan povoljan, a to je \\((2,3)\\). Tada je tražena vjerojatnost jednaka \\(\\dfrac{1}{6}\\) što je veće od \\(\\mathbb{P}(A)\\) (bez uvjeta).\n\nNeka je \\((\\Omega, \\mathcal{F}, \\mathbb{P})\\) vjerojatnosni prostor. Ako za \\(B \\in \\mathcal{F}\\) vrijedi \\(\\mathbb{P}(B) &gt; 0\\), onda za sve \\(A \\in \\mathcal{F}\\) definiramo \\[\n\\mathbb{P}(A \\ | \\ B) := \\frac{\\mathbb{P}(A \\cap B)}{\\mathbb{P}(B)}\n\\]\n\n\\(\\mathbb{P}(A | B)\\) čitamo kao (uvjetna) vjerojatnost od A uz dano B.\nZa \\(B \\in \\mathcal{F}\\), \\(\\mathbb{P}(B) &gt; 0\\) uvedimo oznaku \\[\n\\mathbb{P}_B (A) := \\mathbb{P}(A \\ | \\ B) = \\frac{\\mathbb{P}(A \\cap B)}{\\mathbb{P}(B)}\n\\]\nDefinirana vjerojatnost zaista jest vjerojatnost na \\((\\Omega, \\mathcal{F})\\) i ima svojstva vjerojatnosti koja znamo od prije.\nPrimjerice, za neke događaje \\(A\\) i \\(C \\in \\mathcal{F}\\) uvjetna vjerojatnost uz dano \\(B\\) zadovoljava \\[\n\\mathbb{P}(A \\cup C \\ | \\ B) = \\mathbb{P}(A \\ | \\ B) + \\mathbb{P}(C \\ | \\ B) - \\mathbb{P}(A \\cap C \\ | \\ B)\n\\]\n\n\n\nPotpun sustav događaja (PSD)\nZa konačnu ili prebrojivu familiju događaja \\((H_i)_{i \\in I}\\) (dakle, \\(I\\) \\(=\\) \\(\\{1,2,\\dots,n\\}\\) ili \\(I=\\mathbb{N}\\)), kažemo da je potpun sustav događaja (PSD) ako vrijedi\n\n\\(H_i \\cap H_j = \\emptyset, \\forall i \\neq j\\)\n\\(\\displaystyle \\bigcup _{i\\in I} H_i = \\Omega\\)\n\nDakle, \\((H_i)_{i \\in I}\\) je particija od \\(\\Omega\\).\n\nDogađaje \\(H_i\\) nazivamo hipotezama\nUočimo da potpun sustav događaja dijeli skup \\(\\Omega\\) na disjunktne događaje koji u uniji daju cijeli prostor elementarnih događaja. Ideja je sada za općeniti događaj \\(A\\) promatrati njegove vjerojatnosti uvjetno na članove familije od PSD. Tako dobijemo formulu potpune vjerojatnosti:\n\nZa sve \\(A \\in \\mathcal{F}\\) i bilo koji potpun sustav događaja \\((H_i)_{i \\in I}\\) vrijedi \\[\n\\mathbb{P}(A) = \\sum _{i \\in I} \\mathbb{P}(A \\ | \\ H_i) \\mathbb{P}(H_i)\n\\]\n\n\n\n\nPrikaži dokaz\n\nZa \\(A \\subseteq \\Omega\\) imamo \\[\n\\begin{aligned}\n\\mathbb{P}(A) &= \\mathbb{P}(A \\cap \\Omega) \\\\\n&= \\mathbb{P} \\left(A \\cap \\left( \\bigcup _{i\\in I} H_i \\right)\\right) \\\\\n&= \\mathbb{P} \\left(\\bigcup _{i\\in I} A \\cap H_i \\right) \\\\\n&= \\sum _{i \\in I} \\mathbb{P}(A \\cap H_i) \\\\\n&= \\sum _{i \\in I} \\mathbb{P}(A \\ | \\ H_i) \\mathbb{P}(H_i)\n\\end{aligned}\n\\]\nČetvrta jednakost slijedi iz \\(\\sigma\\)-aditivnosti vjerojatnosti \\(\\mathbb{P}\\)\n\n\nOvaj rezultat kaže da se vjerojatnost svakog događaja može izračunati kao težinska sredina uvjetnih vjerojatnosti tog događaja uvjetno na hipoteze, s težinama jednakim vjerojatnosti hipoteza.\nNapomena: možemo tražiti i slabiji uvjet na hipoteze. Za fiksan \\(A \\in \\mathcal{F}\\) dovoljno je uzeti PSD takav da vrijedi \\(H_i \\cap H_j = \\emptyset\\), za sve \\(i \\neq j\\) i \\(A \\subseteq \\displaystyle \\bigcup _{i\\in I} H_i\\), umjesto uvjeta da hipoteze particioniraju cijeli \\(\\Omega\\).\n\nU jednom je razredu od ukupno \\(28\\) učenika njih \\(12\\) dobilo odličan na maturi iz Matematike, a \\(9\\) je dobilo odličan iz Matematike i Hrvatskog jezika. Kolika je vjerojatnost da je slučajno odabrani učenik toga razreda dobio odličan iz Hrvatskog jezika ako je poznato da je dobio odličan iz Matematike?\nOznačimo ocjenu odličan iz Hrvatskog jezika kao \\(A\\), a odličnu ocjenu iz Matematike kao \\(B\\). Tada imamo \\[\n\\mathbb{P}(A \\ | \\ B) = \\frac{\\mathbb{P}(A \\cap B)}{\\mathbb{P}(B)} = \\frac{\\frac{9}{28}}{\\frac{12}{28}} = \\frac{3}{4}\n\\]\n\n\n\n\n\nAko je \\(A \\in \\mathcal{F}\\) takav da je \\(\\mathbb{P}(A) &gt; 0\\) te \\((H_i)_{i \\in I}\\) potpun sustav događaja, za sve \\(j \\in I\\) vrijedi \\[\n\\mathbb{P}(H_j \\ | \\ A) = \\frac{\\mathbb{P}(H_j)\\mathbb{P}(A \\ | \\ H_j)}{\\displaystyle \\sum _{i \\in I} \\mathbb{P}(H_i) \\mathbb{P}(A \\ | \\ H_i)}\n\\]\n\n\n\n\nPrikaži dokaz\n\nDokaz vršimo direktno koristeći definicije uvjetne vjerojatnosti i formulu potpune vjerojatnosti: \\[\n\\begin{aligned}\n\\mathbb{P}(H_j \\ | \\ A) &= \\frac{\\mathbb{P}(H_j \\cap A)}{\\mathbb{P}(A)} \\\\\n&= \\frac{\\mathbb{P}(H_j)\\mathbb{P}(A \\ | \\ H_j)}{\\mathbb{P}(A)} \\\\\n&= \\frac{\\mathbb{P}(H_j)\\mathbb{P}(A \\ | \\ H_j)}{\\displaystyle \\sum _{i \\in I} \\mathbb{P}(H_i) \\mathbb{P}(A \\ | \\ H_i)}\n\\end{aligned}\n\\]\n\n\nVidimo da tražimo \\(\\mathbb{P}(H_j \\ | \\ A)\\), a s druge strane koristimo \\((A \\ | \\ H_j)\\). Dakle, često ćemo koristiti ovu formulu kad znamo jednu od toh vjerojatnosti.\nRiješimo sad ponovno primjer s lažno pozitivnim testovima.\n\nLažno pozitivni testovi\nLaboratorijski krvni test je \\(95\\%\\) učinkovit u otkrivanju jedne rijetke bolesti kada je ta bolest prisutna. Test također ukazuje na bolest i u \\(0.5\\%\\) slučajeva kada je osoba zdrava (false positive). Poznato je da samo \\(0.001\\%\\) populacije ima tu bolest. Test je pokazao da imate bolest, kolika je vjerojatnost da je zaista imate?\nDefiniramo PSD \\(H_1 := \\{\\) imate tu bolest \\(\\}\\), \\(H_2 := H_1^c\\), vrijedi \\[\n\\mathbb{P}(H_1) = \\frac{1}{100000} \\quad \\mathbb{P}(H_2) = \\frac{99999}{100000}\n\\]\nNeka je \\(T = \\{\\) test je pozitivan \\(\\}\\), stoga imamo \\[\n\\mathbb{P}(T \\ | \\ H_1) = 0.95 \\quad \\mathbb{P}(T \\ | \\ H_2) = 0.005\n\\]\nZanima nas \\(\\mathbb{P}(H_1 \\ | \\ T)\\). Koristimo Bayesovu formulu \\[\n\\begin{aligned}\n\\mathbb{P}(H_1 \\ | \\ T) &= \\frac{\\mathbb{P}(H_1) \\mathbb{P}(T \\ | \\ H_1)}{\\mathbb{P}(H_1) \\mathbb{P}(T \\ | \\ H_1) + \\mathbb{P}(H_2) \\mathbb{P}(T \\ | \\ H_2)} \\\\\n&= \\frac{\\frac{1}{100000} \\cdot 0.95}{\\frac{1}{100000} \\cdot 0.95 + \\frac{99999}{100000} \\cdot 0.005} \\\\\n& \\approx 0.002 = 0.2 \\%\n\\end{aligned}\n\\]\n\nNapomena: uočimo da vjerojatnosti nisu iste kao u prvom iznošenju primjera u prvom poglavlju, ali to je samo zbog lakšeg računa.",
+    "crumbs": [
+      "Home",
+      "4. VJEROJATNOST",
+      "4.4 Uvjetna vjerojatnost i nezavisnost"
+    ]
+  },
+  {
+    "objectID": "vjerojatnost/uvjetna.html#formula-potpune-vjerojatnosti",
+    "href": "vjerojatnost/uvjetna.html#formula-potpune-vjerojatnosti",
+    "title": "4.4 Uvjetna vjerojatnost i nezavisnost",
+    "section": "",
+    "text": "Potpun sustav događaja (PSD)\nZa konačnu ili prebrojivu familiju događaja \\((H_i)_{i \\in I}\\) (dakle, \\(I\\) \\(=\\) \\(\\{1,2,\\dots,n\\}\\) ili \\(I=\\mathbb{N}\\)), kažemo da je potpun sustav događaja (PSD) ako vrijedi\n\n\\(H_i \\cap H_j = \\emptyset, \\forall i \\neq j\\)\n\\(\\displaystyle \\bigcup _{i\\in I} H_i = \\Omega\\)\n\nDakle, \\((H_i)_{i \\in I}\\) je particija od \\(\\Omega\\).\n\nDogađaje \\(H_i\\) nazivamo hipotezama\nUočimo da potpun sustav događaja dijeli skup \\(\\Omega\\) na disjunktne događaje koji u uniji daju cijeli prostor elementarnih događaja. Ideja je sada za općeniti događaj \\(A\\) promatrati njegove vjerojatnosti uvjetno na članove familije od PSD. Tako dobijemo formulu potpune vjerojatnosti:\n\nZa sve \\(A \\in \\mathcal{F}\\) i bilo koji potpun sustav događaja \\((H_i)_{i \\in I}\\) vrijedi \\[\n\\mathbb{P}(A) = \\sum _{i \\in I} \\mathbb{P}(A \\ | \\ H_i) \\mathbb{P}(H_i)\n\\]\n\n\n\n\nPrikaži dokaz\n\nZa \\(A \\subseteq \\Omega\\) imamo \\[\n\\begin{aligned}\n\\mathbb{P}(A) &= \\mathbb{P}(A \\cap \\Omega) \\\\\n&= \\mathbb{P} \\left(A \\cap \\left( \\bigcup _{i\\in I} H_i \\right)\\right) \\\\\n&= \\mathbb{P} \\left(\\bigcup _{i\\in I} A \\cap H_i \\right) \\\\\n&= \\sum _{i \\in I} \\mathbb{P}(A \\cap H_i) \\\\\n&= \\sum _{i \\in I} \\mathbb{P}(A \\ | \\ H_i) \\mathbb{P}(H_i)\n\\end{aligned}\n\\]\nČetvrta jednakost slijedi iz \\(\\sigma\\)-aditivnosti vjerojatnosti \\(\\mathbb{P}\\)\n\n\nOvaj rezultat kaže da se vjerojatnost svakog događaja može izračunati kao težinska sredina uvjetnih vjerojatnosti tog događaja uvjetno na hipoteze, s težinama jednakim vjerojatnosti hipoteza.\nNapomena: možemo tražiti i slabiji uvjet na hipoteze. Za fiksan \\(A \\in \\mathcal{F}\\) dovoljno je uzeti PSD takav da vrijedi \\(H_i \\cap H_j = \\emptyset\\), za sve \\(i \\neq j\\) i \\(A \\subseteq \\displaystyle \\bigcup _{i\\in I} H_i\\), umjesto uvjeta da hipoteze particioniraju cijeli \\(\\Omega\\).\n\nU jednom je razredu od ukupno \\(28\\) učenika njih \\(12\\) dobilo odličan na maturi iz Matematike, a \\(9\\) je dobilo odličan iz Matematike i Hrvatskog jezika. Kolika je vjerojatnost da je slučajno odabrani učenik toga razreda dobio odličan iz Hrvatskog jezika ako je poznato da je dobio odličan iz Matematike?\nOznačimo ocjenu odličan iz Hrvatskog jezika kao \\(A\\), a odličnu ocjenu iz Matematike kao \\(B\\). Tada imamo \\[\n\\mathbb{P}(A \\ | \\ B) = \\frac{\\mathbb{P}(A \\cap B)}{\\mathbb{P}(B)} = \\frac{\\frac{9}{28}}{\\frac{12}{28}} = \\frac{3}{4}\n\\]",
+    "crumbs": [
+      "Home",
+      "4. VJEROJATNOST",
+      "4.4 Uvjetna vjerojatnost i nezavisnost"
+    ]
+  },
+  {
+    "objectID": "vjerojatnost/uvjetna.html#bayesov-teorem",
+    "href": "vjerojatnost/uvjetna.html#bayesov-teorem",
+    "title": "4.4 Uvjetna vjerojatnost i nezavisnost",
+    "section": "",
+    "text": "Ako je \\(A \\in \\mathcal{F}\\) takav da je \\(\\mathbb{P}(A) &gt; 0\\) te \\((H_i)_{i \\in I}\\) potpun sustav događaja, za sve \\(j \\in I\\) vrijedi \\[\n\\mathbb{P}(H_j \\ | \\ A) = \\frac{\\mathbb{P}(H_j)\\mathbb{P}(A \\ | \\ H_j)}{\\displaystyle \\sum _{i \\in I} \\mathbb{P}(H_i) \\mathbb{P}(A \\ | \\ H_i)}\n\\]\n\n\n\n\nPrikaži dokaz\n\nDokaz vršimo direktno koristeći definicije uvjetne vjerojatnosti i formulu potpune vjerojatnosti: \\[\n\\begin{aligned}\n\\mathbb{P}(H_j \\ | \\ A) &= \\frac{\\mathbb{P}(H_j \\cap A)}{\\mathbb{P}(A)} \\\\\n&= \\frac{\\mathbb{P}(H_j)\\mathbb{P}(A \\ | \\ H_j)}{\\mathbb{P}(A)} \\\\\n&= \\frac{\\mathbb{P}(H_j)\\mathbb{P}(A \\ | \\ H_j)}{\\displaystyle \\sum _{i \\in I} \\mathbb{P}(H_i) \\mathbb{P}(A \\ | \\ H_i)}\n\\end{aligned}\n\\]\n\n\nVidimo da tražimo \\(\\mathbb{P}(H_j \\ | \\ A)\\), a s druge strane koristimo \\((A \\ | \\ H_j)\\). Dakle, često ćemo koristiti ovu formulu kad znamo jednu od toh vjerojatnosti.\nRiješimo sad ponovno primjer s lažno pozitivnim testovima.\n\nLažno pozitivni testovi\nLaboratorijski krvni test je \\(95\\%\\) učinkovit u otkrivanju jedne rijetke bolesti kada je ta bolest prisutna. Test također ukazuje na bolest i u \\(0.5\\%\\) slučajeva kada je osoba zdrava (false positive). Poznato je da samo \\(0.001\\%\\) populacije ima tu bolest. Test je pokazao da imate bolest, kolika je vjerojatnost da je zaista imate?\nDefiniramo PSD \\(H_1 := \\{\\) imate tu bolest \\(\\}\\), \\(H_2 := H_1^c\\), vrijedi \\[\n\\mathbb{P}(H_1) = \\frac{1}{100000} \\quad \\mathbb{P}(H_2) = \\frac{99999}{100000}\n\\]\nNeka je \\(T = \\{\\) test je pozitivan \\(\\}\\), stoga imamo \\[\n\\mathbb{P}(T \\ | \\ H_1) = 0.95 \\quad \\mathbb{P}(T \\ | \\ H_2) = 0.005\n\\]\nZanima nas \\(\\mathbb{P}(H_1 \\ | \\ T)\\). Koristimo Bayesovu formulu \\[\n\\begin{aligned}\n\\mathbb{P}(H_1 \\ | \\ T) &= \\frac{\\mathbb{P}(H_1) \\mathbb{P}(T \\ | \\ H_1)}{\\mathbb{P}(H_1) \\mathbb{P}(T \\ | \\ H_1) + \\mathbb{P}(H_2) \\mathbb{P}(T \\ | \\ H_2)} \\\\\n&= \\frac{\\frac{1}{100000} \\cdot 0.95}{\\frac{1}{100000} \\cdot 0.95 + \\frac{99999}{100000} \\cdot 0.005} \\\\\n& \\approx 0.002 = 0.2 \\%\n\\end{aligned}\n\\]\n\nNapomena: uočimo da vjerojatnosti nisu iste kao u prvom iznošenju primjera u prvom poglavlju, ali to je samo zbog lakšeg računa.",
+    "crumbs": [
+      "Home",
+      "4. VJEROJATNOST",
+      "4.4 Uvjetna vjerojatnost i nezavisnost"
+    ]
+  },
+  {
+    "objectID": "vjerojatnost/nezavisnost.html",
+    "href": "vjerojatnost/nezavisnost.html",
+    "title": "4.5 Nezavisnost",
+    "section": "",
+    "text": "4.5 Nezavisnost\n\n\nDogađaji \\(A,B \\in \\mathcal{F}\\) su nezavisni ako vrijedi \\[\n\\mathbb{P}(A \\cap B) = \\mathbb{P}(A) \\mathbb{P}(B)\n\\]\nDogađaji \\(A,B \\in \\mathcal{F}\\) su uvjetno nezavisni uz dani \\(C \\in \\mathcal{F}\\), \\(\\mathbb{P}(C) &gt; 0\\), ako vrijedi \\[\n\\mathbb{P}(A \\cap B \\ | \\ C) = \\mathbb{P}(A \\ | \\ C) \\mathbb{P}(B \\ | \\ C)\n\\]\n\n\nVidjet ćemo da ovako definirana nezavisnost događaja odgovara našoj intuiciji o tom pojmu. Primjerice, ako su \\(A,B \\in \\mathcal{F}\\) nezavisni, vrijedi \\[\n\\mathbb{P}(A \\ | \\ B) = \\frac{\\mathbb{P}(A \\cap B)}{\\mathbb{P}(B)} = \\frac{\\mathbb{P}(A) \\mathbb{P}(B)}{\\mathbb{P}(B)} = \\mathbb{P}(A)\n\\]\nOvo znači da događaj \\(A\\) ne ovisi o događaju \\(B\\) pa ni traženje uvjetne vjerojatnosti ne radi razliku. Vidimo da je ovakav iskaz nezavisnosti inuitivniji.\n\nBacamo dvije kockice. Promatramo događaje \\[\nA = \\{ \\text{na prvoj kocki }3\\}\n\\] \\[\nB = \\{ \\text{na drugoj kocki }4\\}\n\\] \\[\nC = \\{ \\text{zbroj je }7\\}\n\\]\nDokažite\n\n\\(A\\) i \\(B\\) su nezavisni.\n\\(A\\) i \\(C\\) su nezavisni, \\(B\\) i \\(C\\) su nezavisni.\n\\(A\\) i \\(B\\) su zavisni uz dano \\(C\\).\n\n\n\nImamo \\(\\Omega = \\{1,\\dots,6\\}^2\\) pa je \\[\n\\mathbb{P}(A \\cap B) = \\frac{|A \\cap B|}{|\\Omega|} = \\frac{1}{6^2} = \\frac{1}{6} \\cdot \\frac{1}{6} = \\mathbb{P}(A) \\mathbb{P}(B)\n\\]\n\\[\n\\mathbb{P}(A \\ | \\ C) = \\frac{|A \\cap C|}{|C|} = \\frac{|\\{(3,4)\\}|}{|\\{(1,6),(2,5),\\dots,(6,1)\\}|} = \\frac{1}{6} = \\mathbb{P}(A)\n\\]\n\nAnalogno dobijemo \\(\\mathbb{P}(B \\ | \\ C) = \\mathbb{P}(B)\\). Uočimo da \\(A\\) i \\(C\\) nisu disjunktni, ali su nezavisni!\n\nIntuitivno, imamo zavisnost jer ako znamo da je zbroj \\(7\\), to da je na drugoj kocki pao broj \\(4\\) nam odmah govori da je na prvoj kocki morao pasti broj \\(3\\). Formalno, imamo \\[\n\\mathbb{P}(A \\ | \\ B \\cap C) = 1\n\\]\n\ndok je \\[\n\\mathbb{P}(A \\ | \\ C) \\overset{(b.)}{=} \\frac{1}{6} \\neq \\mathbb{P}(A \\ | \\ B \\cap C)\n\\]\n\n\nNezavisnost familije događaja\n\nFamilija događaja \\((A_i)_{i \\in I}\\), pri čemu \\(I\\) može biti bilo koji skup, je\n\nnezavisna ako vrijedi \\[\n\\mathbb{P} \\left( \\bigcup_{i \\in F} A_i \\right) = \\prod _{i \\in F} \\mathbb{P}(A_i)\n\\]\n\nza svaki konačan i neprazan podskup \\(F \\subseteq I\\).\n\nuvjetno nezavisna uz dano \\(C \\in \\mathcal{F}\\) (\\(\\mathbb{P}(C) &gt; 0\\)) ako je nezavisna (u smislu definicije a.) s obzirom na \\(\\mathbb{P}_C\\).\nu parovima nezavisna ako su \\(A_i\\) i \\(A_j\\) nezavisni za sve \\(i,j \\in I\\), \\(i \\neq j\\).\n\n\nOpćenito gledano, nezavisnost u parovima ne povlači nezavisnost.\n\n\nBorel-Cantellijeve leme\n\nPrva Borel-Cantellijeva lema\nAko za niz dogadaja \\(A_1,A_2,\\ldots \\in \\mathcal{F}\\) vrijedi \\[\n\\sum _{i = 1} ^{\\infty} \\mathbb{P}(A_i) &lt; \\infty\n\\]\nonda je \\[\n\\mathbb{P}\\left( \\bigcap _{n=1}^{\\infty} \\bigcup _{k=n}^{\\infty} A_k \\right) = 0\n\\]\n\nInterpretacija: za ishod \\(\\omega \\in \\Omega\\), imamo \\[\n\\omega \\in \\bigcap _{n=1}^{\\infty} \\bigcup _{k=n}^{\\infty} A_k \\quad \\Longleftrightarrow \\quad\n(\\forall n \\in \\mathbb{N}) \\ (\\exists k, \\ k = k(\\omega) \\geq n) \\ ( \\omega \\in A_k)\n\\]\nDrukčije rečeno \\[\n\\bigcap _{n=1}^{\\infty} \\bigcup _{k=n}^{\\infty} A_k = \\{A_n \\text{ b.m.p.}\\}\n\\]\n\nBacamo niz nesimatričnih novčića, pri čemu je vjerojatnost pisma na \\(n\\)-tom novčiću \\(p_n := \\dfrac{1}{n^2}\\). Vrijedi \\[\n\\sum _{n=1}^{\\infty} p_n &lt; \\infty\n\\]\npa po BC1 imamo da je vjerojatnost da pismo padne beskonačno mnogo puta jednaka \\(0\\), tj. vjerojatnost da su nakon nekog trenutka padale samo glave je \\(1\\).\n\n\nDruga Borel-Cantellijeva lema\nAko za niz nezavisnih dogadaja \\(A_1,A_2,\\ldots \\in \\mathcal{F}\\) vrijedi \\[\n\\sum _{i = 1} ^{\\infty} \\mathbb{P}(A_i) = \\infty\n\\]\nonda je \\[\n\\mathbb{P}(\\{A_n \\text{ b.m.p.}\\}) = 1\n\\]\n\nKad bismo modificirali prethodni primjer tako da je \\(p_n = \\dfrac{1}{n}\\), tada bi pismo palo beskonačno mnogo puta s vjerojatnošću \\(1\\).",
+    "crumbs": [
+      "Home",
+      "4. VJEROJATNOST",
+      "4.5 Nezavisnost"
+    ]
+  },
+  {
+    "objectID": "vjerojatnost/zadatci2.html",
+    "href": "vjerojatnost/zadatci2.html",
+    "title": "Zadatci - drugi dio",
+    "section": "",
+    "text": "Zadatci - drugi dio\n\nBacamo simetričnu kockicu. Kolika je vjerojatnost da je pao broj \\(5\\) ako znamo da je pao broj veći od \\(4\\)?\n\n\n\nSpil sadrži \\(n\\) karata označenih prirodnim brojevima od \\(1\\) do \\(n\\). Karte se izvlače slučajnim redoslijedom, jedna po jedna. Neka je \\(1 \\leq k \\leq n\\) fiksan. Ako znamo da je u \\(k\\)-tom izvlačenju izvučen dotad najveći broj, koja je vjerojatnost da je on \\(n\\)?\n\n\n\nSlučajno biramo dva različita broja iz skupa \\(\\{1,\\ldots,9\\}\\). Ako im je zbroj paran, kolika je vjerojatnost da su oba broja bila neparna?\n\n\n\nIz standardnog špila igraćih karata (52 karte) izvlačimo dvije karte. Kolika je vjerojatnost da druga karta bude pik ako je i prva bila pik?\n\n\n\nTri novčića \\(C_1\\), \\(C_2\\) i \\(C_3\\) leže na stolu. Vjerojatnosti da na njima padne pismo su redom \\(\\dfrac{1}{3}\\), \\(\\dfrac{2}{3}\\) i \\(1\\). Na slučajan način uzmemo jedan novčić, bacimo ga i uočimo da je palo pismo. Odredite vjerojatnosti da smo uzeli novčić \\(C_i\\), za \\(i= 1,2,3\\).\n\n\n\nCilj se gađa iz tri topa. Topovi pogađaju cilj nezavisno jedan od drugoga s vjerojatnošću \\(0.4\\). Ako jedan top pogodi cilj uništava ga s vjerojatnošću \\(0.3\\), ako ga pogode dva topa unitavaju ga s vjerojatnošću \\(0.7\\), a ako ga pogode tri topa uništavaju ga s vjerojatnošću \\(0.9\\). Izračunajte vjerojatnost uništenja cilja.\n\n\n\n\nPrikaži hint\n\nIskoristite formulu potpune vjerojatnosti.\n\n\n\n\nU dvjema kutijama nalaze se bijele i crne kuglice. U jednoj se kutiji nalaze \\(4\\) crne i \\(2\\) bijele kuglice, dok se u drugoj kutiji nalaze \\(3\\) crne i \\(4\\) bijele kuglice. Kolika je vjerojatnost da ćemo slučajnim odabirom izvući bijelu kuglicu?\n\n\n\n\nPrikaži hint\n\nVjerojatnost da je neka kutija odabrana računamo Laplaceovim modelom uzevši u obzir koliko je kuglica u toj kutiji, a koliko ukupno u objema kutijama.\n\n\n\n\nU ponoć su na parkiralištu bila dva siva i jedan crni Ford, tri siva i četiri crna BMW–a te tri sive i jedna crna Toyota. Te je noći kradljivac automobila nasumično odabrao automobil i ukrao ga. Ako je ukradeni automobil sive boje, kolika je vjerojatnost da je to bio BMW?\n\n\n\n\nPrikaži hint\n\nIskoristite Bayesovu formulu.\n\n\n\n\nImamo tri kutije: u prvoj su \\(2\\) crne, u drugoj \\(2\\) bijele, a u trećoj po jedna bijela i crna kuglica. Slučajno izaberemo kutiju te zatim jednu kuglicu iz te kutije. Ako je izvučena crna kuglica, kolika je vjerojatnost da je i druga kuglica iz te kutije također crna?\n\n\n\n\nPrikaži hint\n\nIskoristite Bayesovu formulu.\n\n\n\n\n(1. Kolokvij, 2024.) Student putuje iz studentskog doma na kolokvij iz Vjerojatnosti. S vjerojatnošću \\(25\\%\\) zaboravio je noć prije staviti mobitel na punjenje te mu se ne oglašava alarm i probudi se prekasno. U tom slučaju zove taksi koji zbog jutarnje gužve kasni s vjerojatnošću \\(20\\%\\). S druge strane, ako se student probudi na vrijeme, ide na tramvaj, no i u tom slučaju zbog jutarnje gužve kasni s vjerojatnošću \\(60\\%\\). Ako je student stigao na kolokvij na vrijeme, odredite vjerojatnost da se i probudio na vrijeme.\n\n\n\nAko su \\(A,B \\in \\mathcal{F}\\) nezavisni, dokažite da su tada nezavisni i parovi događaja \\[\nA^c \\text{ i } B \\qquad A \\text{ i } B^c \\qquad A^c \\text{ i } B^c\n\\]",
+    "crumbs": [
+      "Home",
+      "4. VJEROJATNOST",
+      "Zadatci - drugi dio"
     ]
   }
 ]

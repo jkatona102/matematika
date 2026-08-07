@@ -73,11 +73,19 @@ website:
         contents: 
           - text: "4.1 Uvod i definicija"
             href: vjerojatnost/uvod.qmd
-          - text: "4.2 Svojstva vjerojatnosti i modeli vjerojatnosti "
+          - text: "4.2 Svojstva vjerojatnosti i modeli vjerojatnosti"
             href: vjerojatnost/modeli.qmd
           - text: "Zadatci - prvi dio"
             href: vjerojatnost/zadatci1.qmd
-            
+          - text: "4.3 Nizovi događaja"
+            href: vjerojatnost/nizovi.qmd
+          - text: "4.4 Uvjetna vjerojatnost i nezavisnost"
+            href: vjerojatnost/uvjetna.qmd
+          - text: "4.5 Nezavisnost"
+            href: vjerojatnost/nezavisnost.qmd
+          - text: "Zadatci - drugi dio"
+            href: vjerojatnost/zadatci2.qmd
+
 format:
   html:
     theme:

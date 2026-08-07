@@ -1,0 +1,146 @@
+# 4.4 Uvjetna vjerojatnost i nezavisnost {.unnumbered}
+
+Motivaciju za promatranje uvjetne vjerojatnosti daju nam razni pokusi. Primjerice, bacamo dvije kockice, kao i prije imamo
+$$
+\Omega = \{(i,j): i,j \in \{1,2,\dots,6\}\}
+$$
+
+- $A = \{$ zbroj je $5\} = \{(1,4),(2,3),(3,2),(4,1)\}$, imamo
+$$
+\mathbb{P}(A) = \frac{|A|}{|\Omega|} = \frac{4}{36} = \frac{1}{9}
+$$
+
+- $B = \{$ na prvoj kockici pala $2\} = \{(2,1),(2,2),\dots,(2,6)\}$. Kolika je sada vjerojatnost događaja $A$?
+
+Sada prostor elementarnih događaja $\Omega$ nije više relevantan jer imamo uvjet da je na prvoj kockici pao broj $2$. Možemo $B$ promatrati kao "novi" $\Omega$ pa su opet svi događaji jednako vjerojatni pa je od svih $\omega \in B$ samo jedan povoljan, a to je $(2,3)$. Tada je tražena vjerojatnost jednaka $\dfrac{1}{6}$ što je veće od $\mathbb{P}(A)$ (bez uvjeta).
+
+:::{.def}
+Neka je $(\Omega, \mathcal{F}, \mathbb{P})$ vjerojatnosni prostor. Ako za $B \in \mathcal{F}$ vrijedi $\mathbb{P}(B) > 0$, onda za sve $A \in \mathcal{F}$ definiramo
+$$
+\mathbb{P}(A \ | \ B) := \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}
+$$
+:::
+
+$\mathbb{P}(A | B)$ čitamo kao **(uvjetna) vjerojatnost od A uz dano B**.
+
+Za $B \in \mathcal{F}$, $\mathbb{P}(B) > 0$ uvedimo oznaku
+$$
+\mathbb{P}_B (A) := \mathbb{P}(A \ | \ B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}
+$$
+
+Definirana vjerojatnost zaista jest vjerojatnost na $(\Omega, \mathcal{F})$ i ima svojstva vjerojatnosti koja znamo od prije. 
+
+Primjerice, za neke događaje $A$ i $C \in \mathcal{F}$ uvjetna vjerojatnost uz dano $B$ zadovoljava
+$$
+\mathbb{P}(A \cup C \ | \ B) = \mathbb{P}(A \ | \ B) + \mathbb{P}(C \ | \ B) - \mathbb{P}(A \cap C \ | \ B)
+$$
+
+## Formula potpune vjerojatnosti {.unnumbered}
+
+:::{.def}
+**Potpun sustav događaja (PSD)**
+
+Za konačnu ili prebrojivu familiju događaja $(H_i)_{i \in I}$ (dakle, $I$ $=$ $\{1,2,\dots,n\}$ ili $I=\mathbb{N}$), kažemo da je potpun sustav događaja (PSD) ako vrijedi 
+
+(a) $H_i \cap H_j = \emptyset, \forall i \neq j$
+
+(b) $\displaystyle \bigcup _{i\in I} H_i = \Omega$
+
+Dakle, $(H_i)_{i \in I}$ je particija od $\Omega$.
+:::
+
+Događaje $H_i$ nazivamo hipotezama
+
+Uočimo da potpun sustav događaja dijeli skup $\Omega$ na disjunktne događaje koji u uniji daju cijeli prostor elementarnih događaja. Ideja je sada za općeniti događaj $A$ promatrati njegove vjerojatnosti uvjetno na članove familije od PSD. Tako dobijemo **formulu potpune vjerojatnosti**:
+
+:::{.teorem}
+Za sve $A \in \mathcal{F}$ i bilo koji potpun sustav događaja $(H_i)_{i \in I}$ vrijedi
+$$
+\mathbb{P}(A) = \sum _{i \in I} \mathbb{P}(A \ | \ H_i) \mathbb{P}(H_i)
+$$
+:::
+
+:::{.dokaz}
+<details>
+<summary>Prikaži dokaz</summary>
+Za $A \subseteq \Omega$ imamo
+$$
+\begin{aligned}
+\mathbb{P}(A) &= \mathbb{P}(A \cap \Omega) \\
+&= \mathbb{P} \left(A \cap \left( \bigcup _{i\in I} H_i \right)\right) \\
+&= \mathbb{P} \left(\bigcup _{i\in I} A \cap H_i \right) \\
+&= \sum _{i \in I} \mathbb{P}(A \cap H_i) \\
+&= \sum _{i \in I} \mathbb{P}(A \ | \ H_i) \mathbb{P}(H_i)
+\end{aligned}
+$$
+
+Četvrta jednakost slijedi iz $\sigma$-aditivnosti vjerojatnosti $\mathbb{P}$
+</details>
+:::
+
+Ovaj rezultat kaže da se vjerojatnost svakog događaja može izračunati kao težinska sredina uvjetnih vjerojatnosti tog događaja uvjetno na hipoteze, s težinama jednakim vjerojatnosti hipoteza.
+
+**Napomena:** možemo tražiti i slabiji uvjet na hipoteze. Za fiksan $A \in \mathcal{F}$ dovoljno je uzeti PSD takav da vrijedi $H_i \cap H_j = \emptyset$, za sve $i \neq j$ i $A \subseteq \displaystyle \bigcup _{i\in I} H_i$, umjesto uvjeta da hipoteze particioniraju cijeli $\Omega$.
+
+:::{.primjer}
+U jednom je razredu od ukupno $28$ učenika njih $12$ dobilo odličan na maturi iz *Matematike*, a $9$ je dobilo odličan iz *Matematike* i *Hrvatskog jezika*. Kolika je vjerojatnost da je slučajno odabrani učenik toga razreda dobio odličan iz *Hrvatskog jezika* ako je poznato da je dobio odličan iz *Matematike*?
+
+Označimo ocjenu odličan iz *Hrvatskog jezika* kao $A$, a odličnu ocjenu iz *Matematike* kao $B$. Tada imamo
+$$
+\mathbb{P}(A \ | \ B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \frac{\frac{9}{28}}{\frac{12}{28}} = \frac{3}{4}
+$$
+:::
+
+## Bayesov teorem {.unnumbered}
+
+:::{.teorem}
+Ako je $A \in \mathcal{F}$ takav da je $\mathbb{P}(A) > 0$ te $(H_i)_{i \in I}$ potpun sustav događaja, za sve $j \in I$ vrijedi
+$$
+\mathbb{P}(H_j \ | \ A) = \frac{\mathbb{P}(H_j)\mathbb{P}(A \ | \ H_j)}{\displaystyle \sum _{i \in I} \mathbb{P}(H_i) \mathbb{P}(A \ | \ H_i)}
+$$
+:::
+
+:::{.dokaz}
+<details>
+<summary>Prikaži dokaz</summary>
+Dokaz vršimo direktno koristeći definicije uvjetne vjerojatnosti i formulu potpune vjerojatnosti:
+$$
+\begin{aligned}
+\mathbb{P}(H_j \ | \ A) &= \frac{\mathbb{P}(H_j \cap A)}{\mathbb{P}(A)} \\
+&= \frac{\mathbb{P}(H_j)\mathbb{P}(A \ | \ H_j)}{\mathbb{P}(A)} \\
+&= \frac{\mathbb{P}(H_j)\mathbb{P}(A \ | \ H_j)}{\displaystyle \sum _{i \in I} \mathbb{P}(H_i) \mathbb{P}(A \ | \ H_i)}
+\end{aligned}
+$$
+</details>
+:::
+
+Vidimo da tražimo $\mathbb{P}(H_j \ | \ A)$, a s druge strane koristimo $(A \ | \ H_j)$. Dakle, često ćemo koristiti ovu formulu kad znamo jednu od toh vjerojatnosti.
+
+Riješimo sad ponovno primjer s lažno pozitivnim testovima.
+
+:::{.primjer}
+**Lažno pozitivni testovi**
+
+Laboratorijski krvni test je $95\%$ učinkovit u otkrivanju jedne rijetke bolesti kada je ta bolest prisutna. Test također ukazuje na bolest i u $0.5\%$ slučajeva kada je osoba zdrava (false positive). Poznato je da samo $0.001\%$ populacije ima tu bolest. Test je pokazao da imate bolest, kolika je vjerojatnost da je zaista imate?
+
+Definiramo PSD $H_1 := \{$ imate tu bolest $\}$, $H_2 := H_1^c$, vrijedi
+$$
+\mathbb{P}(H_1) = \frac{1}{100000} \quad \mathbb{P}(H_2) = \frac{99999}{100000}
+$$
+
+Neka je $T = \{$ test je pozitivan $\}$, stoga imamo
+$$
+\mathbb{P}(T \ | \ H_1) = 0.95 \quad \mathbb{P}(T \ | \ H_2) = 0.005
+$$
+
+Zanima nas $\mathbb{P}(H_1 \ | \ T)$. Koristimo Bayesovu formulu
+$$
+\begin{aligned}
+\mathbb{P}(H_1 \ | \ T) &= \frac{\mathbb{P}(H_1) \mathbb{P}(T \ | \ H_1)}{\mathbb{P}(H_1) \mathbb{P}(T \ | \ H_1) + \mathbb{P}(H_2) \mathbb{P}(T \ | \ H_2)} \\
+&= \frac{\frac{1}{100000} \cdot 0.95}{\frac{1}{100000} \cdot 0.95 + \frac{99999}{100000} \cdot 0.005} \\
+& \approx 0.002 = 0.2 \% 
+\end{aligned}
+$$
+:::
+
+**Napomena:** uočimo da vjerojatnosti nisu iste kao u prvom iznošenju primjera u [prvom poglavlju](uvod.qmd), ali to je samo zbog lakšeg računa.

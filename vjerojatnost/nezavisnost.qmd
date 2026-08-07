@@ -1,0 +1,136 @@
+# 4.5 Nezavisnost {.unnumbered}
+
+:::{.def}
+(i) Događaji $A,B \in \mathcal{F}$ su nezavisni ako vrijedi
+$$
+\mathbb{P}(A \cap B) = \mathbb{P}(A) \mathbb{P}(B)
+$$
+
+(ii) Događaji $A,B \in \mathcal{F}$ su uvjetno nezavisni uz dani $C \in \mathcal{F}$, $\mathbb{P}(C) > 0$, ako vrijedi
+$$
+\mathbb{P}(A \cap B \ | \ C) = \mathbb{P}(A \ | \ C) \mathbb{P}(B \ | \ C)
+$$
+:::
+
+Vidjet ćemo da ovako definirana nezavisnost događaja odgovara našoj intuiciji o tom pojmu. Primjerice, ako su $A,B \in \mathcal{F}$ nezavisni, vrijedi
+$$
+\mathbb{P}(A \ | \ B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \frac{\mathbb{P}(A) \mathbb{P}(B)}{\mathbb{P}(B)} = \mathbb{P}(A)
+$$
+
+Ovo znači da događaj $A$ ne ovisi o događaju $B$ pa ni traženje uvjetne vjerojatnosti ne radi razliku. Vidimo da je ovakav iskaz nezavisnosti inuitivniji.
+
+:::{.primjer}
+Bacamo dvije kockice. Promatramo događaje
+$$
+A = \{ \text{na prvoj kocki }3\}
+$$
+$$
+B = \{ \text{na drugoj kocki }4\}
+$$
+$$
+C = \{ \text{zbroj je }7\}
+$$
+
+Dokažite
+
+(a) $A$ i $B$ su nezavisni.
+
+(b) $A$ i $C$ su nezavisni, $B$ i $C$ su nezavisni.
+
+(c) $A$ i $B$ su zavisni uz dano $C$.
+
+---
+
+(a) Imamo $\Omega = \{1,\dots,6\}^2$ pa je 
+$$
+\mathbb{P}(A \cap B) = \frac{|A \cap B|}{|\Omega|} = \frac{1}{6^2} = \frac{1}{6} \cdot \frac{1}{6} = \mathbb{P}(A) \mathbb{P}(B)
+$$
+
+(b)
+$$
+\mathbb{P}(A \ | \ C) = \frac{|A \cap C|}{|C|} = \frac{|\{(3,4)\}|}{|\{(1,6),(2,5),\dots,(6,1)\}|} = \frac{1}{6} = \mathbb{P}(A)
+$$
+
+Analogno dobijemo $\mathbb{P}(B \ | \ C) = \mathbb{P}(B)$. Uočimo da $A$ i $C$ nisu disjunktni, ali su nezavisni!
+
+(c) Intuitivno, imamo zavisnost jer ako znamo da je zbroj $7$, to da je na drugoj kocki pao broj $4$ nam odmah govori da je na prvoj kocki morao pasti broj $3$. Formalno, imamo 
+$$
+\mathbb{P}(A \ | \ B \cap C) = 1
+$$ 
+
+dok je 
+$$
+\mathbb{P}(A \ | \ C) \overset{(b.)}{=} \frac{1}{6} \neq \mathbb{P}(A \ | \ B \cap C)
+$$
+:::
+
+### Nezavisnost familije događaja {.unnumbered}
+
+:::{.def}
+Familija događaja $(A_i)_{i \in I}$, pri čemu $I$ može biti bilo koji skup, je
+
+(a) **nezavisna** ako vrijedi
+$$
+\mathbb{P} \left( \bigcup_{i \in F} A_i \right) = \prod _{i \in F} \mathbb{P}(A_i)
+$$
+
+za svaki konačan i neprazan podskup $F \subseteq I$.
+
+(b) **uvjetno nezavisna** uz dano $C \in \mathcal{F}$ ($\mathbb{P}(C) > 0$) ako je nezavisna (u smislu definicije *a.*) s obzirom na $\mathbb{P}_C$.
+
+(c) u **parovima nezavisna** ako su $A_i$ i $A_j$ nezavisni za sve $i,j \in I$, $i \neq j$.
+:::
+
+Općenito gledano, nezavisnost u parovima ne povlači nezavisnost.
+
+### Borel-Cantellijeve leme {.unnumbered}
+
+:::{.teorem}
+**Prva Borel-Cantellijeva lema**
+
+Ako za niz dogadaja $A_1,A_2,\ldots \in \mathcal{F}$ vrijedi
+$$
+\sum _{i = 1} ^{\infty} \mathbb{P}(A_i) < \infty
+$$
+
+onda je 
+$$
+\mathbb{P}\left( \bigcap _{n=1}^{\infty} \bigcup _{k=n}^{\infty} A_k \right) = 0
+$$
+:::
+
+**Interpretacija:** za ishod $\omega \in \Omega$, imamo 
+$$
+\omega \in \bigcap _{n=1}^{\infty} \bigcup _{k=n}^{\infty} A_k \quad \Longleftrightarrow \quad
+(\forall n \in \mathbb{N}) \ (\exists k, \ k = k(\omega) \geq n) \ ( \omega \in A_k)
+$$
+
+Drukčije rečeno
+$$
+\bigcap _{n=1}^{\infty} \bigcup _{k=n}^{\infty} A_k = \{A_n \text{ b.m.p.}\}
+$$
+
+:::{.primjer}
+Bacamo niz nesimatričnih novčića, pri čemu je vjerojatnost pisma na $n$-tom novčiću $p_n := \dfrac{1}{n^2}$. Vrijedi
+$$
+\sum _{n=1}^{\infty} p_n < \infty
+$$
+
+pa po BC1 imamo da je vjerojatnost da pismo padne beskonačno mnogo puta jednaka $0$, tj. vjerojatnost da su nakon nekog trenutka padale samo glave je $1$.
+:::
+
+:::{.teorem}
+**Druga Borel-Cantellijeva lema**
+
+Ako za niz **nezavisnih** dogadaja $A_1,A_2,\ldots \in \mathcal{F}$ vrijedi
+$$
+\sum _{i = 1} ^{\infty} \mathbb{P}(A_i) = \infty
+$$
+
+onda je 
+$$
+\mathbb{P}(\{A_n \text{ b.m.p.}\}) = 1
+$$
+:::
+
+Kad bismo modificirali prethodni primjer tako da je $p_n = \dfrac{1}{n}$, tada bi pismo palo beskonačno mnogo puta s vjerojatnošću $1$.

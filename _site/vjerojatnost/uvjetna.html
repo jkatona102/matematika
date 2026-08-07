@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Povijest promjena na stranici – Matematika</title>
+<title>uvjetna – Matematika</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1b8143a5af30aa0587ead8c64582f750.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1b8143a5af30aa0587ead8c64582f750.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,8 +71,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -82,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Matematika</span>
     </a>
   </div>
@@ -93,19 +122,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">O stranici</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./promjene.html" aria-current="page"> 
+    <a class="nav-link" href="../promjene.html"> 
 <span class="menu-text">Novosti</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./literatura.html"> 
+    <a class="nav-link" href="../literatura.html"> 
 <span class="menu-text">Literatura</span></a>
   </li>  
 </ul>
@@ -119,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Povijest promjena na stranici</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../vjerojatnost/vjerojatnost.html">4. VJEROJATNOST</a></li><li class="breadcrumb-item"><a href="../vjerojatnost/uvjetna.html">4.4 Uvjetna vjerojatnost i nezavisnost</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Pretraživanje" onclick="window.quartoOpenSearch();">
@@ -141,13 +170,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./predaja.html" class="sidebar-item-text sidebar-link">
+  <a href="../predaja.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Predavanje zadataka</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./limesi/limesi.html" class="sidebar-item-text sidebar-link">
+            <a href="../limesi/limesi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">1. LIMESI</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -156,13 +185,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limesi/limesi1.html" class="sidebar-item-text sidebar-link">
+  <a href="../limesi/limesi1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">1.1 Definicija i temeljna teorija, neprekidnost</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./limesi/limesi-zadatci.html" class="sidebar-item-text sidebar-link">
+  <a href="../limesi/limesi-zadatci.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zadatci</span></a>
   </div>
 </li>
@@ -170,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./derivacije/derivacije.html" class="sidebar-item-text sidebar-link">
+            <a href="../derivacije/derivacije.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2. DERIVACIJE</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -179,55 +208,55 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivacije/derivacije-uvod.html" class="sidebar-item-text sidebar-link">
+  <a href="../derivacije/derivacije-uvod.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2.1 Uvod u derivacije</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivacije/derivacije-definicija.html" class="sidebar-item-text sidebar-link">
+  <a href="../derivacije/derivacije-definicija.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2.2 Definicija</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivacije/derivacije-racunanje.html" class="sidebar-item-text sidebar-link">
+  <a href="../derivacije/derivacije-racunanje.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2.3 Pravila za računanje derivacija</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivacije/derivacije-zadaci1.html" class="sidebar-item-text sidebar-link">
+  <a href="../derivacije/derivacije-zadaci1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zadatci - prvi dio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivacije/derivacije-rezultati.html" class="sidebar-item-text sidebar-link">
+  <a href="../derivacije/derivacije-rezultati.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2.4 Temeljni rezultati</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivacije/derivacije-tok.html" class="sidebar-item-text sidebar-link">
+  <a href="../derivacije/derivacije-tok.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2.5 Analiza toka funkcije</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivacije/derivacije-zadaci2.html" class="sidebar-item-text sidebar-link">
+  <a href="../derivacije/derivacije-zadaci2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zadatci - drugi dio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivacije/derivacije-primjena.html" class="sidebar-item-text sidebar-link">
+  <a href="../derivacije/derivacije-primjena.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2.6 Primjene derivacija</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./derivacije/derivacije-zadatci3.html" class="sidebar-item-text sidebar-link">
+  <a href="../derivacije/derivacije-zadatci3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zadatci - treći dio</span></a>
   </div>
 </li>
@@ -235,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./integrali/integrali.html" class="sidebar-item-text sidebar-link">
+            <a href="../integrali/integrali.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3. RIEMANNOV INTEGRAL</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -244,49 +273,49 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./integrali/integrali-def.html" class="sidebar-item-text sidebar-link">
+  <a href="../integrali/integrali-def.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3.1 Uvod i definicija</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./integrali/integrali-svojstva.html" class="sidebar-item-text sidebar-link">
+  <a href="../integrali/integrali-svojstva.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3.2 Osnovna svojstva i primitivna funkcija</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./integrali/integrali-racunanje.html" class="sidebar-item-text sidebar-link">
+  <a href="../integrali/integrali-racunanje.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3.3 Metode integriranja</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./integrali/integrali-zadatci1.html" class="sidebar-item-text sidebar-link">
+  <a href="../integrali/integrali-zadatci1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zadatci - prvi dio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./integrali/integrali-racionalne.html" class="sidebar-item-text sidebar-link">
+  <a href="../integrali/integrali-racionalne.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3.4 Integrali racionalnih funkcija</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./integrali/integrali-iracionalne.html" class="sidebar-item-text sidebar-link">
+  <a href="../integrali/integrali-iracionalne.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3.5 Integrali iracionalnih funkcija</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./integrali/integrali-trig.html" class="sidebar-item-text sidebar-link">
+  <a href="../integrali/integrali-trig.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">3.5 Integrali trigonometrijskih i hiperbolnih funkcija</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./integrali/integrali-zadatci2.html" class="sidebar-item-text sidebar-link">
+  <a href="../integrali/integrali-zadatci2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zadatci - drugi dio</span></a>
   </div>
 </li>
@@ -294,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./vjerojatnost/vjerojatnost.html" class="sidebar-item-text sidebar-link">
+            <a href="../vjerojatnost/vjerojatnost.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">4. VJEROJATNOST</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -303,43 +332,43 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vjerojatnost/uvod.html" class="sidebar-item-text sidebar-link">
+  <a href="../vjerojatnost/uvod.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">4.1 Uvod i definicija</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vjerojatnost/modeli.html" class="sidebar-item-text sidebar-link">
+  <a href="../vjerojatnost/modeli.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">4.2 Svojstva vjerojatnosti i modeli vjerojatnosti</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vjerojatnost/zadatci1.html" class="sidebar-item-text sidebar-link">
+  <a href="../vjerojatnost/zadatci1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zadatci - prvi dio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vjerojatnost/nizovi.html" class="sidebar-item-text sidebar-link">
+  <a href="../vjerojatnost/nizovi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">4.3 Nizovi događaja</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vjerojatnost/uvjetna.html" class="sidebar-item-text sidebar-link">
+  <a href="../vjerojatnost/uvjetna.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">4.4 Uvjetna vjerojatnost i nezavisnost</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vjerojatnost/nezavisnost.html" class="sidebar-item-text sidebar-link">
+  <a href="../vjerojatnost/nezavisnost.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">4.5 Nezavisnost</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vjerojatnost/zadatci2.html" class="sidebar-item-text sidebar-link">
+  <a href="../vjerojatnost/zadatci2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Zadatci - drugi dio</span></a>
   </div>
 </li>
@@ -350,84 +379,139 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sadržaj</h2>
+   
+  <ul>
+  <li><a href="#uvjetna-vjerojatnost-i-nezavisnost" id="toc-uvjetna-vjerojatnost-i-nezavisnost" class="nav-link active" data-scroll-target="#uvjetna-vjerojatnost-i-nezavisnost">4.4 Uvjetna vjerojatnost i nezavisnost</a>
+  <ul class="collapse">
+  <li><a href="#formula-potpune-vjerojatnosti" id="toc-formula-potpune-vjerojatnosti" class="nav-link" data-scroll-target="#formula-potpune-vjerojatnosti">Formula potpune vjerojatnosti</a></li>
+  <li><a href="#bayesov-teorem" id="toc-bayesov-teorem" class="nav-link" data-scroll-target="#bayesov-teorem">Bayesov teorem</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../vjerojatnost/vjerojatnost.html">4. VJEROJATNOST</a></li><li class="breadcrumb-item"><a href="../vjerojatnost/uvjetna.html">4.4 Uvjetna vjerojatnost i nezavisnost</a></li></ol></nav></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Povijest promjena na stranici</h1>
+
+
+
+<section id="uvjetna-vjerojatnost-i-nezavisnost" class="level1 unnumbered">
+<h1 class="unnumbered">4.4 Uvjetna vjerojatnost i nezavisnost</h1>
+<p>Motivaciju za promatranje uvjetne vjerojatnosti daju nam razni pokusi. Primjerice, bacamo dvije kockice, kao i prije imamo <span class="math display">\[
+\Omega = \{(i,j): i,j \in \{1,2,\dots,6\}\}
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(A = \{\)</span> zbroj je <span class="math inline">\(5\} = \{(1,4),(2,3),(3,2),(4,1)\}\)</span>, imamo <span class="math display">\[
+\mathbb{P}(A) = \frac{|A|}{|\Omega|} = \frac{4}{36} = \frac{1}{9}
+\]</span></p></li>
+<li><p><span class="math inline">\(B = \{\)</span> na prvoj kockici pala <span class="math inline">\(2\} = \{(2,1),(2,2),\dots,(2,6)\}\)</span>. Kolika je sada vjerojatnost događaja <span class="math inline">\(A\)</span>?</p></li>
+</ul>
+<p>Sada prostor elementarnih događaja <span class="math inline">\(\Omega\)</span> nije više relevantan jer imamo uvjet da je na prvoj kockici pao broj <span class="math inline">\(2\)</span>. Možemo <span class="math inline">\(B\)</span> promatrati kao “novi” <span class="math inline">\(\Omega\)</span> pa su opet svi događaji jednako vjerojatni pa je od svih <span class="math inline">\(\omega \in B\)</span> samo jedan povoljan, a to je <span class="math inline">\((2,3)\)</span>. Tada je tražena vjerojatnost jednaka <span class="math inline">\(\dfrac{1}{6}\)</span> što je veće od <span class="math inline">\(\mathbb{P}(A)\)</span> (bez uvjeta).</p>
+<div class="def">
+<p>Neka je <span class="math inline">\((\Omega, \mathcal{F}, \mathbb{P})\)</span> vjerojatnosni prostor. Ako za <span class="math inline">\(B \in \mathcal{F}\)</span> vrijedi <span class="math inline">\(\mathbb{P}(B) &gt; 0\)</span>, onda za sve <span class="math inline">\(A \in \mathcal{F}\)</span> definiramo <span class="math display">\[
+\mathbb{P}(A \ | \ B) := \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}
+\]</span></p>
 </div>
+<p><span class="math inline">\(\mathbb{P}(A | B)\)</span> čitamo kao <strong>(uvjetna) vjerojatnost od A uz dano B</strong>.</p>
+<p>Za <span class="math inline">\(B \in \mathcal{F}\)</span>, <span class="math inline">\(\mathbb{P}(B) &gt; 0\)</span> uvedimo oznaku <span class="math display">\[
+\mathbb{P}_B (A) := \mathbb{P}(A \ | \ B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}
+\]</span></p>
+<p>Definirana vjerojatnost zaista jest vjerojatnost na <span class="math inline">\((\Omega, \mathcal{F})\)</span> i ima svojstva vjerojatnosti koja znamo od prije.</p>
+<p>Primjerice, za neke događaje <span class="math inline">\(A\)</span> i <span class="math inline">\(C \in \mathcal{F}\)</span> uvjetna vjerojatnost uz dano <span class="math inline">\(B\)</span> zadovoljava <span class="math display">\[
+\mathbb{P}(A \cup C \ | \ B) = \mathbb{P}(A \ | \ B) + \mathbb{P}(C \ | \ B) - \mathbb{P}(A \cap C \ | \ B)
+\]</span></p>
+<section id="formula-potpune-vjerojatnosti" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="formula-potpune-vjerojatnosti">Formula potpune vjerojatnosti</h2>
+<div class="def">
+<p><strong>Potpun sustav događaja (PSD)</strong></p>
+<p>Za konačnu ili prebrojivu familiju događaja <span class="math inline">\((H_i)_{i \in I}\)</span> (dakle, <span class="math inline">\(I\)</span> <span class="math inline">\(=\)</span> <span class="math inline">\(\{1,2,\dots,n\}\)</span> ili <span class="math inline">\(I=\mathbb{N}\)</span>), kažemo da je potpun sustav događaja (PSD) ako vrijedi</p>
+<ol type="a">
+<li><p><span class="math inline">\(H_i \cap H_j = \emptyset, \forall i \neq j\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \bigcup _{i\in I} H_i = \Omega\)</span></p></li>
+</ol>
+<p>Dakle, <span class="math inline">\((H_i)_{i \in I}\)</span> je particija od <span class="math inline">\(\Omega\)</span>.</p>
+</div>
+<p>Događaje <span class="math inline">\(H_i\)</span> nazivamo hipotezama</p>
+<p>Uočimo da potpun sustav događaja dijeli skup <span class="math inline">\(\Omega\)</span> na disjunktne događaje koji u uniji daju cijeli prostor elementarnih događaja. Ideja je sada za općeniti događaj <span class="math inline">\(A\)</span> promatrati njegove vjerojatnosti uvjetno na članove familije od PSD. Tako dobijemo <strong>formulu potpune vjerojatnosti</strong>:</p>
+<div class="teorem">
+<p>Za sve <span class="math inline">\(A \in \mathcal{F}\)</span> i bilo koji potpun sustav događaja <span class="math inline">\((H_i)_{i \in I}\)</span> vrijedi <span class="math display">\[
+\mathbb{P}(A) = \sum _{i \in I} \mathbb{P}(A \ | \ H_i) \mathbb{P}(H_i)
+\]</span></p>
+</div>
+<div class="dokaz">
+<details>
+<summary>
+Prikaži dokaz
+</summary>
+<p>Za <span class="math inline">\(A \subseteq \Omega\)</span> imamo <span class="math display">\[
+\begin{aligned}
+\mathbb{P}(A) &amp;= \mathbb{P}(A \cap \Omega) \\
+&amp;= \mathbb{P} \left(A \cap \left( \bigcup _{i\in I} H_i \right)\right) \\
+&amp;= \mathbb{P} \left(\bigcup _{i\in I} A \cap H_i \right) \\
+&amp;= \sum _{i \in I} \mathbb{P}(A \cap H_i) \\
+&amp;= \sum _{i \in I} \mathbb{P}(A \ | \ H_i) \mathbb{P}(H_i)
+\end{aligned}
+\]</span></p>
+Četvrta jednakost slijedi iz <span class="math inline">\(\sigma\)</span>-aditivnosti vjerojatnosti <span class="math inline">\(\mathbb{P}\)</span>
+</details>
+</div>
+<p>Ovaj rezultat kaže da se vjerojatnost svakog događaja može izračunati kao težinska sredina uvjetnih vjerojatnosti tog događaja uvjetno na hipoteze, s težinama jednakim vjerojatnosti hipoteza.</p>
+<p><strong>Napomena:</strong> možemo tražiti i slabiji uvjet na hipoteze. Za fiksan <span class="math inline">\(A \in \mathcal{F}\)</span> dovoljno je uzeti PSD takav da vrijedi <span class="math inline">\(H_i \cap H_j = \emptyset\)</span>, za sve <span class="math inline">\(i \neq j\)</span> i <span class="math inline">\(A \subseteq \displaystyle \bigcup _{i\in I} H_i\)</span>, umjesto uvjeta da hipoteze particioniraju cijeli <span class="math inline">\(\Omega\)</span>.</p>
+<div class="primjer">
+<p>U jednom je razredu od ukupno <span class="math inline">\(28\)</span> učenika njih <span class="math inline">\(12\)</span> dobilo odličan na maturi iz <em>Matematike</em>, a <span class="math inline">\(9\)</span> je dobilo odličan iz <em>Matematike</em> i <em>Hrvatskog jezika</em>. Kolika je vjerojatnost da je slučajno odabrani učenik toga razreda dobio odličan iz <em>Hrvatskog jezika</em> ako je poznato da je dobio odličan iz <em>Matematike</em>?</p>
+<p>Označimo ocjenu odličan iz <em>Hrvatskog jezika</em> kao <span class="math inline">\(A\)</span>, a odličnu ocjenu iz <em>Matematike</em> kao <span class="math inline">\(B\)</span>. Tada imamo <span class="math display">\[
+\mathbb{P}(A \ | \ B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \frac{\frac{9}{28}}{\frac{12}{28}} = \frac{3}{4}
+\]</span></p>
+</div>
+</section>
+<section id="bayesov-teorem" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="bayesov-teorem">Bayesov teorem</h2>
+<div class="teorem">
+<p>Ako je <span class="math inline">\(A \in \mathcal{F}\)</span> takav da je <span class="math inline">\(\mathbb{P}(A) &gt; 0\)</span> te <span class="math inline">\((H_i)_{i \in I}\)</span> potpun sustav događaja, za sve <span class="math inline">\(j \in I\)</span> vrijedi <span class="math display">\[
+\mathbb{P}(H_j \ | \ A) = \frac{\mathbb{P}(H_j)\mathbb{P}(A \ | \ H_j)}{\displaystyle \sum _{i \in I} \mathbb{P}(H_i) \mathbb{P}(A \ | \ H_i)}
+\]</span></p>
+</div>
+<div class="dokaz">
+<details>
+<summary>
+Prikaži dokaz
+</summary>
+Dokaz vršimo direktno koristeći definicije uvjetne vjerojatnosti i formulu potpune vjerojatnosti: <span class="math display">\[
+\begin{aligned}
+\mathbb{P}(H_j \ | \ A) &amp;= \frac{\mathbb{P}(H_j \cap A)}{\mathbb{P}(A)} \\
+&amp;= \frac{\mathbb{P}(H_j)\mathbb{P}(A \ | \ H_j)}{\mathbb{P}(A)} \\
+&amp;= \frac{\mathbb{P}(H_j)\mathbb{P}(A \ | \ H_j)}{\displaystyle \sum _{i \in I} \mathbb{P}(H_i) \mathbb{P}(A \ | \ H_i)}
+\end{aligned}
+\]</span>
+</details>
+</div>
+<p>Vidimo da tražimo <span class="math inline">\(\mathbb{P}(H_j \ | \ A)\)</span>, a s druge strane koristimo <span class="math inline">\((A \ | \ H_j)\)</span>. Dakle, često ćemo koristiti ovu formulu kad znamo jednu od toh vjerojatnosti.</p>
+<p>Riješimo sad ponovno primjer s lažno pozitivnim testovima.</p>
+<div class="primjer">
+<p><strong>Lažno pozitivni testovi</strong></p>
+<p>Laboratorijski krvni test je <span class="math inline">\(95\%\)</span> učinkovit u otkrivanju jedne rijetke bolesti kada je ta bolest prisutna. Test također ukazuje na bolest i u <span class="math inline">\(0.5\%\)</span> slučajeva kada je osoba zdrava (false positive). Poznato je da samo <span class="math inline">\(0.001\%\)</span> populacije ima tu bolest. Test je pokazao da imate bolest, kolika je vjerojatnost da je zaista imate?</p>
+<p>Definiramo PSD <span class="math inline">\(H_1 := \{\)</span> imate tu bolest <span class="math inline">\(\}\)</span>, <span class="math inline">\(H_2 := H_1^c\)</span>, vrijedi <span class="math display">\[
+\mathbb{P}(H_1) = \frac{1}{100000} \quad \mathbb{P}(H_2) = \frac{99999}{100000}
+\]</span></p>
+<p>Neka je <span class="math inline">\(T = \{\)</span> test je pozitivan <span class="math inline">\(\}\)</span>, stoga imamo <span class="math display">\[
+\mathbb{P}(T \ | \ H_1) = 0.95 \quad \mathbb{P}(T \ | \ H_2) = 0.005
+\]</span></p>
+<p>Zanima nas <span class="math inline">\(\mathbb{P}(H_1 \ | \ T)\)</span>. Koristimo Bayesovu formulu <span class="math display">\[
+\begin{aligned}
+\mathbb{P}(H_1 \ | \ T) &amp;= \frac{\mathbb{P}(H_1) \mathbb{P}(T \ | \ H_1)}{\mathbb{P}(H_1) \mathbb{P}(T \ | \ H_1) + \mathbb{P}(H_2) \mathbb{P}(T \ | \ H_2)} \\
+&amp;= \frac{\frac{1}{100000} \cdot 0.95}{\frac{1}{100000} \cdot 0.95 + \frac{99999}{100000} \cdot 0.005} \\
+&amp; \approx 0.002 = 0.2 \%
+\end{aligned}
+\]</span></p>
+</div>
+<p><strong>Napomena:</strong> uočimo da vjerojatnosti nisu iste kao u prvom iznošenju primjera u <a href="../vjerojatnost/uvod.html">prvom poglavlju</a>, ali to je samo zbog lakšeg računa.</p>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>07.08.2026.</p>
-<ul>
-<li>18:57 objavljena rješenja prvog dijela zadataka iz Vjerojatnosti i dodana nova poglavlja s drugim dijelom zadataka</li>
-</ul>
-<hr>
-<p>04.08.2026.</p>
-<ul>
-<li>11:15 dodano poglavlje <a href="./vjerojatnost/vjerojatnost.html">4. Vjerojatnost</a></li>
-</ul>
-<hr>
-<p>30.07.2026.</p>
-<ul>
-<li>19:53 objavljena poglavlja <a href="./integrali/integrali-racionalne.html">3.4</a>, <a href="./integrali/integrali-iracionalne.html">3.5</a>, <a href="./integrali/integrali-trig.html">3.6</a> i <a href="./integrali/integrali-zadatci2.html">drugi dio zadataka iz integrala</a>.</li>
-</ul>
-<hr>
-<p>10.07.2026.</p>
-<ul>
-<li>16:45 objavljena rješenja trećeg dijela zadataka iz poglavlja o derivacijama (<a href="./derivacije/derivacije-zadatci3.html">Zadatci 3</a>). Dodana cjelina <a href="./integrali/integrali.html">3. Riemannov integral</a> i prva poglavlja sa <a href="./integrali/integrali-zadatci1.html">zadatcima</a></li>
-</ul>
-<hr>
-<p>09.07.2026.</p>
-<ul>
-<li>06:40 objavljena rješenja drugog dijela zadataka iz poglavlja o derivacijama (<a href="./derivacije/derivacije-zadaci2.html">Zadatci 2</a>) i dodan treći dio derivacija</li>
-</ul>
-<hr>
-<p>05.07.2026.</p>
-<ul>
-<li>18:00 ispravljen dokaz Lagrangeovog teorema srednje vrijednosti u poglavlju <a href="./derivacije/derivacije-rezultati.html">2.4</a></li>
-</ul>
-<hr>
-<p>04.07.2026.</p>
-<ul>
-<li><p>21:40 dodana poglavlja <a href="./derivacije/derivacije-rezultati.html">2.4</a> i <a href="./derivacije/derivacije-tok.html">2.5</a> i drugi dio <a href="./derivacije/derivacije-zadaci2.html">zadataka</a> iz derivacija</p></li>
-<li><p>15:56 objavljena rješenja prvog dijela zadataka iz poglavlja o derivacijama (<a href="./derivacije/derivacije-zadaci1.html">Zadatci 1</a>)</p></li>
-</ul>
-<hr>
-<p>02.07.2026.</p>
-<ul>
-<li>08:16 objavljena rješenja zadataka iz poglavlja o limesima (<a href="./limesi/limesi-zadatci.html">Zadatci</a>)</li>
-</ul>
-<hr>
-<p>01.07.2026.</p>
-<ul>
-<li><p>11:00 dodano poglavlje o limesima i neprekidnosti</p></li>
-<li><p>08:00 dodano poglavlje o derivacijama i diferencijabilnosti</p></li>
-</ul>
-<hr>
-<p>30.06.2026.</p>
-<ul>
-<li>stranica stvorena</li>
-</ul>
-
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

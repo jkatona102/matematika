@@ -1,0 +1,97 @@
+# Zadatci - drugi dio {.unnumbered}
+
+:::{.zadatak}
+Bacamo simetričnu kockicu. Kolika je vjerojatnost da je pao broj $5$ ako znamo da je pao broj veći od $4$?
+:::
+
+---
+
+:::{.zadatak}
+Spil sadrži $n$ karata označenih prirodnim brojevima od $1$ do $n$. Karte se izvlače slučajnim redoslijedom, jedna po jedna. Neka je $1 \leq k \leq n$ fiksan. Ako znamo da je u $k$-tom
+izvlačenju izvučen dotad najveći broj, koja je vjerojatnost da je on $n$?
+:::
+
+---
+
+:::{.zadatak}
+Slučajno biramo dva različita broja iz skupa $\{1,\ldots,9\}$. Ako im je zbroj paran, kolika je vjerojatnost da su oba broja bila neparna?
+:::
+
+---
+
+:::{.zadatak}
+Iz standardnog špila igraćih karata (52 karte) izvlačimo dvije karte. Kolika je vjerojatnost da druga karta bude *pik* ako je i prva bila *pik*?
+:::
+
+---
+
+:::{.zadatak}
+Tri novčića $C_1$, $C_2$ i $C_3$ leže na stolu. Vjerojatnosti da na njima padne pismo su redom $\dfrac{1}{3}$, $\dfrac{2}{3}$ i $1$. Na slučajan način uzmemo jedan novčić, bacimo ga i uočimo da je palo pismo. Odredite vjerojatnosti da smo uzeli novčić $C_i$, za $i= 1,2,3$.
+:::
+
+---
+
+:::{.zadatak}
+Cilj se gađa iz tri topa. Topovi pogađaju cilj nezavisno jedan od drugoga s vjerojatnošću $0.4$. Ako jedan top pogodi cilj uništava ga s vjerojatnošću $0.3$, ako ga pogode dva topa unitavaju ga s vjerojatnošću $0.7$, a ako ga pogode tri topa uništavaju ga s vjerojatnošću $0.9$. Izračunajte vjerojatnost uništenja cilja.
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži hint</summary>
+Iskoristite formulu potpune vjerojatnosti.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+U dvjema kutijama nalaze se bijele i crne kuglice. U jednoj se kutiji nalaze $4$ crne i $2$ bijele kuglice, dok se u drugoj kutiji nalaze $3$ crne i $4$ bijele kuglice. Kolika je vjerojatnost da ćemo slučajnim odabirom izvući bijelu kuglicu?
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži hint</summary>
+Vjerojatnost da je neka kutija odabrana računamo Laplaceovim modelom uzevši u obzir koliko je kuglica u toj kutiji, a koliko ukupno u objema kutijama.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+U ponoć su na parkiralištu bila dva siva i jedan crni *Ford*, tri siva i četiri crna *BMW*–a te tri sive i jedna crna *Toyota*. Te je noći kradljivac automobila nasumično odabrao automobil i ukrao ga. Ako je ukradeni automobil sive boje, kolika je vjerojatnost da je to bio *BMW*?
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži hint</summary>
+Iskoristite Bayesovu formulu.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+Imamo tri kutije: u prvoj su $2$ crne, u drugoj $2$ bijele, a u trećoj po jedna bijela i crna kuglica. Slučajno izaberemo kutiju te zatim jednu kuglicu iz te kutije. Ako je izvučena crna kuglica, kolika je vjerojatnost da je i druga kuglica iz te kutije također crna?
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži hint</summary>
+Iskoristite Bayesovu formulu.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+**(1. Kolokvij, 2024.)** Student putuje iz studentskog doma na kolokvij iz *Vjerojatnosti*. S vjerojatnošću $25\%$ zaboravio je noć prije staviti mobitel na punjenje te mu se ne oglašava alarm i probudi se prekasno. U tom slučaju zove taksi koji zbog jutarnje gužve kasni s vjerojatnošću $20\%$. S druge strane, ako se student probudi na vrijeme, ide na tramvaj, no i u tom slučaju zbog jutarnje gužve kasni s vjerojatnošću $60\%$. Ako je student stigao na kolokvij na vrijeme, odredite vjerojatnost da se i probudio na vrijeme.
+:::
+
+---
+
+:::{.zadatak}
+Ako su $A,B \in \mathcal{F}$ nezavisni, dokažite da su tada nezavisni i parovi događaja
+$$
+A^c \text{ i } B \qquad A \text{ i } B^c \qquad A^c \text{ i } B^c
+$$
+:::
