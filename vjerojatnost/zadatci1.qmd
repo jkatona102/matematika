@@ -432,6 +432,8 @@ $$
 :::
 
 :::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
 Za $\Omega$ takav da je $|\Omega| < \infty$ i da su svi elementarni događaji jednako vjerojatni vrijedi
 $$
 \mathbb{P}(A) = \frac{|A|}{|\Omega|}
@@ -488,4 +490,5 @@ $$
 pa je vjerojatnost definirana Laplaceovim modelom $\sigma$-aditivna.
 
 **Napomena:** U konačnom Laplaceovu modelu $\sigma$-aditivnost zapravo slijedi iz konačne aditivnosti. Naime, zbog konačnosti prostora $\Omega$, među međusobno disjunktnim događajima može biti samo konačno mnogo nepraznih skupova.
+</details>
 :::
