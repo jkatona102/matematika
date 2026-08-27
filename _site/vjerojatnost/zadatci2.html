@@ -372,6 +372,12 @@ window.Quarto = {
  <span class="menu-text">Zadatci - drugi dio</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vjerojatnost/zadatci3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Zadatci - treći dio</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -406,8 +412,8 @@ Prikaži rješenje
 </summary>
 <p>Označimo</p>
 <ul>
-<li><span class="math inline">\(A = \{\)</span>pao je broj <span class="math inline">\(5\}\)</span></li>
-<li><span class="math inline">\(B = \{\)</span>pao je broj veći od <span class="math inline">\(4\}\)</span></li>
+<li><span class="math inline">\(A = \{\)</span>pao je broj <span class="math inline">\(5\} = \{5\}\)</span></li>
+<li><span class="math inline">\(B = \{\)</span>pao je broj veći od <span class="math inline">\(4\} = \{5,6\}\)</span></li>
 </ul>
 Imamo <span class="math display">\[
 \mathbb{P}(A \ | \ B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \frac{\frac16}{\frac26} = \frac{1}{2}
@@ -597,9 +603,11 @@ Prikaži rješenje
 <li><span class="math inline">\(K_2 = \{\)</span>odabrana je druga kutija<span class="math inline">\(\}\)</span></li>
 <li><span class="math inline">\(B = \{\)</span>izvučena je bijela kuglica<span class="math inline">\(\}\)</span></li>
 </ul>
-<p>Budući da kutiju biramo slučajno, vrijedi</p>
+<p>U prvoj se kutiji nalazi ukupno <span class="math inline">\(6\)</span> kuglica, a u drugoj <span class="math inline">\(7\)</span> kuglica. Budući da slučajno odabiremo jednu od svih kuglica, vrijedi</p>
 <p><span class="math display">\[
-\mathbb{P}(K_1)=\mathbb{P}(K_2)=\frac{1}{2}.
+\mathbb{P}(K_1)=\frac{6}{13},
+\qquad
+\mathbb{P}(K_2)=\frac{7}{13}.
 \]</span></p>
 <p>Vjerojatnosti izvlačenja bijele kuglice iz pojedinih kutija su</p>
 <p><span class="math display">\[
@@ -608,14 +616,17 @@ Prikaži rješenje
 \mathbb{P}(B\mid K_2)=\frac{4}{7}.
 \]</span></p>
 <p>Prema formuli potpune vjerojatnosti,</p>
-<span class="math display">\[
+<p><span class="math display">\[
 \begin{aligned}
 \mathbb{P}(B)
-&amp;=\mathbb{P}(B\mid K_1)\mathbb{P}(K_1)+\mathbb{P}(B\mid K_2)\mathbb{P}(K_2)\\
-&amp;=\frac{1}{3}\cdot\frac{1}{2} + \frac{4}{7}\cdot\frac{1}{2}\\
-&amp;=\frac{1}{6}+\frac{2}{7} = \frac{7}{42}+\frac{12}{42} =\frac{19}{42}
+&amp;=\mathbb{P}(B\mid K_1)\mathbb{P}(K_1)
++\mathbb{P}(B\mid K_2)\mathbb{P}(K_2)\\
+&amp;=\frac{1}{3}\cdot\frac{6}{13}
++\frac{4}{7}\cdot\frac{7}{13}\\
+&amp;=\frac{2}{13}+\frac{4}{13}\\
+&amp;=\frac{6}{13}
 \end{aligned}
-\]</span>
+\]</span></p>
 </details>
 </div>
 <hr>
@@ -700,7 +711,7 @@ Prikaži rješenje
 <p>Neka je:</p>
 <ul>
 <li><span class="math inline">\(K_i = \{\)</span>odabrana je kutija <span class="math inline">\(i \}\)</span></li>
-<li><span class="math inline">\(C_i = \{\)</span> — izvučena je kuglica <span class="math inline">\(i\}\)</span></li>
+<li><span class="math inline">\(C_i = \{\)</span>izvučena je kuglica <span class="math inline">\(i\}\)</span></li>
 </ul>
 <p>Budući da kutiju biramo slučajno, vrijedi</p>
 <p><span class="math display">\[
@@ -779,15 +790,15 @@ Dakle, vjerojatnost da se student probudio na vrijeme iznosi <span class="math i
 </div>
 <hr>
 <div class="zadatak">
+<p>Ako su <span class="math inline">\(A,B \in \mathcal{F}\)</span> nezavisni, dokažite da su tada nezavisni i parovi događaja <span class="math display">\[
+A^c \text{ i } B \qquad A \text{ i } B^c \qquad A^c \text{ i } B^c
+\]</span></p>
+</div>
+<div class="rjesenje">
 <details>
 <summary>
 Prikaži rješenje
 </summary>
-<p>Ako su <span class="math inline">\(A,B \in \mathcal{F}\)</span> nezavisni, dokažite da su tada nezavisni i parovi događaja <span class="math display">\[
-A^c \text{ i } B \qquad A \text{ i } B^c \qquad A^c \text{ i } B^c
-\]</span></p>
-<p>:::</p>
-<div class="rjesenje">
 <p>Pretpostavimo da su <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> nezavisni, tj.</p>
 <p><span class="math display">\[
 \mathbb{P}(A\cap B)=\mathbb{P}(A)\mathbb{P}(B).
@@ -825,14 +836,13 @@ A^c \text{ i } B \qquad A \text{ i } B^c \qquad A^c \text{ i } B^c
 &amp;=\mathbb{P}(A^c)\mathbb{P}(B^c)
 \end{aligned}
 \]</span>
-</div></details>
+</details>
 </div>
 
 
-</section></main></div>
+</section>
 
-
- <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -1233,7 +1243,7 @@ A^c \text{ i } B \qquad A \text{ i } B^c \qquad A^c \text{ i } B^c
     }
   });
   </script>
- <!-- /content -->
+</div> <!-- /content -->
 
 
 

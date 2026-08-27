@@ -319,7 +319,7 @@ Probajte fiksirati Arthura i pronaći moguće načine sjedenja ostalih vitezova.
 <summary>Prikaži rješenje</summary>
 Neka je $A = \{$ Arthur ne sjedi pored Mordreda ni pored Lancelota $\}$.
 
-Smjestimo Arthura na jedno mjesto i fiksiramo ga. Budući da Lancelot i Mordred ne smiju sjesti pored Arthura, imaju na raspolaganju $n-3$ mjesta. Stoga biramo dva mjesta i permutiramo Lancelota i Mordreda na ta mjesta na $\displaystyle \binom{n+3}{2} \cdot 2$ $=$ $(n-3)(n-4)$ načina. Preostale vitezove smjestimo na $(n-3)!$ načina. Stoga je ukupno $(n-3)(n-4)(n-3)!$ povoljnih smještaja oko stola.
+Smjestimo Arthura na jedno mjesto i fiksiramo ga. Budući da Lancelot i Mordred ne smiju sjesti pored Arthura, imaju na raspolaganju $n-3$ mjesta. Stoga biramo dva mjesta i permutiramo Lancelota i Mordreda na ta mjesta na $\displaystyle \binom{n-3}{2} \cdot 2$ $=$ $(n-3)(n-4)$ načina. Preostale vitezove smjestimo na $(n-3)!$ načina. Stoga je ukupno $(n-3)(n-4)(n-3)!$ povoljnih smještaja oko stola.
 
 Ukupno ima $(n-1)!$ rasporeda za stolom. Tražena vjerojatnost danog tada iznosi
 $$
@@ -463,7 +463,7 @@ $$
 \bigcup_{j=1}^{\infty}A_j = \bigcup_{j=1}^{m}A_j
 $$
 
-Budući da su skupovi (A_1,\ldots,A_m) međusobno disjunktni, vrijedi
+Budući da su skupovi $A_1,\ldots,A_m$ međusobno disjunktni, vrijedi
 $$
 \left|\bigcup_{j=1}^{m}A_j\right| = \sum_{j=1}^{m}|A_j|.
 $$

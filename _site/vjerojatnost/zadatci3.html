@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>vjerojatnost – Matematika</title>
+<title>zadatci3 – Matematika</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -119,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../vjerojatnost/vjerojatnost.html">4. VJEROJATNOST</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../vjerojatnost/vjerojatnost.html">4. VJEROJATNOST</a></li><li class="breadcrumb-item"><a href="../vjerojatnost/zadatci3.html">Zadatci - treći dio</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Pretraživanje" onclick="window.quartoOpenSearch();">
@@ -294,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../vjerojatnost/vjerojatnost.html" class="sidebar-item-text sidebar-link active">
+            <a href="../vjerojatnost/vjerojatnost.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">4. VJEROJATNOST</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -345,7 +374,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../vjerojatnost/zadatci3.html" class="sidebar-item-text sidebar-link">
+  <a href="../vjerojatnost/zadatci3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Zadatci - treći dio</span></a>
   </div>
 </li>
@@ -361,37 +390,60 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sadržaj</h2>
    
   <ul>
-  <li><a href="#vjerojatnost" id="toc-vjerojatnost" class="nav-link active" data-scroll-target="#vjerojatnost">4. VJEROJATNOST</a>
-  <ul class="collapse">
-  <li><a href="#sadržaj-poglavlja" id="toc-sadržaj-poglavlja" class="nav-link" data-scroll-target="#sadržaj-poglavlja">Sadržaj poglavlja</a></li>
-  </ul></li>
+  <li><a href="#zadatci---treći-dio" id="toc-zadatci---treći-dio" class="nav-link active" data-scroll-target="#zadatci---treći-dio">Zadatci - treći dio</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../vjerojatnost/vjerojatnost.html">4. VJEROJATNOST</a></li><li class="breadcrumb-item"><a href="../vjerojatnost/zadatci3.html">Zadatci - treći dio</a></li></ol></nav></header>
 
 
 
 
-<section id="vjerojatnost" class="level1 unnumbered">
-<h1 class="unnumbered">4. VJEROJATNOST</h1>
-<p>U ovom poglavlju dat ćemo temelj proučavanju vjerojatnosti i vjerojatnosnih prostora.</p>
-<section id="sadržaj-poglavlja" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sadržaj-poglavlja">Sadržaj poglavlja</h2>
-<ul>
-<li><p><a href="../vjerojatnost/uvod.html">4.1 Uvod i definicija</a></p></li>
-<li><p><a href="../vjerojatnost/modeli.html">4.2 Svojstva vjerojatnosti i modeli vjerojatnosti</a></p></li>
-<li><p><a href="../vjerojatnost/zadatci1.html">Zadatci - prvi dio</a></p></li>
-<li><p><a href="../vjerojatnost/nizovi.html">4.3 Nizovi događaja</a></p></li>
-<li><p><a href="../vjerojatnost/uvjetna.html">4.4 Uvjetna vjerojatnost i nezavisnost</a></p></li>
-<li><p><a href="../vjerojatnost/nezavisnost.html">4.5 Nezavisnost</a></p></li>
-<li><p><a href="../vjerojatnost/zadatci2.html">Zadatci - drugi dio</a></p></li>
-<li><p><a href="../vjerojatnost/zadatci3.html">Zadatci - treći dio</a></p></li>
-</ul>
+<section id="zadatci---treći-dio" class="level1 unnumbered">
+<h1 class="unnumbered">Zadatci - treći dio</h1>
+<div class="zadatak">
+<p>Iz skupa <span class="math inline">\(\{1,\ldots,9\}\)</span> biramo broj <span class="math inline">\(c\)</span>. Odredite vjerojatnost da uz slučajno odabrani <span class="math inline">\(c\)</span> kvadratna jednadžba <span class="math inline">\(x^2+4x+c=0\)</span> ima cjelobrojne nultočke.</p>
+</div>
+<hr>
+<div class="zadatak">
+<p>Funkcija <span class="math inline">\(f\colon \mathbb{R} \to \mathbb{R}\)</span> zadana je pravilom pridruživanja <span class="math display">\[
+f(x) = 𝑥^2−\sqrt{b} \cdot x + c
+\]</span></p>
+<p>pri čemu su <span class="math inline">\(b\)</span> i <span class="math inline">\(c\)</span> realni parametri. Odredite vjerojatnost da će pri slučajnom odabiru parametara <span class="math inline">\(b\)</span> i <span class="math inline">\(c\)</span> iz segmenta <span class="math inline">\([0,10]\)</span> minimalna vrijednost zadane funkcije biti unutar segmenta <span class="math inline">\([2,3]\)</span>.</p>
+</div>
+<hr>
+<div class="zadatak">
+<p>Na šahovsku ploču stavljamo dvije kule. Odredite vjerojatnost da se te dvije kule ne napadaju.</p>
+</div>
+<hr>
+<div class="zadatak">
+<p>Na kružnici slučajno odaberemo tri točke. Odredite vjerojatnost da će te tri točke biti vrhovi tupokutnog trokuta.</p>
+</div>
+<div class="hint">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+Prvo provjerite za kakve je točke trokut tupokutan. Iskoristite Talesov poučak.
+</details>
+</div>
+<hr>
+<div class="zadatak">
+<p>Bacamo dvije kockice. Označimo s <span class="math inline">\(S\)</span> zbroj brojeva na kockicama. Odredite vjerojatnost da <span class="math display">\[
+S \mid S^2 + 4
+\]</span></p>
+</div>
+<div class="hint">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+Pojednostavite uvjet djeljivosti.
+</details>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

@@ -71,7 +71,7 @@ Familija događaja $(A_i)_{i \in I}$, pri čemu $I$ može biti bilo koji skup, j
 
 (a) **nezavisna** ako vrijedi
 $$
-\mathbb{P} \left( \bigcup_{i \in F} A_i \right) = \prod _{i \in F} \mathbb{P}(A_i)
+\mathbb{P} \left( \bigcap_{i \in F} A_i \right) = \prod _{i \in F} \mathbb{P}(A_i)
 $$
 
 za svaki konačan i neprazan podskup $F \subseteq I$.
@@ -111,7 +111,7 @@ $$
 $$
 
 :::{.primjer}
-Bacamo niz nesimatričnih novčića, pri čemu je vjerojatnost pisma na $n$-tom novčiću $p_n := \dfrac{1}{n^2}$. Vrijedi
+Bacamo niz nesimetričnih novčića, pri čemu je vjerojatnost pisma na $n$-tom novčiću $p_n := \dfrac{1}{n^2}$. Vrijedi
 $$
 \sum _{n=1}^{\infty} p_n < \infty
 $$

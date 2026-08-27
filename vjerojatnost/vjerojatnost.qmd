@@ -17,3 +17,5 @@ U ovom poglavlju dat ćemo temelj proučavanju vjerojatnosti i vjerojatnosnih pr
 - [4.5 Nezavisnost](nezavisnost.qmd)
 
 - [Zadatci - drugi dio](zadatci2.qmd)
+
+- [Zadatci - treći dio](zadatci3.qmd)

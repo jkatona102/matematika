@@ -2,6 +2,12 @@
 title: "Povijest promjena na stranici"
 ---
 
+27.08.2026.
+
+- 19:30 objavljena rješenaj [drugog dijela zadataka](vjerojatnost/zadatci2.qmd) iz Vjerojatnosti i dodan [treći dio zadataka](vjerojatnost/zadatci3.qmd)
+
+---
+
 07.08.2026.
 
 - 18:57 objavljena rješenja prvog dijela zadataka iz Vjerojatnosti i dodana nova poglavlja s drugim dijelom zadataka

@@ -85,6 +85,8 @@ website:
             href: vjerojatnost/nezavisnost.qmd
           - text: "Zadatci - drugi dio"
             href: vjerojatnost/zadatci2.qmd
+          - text: "Zadatci - treći dio"
+            href: vjerojatnost/zadatci3.qmd
 
 format:
   html:

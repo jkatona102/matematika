@@ -9,8 +9,8 @@ Bacamo simetričnu kockicu. Kolika je vjerojatnost da je pao broj $5$ ako znamo 
 <summary>Prikaži rješenje</summary>
 Označimo
 
-* $A = \{$pao je broj $5\}$
-* $B = \{$pao je broj veći od $4\}$
+* $A = \{$pao je broj $5\} = \{5\}$
+* $B = \{$pao je broj veći od $4\} = \{5,6\}$
 
 Imamo
 $$
@@ -225,18 +225,23 @@ Vjerojatnost da je neka kutija odabrana računamo Laplaceovim modelom uzevši u 
 :::
 
 :::{.rjesenje}
+
 <details>
+
 <summary>Prikaži rješenje</summary>
+
 Neka je:
 
 * $K_1 = \{$odabrana je prva kutija$\}$
 * $K_2 = \{$odabrana je druga kutija$\}$
 * $B = \{$izvučena je bijela kuglica$\}$
 
-Budući da kutiju biramo slučajno, vrijedi
+U prvoj se kutiji nalazi ukupno $6$ kuglica, a u drugoj $7$ kuglica. Budući da slučajno odabiremo jednu od svih kuglica, vrijedi
 
 $$
-\mathbb{P}(K_1)=\mathbb{P}(K_2)=\frac{1}{2}.
+\mathbb{P}(K_1)=\frac{6}{13},
+\qquad
+\mathbb{P}(K_2)=\frac{7}{13}.
 $$
 
 Vjerojatnosti izvlačenja bijele kuglice iz pojedinih kutija su
@@ -252,11 +257,15 @@ Prema formuli potpune vjerojatnosti,
 $$
 \begin{aligned}
 \mathbb{P}(B)
-&=\mathbb{P}(B\mid K_1)\mathbb{P}(K_1)+\mathbb{P}(B\mid K_2)\mathbb{P}(K_2)\\
-&=\frac{1}{3}\cdot\frac{1}{2} + \frac{4}{7}\cdot\frac{1}{2}\\
-&=\frac{1}{6}+\frac{2}{7} = \frac{7}{42}+\frac{12}{42} =\frac{19}{42}
+&=\mathbb{P}(B\mid K_1)\mathbb{P}(K_1)
++\mathbb{P}(B\mid K_2)\mathbb{P}(K_2)\\
+&=\frac{1}{3}\cdot\frac{6}{13}
++\frac{4}{7}\cdot\frac{7}{13}\\
+&=\frac{2}{13}+\frac{4}{13}\\
+&=\frac{6}{13}
 \end{aligned}
 $$
+
 </details>
 :::
 
@@ -350,7 +359,7 @@ Iskoristite Bayesovu formulu.
 Neka je:
 
 * $K_i = \{$odabrana je kutija $i \}$
-* $C_i = \{$ — izvučena je kuglica $i\}$
+* $C_i = \{$izvučena je kuglica $i\}$
 
 Budući da kutiju biramo slučajno, vrijedi
 
@@ -452,8 +461,6 @@ Dakle, vjerojatnost da se student probudio na vrijeme iznosi $60\%$.
 ---
 
 :::{.zadatak}
-<details>
-<summary>Prikaži rješenje</summary>
 Ako su $A,B \in \mathcal{F}$ nezavisni, dokažite da su tada nezavisni i parovi događaja
 $$
 A^c \text{ i } B \qquad A \text{ i } B^c \qquad A^c \text{ i } B^c
@@ -461,6 +468,8 @@ $$
 :::
 
 :::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
 Pretpostavimo da su $A$ i $B$ nezavisni, tj.
 
 $$
@@ -508,5 +517,5 @@ $$
 &=\mathbb{P}(A^c)\mathbb{P}(B^c)
 \end{aligned}
 $$
-</details>
+</details> 
 :::

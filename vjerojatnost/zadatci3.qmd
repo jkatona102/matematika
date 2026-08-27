@@ -1,0 +1,51 @@
+# Zadatci - treći dio {.unnumbered}
+
+:::{.zadatak}
+Iz skupa $\{1,\ldots,9\}$ biramo broj $c$. Odredite vjerojatnost da uz slučajno odabrani $c$ kvadratna jednadžba $x^2+4x+c=0$ ima cjelobrojne nultočke.
+:::
+
+---
+
+:::{.zadatak}
+Funkcija $f\colon \mathbb{R} \to \mathbb{R}$ zadana je pravilom pridruživanja 
+$$
+f(x) = 𝑥^2−\sqrt{b} \cdot x + c
+$$ 
+
+pri čemu su $b$ i $c$ realni parametri. Odredite vjerojatnost da će pri slučajnom odabiru parametara $b$ i $c$ iz segmenta $[0,10]$ minimalna vrijednost zadane funkcije biti unutar segmenta $[2,3]$.
+:::
+
+---
+
+:::{.zadatak}
+Na šahovsku ploču stavljamo dvije kule. Odredite vjerojatnost da se te dvije kule ne napadaju.
+:::
+
+---
+
+:::{.zadatak}
+Na kružnici slučajno odaberemo tri točke. Odredite vjerojatnost da će te tri točke biti vrhovi tupokutnog trokuta.
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži rješenje</summary>
+Prvo provjerite za kakve je točke trokut tupokutan. Iskoristite Talesov poučak.
+</details>
+:::
+
+---
+
+:::{.zadatak}
+Bacamo dvije kockice. Označimo s $S$ zbroj brojeva na kockicama. Odredite vjerojatnost da 
+$$
+S \mid S^2 + 4
+$$
+:::
+
+:::{.hint}
+<details>
+<summary>Prikaži rješenje</summary>
+Pojednostavite uvjet djeljivosti.
+</details>
+:::

@@ -626,7 +626,7 @@ Skicirajte dani skup i iskoristite model geometrijske vjerojatnosti.
 Prikaži rješenje
 </summary>
 <p>Napravimo prvo skicu.</p>
-<div id="50d6dceb" class="cell" data-execution_count="1">
+<div id="827aa947" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Prikaži Python kod</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -743,7 +743,7 @@ Probajte fiksirati Arthura i pronaći moguće načine sjedenja ostalih vitezova.
 Prikaži rješenje
 </summary>
 <p>Neka je <span class="math inline">\(A = \{\)</span> Arthur ne sjedi pored Mordreda ni pored Lancelota <span class="math inline">\(\}\)</span>.</p>
-<p>Smjestimo Arthura na jedno mjesto i fiksiramo ga. Budući da Lancelot i Mordred ne smiju sjesti pored Arthura, imaju na raspolaganju <span class="math inline">\(n-3\)</span> mjesta. Stoga biramo dva mjesta i permutiramo Lancelota i Mordreda na ta mjesta na <span class="math inline">\(\displaystyle \binom{n+3}{2} \cdot 2\)</span> <span class="math inline">\(=\)</span> <span class="math inline">\((n-3)(n-4)\)</span> načina. Preostale vitezove smjestimo na <span class="math inline">\((n-3)!\)</span> načina. Stoga je ukupno <span class="math inline">\((n-3)(n-4)(n-3)!\)</span> povoljnih smještaja oko stola.</p>
+<p>Smjestimo Arthura na jedno mjesto i fiksiramo ga. Budući da Lancelot i Mordred ne smiju sjesti pored Arthura, imaju na raspolaganju <span class="math inline">\(n-3\)</span> mjesta. Stoga biramo dva mjesta i permutiramo Lancelota i Mordreda na ta mjesta na <span class="math inline">\(\displaystyle \binom{n-3}{2} \cdot 2\)</span> <span class="math inline">\(=\)</span> <span class="math inline">\((n-3)(n-4)\)</span> načina. Preostale vitezove smjestimo na <span class="math inline">\((n-3)!\)</span> načina. Stoga je ukupno <span class="math inline">\((n-3)(n-4)(n-3)!\)</span> povoljnih smještaja oko stola.</p>
 Ukupno ima <span class="math inline">\((n-1)!\)</span> rasporeda za stolom. Tražena vjerojatnost danog tada iznosi <span class="math display">\[
 \mathbb{P}(A) = \frac{(n-3)(n-4)(n-3)!}{(n-1)!} = \frac{(n-3)(n-4)}{(n-1)(n-2)}
 \]</span>
@@ -865,7 +865,7 @@ A_j=\emptyset,
 <p>Prema tome, <span class="math display">\[
 \bigcup_{j=1}^{\infty}A_j = \bigcup_{j=1}^{m}A_j
 \]</span></p>
-<p>Budući da su skupovi (A_1,,A_m) međusobno disjunktni, vrijedi <span class="math display">\[
+<p>Budući da su skupovi <span class="math inline">\(A_1,\ldots,A_m\)</span> međusobno disjunktni, vrijedi <span class="math display">\[
 \left|\bigcup_{j=1}^{m}A_j\right| = \sum_{j=1}^{m}|A_j|.
 \]</span></p>
 <p>Prema definiciji Laplaceove vjerojatnosti dobivamo <span class="math display">\[

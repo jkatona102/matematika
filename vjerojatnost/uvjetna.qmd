@@ -114,7 +114,7 @@ $$
 </details>
 :::
 
-Vidimo da tražimo $\mathbb{P}(H_j \ | \ A)$, a s druge strane koristimo $(A \ | \ H_j)$. Dakle, često ćemo koristiti ovu formulu kad znamo jednu od toh vjerojatnosti.
+Vidimo da tražimo $\mathbb{P}(H_j \ | \ A)$, a s druge strane koristimo $(A \ | \ H_j)$. Dakle, često ćemo koristiti ovu formulu kad znamo jednu od tih vjerojatnosti.
 
 Riješimo sad ponovno primjer s lažno pozitivnim testovima.
 
