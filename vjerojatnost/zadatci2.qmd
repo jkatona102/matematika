@@ -4,11 +4,40 @@
 Bacamo simetričnu kockicu. Kolika je vjerojatnost da je pao broj $5$ ako znamo da je pao broj veći od $4$?
 :::
 
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Označimo
+
+* $A = \{$pao je broj $5\}$
+* $B = \{$pao je broj veći od $4\}$
+
+Imamo
+$$
+\mathbb{P}(A \ | \ B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \frac{\frac16}{\frac26} = \frac{1}{2}
+$$
+</details>
+:::
+
 ---
 
 :::{.zadatak}
-Spil sadrži $n$ karata označenih prirodnim brojevima od $1$ do $n$. Karte se izvlače slučajnim redoslijedom, jedna po jedna. Neka je $1 \leq k \leq n$ fiksan. Ako znamo da je u $k$-tom
+Špil sadrži $n$ karata označenih prirodnim brojevima od $1$ do $n$. Karte se izvlače slučajnim redoslijedom, jedna po jedna. Neka je $1 \leq k \leq n$ fiksan. Ako znamo da je u $k$-tom
 izvlačenju izvučen dotad najveći broj, koja je vjerojatnost da je on $n$?
+:::
+
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Neka je 
+
+* $A = \{$u $k$-tom izvlačenju izvučen $n\}$
+* $B = \{$u $k$-tom izvlačenju izvučen dotad najveći broj$\}$
+
+$$
+\mathbb{P}(A \ | \ B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} \overset{A \subseteq B}{=} \frac{\mathbb{P}(A)}{\mathbb{P}(B)} = \frac{\frac1n}{\frac1k} = \frac{k}{n}
+$$
+</details>
 :::
 
 ---
@@ -17,16 +46,107 @@ izvlačenju izvučen dotad najveći broj, koja je vjerojatnost da je on $n$?
 Slučajno biramo dva različita broja iz skupa $\{1,\ldots,9\}$. Ako im je zbroj paran, kolika je vjerojatnost da su oba broja bila neparna?
 :::
 
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Označimo 
+
+* $A = \{$oba broja su neparna$\}$
+* $B = \{$zbroj je paran$\}$
+
+Opet imamo $A \subseteq B$ pa je 
+$$
+\mathbb{P}(A \cap B) = \mathbb{P}(A)
+$$
+
+Slijedi
+$$
+\mathbb{P}(A) = \frac{\binom{5}{2}}{\binom{9}{2}} = \frac{10}{36} = \frac{5}{18}
+$$
+
+Za događaj $B$ znamo da je zadovoljen ako su oba broja parna ili neparna. Imamo 
+$$
+\mathbb{P}(B) = \dfrac{\binom{5}{2} + \binom{4}{2}}{\binom{9}{2}} = \frac{4}{9}
+$$
+
+$$
+\mathbb{P}(A \ | \ B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} \overset{A \subseteq B}{=} \frac{\mathbb{P}(A)}{\mathbb{P}(B)} = \frac{\frac{5}{18}}{\frac{4}{9}} = \frac{5}{8}
+$$
+</details>
+:::
+
 ---
 
 :::{.zadatak}
 Iz standardnog špila igraćih karata (52 karte) izvlačimo dvije karte. Kolika je vjerojatnost da druga karta bude *pik* ako je i prva bila *pik*?
 :::
 
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Imamo
+
+* $A = \{$druga karta je *pik*$\}$
+* $B = \{$prva karta je *pik*$\}$
+$$
+\mathbb{P}(A \ | \ B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \frac{\frac{13}{52} \cdot \frac{12}{51}}{\frac{13}{52}} = \frac{12}{51} = \frac{4}{17}
+$$
+
+Pripazimo, vjerojatnost od $A \cap B$ računali smo kao umnožak vjerojatnosti tih događaja, ali to ne znači da su oni nezavisni!
+</details>
+:::
+
 ---
 
 :::{.zadatak}
 Tri novčića $C_1$, $C_2$ i $C_3$ leže na stolu. Vjerojatnosti da na njima padne pismo su redom $\dfrac{1}{3}$, $\dfrac{2}{3}$ i $1$. Na slučajan način uzmemo jedan novčić, bacimo ga i uočimo da je palo pismo. Odredite vjerojatnosti da smo uzeli novčić $C_i$, za $i= 1,2,3$.
+:::
+
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Neka je:
+
+* $C_i = \{$odabran je novčić $C_i \}$
+* $P = \{$ palo je pismo$\}$
+
+Budući da novčić biramo slučajno, vrijedi
+$$
+\mathbb{P}(C_1)=\mathbb{P}(C_2)=\mathbb{P}(C_3)=\frac{1}{3}.
+$$
+
+Zadano je
+$$
+\mathbb{P}(P\mid C_1)=\frac{1}{3},\qquad
+\mathbb{P}(P\mid C_2)=\frac{2}{3},\qquad
+\mathbb{P}(P\mid C_3)=1.
+$$
+
+Tražimo vjerojatnosti $\mathbb{P}(C_i\mid P)$. Prema Bayesovoj formuli,
+$$
+\mathbb{P}(C_i\mid P) = \frac{\mathbb{P}(P\mid C_i)\mathbb{P}(C_i)}{\mathbb{P}(P)}.
+$$
+
+Najprije izračunajmo $\mathbb{P}(P)$ pomoću formule potpune vjerojatnosti:
+$$
+\begin{aligned}
+\mathbb{P}(P) &= \mathbb{P}(P\mid C_1)\mathbb{P}(C_1) +\mathbb{P}(P\mid C_2)\mathbb{P}(C_2) + \mathbb{P}(P\mid C_3)\mathbb{P}(C_3) \\
+&=\frac{1}{3}\cdot\frac{1}{3} +\frac{2}{3}\cdot\frac{1}{3} +1\cdot\frac{1}{3} \\
+&=\frac{1}{9}+\frac{2}{9}+\frac{3}{9} =\frac{6}{9} =\frac{2}{3} 
+\end{aligned}
+$$
+
+Sada dobivamo
+$$
+\mathbb{P}(C_1\mid P) = \frac{\frac{1}{3}\cdot\frac{1}{3}}{\frac{2}{3}} =\frac{1}{6}
+$$
+$$
+\mathbb{P}(C_2\mid P) = \frac{\frac{2}{3}\cdot\frac{1}{3}}{\frac{2}{3}} =\frac{1}{3}
+$$
+$$
+\mathbb{P}(C_3\mid P) = \frac{1\cdot\frac{1}{3}}{\frac{2}{3}} =\frac{1}{2}
+$$
+</details>
 :::
 
 ---
@@ -39,6 +159,55 @@ Cilj se gađa iz tri topa. Topovi pogađaju cilj nezavisno jedan od drugoga s vj
 <details>
 <summary>Prikaži hint</summary>
 Iskoristite formulu potpune vjerojatnosti.
+</details>
+:::
+
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Neka je:
+
+* $A_i = \{$cilj je pogodilo točno $i$ topova$\}$
+* $U = \{$cilj je uništen$\}$
+
+Budući da topovi pogađaju nezavisno i svaki pogađa s vjerojatnošću $0.4$, vrijedi
+
+$$
+\mathbb{P}(A_1)=\binom{3}{1}(0.4)(0.6)^2=0.432,
+$$
+
+$$
+\mathbb{P}(A_2)=\binom{3}{2}(0.4)^2(0.6)=0.288,
+$$
+
+$$
+\mathbb{P}(A_3)=\binom{3}{3}(0.4)^3=0.064.
+$$
+
+Zadano je
+$$
+\mathbb{P}(U\mid A_1)=0.3,\qquad
+\mathbb{P}(U\mid A_2)=0.7,\qquad
+\mathbb{P}(U\mid A_3)=0.9.
+$$
+
+Prema formuli potpune vjerojatnosti,
+$$
+\begin{aligned}
+\mathbb{P}(U)
+&=\mathbb{P}(U\mid A_1)\mathbb{P}(A_1)
++\mathbb{P}(U\mid A_2)\mathbb{P}(A_2)
++\mathbb{P}(U\mid A_3)\mathbb{P}(A_3)\\
+&=0.3\cdot0.432+0.7\cdot0.288+0.9\cdot0.064\\
+&=0.1296+0.2016+0.0576
+=0.3888.
+\end{aligned}
+$$
+
+Dakle,
+$$
+\mathbb{P}(U)=0.3888
+$$
 </details>
 :::
 
@@ -55,6 +224,42 @@ Vjerojatnost da je neka kutija odabrana računamo Laplaceovim modelom uzevši u 
 </details>
 :::
 
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Neka je:
+
+* $K_1 = \{$odabrana je prva kutija$\}$
+* $K_2 = \{$odabrana je druga kutija$\}$
+* $B = \{$izvučena je bijela kuglica$\}$
+
+Budući da kutiju biramo slučajno, vrijedi
+
+$$
+\mathbb{P}(K_1)=\mathbb{P}(K_2)=\frac{1}{2}.
+$$
+
+Vjerojatnosti izvlačenja bijele kuglice iz pojedinih kutija su
+
+$$
+\mathbb{P}(B\mid K_1)=\frac{2}{6}=\frac{1}{3},
+\qquad
+\mathbb{P}(B\mid K_2)=\frac{4}{7}.
+$$
+
+Prema formuli potpune vjerojatnosti,
+
+$$
+\begin{aligned}
+\mathbb{P}(B)
+&=\mathbb{P}(B\mid K_1)\mathbb{P}(K_1)+\mathbb{P}(B\mid K_2)\mathbb{P}(K_2)\\
+&=\frac{1}{3}\cdot\frac{1}{2} + \frac{4}{7}\cdot\frac{1}{2}\\
+&=\frac{1}{6}+\frac{2}{7} = \frac{7}{42}+\frac{12}{42} =\frac{19}{42}
+\end{aligned}
+$$
+</details>
+:::
+
 ---
 
 :::{.zadatak}
@@ -65,6 +270,64 @@ U ponoć su na parkiralištu bila dva siva i jedan crni *Ford*, tri siva i četi
 <details>
 <summary>Prikaži hint</summary>
 Iskoristite Bayesovu formulu.
+</details>
+:::
+
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Neka je:
+
+* $F = \{$odabran je *Ford*$\}$
+* $B = \{$odabran je *BMW*$\}$
+* $T = \{$odabrana je *Toyota*$\}$
+* $S = \{$ukradeni automobil je sive boje$\}$
+
+Budući da kradljivac nasumično odabire automobil, a ukupno je $14$ automobila, pa vrijedi
+$$
+\mathbb{P}(F)=\frac{3}{14},\qquad
+\mathbb{P}(B)=\frac{7}{14},\qquad
+\mathbb{P}(T)=\frac{4}{14}.
+$$
+
+Vjerojatnosti da je automobil sive boje, uz danu marku, su
+
+$$
+\mathbb{P}(S\mid F)=\frac{2}{3},\qquad
+\mathbb{P}(S\mid B)=\frac{3}{7},\qquad
+\mathbb{P}(S\mid T)=\frac{3}{4}.
+$$
+
+Tražimo $\mathbb{P}(B\mid S)$. Prema Bayesovoj formuli,
+
+$$
+\mathbb{P}(B\mid S) = \frac{\mathbb{P}(S\mid B)\mathbb{P}(B)}{\mathbb{P}(S)}
+$$
+
+Najprije izračunajmo $\mathbb{P}(S)$ pomoću formule potpune vjerojatnosti:
+$$
+\begin{aligned}
+\mathbb{P}(S)
+&=\mathbb{P}(S\mid F)\mathbb{P}(F)
++\mathbb{P}(S\mid B)\mathbb{P}(B)
++\mathbb{P}(S\mid T)\mathbb{P}(T)\\
+&=\frac{2}{3}\cdot\frac{3}{14}
++\frac{3}{7}\cdot\frac{7}{14}
++\frac{3}{4}\cdot\frac{4}{14}\\
+&=\frac{2}{14}+\frac{3}{14}+\frac{3}{14}\\
+&=\frac{8}{14}
+=\frac{4}{7}
+\end{aligned}
+$$
+
+Sada dobivamo
+
+$$
+\mathbb{P}(B\mid S)
+=\frac{\frac{3}{7}\cdot\frac{7}{14}}{\frac{4}{7}}
+=\frac{3}{14}\cdot\frac{7}{4}
+=\frac{3}{8}
+$$
 </details>
 :::
 
@@ -81,17 +344,169 @@ Iskoristite Bayesovu formulu.
 </details>
 :::
 
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Neka je:
+
+* $K_i = \{$odabrana je kutija $i \}$
+* $C_i = \{$ — izvučena je kuglica $i\}$
+
+Budući da kutiju biramo slučajno, vrijedi
+
+$$
+\mathbb{P}(K_1)=\mathbb{P}(K_2)=\mathbb{P}(K_3)=\frac{1}{3}.
+$$
+
+Neka je $C$ događaj da je izvučena crna kuglica. Tada vrijedi
+
+$$
+\mathbb{P}(C\mid K_1)=1,\qquad
+\mathbb{P}(C\mid K_2)=0,\qquad
+\mathbb{P}(C\mid K_3)=\frac{1}{2}.
+$$
+
+Tražimo vjerojatnost da je druga kuglica crna ako znamo da je prva izvučena kuglica crna. To se događa upravo ako je odabrana prva kutija, pa tražimo $\mathbb{P}(K_1\mid C)$.
+
+Prema Bayesovoj formuli,
+
+$$
+\mathbb{P}(K_1\mid C) = 
+\frac{\mathbb{P}(C\mid K_1)\mathbb{P}(K_1)}{\mathbb{P}(C)}
+$$
+
+Najprije izračunajmo $\mathbb{P}(C)$ pomoću formule potpune vjerojatnosti:
+$$
+\begin{aligned}
+\mathbb{P}(C)
+&=\mathbb{P}(C\mid K_1)\mathbb{P}(K_1)
++\mathbb{P}(C\mid K_2)\mathbb{P}(K_2)
++\mathbb{P}(C\mid K_3)\mathbb{P}(K_3)\\
+&=1\cdot\frac{1}{3}
++0\cdot\frac{1}{3}
++\frac{1}{2}\cdot\frac{1}{3}\\
+&=\frac{1}{3}+\frac{1}{6}
+=\frac{1}{2}
+\end{aligned}
+$$
+
+Sada dobivamo
+$$
+\mathbb{P}(K_1\mid C) = \frac{1\cdot\frac{1}{3}}{\frac{1}{2}} = \frac{2}{3}
+$$
+</details>
+:::
+
 ---
 
 :::{.zadatak}
 **(1. Kolokvij, 2024.)** Student putuje iz studentskog doma na kolokvij iz *Vjerojatnosti*. S vjerojatnošću $25\%$ zaboravio je noć prije staviti mobitel na punjenje te mu se ne oglašava alarm i probudi se prekasno. U tom slučaju zove taksi koji zbog jutarnje gužve kasni s vjerojatnošću $20\%$. S druge strane, ako se student probudi na vrijeme, ide na tramvaj, no i u tom slučaju zbog jutarnje gužve kasni s vjerojatnošću $60\%$. Ako je student stigao na kolokvij na vrijeme, odredite vjerojatnost da se i probudio na vrijeme.
 :::
 
+:::{.rjesenje}
+<details>
+<summary>Prikaži rješenje</summary>
+Neka je:
+
+* $A = \{$student se probudio na vrijeme$\}$
+* $B = \{$student je stigao na kolokvij na vrijeme$\}$
+
+Tada je
+$$
+\mathbb{P}(A)=0.75,\qquad
+\mathbb{P}(A^c)=0.25,
+$$
+
+a vrijedi
+$$
+\mathbb{P}(B\mid A)=0.4,
+\qquad
+\mathbb{P}(B\mid A^c)=0.8.
+$$
+
+Tražimo $\mathbb{P}(A\mid B)$. Prema Bayesovoj formuli,
+$$
+\mathbb{P}(A\mid B) = \frac{\mathbb{P}(B\mid A)\mathbb{P}(A)}{\mathbb{P}(B)}
+$$
+
+Prema formuli potpune vjerojatnosti
+$$
+\begin{aligned}
+\mathbb{P}(B)
+&=\mathbb{P}(B\mid A)\mathbb{P}(A)
++\mathbb{P}(B\mid A^c)\mathbb{P}(A^c)\\
+&=0.4\cdot0.75+0.8\cdot0.25\\
+&=0.3+0.2=0.5
+\end{aligned}
+$$
+
+Stoga
+$$
+\mathbb{P}(A\mid B) = \frac{0.4\cdot0.75}{0.5} =\frac{0.3}{0.5} = 0.6
+$$
+
+Dakle, vjerojatnost da se student probudio na vrijeme iznosi $60\%$.
+</details>
+:::
+
 ---
 
 :::{.zadatak}
+<details>
+<summary>Prikaži rješenje</summary>
 Ako su $A,B \in \mathcal{F}$ nezavisni, dokažite da su tada nezavisni i parovi događaja
 $$
 A^c \text{ i } B \qquad A \text{ i } B^c \qquad A^c \text{ i } B^c
 $$
+:::
+
+:::{.rjesenje}
+Pretpostavimo da su $A$ i $B$ nezavisni, tj.
+
+$$
+\mathbb{P}(A\cap B)=\mathbb{P}(A)\mathbb{P}(B).
+$$
+
+Dokažimo nezavisnost za svaki od navedenih parova.
+
+Za $A^c$ i $B$ vrijedi
+$$
+\begin{aligned}
+\mathbb{P}(A^c\cap B)
+&=\mathbb{P}(B)-\mathbb{P}(A\cap B)\\
+&=\mathbb{P}(B)-\mathbb{P}(A)\mathbb{P}(B)\\
+&=(1-\mathbb{P}(A))\mathbb{P}(B)\\
+&=\mathbb{P}(A^c)\mathbb{P}(B)
+\end{aligned}
+$$
+
+---
+
+Za $A$ i $B^c$ analogno dobivamo
+
+$$
+\begin{aligned}
+\mathbb{P}(A\cap B^c)
+&=\mathbb{P}(A)-\mathbb{P}(A\cap B)\\
+&=\mathbb{P}(A)-\mathbb{P}(A)\mathbb{P}(B)\\
+&=\mathbb{P}(A)(1-\mathbb{P}(B))\\
+&=\mathbb{P}(A)\mathbb{P}(B^c)
+\end{aligned}
+$$
+
+---
+
+Konačno, za $A^c$ i $B^c$ vrijedi
+
+$$
+\begin{aligned}
+\mathbb{P}(A^c\cap B^c)
+&=1-\mathbb{P}(A\cup B)\\
+&=1-\mathbb{P}(A)-\mathbb{P}(B)+\mathbb{P}(A\cap B)\\
+&=1-\mathbb{P}(A)-\mathbb{P}(B)+\mathbb{P}(A)\mathbb{P}(B)\\
+&=(1-\mathbb{P}(A))(1-\mathbb{P}(B))\\
+&=\mathbb{P}(A^c)\mathbb{P}(B^c)
+\end{aligned}
+$$
+</details>
 :::

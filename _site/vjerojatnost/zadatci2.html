@@ -399,21 +399,127 @@ window.Quarto = {
 <div class="zadatak">
 <p>Bacamo simetričnu kockicu. Kolika je vjerojatnost da je pao broj <span class="math inline">\(5\)</span> ako znamo da je pao broj veći od <span class="math inline">\(4\)</span>?</p>
 </div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Označimo</p>
+<ul>
+<li><span class="math inline">\(A = \{\)</span>pao je broj <span class="math inline">\(5\}\)</span></li>
+<li><span class="math inline">\(B = \{\)</span>pao je broj veći od <span class="math inline">\(4\}\)</span></li>
+</ul>
+Imamo <span class="math display">\[
+\mathbb{P}(A \ | \ B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \frac{\frac16}{\frac26} = \frac{1}{2}
+\]</span>
+</details>
+</div>
 <hr>
 <div class="zadatak">
-<p>Spil sadrži <span class="math inline">\(n\)</span> karata označenih prirodnim brojevima od <span class="math inline">\(1\)</span> do <span class="math inline">\(n\)</span>. Karte se izvlače slučajnim redoslijedom, jedna po jedna. Neka je <span class="math inline">\(1 \leq k \leq n\)</span> fiksan. Ako znamo da je u <span class="math inline">\(k\)</span>-tom izvlačenju izvučen dotad najveći broj, koja je vjerojatnost da je on <span class="math inline">\(n\)</span>?</p>
+<p>Špil sadrži <span class="math inline">\(n\)</span> karata označenih prirodnim brojevima od <span class="math inline">\(1\)</span> do <span class="math inline">\(n\)</span>. Karte se izvlače slučajnim redoslijedom, jedna po jedna. Neka je <span class="math inline">\(1 \leq k \leq n\)</span> fiksan. Ako znamo da je u <span class="math inline">\(k\)</span>-tom izvlačenju izvučen dotad najveći broj, koja je vjerojatnost da je on <span class="math inline">\(n\)</span>?</p>
+</div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Neka je</p>
+<ul>
+<li><span class="math inline">\(A = \{\)</span>u <span class="math inline">\(k\)</span>-tom izvlačenju izvučen <span class="math inline">\(n\}\)</span></li>
+<li><span class="math inline">\(B = \{\)</span>u <span class="math inline">\(k\)</span>-tom izvlačenju izvučen dotad najveći broj<span class="math inline">\(\}\)</span></li>
+</ul>
+<span class="math display">\[
+\mathbb{P}(A \ | \ B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} \overset{A \subseteq B}{=} \frac{\mathbb{P}(A)}{\mathbb{P}(B)} = \frac{\frac1n}{\frac1k} = \frac{k}{n}
+\]</span>
+</details>
 </div>
 <hr>
 <div class="zadatak">
 <p>Slučajno biramo dva različita broja iz skupa <span class="math inline">\(\{1,\ldots,9\}\)</span>. Ako im je zbroj paran, kolika je vjerojatnost da su oba broja bila neparna?</p>
 </div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Označimo</p>
+<ul>
+<li><span class="math inline">\(A = \{\)</span>oba broja su neparna<span class="math inline">\(\}\)</span></li>
+<li><span class="math inline">\(B = \{\)</span>zbroj je paran<span class="math inline">\(\}\)</span></li>
+</ul>
+<p>Opet imamo <span class="math inline">\(A \subseteq B\)</span> pa je <span class="math display">\[
+\mathbb{P}(A \cap B) = \mathbb{P}(A)
+\]</span></p>
+<p>Slijedi <span class="math display">\[
+\mathbb{P}(A) = \frac{\binom{5}{2}}{\binom{9}{2}} = \frac{10}{36} = \frac{5}{18}
+\]</span></p>
+<p>Za događaj <span class="math inline">\(B\)</span> znamo da je zadovoljen ako su oba broja parna ili neparna. Imamo <span class="math display">\[
+\mathbb{P}(B) = \dfrac{\binom{5}{2} + \binom{4}{2}}{\binom{9}{2}} = \frac{4}{9}
+\]</span></p>
+<span class="math display">\[
+\mathbb{P}(A \ | \ B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} \overset{A \subseteq B}{=} \frac{\mathbb{P}(A)}{\mathbb{P}(B)} = \frac{\frac{5}{18}}{\frac{4}{9}} = \frac{5}{8}
+\]</span>
+</details>
+</div>
 <hr>
 <div class="zadatak">
 <p>Iz standardnog špila igraćih karata (52 karte) izvlačimo dvije karte. Kolika je vjerojatnost da druga karta bude <em>pik</em> ako je i prva bila <em>pik</em>?</p>
 </div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Imamo</p>
+<ul>
+<li><span class="math inline">\(A = \{\)</span>druga karta je <em>pik</em><span class="math inline">\(\}\)</span></li>
+<li><span class="math inline">\(B = \{\)</span>prva karta je <em>pik</em><span class="math inline">\(\}\)</span> <span class="math display">\[
+\mathbb{P}(A \ | \ B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} = \frac{\frac{13}{52} \cdot \frac{12}{51}}{\frac{13}{52}} = \frac{12}{51} = \frac{4}{17}
+\]</span></li>
+</ul>
+Pripazimo, vjerojatnost od <span class="math inline">\(A \cap B\)</span> računali smo kao umnožak vjerojatnosti tih događaja, ali to ne znači da su oni nezavisni!
+</details>
+</div>
 <hr>
 <div class="zadatak">
 <p>Tri novčića <span class="math inline">\(C_1\)</span>, <span class="math inline">\(C_2\)</span> i <span class="math inline">\(C_3\)</span> leže na stolu. Vjerojatnosti da na njima padne pismo su redom <span class="math inline">\(\dfrac{1}{3}\)</span>, <span class="math inline">\(\dfrac{2}{3}\)</span> i <span class="math inline">\(1\)</span>. Na slučajan način uzmemo jedan novčić, bacimo ga i uočimo da je palo pismo. Odredite vjerojatnosti da smo uzeli novčić <span class="math inline">\(C_i\)</span>, za <span class="math inline">\(i= 1,2,3\)</span>.</p>
+</div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Neka je:</p>
+<ul>
+<li><span class="math inline">\(C_i = \{\)</span>odabran je novčić <span class="math inline">\(C_i \}\)</span></li>
+<li><span class="math inline">\(P = \{\)</span> palo je pismo<span class="math inline">\(\}\)</span></li>
+</ul>
+<p>Budući da novčić biramo slučajno, vrijedi <span class="math display">\[
+\mathbb{P}(C_1)=\mathbb{P}(C_2)=\mathbb{P}(C_3)=\frac{1}{3}.
+\]</span></p>
+<p>Zadano je <span class="math display">\[
+\mathbb{P}(P\mid C_1)=\frac{1}{3},\qquad
+\mathbb{P}(P\mid C_2)=\frac{2}{3},\qquad
+\mathbb{P}(P\mid C_3)=1.
+\]</span></p>
+<p>Tražimo vjerojatnosti <span class="math inline">\(\mathbb{P}(C_i\mid P)\)</span>. Prema Bayesovoj formuli, <span class="math display">\[
+\mathbb{P}(C_i\mid P) = \frac{\mathbb{P}(P\mid C_i)\mathbb{P}(C_i)}{\mathbb{P}(P)}.
+\]</span></p>
+<p>Najprije izračunajmo <span class="math inline">\(\mathbb{P}(P)\)</span> pomoću formule potpune vjerojatnosti: <span class="math display">\[
+\begin{aligned}
+\mathbb{P}(P) &amp;= \mathbb{P}(P\mid C_1)\mathbb{P}(C_1) +\mathbb{P}(P\mid C_2)\mathbb{P}(C_2) + \mathbb{P}(P\mid C_3)\mathbb{P}(C_3) \\
+&amp;=\frac{1}{3}\cdot\frac{1}{3} +\frac{2}{3}\cdot\frac{1}{3} +1\cdot\frac{1}{3} \\
+&amp;=\frac{1}{9}+\frac{2}{9}+\frac{3}{9} =\frac{6}{9} =\frac{2}{3}
+\end{aligned}
+\]</span></p>
+Sada dobivamo <span class="math display">\[
+\mathbb{P}(C_1\mid P) = \frac{\frac{1}{3}\cdot\frac{1}{3}}{\frac{2}{3}} =\frac{1}{6}
+\]</span> <span class="math display">\[
+\mathbb{P}(C_2\mid P) = \frac{\frac{2}{3}\cdot\frac{1}{3}}{\frac{2}{3}} =\frac{1}{3}
+\]</span> <span class="math display">\[
+\mathbb{P}(C_3\mid P) = \frac{1\cdot\frac{1}{3}}{\frac{2}{3}} =\frac{1}{2}
+\]</span>
+</details>
 </div>
 <hr>
 <div class="zadatak">
@@ -425,6 +531,47 @@ window.Quarto = {
 Prikaži hint
 </summary>
 Iskoristite formulu potpune vjerojatnosti.
+</details>
+</div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Neka je:</p>
+<ul>
+<li><span class="math inline">\(A_i = \{\)</span>cilj je pogodilo točno <span class="math inline">\(i\)</span> topova<span class="math inline">\(\}\)</span></li>
+<li><span class="math inline">\(U = \{\)</span>cilj je uništen<span class="math inline">\(\}\)</span></li>
+</ul>
+<p>Budući da topovi pogađaju nezavisno i svaki pogađa s vjerojatnošću <span class="math inline">\(0.4\)</span>, vrijedi</p>
+<p><span class="math display">\[
+\mathbb{P}(A_1)=\binom{3}{1}(0.4)(0.6)^2=0.432,
+\]</span></p>
+<p><span class="math display">\[
+\mathbb{P}(A_2)=\binom{3}{2}(0.4)^2(0.6)=0.288,
+\]</span></p>
+<p><span class="math display">\[
+\mathbb{P}(A_3)=\binom{3}{3}(0.4)^3=0.064.
+\]</span></p>
+<p>Zadano je <span class="math display">\[
+\mathbb{P}(U\mid A_1)=0.3,\qquad
+\mathbb{P}(U\mid A_2)=0.7,\qquad
+\mathbb{P}(U\mid A_3)=0.9.
+\]</span></p>
+<p>Prema formuli potpune vjerojatnosti, <span class="math display">\[
+\begin{aligned}
+\mathbb{P}(U)
+&amp;=\mathbb{P}(U\mid A_1)\mathbb{P}(A_1)
++\mathbb{P}(U\mid A_2)\mathbb{P}(A_2)
++\mathbb{P}(U\mid A_3)\mathbb{P}(A_3)\\
+&amp;=0.3\cdot0.432+0.7\cdot0.288+0.9\cdot0.064\\
+&amp;=0.1296+0.2016+0.0576
+=0.3888.
+\end{aligned}
+\]</span></p>
+Dakle, <span class="math display">\[
+\mathbb{P}(U)=0.3888
+\]</span>
 </details>
 </div>
 <hr>
@@ -439,6 +586,38 @@ Prikaži hint
 Vjerojatnost da je neka kutija odabrana računamo Laplaceovim modelom uzevši u obzir koliko je kuglica u toj kutiji, a koliko ukupno u objema kutijama.
 </details>
 </div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Neka je:</p>
+<ul>
+<li><span class="math inline">\(K_1 = \{\)</span>odabrana je prva kutija<span class="math inline">\(\}\)</span></li>
+<li><span class="math inline">\(K_2 = \{\)</span>odabrana je druga kutija<span class="math inline">\(\}\)</span></li>
+<li><span class="math inline">\(B = \{\)</span>izvučena je bijela kuglica<span class="math inline">\(\}\)</span></li>
+</ul>
+<p>Budući da kutiju biramo slučajno, vrijedi</p>
+<p><span class="math display">\[
+\mathbb{P}(K_1)=\mathbb{P}(K_2)=\frac{1}{2}.
+\]</span></p>
+<p>Vjerojatnosti izvlačenja bijele kuglice iz pojedinih kutija su</p>
+<p><span class="math display">\[
+\mathbb{P}(B\mid K_1)=\frac{2}{6}=\frac{1}{3},
+\qquad
+\mathbb{P}(B\mid K_2)=\frac{4}{7}.
+\]</span></p>
+<p>Prema formuli potpune vjerojatnosti,</p>
+<span class="math display">\[
+\begin{aligned}
+\mathbb{P}(B)
+&amp;=\mathbb{P}(B\mid K_1)\mathbb{P}(K_1)+\mathbb{P}(B\mid K_2)\mathbb{P}(K_2)\\
+&amp;=\frac{1}{3}\cdot\frac{1}{2} + \frac{4}{7}\cdot\frac{1}{2}\\
+&amp;=\frac{1}{6}+\frac{2}{7} = \frac{7}{42}+\frac{12}{42} =\frac{19}{42}
+\end{aligned}
+\]</span>
+</details>
+</div>
 <hr>
 <div class="zadatak">
 <p>U ponoć su na parkiralištu bila dva siva i jedan crni <em>Ford</em>, tri siva i četiri crna <em>BMW</em>–a te tri sive i jedna crna <em>Toyota</em>. Te je noći kradljivac automobila nasumično odabrao automobil i ukrao ga. Ako je ukradeni automobil sive boje, kolika je vjerojatnost da je to bio <em>BMW</em>?</p>
@@ -449,6 +628,56 @@ Vjerojatnost da je neka kutija odabrana računamo Laplaceovim modelom uzevši u 
 Prikaži hint
 </summary>
 Iskoristite Bayesovu formulu.
+</details>
+</div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Neka je:</p>
+<ul>
+<li><span class="math inline">\(F = \{\)</span>odabran je <em>Ford</em><span class="math inline">\(\}\)</span></li>
+<li><span class="math inline">\(B = \{\)</span>odabran je <em>BMW</em><span class="math inline">\(\}\)</span></li>
+<li><span class="math inline">\(T = \{\)</span>odabrana je <em>Toyota</em><span class="math inline">\(\}\)</span></li>
+<li><span class="math inline">\(S = \{\)</span>ukradeni automobil je sive boje<span class="math inline">\(\}\)</span></li>
+</ul>
+<p>Budući da kradljivac nasumično odabire automobil, a ukupno je <span class="math inline">\(14\)</span> automobila, pa vrijedi <span class="math display">\[
+\mathbb{P}(F)=\frac{3}{14},\qquad
+\mathbb{P}(B)=\frac{7}{14},\qquad
+\mathbb{P}(T)=\frac{4}{14}.
+\]</span></p>
+<p>Vjerojatnosti da je automobil sive boje, uz danu marku, su</p>
+<p><span class="math display">\[
+\mathbb{P}(S\mid F)=\frac{2}{3},\qquad
+\mathbb{P}(S\mid B)=\frac{3}{7},\qquad
+\mathbb{P}(S\mid T)=\frac{3}{4}.
+\]</span></p>
+<p>Tražimo <span class="math inline">\(\mathbb{P}(B\mid S)\)</span>. Prema Bayesovoj formuli,</p>
+<p><span class="math display">\[
+\mathbb{P}(B\mid S) = \frac{\mathbb{P}(S\mid B)\mathbb{P}(B)}{\mathbb{P}(S)}
+\]</span></p>
+<p>Najprije izračunajmo <span class="math inline">\(\mathbb{P}(S)\)</span> pomoću formule potpune vjerojatnosti: <span class="math display">\[
+\begin{aligned}
+\mathbb{P}(S)
+&amp;=\mathbb{P}(S\mid F)\mathbb{P}(F)
++\mathbb{P}(S\mid B)\mathbb{P}(B)
++\mathbb{P}(S\mid T)\mathbb{P}(T)\\
+&amp;=\frac{2}{3}\cdot\frac{3}{14}
++\frac{3}{7}\cdot\frac{7}{14}
++\frac{3}{4}\cdot\frac{4}{14}\\
+&amp;=\frac{2}{14}+\frac{3}{14}+\frac{3}{14}\\
+&amp;=\frac{8}{14}
+=\frac{4}{7}
+\end{aligned}
+\]</span></p>
+<p>Sada dobivamo</p>
+<span class="math display">\[
+\mathbb{P}(B\mid S)
+=\frac{\frac{3}{7}\cdot\frac{7}{14}}{\frac{4}{7}}
+=\frac{3}{14}\cdot\frac{7}{4}
+=\frac{3}{8}
+\]</span>
 </details>
 </div>
 <hr>
@@ -463,21 +692,147 @@ Prikaži hint
 Iskoristite Bayesovu formulu.
 </details>
 </div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Neka je:</p>
+<ul>
+<li><span class="math inline">\(K_i = \{\)</span>odabrana je kutija <span class="math inline">\(i \}\)</span></li>
+<li><span class="math inline">\(C_i = \{\)</span> — izvučena je kuglica <span class="math inline">\(i\}\)</span></li>
+</ul>
+<p>Budući da kutiju biramo slučajno, vrijedi</p>
+<p><span class="math display">\[
+\mathbb{P}(K_1)=\mathbb{P}(K_2)=\mathbb{P}(K_3)=\frac{1}{3}.
+\]</span></p>
+<p>Neka je <span class="math inline">\(C\)</span> događaj da je izvučena crna kuglica. Tada vrijedi</p>
+<p><span class="math display">\[
+\mathbb{P}(C\mid K_1)=1,\qquad
+\mathbb{P}(C\mid K_2)=0,\qquad
+\mathbb{P}(C\mid K_3)=\frac{1}{2}.
+\]</span></p>
+<p>Tražimo vjerojatnost da je druga kuglica crna ako znamo da je prva izvučena kuglica crna. To se događa upravo ako je odabrana prva kutija, pa tražimo <span class="math inline">\(\mathbb{P}(K_1\mid C)\)</span>.</p>
+<p>Prema Bayesovoj formuli,</p>
+<p><span class="math display">\[
+\mathbb{P}(K_1\mid C) =
+\frac{\mathbb{P}(C\mid K_1)\mathbb{P}(K_1)}{\mathbb{P}(C)}
+\]</span></p>
+<p>Najprije izračunajmo <span class="math inline">\(\mathbb{P}(C)\)</span> pomoću formule potpune vjerojatnosti: <span class="math display">\[
+\begin{aligned}
+\mathbb{P}(C)
+&amp;=\mathbb{P}(C\mid K_1)\mathbb{P}(K_1)
++\mathbb{P}(C\mid K_2)\mathbb{P}(K_2)
++\mathbb{P}(C\mid K_3)\mathbb{P}(K_3)\\
+&amp;=1\cdot\frac{1}{3}
++0\cdot\frac{1}{3}
++\frac{1}{2}\cdot\frac{1}{3}\\
+&amp;=\frac{1}{3}+\frac{1}{6}
+=\frac{1}{2}
+\end{aligned}
+\]</span></p>
+Sada dobivamo <span class="math display">\[
+\mathbb{P}(K_1\mid C) = \frac{1\cdot\frac{1}{3}}{\frac{1}{2}} = \frac{2}{3}
+\]</span>
+</details>
+</div>
 <hr>
 <div class="zadatak">
 <p><strong>(1. Kolokvij, 2024.)</strong> Student putuje iz studentskog doma na kolokvij iz <em>Vjerojatnosti</em>. S vjerojatnošću <span class="math inline">\(25\%\)</span> zaboravio je noć prije staviti mobitel na punjenje te mu se ne oglašava alarm i probudi se prekasno. U tom slučaju zove taksi koji zbog jutarnje gužve kasni s vjerojatnošću <span class="math inline">\(20\%\)</span>. S druge strane, ako se student probudi na vrijeme, ide na tramvaj, no i u tom slučaju zbog jutarnje gužve kasni s vjerojatnošću <span class="math inline">\(60\%\)</span>. Ako je student stigao na kolokvij na vrijeme, odredite vjerojatnost da se i probudio na vrijeme.</p>
 </div>
+<div class="rjesenje">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
+<p>Neka je:</p>
+<ul>
+<li><span class="math inline">\(A = \{\)</span>student se probudio na vrijeme<span class="math inline">\(\}\)</span></li>
+<li><span class="math inline">\(B = \{\)</span>student je stigao na kolokvij na vrijeme<span class="math inline">\(\}\)</span></li>
+</ul>
+<p>Tada je <span class="math display">\[
+\mathbb{P}(A)=0.75,\qquad
+\mathbb{P}(A^c)=0.25,
+\]</span></p>
+<p>a vrijedi <span class="math display">\[
+\mathbb{P}(B\mid A)=0.4,
+\qquad
+\mathbb{P}(B\mid A^c)=0.8.
+\]</span></p>
+<p>Tražimo <span class="math inline">\(\mathbb{P}(A\mid B)\)</span>. Prema Bayesovoj formuli, <span class="math display">\[
+\mathbb{P}(A\mid B) = \frac{\mathbb{P}(B\mid A)\mathbb{P}(A)}{\mathbb{P}(B)}
+\]</span></p>
+<p>Prema formuli potpune vjerojatnosti <span class="math display">\[
+\begin{aligned}
+\mathbb{P}(B)
+&amp;=\mathbb{P}(B\mid A)\mathbb{P}(A)
++\mathbb{P}(B\mid A^c)\mathbb{P}(A^c)\\
+&amp;=0.4\cdot0.75+0.8\cdot0.25\\
+&amp;=0.3+0.2=0.5
+\end{aligned}
+\]</span></p>
+<p>Stoga <span class="math display">\[
+\mathbb{P}(A\mid B) = \frac{0.4\cdot0.75}{0.5} =\frac{0.3}{0.5} = 0.6
+\]</span></p>
+Dakle, vjerojatnost da se student probudio na vrijeme iznosi <span class="math inline">\(60\%\)</span>.
+</details>
+</div>
 <hr>
 <div class="zadatak">
+<details>
+<summary>
+Prikaži rješenje
+</summary>
 <p>Ako su <span class="math inline">\(A,B \in \mathcal{F}\)</span> nezavisni, dokažite da su tada nezavisni i parovi događaja <span class="math display">\[
 A^c \text{ i } B \qquad A \text{ i } B^c \qquad A^c \text{ i } B^c
 \]</span></p>
+<p>:::</p>
+<div class="rjesenje">
+<p>Pretpostavimo da su <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span> nezavisni, tj.</p>
+<p><span class="math display">\[
+\mathbb{P}(A\cap B)=\mathbb{P}(A)\mathbb{P}(B).
+\]</span></p>
+<p>Dokažimo nezavisnost za svaki od navedenih parova.</p>
+<p>Za <span class="math inline">\(A^c\)</span> i <span class="math inline">\(B\)</span> vrijedi <span class="math display">\[
+\begin{aligned}
+\mathbb{P}(A^c\cap B)
+&amp;=\mathbb{P}(B)-\mathbb{P}(A\cap B)\\
+&amp;=\mathbb{P}(B)-\mathbb{P}(A)\mathbb{P}(B)\\
+&amp;=(1-\mathbb{P}(A))\mathbb{P}(B)\\
+&amp;=\mathbb{P}(A^c)\mathbb{P}(B)
+\end{aligned}
+\]</span></p>
+<hr>
+<p>Za <span class="math inline">\(A\)</span> i <span class="math inline">\(B^c\)</span> analogno dobivamo</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbb{P}(A\cap B^c)
+&amp;=\mathbb{P}(A)-\mathbb{P}(A\cap B)\\
+&amp;=\mathbb{P}(A)-\mathbb{P}(A)\mathbb{P}(B)\\
+&amp;=\mathbb{P}(A)(1-\mathbb{P}(B))\\
+&amp;=\mathbb{P}(A)\mathbb{P}(B^c)
+\end{aligned}
+\]</span></p>
+<hr>
+<p>Konačno, za <span class="math inline">\(A^c\)</span> i <span class="math inline">\(B^c\)</span> vrijedi</p>
+<span class="math display">\[
+\begin{aligned}
+\mathbb{P}(A^c\cap B^c)
+&amp;=1-\mathbb{P}(A\cup B)\\
+&amp;=1-\mathbb{P}(A)-\mathbb{P}(B)+\mathbb{P}(A\cap B)\\
+&amp;=1-\mathbb{P}(A)-\mathbb{P}(B)+\mathbb{P}(A)\mathbb{P}(B)\\
+&amp;=(1-\mathbb{P}(A))(1-\mathbb{P}(B))\\
+&amp;=\mathbb{P}(A^c)\mathbb{P}(B^c)
+\end{aligned}
+\]</span>
+</div></details>
 </div>
 
 
-</section>
+</section></main></div>
 
-</main> <!-- /main -->
+
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -878,7 +1233,7 @@ A^c \text{ i } B \qquad A \text{ i } B^c \qquad A^c \text{ i } B^c
     }
   });
   </script>
-</div> <!-- /content -->
+ <!-- /content -->
 
 
 
